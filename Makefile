@@ -2,7 +2,7 @@
 ### Hooks for the editor to set the default target
 current: target
 
-target pngtarget pdftarget vtarget acrtarget: notarget
+target pngtarget pdftarget vtarget acrtarget: recodes.output 
 
 ##################################################################
 
@@ -32,10 +32,10 @@ Sources += religion_basic.ccsv partnership_basic.ccsv
 sets = ke5 ml5 ng5 sl5
  
 .PRECIOUS: %.recode.Rout
-%.recode.Rout: data/%.women.Rout recodeFuns.Rout religion_basic.ccsv partnership_basic.ccsv recode.R
+%.recode.Rout: data/%.women.RData recodeFuns.Rout religion_basic.ccsv partnership_basic.ccsv recode.R
 	$(run-R)
  
-recodes.output: $(sets:%=%.recode.objects.Routput)
+recodes.output: $(sets:%=%.recode.Routput)
 	cat $^ > $@
  
 recodes.objects.output: $(sets:%=%.recode.objects.Routput)
@@ -59,5 +59,5 @@ recodes.summary.output: $(sets:%=%.recode.summary.Routput)
 -include $(ms)/git.mk
 -include $(ms)/visual.mk
 
-# -include $(ms)/wrapR.mk
+-include $(ms)/wrapR.mk
 # -include $(ms)/oldlatex.mk
