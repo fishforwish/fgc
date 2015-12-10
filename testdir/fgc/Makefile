@@ -1,4 +1,5 @@
 # fgc
+
 ### Hooks for the editor to set the default target
 current: target
 
