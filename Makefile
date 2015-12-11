@@ -2,7 +2,7 @@
 ### Hooks for the editor to set the default target
 current: target
 
-target pngtarget pdftarget vtarget acrtarget: recodes.output 
+target pngtarget pdftarget vtarget acrtarget: recodes.summary.output 
 
 ##################################################################
 
@@ -30,6 +30,9 @@ Sources += $(wildcard *.R)
 Sources += religion_basic.ccsv partnership_basic.ccsv
 
 sets = ke5 ml5 ng5 sl5
+
+
+#### Recodes
  
 .PRECIOUS: %.recode.Rout
 %.recode.Rout: data/%.women.RData recodeFuns.Rout religion_basic.ccsv partnership_basic.ccsv recode.R
