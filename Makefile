@@ -51,51 +51,13 @@ recodes.summary.output: $(sets:%=%.recode.summary.Routput)
 
 #### Qual
 
+-include qual.mk
 
-%.beneQual.Rout: %.recode.Rout bene.R qual.R
-		 $(run-R)
- 
-beneQuals.output: $(sets:%=%.beneQual.Routput)
-		  cat $^ > $@
- 
-beneQuals.objects.output: $(sets:%=%.beneQual.objects.Routput)
-			  cat $^ > $@
- 
-beneQuals.summary.output: $(sets:%=%.beneQual.summary.Routput)
-			  cat $^ > $@
+#### Quant
 
+-include quant.mk
 
 ######################################################################
-
-%.attQual.Rout: %.recode.Rout att.R qual.R
-		$(run-R)
- 
-attQuals.output: $(sets:%=%.attQual.Routput)
-		 cat $^ > $@
- 
-attQuals.objects.output: $(sets:%=%.attQual.objects.Routput)
-			 cat $^ > $@
- 
-attQuals.summary.output: $(sets:%=%.attQual.summary.Routput)
-			 cat $^ > $@
-
-
-######################################################################
-
-%.mediaQual.Rout: %.recode.Rout media.R qual.R
-		  $(run-R)
- 
-mediaQuals.output: $(sets:%=%.mediaQual.Routput)
-		   cat $^ > $@
- 
-mediaQuals.objects.output: $(sets:%=%.mediaQual.objects.Routput)
-			   cat $^ > $@
- 
-mediaQuals.summary.output: $(sets:%=%.mediaQual.summary.Routput)
-			   cat $^ > $@
-
-######################################################################
-
 
 ### Crib
 
@@ -106,6 +68,7 @@ mediaQuals.summary.output: $(sets:%=%.mediaQual.summary.Routput)
 
 ## Change this name to download a new version of the makestuff directory
 # Makefile: start.makestuff
+
 
 -include $(ms)/git.mk
 -include $(ms)/visual.mk
