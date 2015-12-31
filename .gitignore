@@ -1,6 +1,8 @@
 commit.txt
 .*.sw*
 
+*~
+
 *.pdf
 
 *.log
@@ -10,7 +12,9 @@ commit.txt
 *.bbl
 
 *out
+*.output
 *.RData
+*.Routput
 *.Rlog
 *.r
 .Rhistory
@@ -22,5 +26,6 @@ local.mk
 testdir/
 .testdir/
 subclone_dir/
+data
 
 *.makestuff
