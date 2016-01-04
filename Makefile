@@ -57,6 +57,10 @@ recodes.summary.output: $(sets:%=%.recode.summary.Routput)
 
 -include quant.mk
 
+#### PCA
+
+-include PCA.mk
+
 ######################################################################
 
 ### Crib
