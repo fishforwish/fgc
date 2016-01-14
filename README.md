@@ -10,7 +10,7 @@ M2:  women's FGC status and FGC belief --> daughter's future FGC status
 
 M3:  correlation of women's FGC belief, overall FGC future and daughter's future FGC status
 
-links below for more details./ 
+Links below for more details (where we were):
 
 main page:  http://lalashan.mcmaster.ca/theobio/circumcision/index.php/FGC
 
