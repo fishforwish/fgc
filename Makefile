@@ -62,7 +62,14 @@ recodes.summary.output: $(sets:%=%.recode.summary.Routput)
 -include PCA.mk
 
 ######################################################################
+##CPC test
 
+cpctest.Rout:	mediaPCAs.summary.output *.mediaQuant.RData saveRDS.R CPCtest.R
+		$(run-R)
+
+
+
+######################################################################
 ### Crib
 
 %: data/%
