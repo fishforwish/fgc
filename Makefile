@@ -2,7 +2,7 @@
 ### Hooks for the editor to set the default target
 current: target
 
-target pngtarget pdftarget vtarget acrtarget: beneQuals.summary.output 
+target pngtarget pdftarget vtarget acrtarget: mediaPCAs.summary.output 
 
 ##################################################################
 
@@ -64,7 +64,7 @@ recodes.summary.output: $(sets:%=%.recode.summary.Routput)
 ######################################################################
 ##CPC test
 
-cpctest.Rout:	mediaPCAs.summary.output *.mediaQuant.RData saveRDS.R CPCtest.R
+cpctest.Rout:	*.mediaQuant.RData saveRDS.R CPCtest.R
 		$(run-R)
 
 
