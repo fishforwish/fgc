@@ -1,6 +1,6 @@
 # fgc
 
-The main question:  to include 2 predictors and 2 outcome variables in one model.
+*** The main question:  to include 2 predictors and 2 outcome variables in one model.***
 
 Go to the link below for more details./ 
 
