@@ -75,7 +75,7 @@ normative expectation: What the responder believes others think she should do
 
 == Research Questions ==
 
-There are three research questions:  First, what is the association of women's beliefs in FGC benefits (see the list of FGC benefits at table--) \cf{i.e., normative norm?} and their position on continuing FGC in the future \cf{also normative norm}?  It is called FGC attitude model.  Second, what is the association of women's beliefs in FGC benefits and their daughters' FGC status \cf{empirical norm?}?  It is called daughters’ FGC status model.  Third, what is the association of women’s position on FGC future and daughters’ FGC status.  It is called FGC norm model \cf{get a better name.  I think we can do a model to test all the 3 variables:  women’s position on continuing FGC in the future, women’s belief in FGC benefits and daughter’s FGC status.  Or shall it be our main research question?}.  We are interested in both questions at both a community level and a population level.
+There are three research questions:  First, what is the association of women's beliefs in FGC benefits (see the list of FGC benefits at table--) \cf{i.e., normative norm?} and their position on continuing FGC in the future \cf{also normative norm}?  It is called FGC future model.  Second, what is the association of women's beliefs in FGC benefits and their daughters' FGC status \cf{empirical norm?}?  It is called daughters’ FGC status model.  Third, what is the association of women’s position on FGC future and daughters’ FGC status.  It is called FGC norm model \cf{get a better name.  I think we can do a model to test all the 3 variables:  women’s position on continuing FGC in the future, women’s belief in FGC benefits and daughter’s FGC status.  Or shall it be our main research question?}.  We are interested in both questions at both a community level and a population level.
 
 women’s position on continuing FGC in the future, 
 predictor: women’s belief in FGC benefits 
@@ -84,11 +84,13 @@ the concept of heterogeneity and threshold:  \cf{I think these two concepts are 
 
 == Methods ==
 
+=== Data ===
+
 The Demographic and Health Surveys (DHS), sponsored by USAID, which works with the surveyed nations, is designed to be nationally representative.  We looked for surveys from nations with high FGC prevalence and information of FGC status, beliefs of FGC benefits; attitudes towards FGC future, indices of gender awareness and GPS data about respondent locations; and the following countries met the criteria:  Kenya 2008/9 ((KNBS10)), Mali 2006 ((Mali06))\cf{the report was in French}, and Nigeria 2008 ((NNPC09)).
 
 === samples ===
 
-Women who were visitors (V104), and never heard of FGC (and female genital circumcision) (G101) were excluded from this study.  It resulted in xxxx, xxxx and xxxx women (aged 15-49) in the DHS of Kenya, Mali, Nigeria and Senegal, respectively.  Women without daughters are treated as NAs in the daughter models; and that resulted in xxx, xxx, xxx, and xxx as well.  We included all the women in the surveys because the opinions of women who were not cut was part of the community attitudes towards FGC and needed to be counted.
+Women who were visitors (V104), and never heard of FGC (and female genital circumcision) (G101) were excluded from this study.  It resulted in xxxx, xxxx and xxxx women (aged 15-49) in the DHS of Kenya, Mali, Nigeria and Senegal, respectively for the FGC future model.  We included all the women in the surveys because the opinions of women who were not cut was part of the community attitudes towards FGC and needed to be counted.  But only women with uncircumcised daughters are analyzed in the daughters’ FGC status models; and that resulted in xxx, xxx, xxx, and xxx respectively.  
 
 === Measurements and Concepts ===
 
