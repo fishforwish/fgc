@@ -1,23 +1,36 @@
+
+%.beneQuant.Rout: %.beneQual.Rout levelcodes_bene.tsv quant.R
+	$(run-R)
+
+beneQuants.output: $(sets:%=%.beneQuant.Routput)
+	cat $^ > $@
+
+beneQuants.objects.output: $(sets:%=%.beneQuant.objects.Routput)
+	cat $^ > $@
+
+beneQuants.summary.output: $(sets:%=%.beneQuant.summary.Routput)
+	cat $^ > $@
+
 %.attQuant.Rout: %.attQual.Rout levelcodes_att.tsv quant.R
-		 $(run-R)
- 
+	$(run-R)
+
 attQuants.output: $(sets:%=%.attQuant.Routput)
-		  cat $^ > $@
- 
+	cat $^ > $@
+
 attQuants.objects.output: $(sets:%=%.attQuant.objects.Routput)
-			  cat $^ > $@
- 
+	cat $^ > $@
+
 attQuants.summary.output: $(sets:%=%.attQuant.summary.Routput)
-			  cat $^ > $@
- 
+	cat $^ > $@
+
 %.mediaQuant.Rout: %.mediaQual.Rout levelcodes_media.tsv quant.R
-		   $(run-R)
- 
+	$(run-R)
+
 mediaQuants.output: $(sets:%=%.mediaQuant.Routput)
-		    cat $^ > $@
- 
+	cat $^ > $@
+
 mediaQuants.objects.output: $(sets:%=%.mediaQuant.objects.Routput)
-			    cat $^ > $@
- 
+	cat $^ > $@
+
 mediaQuants.summary.output: $(sets:%=%.mediaQuant.summary.Routput)
-			    cat $^ > $@
+	cat $^ > $@

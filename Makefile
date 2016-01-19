@@ -59,11 +59,13 @@ recodes.summary.output: $(sets:%=%.recode.summary.Routput)
 
 -include PCA.mk
 
-######################################################################
-##CPC test
+#### Plots
 
-cpctest.Rout:	*.mediaQuant.RData saveRDS.R CPCtest.R
-		$(run-R)
+-include plots.mk
+-include comPlots.mk
+-include bioPlots.mk
+
+######################################################################
 
 
 
