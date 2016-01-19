@@ -6,6 +6,7 @@
 
 msrepo = https://github.com/dushoff
 gitroot = ../
+Drop = ~/Dropbox
 
 -include local.mk
 -include $(gitroot)/local.mk

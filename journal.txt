@@ -1,0 +1,15 @@
+19 Jan 2016: JD, CS, ML
+
+We will try to build a multi-level, multivariate-response model:
+
+women's FGC status; FGC belief 
+	--> overall FGC future; daughter's future FGC status
+
+We are starting with four data sets (ke5, ng5, ml5, sl5).
+
+Our next step is to look at PCA analyses of responses about FGC benefit.
+
+We might look into logistic PCA
+
+----------------------------------------------------------------------
+

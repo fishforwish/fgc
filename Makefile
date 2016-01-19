@@ -8,8 +8,7 @@ target pngtarget pdftarget vtarget acrtarget: mediaPCAs.summary.output
 
 # make files
 
-Drop = ~/Dropbox
-Sources = Makefile .gitignore README.md stuff.mk LICENSE.md
+Sources = Makefile .gitignore README.md stuff.mk LICENSE.md journal.txt
 include stuff.mk
 
 ##################################################################
@@ -19,7 +18,7 @@ include stuff.mk
 Makefile: data
 
 data:
-	ln -s $(Drop)/fgc $@
+	ln -fs $(Drop)/fgc $@
 
 ##################################################################
 
@@ -30,7 +29,6 @@ Sources += $(wildcard *.R)
 Sources += religion_basic.ccsv partnership_basic.ccsv
 
 sets = ke5 ml5 ng5 sl5
-
 
 #### Recodes
  
