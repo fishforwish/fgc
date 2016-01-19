@@ -28,4 +28,4 @@ quantpca <- quantpca[-1]
 # row.names(quantpca)
 # row.names(scores)
 
-# rdsave(quantpca, scores, catname)
+# rdsave(quantpca, scores, catname, pc)
