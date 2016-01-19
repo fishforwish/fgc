@@ -1,36 +1,36 @@
+
+%.benePCA.Rout: %.beneQuant.Rout catPCA.R
+	$(run-R)
+
+benePCAs.output: $(benefits:%=%.benePCA.Routput)
+	cat $^ > $@
+
+benePCAs.objects.output: $(benefits:%=%.benePCA.objects.Routput)
+	cat $^ > $@
+
+benePCAs.summary.output: $(benefits:%=%.benePCA.summary.Routput)
+	cat $^ > $@
+
 %.attPCA.Rout: %.attQuant.Rout catPCA.R
-	       $(run-R)
- 
+	$(run-R)
+
 attPCAs.output: $(sets:%=%.attPCA.Routput)
-		cat $^ > $@
- 
+	cat $^ > $@
+
 attPCAs.objects.output: $(sets:%=%.attPCA.objects.Routput)
-			cat $^ > $@
- 
+	cat $^ > $@
+
 attPCAs.summary.output: $(sets:%=%.attPCA.summary.Routput)
-			cat $^ > $@
- 
+	cat $^ > $@
+
 %.mediaPCA.Rout: %.mediaQuant.Rout catPCA.R
-		 $(run-R)
- 
+	$(run-R)
+
 mediaPCAs.output: $(sets:%=%.mediaPCA.Routput)
-		  cat $^ > $@
- 
+	cat $^ > $@
+
 mediaPCAs.objects.output: $(sets:%=%.mediaPCA.objects.Routput)
-			  cat $^ > $@
- 
+	cat $^ > $@
+
 mediaPCAs.summary.output: $(sets:%=%.mediaPCA.summary.Routput)
-			  cat $^ > $@
-
-%.benePCA.Rout:		  %.mediaPCA.Rout emptyBene.R 
-			  $(run-R)
-
-benePCAs.output: $(sets:%=%.benePCA.Routput)
-		cat $^ > $@
- 
-benePCAs.objects.output: $(sets:%=%.benePCA.objects.Routput)
-			cat $^ > $@
- 
-benePCAs.summary.output: $(sets:%=%.benePCA.summary.Routput)
-			cat $^ > $@
-
+	cat $^ > $@
