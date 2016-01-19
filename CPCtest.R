@@ -16,10 +16,13 @@ sl5 <- sl5[complete.cases(sl5),]
 dat <- list(ke5,ml5,ng5,sl5)
 
 vardat <- lapply(dat,var)
+corrdat <- lapply(dat,cor)
 ndat <- unlist(lapply(dat,nrow))
 ndat2 <- lapply(dat,nrow)
 
 class(ndat)
+
+cpc(vardat,n=ndat)
 
 mediacpc <- new_cpc(vardat,n=ndat)
 
