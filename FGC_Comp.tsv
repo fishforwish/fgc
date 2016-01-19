@@ -1,0 +1,15 @@
+
+# needs to be double-check, since I redid the score code.
+Var/Component				1st	2nd	3rd	4th	5th
+
+cleanliness/hygiene			*	*	*	*	
+social acceptance			*	*.	*.	*.	.
+better marriage prospects		*	<	*	*	
+virginity/prevent premarital sex	=	*.,		*	.
+more sexual pleasures for men		=	+	*	*	
+religious approval			=.,	=.		=.	.
+promiscuity/sex drive			+	=.		+
+prevent STD/HIV infection		+.	<		<	.
+others					+	+		*	.
+
+# "." means positive loadings; "," means uncertain.
