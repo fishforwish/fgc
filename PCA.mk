@@ -2,13 +2,13 @@
 %.benePCA.Rout: %.beneQuant.Rout catPCA.R
 	$(run-R)
 
-benePCAs.output: $(benefits:%=%.benePCA.Routput)
+benePCAs.output: $(sets:%=%.benePCA.Routput)
 	cat $^ > $@
 
-benePCAs.objects.output: $(benefits:%=%.benePCA.objects.Routput)
+benePCAs.objects.output: $(sets:%=%.benePCA.objects.Routput)
 	cat $^ > $@
 
-benePCAs.summary.output: $(benefits:%=%.benePCA.summary.Routput)
+benePCAs.summary.output: $(sets:%=%.benePCA.summary.Routput)
 	cat $^ > $@
 
 %.attPCA.Rout: %.attQuant.Rout catPCA.R
