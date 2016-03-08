@@ -13,3 +13,6 @@ We might look into logistic PCA
 
 ----------------------------------------------------------------------
 
+08 Mar 2016: ML
+
+We will build the univariate response model first with using clmm2 clusterid as random effect 
