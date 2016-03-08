@@ -39,3 +39,5 @@ contmod <- clm2(continueFgc~fgc+Factor1,data=dat3)
 
 fullmod <- clm2(continueFgc:daughterToFgc~fgc+Factor1,data=dat3)
 summary(fullmod)
+
+##aa <- princomp(qual,scores=TRUE)

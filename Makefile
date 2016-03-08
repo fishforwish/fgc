@@ -45,6 +45,9 @@ recodes.objects.output: $(sets:%=%.recode.objects.Routput)
 recodes.summary.output: $(sets:%=%.recode.summary.Routput)
 	cat $^ > $@
 
+%.prelim_fit.Rout: %.recode.Rout prelim_fit.R
+		   $(run-R)
+
 ######################################################################
 
 #### Qual
