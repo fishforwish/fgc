@@ -16,3 +16,6 @@ We might look into logistic PCA
 08 Mar 2016: ML
 
 We will build the univariate response model first with using clmm2 clusterid as random effect 
+
+Done. now try to do the bolker MANOVA trick. (Is that what we are going to call it from now on?)
+

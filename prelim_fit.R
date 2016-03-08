@@ -15,7 +15,7 @@ numchange2 <- function(x){
 
 df <- (Answers 
 	%>% select(c(
-		continueFgc,daughterToFgc,fgc,
+		continueFgc,daughterToFgc,fgc,clusterId,
       beneHygiene,beneAcceptance,beneMarriage,
       benePreventPreSex,benePleasureM,beneReligion,
       beneRedPromis,beneRedSTD,beneOther
@@ -24,7 +24,8 @@ df <- (Answers
 )
 
 beneNames <- grepl("bene", names(df))
-fgcDat <- df[!beneNames]
+fgcDat <- df %>% select(c(continueFgc,daughterToFgc,fgc))
+covsDat <- df %>% select(clusterId)
 beneDat <- df[beneNames] 
 
 fgcDat <- (fgcDat
@@ -39,17 +40,16 @@ beneDat <- beneDat %>% rowwise() %>% summarise_each(funs(numchange))
 
 belief_score <- factanal(beneDat,factors=1,scores="regression")$score
 
-combinedDat <- data.frame(fgcDat, beneScore=belief_score[,1])
+combinedDat <- data.frame(fgcDat, beneScore=belief_score[,1],covsDat)
 
-daughtermod <- clm2(daughterToFgc~fgc+beneScore,data=combinedDat)
+daughtermod <- clmm2(daughterToFgc~fgc+beneScore,
+                     random = clusterId,
+                     Hess = TRUE,
+                     data=combinedDat)
 summary(daughtermod)
 
-contmod <- clm2(continueFgc~fgc+beneScore,data=combinedDat)
+contmod <- clmm2(continueFgc~fgc+beneScore,
+                 random = clusterID,
+                 Hess = TRUE,
+                 data=combinedDat)
 summary(contmod)
-
-fullmod <- clm2(
-	continueFgc:daughterToFgc~fgc+beneScore,data=combinedDat
-)
-summary(fullmod)
-
-##aa <- princomp(beneDat,scores=TRUE)
