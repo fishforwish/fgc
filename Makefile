@@ -2,7 +2,7 @@
 ### Hooks for the editor to set the default target
 current: target
 
-target pngtarget pdftarget vtarget acrtarget: benePCAs.summary.output
+target pngtarget pdftarget vtarget acrtarget: ke5.prelim_fit.Rout 
 
 ##################################################################
 
@@ -45,6 +45,7 @@ recodes.objects.output: $(sets:%=%.recode.objects.Routput)
 recodes.summary.output: $(sets:%=%.recode.summary.Routput)
 	cat $^ > $@
 
+ke5.prelim_fit.Rout: ke5.recode.Rout prelim_fit.R
 %.prelim_fit.Rout: %.recode.Rout prelim_fit.R
 		   $(run-R)
 

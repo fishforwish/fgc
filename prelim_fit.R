@@ -14,30 +14,42 @@ numchange2 <- function(x){
 }
 
 df <- (Answers 
-  %>% select(c(continueFgc,daughterToFgc,fgc,
+	%>% select(c(
+		continueFgc,daughterToFgc,fgc,
       beneHygiene,beneAcceptance,beneMarriage,
       benePreventPreSex,benePleasureM,beneReligion,
-      beneRedPromis,beneRedSTD,beneOther))
-    %>% filter(complete.cases(.))
+      beneRedPromis,beneRedSTD,beneOther
+	))
+	%>% filter(complete.cases(.))
 )
 
-catList <- grepl("bene", names(df))
-dat <- df[!catList]
-dat <- (dat %>% rowwise() %>% 
-  transmute(continueFgc = numchange2(continueFgc),
-            daughterToFgc = numchange(daughterToFgc),
-            fgc = numchange(fgc))
+beneNames <- grepl("bene", names(df))
+fgcDat <- df[!beneNames]
+beneDat <- df[beneNames] 
+
+fgcDat <- (fgcDat
+	%>% rowwise() %>% 
+	transmute(continueFgc = numchange2(continueFgc),
+  	daughterToFgc = numchange(daughterToFgc),
+  	fgc = numchange(fgc))
 )
-dat2 <- sapply(dat,as.factor)
-qual <- df[catList] %>% rowwise() %>% summarise_each(funs(numchange))
+fgcDat <- sapply(fgcDat,as.factor)
 
-belief_score <- factanal(qual,factors=1,scores="regression")$score
+beneDat <- beneDat %>% rowwise() %>% summarise_each(funs(numchange))
 
-dat3 <- data.frame(dat2,belief_score)
-daughtermod <- clm2(daughterToFgc~fgc+Factor1,data=dat3)
-contmod <- clm2(continueFgc~fgc+Factor1,data=dat3)
+belief_score <- factanal(beneDat,factors=1,scores="regression")$score
 
-fullmod <- clm2(continueFgc:daughterToFgc~fgc+Factor1,data=dat3)
+combinedDat <- data.frame(fgcDat, beneScore=belief_score[,1])
+
+daughtermod <- clm2(daughterToFgc~fgc+beneScore,data=combinedDat)
+summary(daughtermod)
+
+contmod <- clm2(continueFgc~fgc+beneScore,data=combinedDat)
+summary(contmod)
+
+fullmod <- clm2(
+	continueFgc:daughterToFgc~fgc+beneScore,data=combinedDat
+)
 summary(fullmod)
 
-##aa <- princomp(qual,scores=TRUE)
+##aa <- princomp(beneDat,scores=TRUE)
