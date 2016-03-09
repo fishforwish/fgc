@@ -2,7 +2,7 @@
 ### Hooks for the editor to set the default target
 current: target
 
-target pngtarget pdftarget vtarget acrtarget: ke5.prelim_fit.Rout 
+target pngtarget pdftarget vtarget acrtarget: ke5.multi_fit.Rout 
 
 ##################################################################
 
@@ -49,6 +49,9 @@ ke5.prelim_fit.Rout: ke5.recode.Rout prelim_fit.R
 %.prelim_fit.Rout: %.recode.Rout prelim_fit.R
 		   $(run-R)
 
+ke5.multi_fit.Rout: ke5.prelim_fit.Rout multi_fit.R
+%.multi_fit.Rout: %.prelim_fit.Rout multi_fit.R
+		  $(run-R)
 ######################################################################
 
 #### Qual

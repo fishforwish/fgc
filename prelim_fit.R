@@ -49,7 +49,9 @@ daughtermod <- clmm2(daughterToFgc~fgc+beneScore,
 summary(daughtermod)
 
 contmod <- clmm2(continueFgc~fgc+beneScore,
-                 random = clusterID,
+                 random = clusterId,
                  Hess = TRUE,
                  data=combinedDat)
-summary(contmod)
+
+# rdsave(combinedDat)
+
