@@ -4,14 +4,19 @@ library(reshape2)
 library(ordinal)
 
 
-dat <- data.frame(obs= 1:nrow(combinedDat),combinedDat)
+combinedDatID <- data.frame(id= 1:nrow(combinedDat),combinedDat)
 
-aa <- melt(dat,id=c("obs","fgc","beneScore","clusterId"))
+mcombinedDatID <- melt(combinedDatID,id=c("id","fgc","beneScore","clusterId"))
 
-dat2 <- aa %>% mutate(value = as.factor(value))
+mcombinedDatID <- (mcombinedDatID %>% 
+  mutate(value = as.factor(value)
+         , futurefgc = variable
+  )
+    %>% select(-variable)
+)
 
-str(dat2)
+str(mcombinedDatID)
 
-fullmod <- clmm(value~variable+fgc+beneScore+ (0+variable|clusterId),
-               data = dat2)
+fullmod <- clmm(value~variable+fgc+beneScore-1 +(0+variable|clusterId) +(0+variable|id),
+               data = mcombinedDatID)
 

@@ -23,3 +23,12 @@ I set it up correctly (I think) with random effect (1|clusterId) + (1|clusterId:
 optimizer nlminb failed to converge
 
 Baseline is causing a problem. We can't get rid of the intercept(baseline/contrasting level) it cases a problem in id/obs RE
+
+
+----------------------------------------------------------------------
+
+09 Mar 2016 
+
+ML: made an attempt of the bolker MANOVA trick and JD will take a shot at it
+multi_fit.R
+
