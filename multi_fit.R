@@ -17,6 +17,6 @@ mcombinedDatID <- (mcombinedDatID %>%
 
 str(mcombinedDatID)
 
-fullmod <- clmm(value~variable+fgc+beneScore-1 +(0+variable|clusterId) +(0+variable|id),
+fullmod <- clmm(value~futurefgc+fgc+beneScore-1 +(0+futurefgc|clusterId) +(0+futurefgc|id),
                data = mcombinedDatID)
 
