@@ -7,7 +7,13 @@ numchange <- function(x){
   ifelse(x=="Yes",1,0)
 }
 
-numchange2 <- function(x){
+daufuture <- function(x){
+  if(x=="Yes"){return(2)}
+  if(x=="Don't know"){return(1)}
+  if(x=="No"){return(0)}
+}
+
+contfgc <- function(x){
   if(x=="Continued"){return(2)}
   if(x=="Depends"){return(1)}
   if(x=="Discontinued"){return(0)}
@@ -30,8 +36,8 @@ beneDat <- df[beneNames]
 
 fgcDat <- (fgcDat
 	%>% rowwise() %>% 
-	transmute(continueFgc = numchange2(continueFgc),
-  	daughterToFgc = numchange(daughterToFgc),
+	transmute(continueFgc = contfgc(continueFgc),
+  	daughterToFgc = daufuture(daughterToFgc),
   	fgc = numchange(fgc))
 )
 fgcDat <- sapply(fgcDat,as.factor)

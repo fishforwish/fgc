@@ -32,3 +32,9 @@ Baseline is causing a problem. We can't get rid of the intercept(baseline/contra
 ML: made an attempt of the bolker MANOVA trick and JD will take a shot at it
 multi_fit.R
 
+----------------------------------------------------------------------
+
+11 Mar 2016
+
+ML took Bolker's advice and lumped maybes and yes together and fit a binomial glmer.
+Still no success but good attempt. Maybe need to look up multivariate complete separation.

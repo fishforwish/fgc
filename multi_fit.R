@@ -11,12 +11,13 @@ mcombinedDatID <- melt(combinedDatID,id=c("id","fgc","beneScore","clusterId"))
 mcombinedDatID <- (mcombinedDatID %>% 
   mutate(value = as.factor(value)
          , futurefgc = variable
+#         , id = as.factor(id)
   )
     %>% select(-variable)
 )
 
 str(mcombinedDatID)
 
-fullmod <- clmm(value~futurefgc+fgc+beneScore-1 +(0+futurefgc|clusterId) +(0+futurefgc|id),
+fullmod2 <- clmm(value~futurefgc+fgc+beneScore -1 + (futurefgc|clusterId),
                data = mcombinedDatID)
 
