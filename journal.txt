@@ -38,3 +38,9 @@ multi_fit.R
 
 ML took Bolker's advice and lumped maybes and yes together and fit a binomial glmer.
 Still no success but good attempt. Maybe need to look up multivariate complete separation.
+
+----------------------------------------------------------------------
+
+14 Mar 2016
+
+multi_fit seem to work, still need to clarify the RE. Going to try logistic PCA next

@@ -19,5 +19,10 @@ mcombinedDatID <- (mcombinedDatID %>%
 str(mcombinedDatID)
 
 fullmod2 <- clmm(value~futurefgc+fgc+beneScore -1 + (futurefgc|clusterId),
-               data = mcombinedDatID)
+                 control=clmm.control(method="nlminb"),
+                  data = mcombinedDatID)
+
+print(fullmod2)
+
+summary(fullmod2)
 
