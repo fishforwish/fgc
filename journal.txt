@@ -50,3 +50,9 @@ multi_fit seem to work, still need to clarify the RE. Going to try logistic PCA 
 15 Mar 2016
 
 Did not try logistic PCA, trying to get a sense of what is going on with RE
+
+Try logistic PCA and don't know what is going on.
+
+Had a meeting with JD and CF, did a lot of code clean up.
+
+Made a mcmcglmm model, but I don't know how to read it
