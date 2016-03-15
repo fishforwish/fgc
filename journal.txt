@@ -44,3 +44,9 @@ Still no success but good attempt. Maybe need to look up multivariate complete s
 14 Mar 2016
 
 multi_fit seem to work, still need to clarify the RE. Going to try logistic PCA next
+
+----------------------------------------------------------------------
+
+15 Mar 2016
+
+Did not try logistic PCA, trying to get a sense of what is going on with RE

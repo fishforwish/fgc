@@ -58,6 +58,7 @@ contmod <- clmm2(continueFgc~fgc+beneScore,
                  random = clusterId,
                  Hess = TRUE,
                  data=combinedDat)
+summary(contmod)
 
 # rdsave(combinedDat)
 
