@@ -59,22 +59,22 @@ combinedDat <- data.frame(fgcDat, beneScore=belief_score[,1],covsDat,
                           P1=logPCA$PCs,
                           PC1 = PCAscores2[,1],PC2 = PCAscores2[,2])
 
-daughtermod <- clmm(daughterToFgc~fgc+beneScore+ (1|clusterId),
-                     data=combinedDat)
-summary(daughtermod)
-
-daughtermodP1 <- update(daughtermod,.~fgc+P1+(1|clusterId))
-summary(daughtermodP1)
-
-daughtermodPC <- update(daughtermod,.~fgc+PC1+PC2+(1|clusterId))
-summary(daughtermodPC)
-
-
-contmod <- clmm2(continueFgc~fgc+beneScore,
-                 random = clusterId,
-                 Hess = TRUE,
-                 data=combinedDat)
-summary(contmod)
+# daughtermod <- clmm(daughterToFgc~fgc+beneScore+ (1|clusterId),
+#                      data=combinedDat)
+# summary(daughtermod)
+# 
+# daughtermodP1 <- update(daughtermod,.~fgc+P1+(1|clusterId))
+# summary(daughtermodP1)
+# 
+# daughtermodPC <- update(daughtermod,.~fgc+PC1+PC2+(1|clusterId))
+# summary(daughtermodPC)
+# 
+# 
+# contmod <- clmm2(continueFgc~fgc+beneScore,
+#                  random = clusterId,
+#                  Hess = TRUE,
+#                  data=combinedDat)
+# summary(contmod)
 
 # rdsave(combinedDat)
 
