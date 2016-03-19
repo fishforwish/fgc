@@ -62,3 +62,9 @@ Made a mcmcglmm model, but I don't know how to read it
 17 March 2016
 
 Can't improve the mixing for mcmcglmm. Going to do some simulation with bolker and testing bolker manova trick
+
+----------------------------------------------------------------------
+
+18 March 2016
+
+Ian suggested trying to fit the model in stan
