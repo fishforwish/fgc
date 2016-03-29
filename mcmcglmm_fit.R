@@ -2,13 +2,14 @@ library(MCMCglmm)
 
 combinedDatID <- data.frame(id=1:(nrow(combinedDat)),combinedDat)
 
-prior.c <- list(R=list(list(V=diag(2),n=2)),
-                G=list(list(V=diag(2),n=2)))
+prior.c <- list(R=list(list(V=diag(2),nu=5)),
+                G=list(list(V=diag(2),nu=5)))
 
-MCMCmod <- MCMCglmm(cbind(as.factor(continueFgc),as.factor(daughterToFgc))~trait-1+fgc+beneScore,
+MCMCmod <- MCMCglmm(cbind(as.factor(continueFgc),as.factor(daughterToFgc))~trait-1+fgc+benesum,
                 random=~us(trait):clusterId,
-                rcov=~us(trait):id,
+                rcov=~us(trait):units,
                 prior=prior.c,
+                nitt = 30000,
                 data=combinedDatID,
                 family=c("ordinal","ordinal"))
 
