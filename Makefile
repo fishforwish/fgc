@@ -46,7 +46,7 @@ recodes.summary.output: $(sets:%=%.recode.summary.Routput)
 	cat $^ > $@
 
 ke5.prelim_fit.Rout: ke5.recode.Rout prelim_fit.R
-%.prelim_fit.Rout: %.filter.R %.recode.Rout prelim_fit.R
+%.prelim_fit.Rout: %.recode.Rout prelim_fit.R
 		   $(run-R)
 
 ke5.multi_fit.Rout: ke5.prelim_fit.Rout multi_fit.R

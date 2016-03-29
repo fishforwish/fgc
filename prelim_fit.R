@@ -3,16 +3,19 @@ library(dplyr)
 ## Y1 = overall FGC future (continueFgc) 
 ## Y2 = daughter's future fgc status (daughterToFgc)
 numchange <- function(x){
+  if(is.na(x)){return(NA)}
   ifelse(x=="Yes",1,0)
 }
 
 daufuture <- function(x){
+  if(is.na(x)){return(NA)}
   if(x=="Yes"){return(2)}
   if(x=="Don't know"){return(1)}
   if(x=="No"){return(0)}
 }
 
 contfgc <- function(x){
+  if(is.na(x)){return(NA)}
   if(x=="Continued"){return(2)}
   if(x=="Depends"){return(1)}
   if(x=="Discontinued"){return(0)}
@@ -21,7 +24,8 @@ contfgc <- function(x){
 df <- Answers %>% select(c(continueFgc,daughterToFgc,fgc,clusterId,
                            beneHygiene,beneAcceptance,beneMarriage,
                            benePreventPreSex,benePleasureM,beneReligion,
-                           beneRedPromis,beneRedSTD,beneOther))
+                           beneRedPromis,beneRedSTD,beneOther)) %>% 
+  filter(complete.cases(.))
 
 beneNames <- grepl("bene", names(df))
 fgcDat <- df %>% select(c(continueFgc,daughterToFgc,fgc))
@@ -40,8 +44,8 @@ fgcDat <- (fgcDat
 )
 fgcDat <- sapply(fgcDat,as.factor)
 
-combinedDat <- data.frame(fgcDat, beneScore=belief_score[,1],covsDat, 
-                          benesum=beneDat2$benesum, country="ke")
+combinedDat <- data.frame(fgcDat,covsDat, 
+                          benemean=beneDat2$benemean, country="ke")
 
 # rdsave(combinedDat)
 
