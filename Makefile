@@ -2,7 +2,7 @@
 ### Hooks for the editor to set the default target
 current: target
 
-target pngtarget pdftarget vtarget acrtarget: ke5.prelim_fit.Rout 
+target pngtarget pdftarget vtarget acrtarget: ke5.benePCA.Rout 
 
 ##################################################################
 

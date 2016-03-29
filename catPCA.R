@@ -9,6 +9,10 @@ quant <- na.omit(quant)
 # print(rownames(complete_quant))
 # print(rownames(quant))
 
+print(summary(quant))
+
+quant$sum <- rowSums(quant)
+
 pc <- prcomp(quant, scale=TRUE, center=FALSE)
 print(pc$rotation)
 plot(pc)
@@ -17,6 +21,10 @@ scores <- as.data.frame(predict(pc))
 scores <- within(scores, {
 	PC1 <- PC1/mean(PC1)
 })
+
+quant$score <- scores$PC1
+
+cor(quant$score, quant$sum)
 
 print(summary(scores))
 
