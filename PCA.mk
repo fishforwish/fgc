@@ -1,4 +1,6 @@
 
+ke5.benePCA.Rout: ke5.beneQuant.Rout catPCA.R
+
 %.benePCA.Rout: %.beneQuant.Rout catPCA.R
 	$(run-R)
 

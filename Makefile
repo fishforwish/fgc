@@ -8,7 +8,7 @@ target pngtarget pdftarget vtarget acrtarget: ke5.benePCA.Rout
 
 # make files
 
-Sources = Makefile .gitignore README.md stuff.mk LICENSE.md journal.txt
+Sources = Makefile .gitignore README.md LICENSE.md journal.txt
 include stuff.mk
 
 ##################################################################
@@ -58,6 +58,8 @@ ke5.mcmcglmm_fit.Rout: ke5.prelim_fit.Rout mcmcglmm_fit.R
 		     $(run-R)
 
 ######################################################################
+
+Sources += $(wildcard *.mk)
 
 #### Qual
 
