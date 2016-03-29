@@ -57,6 +57,8 @@ ke5.mcmcglmm_fit.Rout: ke5.df.Rout mcmcglmm_fit.R
 %.mcmcglmm_fit.Rout: %.df.Rout mcmcglmm_fit.R
 		     $(run-R)
 
+all_countries: ke5.mcmcglmm_fit.Rout ng5.mcmcglmm_fit.Rout sl5.mcmcglmm_fit.Rout ml5.mcmcglmm_fit.Rout
+
 ######################################################################
 
 Sources += $(wildcard *.mk)
