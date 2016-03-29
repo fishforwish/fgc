@@ -28,4 +28,4 @@ testdir/
 subclone_dir/
 data
 
-*.makestuff
+makestuff/
