@@ -38,6 +38,6 @@ combinedDatID <- left_join(Answers,scores,by="id") %>%
   group_by(clusterId) %>% 
   mutate(Gscore = mean(beneScore))
 
-
+# rdsave(combinedDatID)
 
 
