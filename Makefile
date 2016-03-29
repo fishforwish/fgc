@@ -45,16 +45,16 @@ recodes.objects.output: $(sets:%=%.recode.objects.Routput)
 recodes.summary.output: $(sets:%=%.recode.summary.Routput)
 	cat $^ > $@
 
-ke5.prelim_fit.Rout: ke5.recode.Rout prelim_fit.R
-%.prelim_fit.Rout: %.recode.Rout prelim_fit.R
-		   $(run-R)
+ke5.df.Rout: ke5.benePCA.Rout ke5.recode.Rout df.R
+%.df.Rout: %.benePCA.Rout %.recode.Rout df.R
+	   $(run-R)
 
-ke5.multi_fit.Rout: ke5.prelim_fit.Rout multi_fit.R
-%.multi_fit.Rout: %.prelim_fit.Rout multi_fit.R
+ke5.multi_fit.Rout: ke5.df.Rout multi_fit.R
+%.multi_fit.Rout: %.df.Rout multi_fit.R
 		  $(run-R)
 
-ke5.mcmcglmm_fit.Rout: ke5.prelim_fit.Rout mcmcglmm_fit.R
-%.mcmcglmm_fit.Rout: %.prelim_fit.Rout mcmcglmm_fit.R
+ke5.mcmcglmm_fit.Rout: ke5.df.Rout mcmcglmm_fit.R
+%.mcmcglmm_fit.Rout: %.df.Rout mcmcglmm_fit.R
 		     $(run-R)
 
 ######################################################################
