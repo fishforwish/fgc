@@ -68,3 +68,10 @@ Can't improve the mixing for mcmcglmm. Going to do some simulation with bolker a
 18 March 2016
 
 Ian suggested trying to fit the model in stan
+
+----------------------------------------------------------------------
+
+03/30/16:  
+Mike did the statistics of the four countries separately, usig ? model?  
+We now lean towards doing a big model (using MCMC?) by merging all the data. The big modle givs us more statistical power, 
+but also allows us to compare the differences among the countries.  Some questions remains before proceeding to a big model:
