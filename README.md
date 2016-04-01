@@ -17,4 +17,4 @@ reference:  http://lalashan.mcmaster.ca/theobio/circumcision/index.php/FGC/refer
 
 meeting notes: http://lalashan.mcmaster.ca/theobio/circumcision/index.php/FGC/meeting_journal
 
-# We also like to use men's beliefs of FGC benefits in the future (e.g., Mali)
+We also like to use men's beliefs of FGC benefits in the future (e.g., Mali)
