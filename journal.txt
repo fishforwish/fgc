@@ -75,3 +75,10 @@ Ian suggested trying to fit the model in stan
 Mike did the statistics of the four countries separately, usig ? model?  
 We now lean towards doing a big model (using MCMC?) by merging all the data. The big modle givs us more statistical power, 
 but also allows us to compare the differences among the countries.  Some questions remains before proceeding to a big model:
+
+----------------------------------------------------------------------
+
+04/04/16:
+ML will recompute the benefit score and check correlation with PC score for all countries. Big model should not be that hard, but we should include another layer of benefit score. ie. individual level/ community level/ country level. This also suggest we should use the averaging (with proper standardization) instead of PC. In theory, this is what "CPC" common principal components are for, but let's not go there.
+
+
