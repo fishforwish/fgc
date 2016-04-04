@@ -81,4 +81,4 @@ but also allows us to compare the differences among the countries.  Some questio
 04/04/16:
 ML will recompute the benefit score and check correlation with PC score for all countries. Big model should not be that hard, but we should include another layer of benefit score. ie. individual level/ community level/ country level. This also suggest we should use the averaging (with proper standardization) instead of PC. In theory, this is what "CPC" common principal components are for, but let's not go there.
 
-
+Everything above is done, now I am going to "merge" the data together (ie combine all the country data together)
