@@ -46,7 +46,7 @@ recodes.summary.output: $(sets:%=%.recode.summary.Routput)
 	cat $^ > $@
 
 ke5.df.Rout: ke5.benePCA.Rout ke5.recode.Rout df.R
-%.df.Rout: %.benePCA.Rout %.recode.Rout df.R
+%.df.Rout: %.recode.Rout df.R
 	   $(run-R)
 
 ke5.multi_fit.Rout: ke5.df.Rout multi_fit.R

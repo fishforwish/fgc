@@ -20,14 +20,28 @@ contfgc <- function(x){
   if(x=="Discontinued"){return(0)}
 }
 
-Answers <- Answers %>% mutate(id=row.names(.))
-scores <- scores %>% 
-  mutate(id=row.names(.),beneScore=PC1) %>%
-  select(c(beneScore,id))
-  
+scoring <- function(dat, type){
+  typeNames <- grepl(type, names(Answers))
+  cols <- sum(typeNames)
+  tempdat <- dat[typeNames] %>% 
+    rowwise() %>%
+    summarise_each(funs(numchange)) %>%
+    transmute(total = rowMeans(.[1:cols],na.rm=TRUE)) %>%
+    ungroup() %>%
+    transmute(Score=total/mean(total,na.rm=TRUE))
+  colnames(tempdat) <- paste(type,"score",sep=".")
+  return(tempdat)
+}
 
-combinedDatID <- left_join(Answers,scores,by="id") %>% 
-  select(c(continueFgc,daughterToFgc,fgc,clusterId,beneScore,clusterId)) %>%
+Answers <- Answers %>% mutate(id=row.names(.))
+benescore <- scoring(Answers,"bene")
+attscore <- scoring(Answers,"att")
+Answers <- cbind(Answers,benescore,attscore)
+
+combinedDatID <- Answers %>%  
+  select(c(continueFgc,daughterToFgc,fgc,clusterId,bene.score,att.score,clusterId,age,
+           edu,wealth,ethni,religion,maritalStat,job,urRural,mediaNpmg,
+           mediaRadio,mediaTv,CC)) %>%
   filter(complete.cases(.)) %>%
   rowwise() %>% 
   mutate(futurefgc = contfgc(continueFgc)
@@ -36,7 +50,8 @@ combinedDatID <- left_join(Answers,scores,by="id") %>%
   select(-c(continueFgc,daughterToFgc,fgc)) %>% 
   ungroup() %>% 
   group_by(clusterId) %>% 
-  mutate(Gscore = mean(beneScore))
+  mutate(Gbenescore = mean(bene.score),
+         Gattscore = mean(att.score))
 
 # rdsave(combinedDatID)
 
