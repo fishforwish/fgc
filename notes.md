@@ -13,13 +13,13 @@ variables:
 + covariates at a community level:  education, wealth, media use, FGC benefits, gender awareness and FGC prevalence
 
 other issues:
-+ none for now.
++ to decide if to include the following avriable at the community level:  wealth, education and media use
 
 
 decision:
 + This study is about testing hypothesis not prediction.
 + We agree on using spline for age and wealth keep more power (correct?)
-+ Cluster is treated as the only random effect.
++ Cluster is treated as the only random effect; while ethinicity and religion are fixed.
 + We used score (instead of PCA) to represent Media use, FGC benefits, gender awareness.
 
 
