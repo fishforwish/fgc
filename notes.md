@@ -1,6 +1,6 @@
 
 Basically, this paper is about norm and behaviors.
-We studied KMNS: Kenya 2008/9, Mali 2006 cf{the report was in French}, and Nigeria 2008 and Senegal.
+We studied KMNS: Kenya 2008/9, Mali 2006 cf{the report was in French}, and Nigeria 2008 and Senegal 2005.
 
 + Research Questions:
 
