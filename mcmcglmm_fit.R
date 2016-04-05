@@ -1,13 +1,16 @@
 library(MCMCglmm)
 
-dat <- rbind(readRDS("KE.df.RDS"),
-             readRDS("SL.df.RDS"),
-             readRDS("NG.df.RDS"),
-             readRDS("ML.df.RDS")
-)
+for (r in grep("Rds$", input_files, value=TRUE)){
+	if (exists("dat"))
+		dat <- rbind(dat, readRDS(r))
+	else
+		dat <- readRDS(r)
+}
 
 prior.c <- list(R=list(list(V=diag(2),nu=5)),
                 G=list(list(V=diag(2),nu=5)))
+
+print(summary(dat))
 
 MCMCmod <- MCMCglmm(
 	cbind(as.factor(futurefgc),as.factor(futurefgcDau)) ~ trait

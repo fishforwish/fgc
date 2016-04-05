@@ -83,5 +83,5 @@ combinedDat <- (combinedDat %>%
 
 summary(combinedDat)
 
-saveRDS(combinedDat,file=paste(combinedDat$CC[1],"df.RDS",sep="."))
+saveRDS(combinedDat, rdsname)
 
