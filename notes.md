@@ -13,13 +13,15 @@ variables:
 + covariates at a community level:  education, wealth, media use, FGC benefits, gender awareness and FGC prevalence
 
 other issues:
-+ PCA or scores for media use, FGC benefits, gender awareness.
-+ Cluster is treated as WHAT effect?
-+ Is ethinicty a random or fixed variable? jd{Ideally, we would make ethnicity a random effect, but we are back to the Gilmour problem I guess.}
++ none for now.
 
 
 decision:
-+ Chyun still has no clear ideas whether to make these modles FIT or PREDICTION?  Jonathan made the decision:  it is a hypothesis testing not to predict.
-+ Do we spline weath and age?  Yes.  We reached an agreement on using spline which compared to categorical variables keep more power (correct?)
++ This study is about testing hypothesis not prediction.
++ We agree on using spline for age and wealth keep more power (correct?)
++ Cluster is treated as the only random effect.
++ We used score (instead of PCA) to represent Media use, FGC benefits, gender awareness.
+
+
 
 
