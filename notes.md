@@ -24,6 +24,6 @@ Cluster is treated as WHAT effect?
 
 Is ethinicty a random or fixed variable? jd{Ideally, we would make ethnicity a random effect, but we are back to the Gilmour problem I guess.}
 
-Chyun still has no clear ideas whether to make these modles FIT or PREDICTION??????????? .
+Chyun still has no clear ideas whether to make these modles FIT or PREDICTION?  Jonathan made the decision:  it is a hypothesis testing not to predict.
 
 
