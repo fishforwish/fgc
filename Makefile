@@ -53,9 +53,8 @@ ke5.multi_fit.Rout: ke5.df.Rout multi_fit.R
 %.multi_fit.Rout: %.df.Rout multi_fit.R
 		  $(run-R)
 
-ke5.mcmcglmm_fit.Rout: ke5.df.Rout mcmcglmm_fit.R
-%.mcmcglmm_fit.Rout: %.df.Rout mcmcglmm_fit.R
-		     $(run-R)
+all.mcmcglmm_fit.Rout: KE.df.RDS SL.df.RDS NG.df.RDS ML.df.RDS mcmcglmm_fit.R
+	$(run-R)
 
 all_countries: ke5.df.Rout ng5.df.Rout sl5.df.Rout ml5.df.Rout
 
