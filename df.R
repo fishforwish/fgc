@@ -20,7 +20,8 @@ contfgc <- function(x){
   if(x=="Discontinued"){return(0)}
 }
 
-scoring <- function(dat, type){
+scoring <- function(dat, type, colnam,idvec=NULL){
+  if(!is.null(idvec)) dat <- dat %>% filter(id %in% idvec)
   typeNames <- grepl(type, names(Answers))
   cols <- sum(typeNames)
   tempdat <- dat[typeNames] %>% 
@@ -29,30 +30,40 @@ scoring <- function(dat, type){
     transmute(total = rowMeans(.[1:cols],na.rm=TRUE)) %>%
     ungroup() %>%
     transmute(Score=total/mean(total,na.rm=TRUE))
-  colnames(tempdat) <- paste(type,"score",sep=".")
+  colnames(tempdat) <- paste(colnam,"score",sep=".")
+  tempdat <- tempdat %>% mutate(id=idvec)
   return(tempdat)
 }
 
-Answers <- Answers %>% mutate(id=row.names(.))
-benescore <- scoring(Answers,"bene")
-attscore <- scoring(Answers,"att")
-Answers <- cbind(Answers,benescore,attscore)
+Answers <- Answers %>% mutate(id=1:nrow(.))
+# benescore <- scoring(Answers,"bene","B")
+# attscore <- scoring(Answers,"att","A")
+# Answers <- cbind(Answers,benescore,attscore)
 
-combinedDatID <- Answers %>%  
-  select(c(continueFgc,daughterToFgc,fgc,clusterId,bene.score,att.score,clusterId,age,
+filterDat <- Answers %>%  
+  select(c(continueFgc,daughterToFgc,fgc,clusterId,clusterId,age,id,
            edu,wealth,ethni,religion,maritalStat,job,urRural,mediaNpmg,
            mediaRadio,mediaTv,CC)) %>%
   filter(complete.cases(.)) %>%
+  ungroup()
+
+benescore <- scoring(Answers,"bene","B",filterDat$id)
+attscore <- scoring(Answers,"att","A",filterDat$id)
+combinedDat <- filterDat %>% 
+  left_join(.,benescore,by="id") %>%
+  left_join(.,attscore,by="id")
+
+combinedDat <- combinedDat %>%
   rowwise() %>% 
   mutate(futurefgc = contfgc(continueFgc)
          , futurefgcDau = daufuture(daughterToFgc)
          , fgcstatusMom = numchange(fgc)) %>% 
-  select(-c(continueFgc,daughterToFgc,fgc)) %>% 
-  ungroup() %>% 
+  select(-c(continueFgc,daughterToFgc,fgc)) %>%
+  ungroup() %>%
   group_by(clusterId) %>% 
-  mutate(Gbenescore = mean(bene.score),
-         Gattscore = mean(att.score))
+  mutate(Gbenescore = mean(B.score),
+         Gattscore = mean(A.score))
 
-# rdsave(combinedDatID)
+# rdsave(combinedDat)
 
 
