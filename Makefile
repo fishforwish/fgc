@@ -2,7 +2,7 @@
 ### Hooks for the editor to set the default target
 current: target
 
-target pngtarget pdftarget vtarget acrtarget: ke5.benePCA.Rout 
+target pngtarget pdftarget vtarget acrtarget: all_countries 
 
 ##################################################################
 
@@ -61,7 +61,9 @@ all_countries: ke5.df.Rout ng5.df.Rout sl5.df.Rout ml5.df.Rout
 
 ######################################################################
 
-Sources += $(wildcard *.mk)
+## Mike, why do we have so many .mk files? Can we pull these into a Makefile, would that be easier to read and navigate/
+
+Sources += qual.mk quant.mk plots.mk comPlots.mk bioPlots.mk
 
 #### Qual
 
@@ -82,20 +84,12 @@ Sources += $(wildcard *.mk)
 -include bioPlots.mk
 
 ######################################################################
-
-
-
-######################################################################
 ### Crib
 
 %: data/%
 	$(copy)
 
 ### Makestuff
-
-## Change this name to download a new version of the makestuff directory
-# Makefile: start.makestuff
-
 
 -include $(ms)/git.mk
 -include $(ms)/visual.mk
