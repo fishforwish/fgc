@@ -106,3 +106,15 @@ Consider
 * media, wealth, edu
 
 Arising: do we want to score education, or keep it categorical?
+
+
+----------------------------------------------------------------------
+
+06/04/16
+Mike fixed the whole pipeline. NA's are caused by incomplete cases and if bene/att/media has a row of ALL NAs. Everything is fixed and can run/fit in MCMCglmm.
+
+Mike's thoughts: It is good we have a big multivariate model, but at the same time, we are throwing away a lot of data. (ie, some countries do not have a lot of data on futurefgcDau). A rough estimate of 60% data are thrown out.
+
+ 
+
+ 

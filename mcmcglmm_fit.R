@@ -1,5 +1,4 @@
 library(MCMCglmm)
-library(splines)
 
 for (r in grep("Rds$", input_files, value=TRUE)){
 	if (exists("dat"))
@@ -7,7 +6,7 @@ for (r in grep("Rds$", input_files, value=TRUE)){
 	else
 		dat <- readRDS(r)
 }
-rdsave(dat)
+# rdsave(dat)
 
 prior.c <- list(R=list(list(V=diag(2),nu=5)),
                 G=list(list(V=diag(2),nu=5)))
@@ -17,19 +16,19 @@ print(summary(dat))
 MCMCmod <- MCMCglmm(
 	cbind(as.factor(futurefgc),as.factor(futurefgcDau)) ~ trait
 		+ fgcstatusMom
-# 		+ bene + media + att
-# 		+ group_bene + group_media + group_att + group_fgc
-# 	  	+ ns(age, 4) + ns(wealth, 4) 
-# 		+ edu + maritalStat + job + urRural + CC
-# 		+ ethni + religion
+		+ bene + media + att
+		+ group_bene + group_media + group_att + group_fgc
+	  	+ splines::ns(age, 4) + splines::ns(wealth, 4) 
+		+ edu + maritalStat + job + urRural + CC
+		+ ethni + religion
 		- 1
 	, random=~us(trait):clusterId
 	, rcov=~us(trait):units
-#	, prior=prior.c
-	, nitt = 5000
+	, prior=prior.c
+	, nitt = 50000
 	, data=dat
 	, verbose=FALSE
 	, family=c("ordinal","ordinal")
 )
 
-summary(MCMCmod)
+print(summary(MCMCmod))
