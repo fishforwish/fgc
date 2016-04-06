@@ -10,8 +10,13 @@ yesnodk <- function(x){
 	return(y)
 }
 
+yesnodk2 <- function(x){
+  y <- factor(x,levels(x)[c(1,3,2)])
+  return(y)
+}
+
 contfgc <- function(x){
-	y <- as.numeric(factor(x,levels(x)[c(3,1,2)]))-1
+	y <- factor(x,levels(x)[c(2,3,1)])
 	return(y)
 }
 
@@ -44,7 +49,7 @@ Answers <- Answers %>% mutate(id=1:nrow(.))
 responseDat <- Answers %>%  
 	select(c(continueFgc,daughterToFgc,id)) %>%
 	mutate(futurefgc = contfgc(continueFgc),
-	       futurefgcDau = yesnodk(daughterToFgc)) %>%
+	       futurefgcDau = yesnodk2(daughterToFgc)) %>%
 	select(-c(continueFgc,daughterToFgc)) 
 	
 covDat <- (Answers

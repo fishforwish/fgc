@@ -7,17 +7,10 @@ for (r in grep("Rds$", input_files, value=TRUE)){
 	else
 		dat <- readRDS(r)
 }
-# rdsave(dat)
+rdsave(dat)
 
 prior.c <- list(R=list(list(V=diag(2),nu=5)),
                 G=list(list(V=diag(2),nu=5)))
-
-dat2 <- dat %>% 
-  ungroup() %>% 
-  mutate(futurefgc=vector(futurefgc,mode="integer"),
-         futurefgcDau=vector(futurefgcDau,mode="integer"))
-
-aa <- dat2$futurefgc
 
 print(summary(dat))
 
@@ -34,7 +27,7 @@ MCMCmod <- MCMCglmm(
 	, rcov=~us(trait):units
 #	, prior=prior.c
 	, nitt = 5000
-	, data=dat2
+	, data=dat
 	, verbose=FALSE
 	, family=c("ordinal","ordinal")
 )
