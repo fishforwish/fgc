@@ -29,9 +29,7 @@ scoring <- function(dat, type,funct,idvec=NULL,colnam=NULL){
 	tempdat <- dat[typeNames] %>% 
 	  rowwise() %>% 
 	  summarise_each(funs(funct)) %>%
-	  mutate(id=idvec
-	         , numNA = rowSums(is.na(.[,1:cols]))) %>% 
-	  filter(numNA != cols) %>% 
+	  mutate(id=idvec) %>% 
 	  transmute(total = rowMeans(.[,1:cols],na.rm=TRUE)
 	            , id=id) %>%
 	  ungroup() %>%
@@ -42,28 +40,33 @@ scoring <- function(dat, type,funct,idvec=NULL,colnam=NULL){
 }
 
 Answers <- Answers %>% mutate(id=1:nrow(.))
+
 responseDat <- Answers %>%  
 	select(c(continueFgc,daughterToFgc,id)) %>%
 	mutate(futurefgc = contfgc(continueFgc),
 	       futurefgcDau = yesnodk(daughterToFgc)) %>%
-	select(-c(continueFgc,daughterToFgc)) %>% 
-	filter(complete.cases(.))
+	select(-c(continueFgc,daughterToFgc)) 
 	
 covDat <- (Answers
 	%>% select(c(
 	  fgc,clusterId,age,id,edu,wealth,ethni
-	 ,religion,maritalStat, job,urRural,CC
+	 ,religion,maritalStat, job,urRural,CC,beneAcceptance,attArgue,mediaRadio 
 	))
 	%>% mutate(fgcstatusMom = rightfactor(fgc))
 	%>% select(-fgc)
 )
 
-beneframe <- scoring(Answers,"bene",rightfactor,responseDat$id)
-attframe <- scoring(Answers,"att",yesnodk,responseDat$id)
-mediaframe <- scoring(Answers, "media",rightfactor,responseDat$id)
+tempcombDat <- left_join(responseDat,covDat,by="id") %>% 
+  filter(complete.cases(.)) %>% select(-c(beneAcceptance,attArgue,mediaRadio))
 
-combinedDat <- responseDat %>% 
-	left_join(., covDat, by="id") %>%
+
+beneframe <- scoring(Answers,"bene",rightfactor,tempcombDat$id)
+attframe <- scoring(Answers,"att",yesnodk,tempcombDat$id)
+mediaframe <- scoring(Answers, "media",rightfactor,tempcombDat$id)
+
+
+
+combinedDat <- tempcombDat %>% 
 	left_join(.,beneframe,by="id") %>%
 	left_join(.,attframe,by="id") %>%
 	left_join(.,mediaframe, by= "id")
