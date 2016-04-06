@@ -1,5 +1,6 @@
 # fgc
 ### Hooks for the editor to set the default target
+
 current: target
 
 target pngtarget pdftarget vtarget acrtarget: all.mcmcglmm_fit.Rout 
@@ -8,7 +9,8 @@ target pngtarget pdftarget vtarget acrtarget: all.mcmcglmm_fit.Rout
 
 # make files
 
-Sources = Makefile .gitignore README.md LICENSE.md journal.txt
+Sources = Makefile .gitignore README.md LICENSE.md journal.txt stuff.mk
+
 include stuff.mk
 
 ##################################################################
@@ -26,7 +28,7 @@ data:
 
 Sources += $(wildcard *.R)
 
-Sources += religion_basic.ccsv partnership_basic.ccsv
+Sources += $(wildcard *.ccsv *.tsv)
 
 sets = ke5 ml5 ng5 sl5
 
@@ -62,7 +64,7 @@ all_countries: ke5.df.Rout ng5.df.Rout sl5.df.Rout ml5.df.Rout
 
 ## Mike, why do we have so many .mk files? Can we pull these into a Makefile, would that be easier to read and navigate/
 
-Sources += qual.mk quant.mk plots.mk comPlots.mk bioPlots.mk
+Sources += qual.mk quant.mk plots.mk comPlots.mk bioPlots.mk PCA.mk
 
 #### Qual
 
