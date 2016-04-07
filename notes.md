@@ -12,10 +12,11 @@ variables:
 + other covariates:  country \cf{We don’t need this if we analyze each country separately}, age, education, wealth, ethnicity, religion, marital status, work status, residence (urban vs. rural), media use (another PCA or score?) and gender awareness.
 + covariates at a community level:  education, wealth, media use, FGC benefits, gender awareness and FGC prevalence
 
-other issues:
+other issues and questions:
 + to decide if to include the following avriable at the community level:  wealth, education and media use
 + To confirm:  att (gender awareness: no=0, DK=1 and yes=2):  the higher the score is, the LESS aware of gender equality a woman feels.  FGC bene (no=0, yes=1):  the higher the score, the stronger in believing FGC beneifts.  Media use (not at all=0..., almost everyday=3):  the higher the score, the more in using media.
 + There is a problem with the big model.  Originally, we wanted to include all the women (with daughters to FGC or not) for their opinion in future FGC practice.  They seemed to be dropped out in the big model, right?
++ How about our secondary question?
 
 
 decision:
