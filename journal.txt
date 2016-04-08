@@ -115,6 +115,14 @@ Mike fixed the whole pipeline. NA's are caused by incomplete cases and if bene/a
 
 Mike's thoughts: It is good we have a big multivariate model, but at the same time, we are throwing away a lot of data. (ie, some countries do not have a lot of data on futurefgcDau). A rough estimate of 60% data are thrown out.
 
- 
+ ----------------------------------------------------------------------
+08/04/16
+We found a problem of missing all the women who answered no daughter to be cut in our main model.  So we need to reset our models:
++ The first (or the main) model will be using fgc beneifts and women's fgc status as the main predictors and with two responses:  "whether to cut their daughter" and "whether to continue fgc."  I believe that we already did this one by using mcmc.
++ The secondary model will be using the same predictors (fgc beneifts and women's fgc status) with only one response: "whether to continue fgc".  In this model, all the women (despite with or without daughters to be cut) will be included in the analysis.
++ Regarding the main model (mcmc model), we also need to think about the interaction between fgc benefits and gender attitudes, because we believe that these two variables has a potential "strong" correlation with each other and need to be tested.  Mike said it can be done by coding "bene x att."
++ another confusing but minor questions:  why don't we just put all the predictors in a x b x c x .....?
+
+
 
  
