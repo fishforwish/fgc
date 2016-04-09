@@ -17,6 +17,7 @@ other issues and questions:
 + To confirm:  att (gender awareness: no=0, DK=1 and yes=2):  the higher the score is, the LESS aware of gender equality a woman feels.  FGC bene (no=0, yes=1):  the higher the score, the stronger in believing FGC beneifts.  Media use (not at all=0..., almost everyday=3):  the higher the score, the more in using media.
 + There is a problem with the big model.  Originally, we wanted to include all the women (with daughters to FGC or not) for their opinion in future FGC practice.  They seemed to be dropped out in the big model, right?
 + How about our secondary question?
++ studying threshold/tipping point: to test if when FGC prevalence reaches certain point , the behaviors start to change (either direction), and if the association of benefit and prevalence also play a crucial role in the "tipping point"?
 
 
 decision:
