@@ -125,5 +125,5 @@ We found a problem of missing all the women who answered no daughter to be cut i
 
 11/04/16
 ML will remodel the univariate models again via clmm and mcmcglmm.
-
+ML finish making univariate MCMCglmm model, going to refit in clmm
  
