@@ -15,14 +15,14 @@ prior.c <- list(R=list(list(V=diag(1),nu=5)),
 print(summary(dat))
 
 MCMCmod <- MCMCglmm(
-    as.factor(futurefgc) ~
+  as.factor(futurefgcDau) ~
     fgcstatusMom
-    + bene + media + att
-    + group_bene + group_media + group_att + group_fgc
-    + splines::ns(age, 4) + splines::ns(wealth, 4) 
-    + edu + maritalStat + job + urRural + CC
-    + ethni + religion
-   - 1
+  + bene + media + att
+  + group_bene + group_media + group_att + group_fgc
+  + splines::ns(age, 4) + splines::ns(wealth, 4) 
+  + edu + maritalStat + job + urRural + CC
+  + ethni + religion
+  - 1
   , random=~clusterId
   , rcov=~units
   , prior=prior.c
