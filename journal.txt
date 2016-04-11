@@ -123,6 +123,7 @@ We found a problem of missing all the women who answered no daughter to be cut i
 + Regarding the main model (mcmc model), we also need to think about the interaction between fgc benefits and gender attitudes, because we believe that these two variables has a potential "strong" correlation with each other and need to be tested.  Mike said it can be done by coding "bene x att."
 + another confusing but minor questions:  why don't we just put all the predictors in a x b x c x .....?
 
-
+11/04/16
+ML will remodel the univariate models again via clmm and mcmcglmm.
 
  
