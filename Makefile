@@ -51,14 +51,21 @@ ke5.df.Rout: ke5.benePCA.Rout ke5.recode.Rout df.R
 %.df.Rout: %.recode.Rout df.R
 	   $(run-R)
 
-ke5.multi_fit.Rout: ke5.df.Rout multi_fit.R
-%.multi_fit.Rout: %.df.Rout multi_fit.R
+%.multivariate_df.Rout: %.df.Rout multivariate_df.R
+			$(run-R)
+
+%.futurefgc.Rout: %.df.Rout futurefgc.R
 		  $(run-R)
 
-all.mcmcglmm_fit.Rout: ke5.df.Rds ng5.df.Rds sl5.df.Rds ml5.df.Rds mcmcglmm_fit.R
+%.futurefgcDau.Rout: %.df.Rout futurefgcDau.R
+		     $(run-R)
+
+
+
+all.mcmcglmm_fit.Rout: ke5.multivariate_df.Rds ng5.multivariate_df.Rds sl5.multivariate_df.Rds ml5.multivariate_df.Rds mcmcglmm_fit.R
 	$(run-R)
 
-all_countries: ke5.df.Rout ng5.df.Rout sl5.df.Rout ml5.df.Rout
+all_countries_%.Rout: ke5.%.Rout ng5.%.Rout sl5.%.Rout ml5.%.Rout
 
 ######################################################################
 
