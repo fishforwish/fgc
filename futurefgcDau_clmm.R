@@ -7,7 +7,8 @@ for (r in grep("Rds$", input_files, value=TRUE)){
     dat <- readRDS(r)
 }
 
-dat2 <- head(dat,9000)
+# rdsave(dat)
+
 
 fullmod <- clmm(futurefgcDau~
   fgcstatusMom
@@ -17,6 +18,6 @@ fullmod <- clmm(futurefgcDau~
   + edu + maritalStat + job + urRural + CC
   + ethni + religion
   - 1
-  + (0|clusterId),
-  data=dat2
+  + (1|clusterId),
+  data=dat
 )
