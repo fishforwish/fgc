@@ -5,6 +5,12 @@ yesnodk <- function(x){
   return(y)
 }
 
+
+yesnodkFactor <- function(x){
+  y <- factor(x,levels(x)[c(1,3,2)])
+  return(y)
+}
+
 contfgc <- function(x){
   y <- factor(x,levels(x)[c(2,3,1)])
   return(y)
@@ -38,7 +44,7 @@ scoring <- function(dat, type,funct,idvec=NULL,colnam=NULL){
 
 responseDat <- (Answers 
   %>% select(c(daughterToFgc,id)) 
-  %>% mutate(futurefgcDau = yesnodk(daughterToFgc)
+  %>% mutate(futurefgcDau = yesnodkFactor(daughterToFgc)
     ) 
   %>% select(-c(daughterToFgc))
 )

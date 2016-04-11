@@ -9,7 +9,7 @@ for (r in grep("Rds$", input_files, value=TRUE)){
 
 dat2 <- head(dat,9000)
 
-fullmod <- clmm(futurefgc~
+fullmod <- clmm(futurefgcDau~
   fgcstatusMom
   + bene + media + att
   + group_bene + group_media + group_att + group_fgc
