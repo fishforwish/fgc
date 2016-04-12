@@ -128,4 +128,6 @@ ML will remodel the univariate models again via clmm and mcmcglmm.
 ML finish making univariate MCMCglmm model, going to refit in clmm
 ML I think the problem right now is we added too many covariates into the model. This can lead to (most likely why it is not working for me) is that we are thinning the sample sizes too small such that we have samples with the same response. In theory, and assuming we don't have complete separation problem, we need at last 1 person for each response level. ... complete separation is the next step after this. I tried running all.futurefgcDau.clmm.Rout and not done after 2 hours. 
 
-  
+12/04/16
+
+ML will test complete separation problem with just ethni as covariate. It seems to be a problem in both fixed and random effect, not enough time to investigate, check out error_test.R
