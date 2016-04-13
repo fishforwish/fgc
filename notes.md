@@ -17,6 +17,7 @@ other issues and questions:
 + There is a problem with the big model.  Originally, we wanted to include all the women (with daughters to FGC or not) for their opinion in future FGC practice.  They seemed to be dropped out in the big model, right?
 + How about our secondary question?
 + studying threshold/tipping point: to test if when FGC prevalence reaches certain point , the behaviors start to change (either direction), and if the association of benefit and prevalence also play a crucial role in the "tipping point"?
++ to add Sierra Leone 2008
 
 
 decision:
