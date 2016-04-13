@@ -28,8 +28,8 @@ MCMCmod <- MCMCglmm(
   , prior=prior.c
   , nitt = nitt
   , data=dat
-  , verbose=FALSE
+  , verbose=TRUE
   , family="ordinal"
 )
 
-print(MCMCmod)
+print(summary(MCMCmod))

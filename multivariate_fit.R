@@ -27,7 +27,7 @@ MCMCmod <- MCMCglmm(
   , prior=prior.c
   , nitt = nitt
   , data=dat
-  , verbose=FALSE
+  , verbose=TRUE
   , family=c("ordinal","ordinal")
 )
 
