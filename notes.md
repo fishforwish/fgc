@@ -24,7 +24,7 @@ decision:
 + We agree on using spline for age and wealth keep more power (correct?)
 + Cluster is treated as the only random effect; while ethinicity and religion are fixed.
 + We used score (instead of PCA) to represent Media use, FGC benefits, gender awareness.
-+ + to include wealth, and educationat the community level.
++ to include wealth, and educationat the community level.
 
 
 
