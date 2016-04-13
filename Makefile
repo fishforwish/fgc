@@ -54,7 +54,7 @@ ke5.df.Rout: ke5.benePCA.Rout ke5.recode.Rout df.R
 %.futurefgc.Rout: %.df.Rout futurefgc.R
 		  $(run-R)
 
-%.multivariate_df.Rout: %.df.Rout multivariate_df.R
+%.multivariate.Rout: %.df.Rout multivariate_df.R
 			$(run-R)
 
 all_countries_%: ke5.%.Rout ng5.%.Rout sl5.%.Rout ml5.%.Rout
