@@ -3,7 +3,7 @@
 
 current: target
 
-target pngtarget pdftarget vtarget acrtarget: all.mcmcglmm_fit.Rout 
+target pngtarget pdftarget vtarget acrtarget: all.multivariate.Rout 
 
 ##################################################################
 
