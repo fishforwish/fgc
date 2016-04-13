@@ -26,7 +26,7 @@ decision:
 + Cluster is treated as the only random effect; while ethinicity and religion are fixed.
 + We used score (instead of PCA) to represent Media use, FGC benefits, gender awareness.
 + to include wealth, and educationat the community level.
-
++ to make ethnicity a random because because we don't need the power for the result.  We have enough levels for our reason; and we are not particularly interested in ethinicity for our study.
 
 
 
