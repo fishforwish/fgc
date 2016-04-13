@@ -60,8 +60,6 @@ ke5.df.Rout: ke5.benePCA.Rout ke5.recode.Rout df.R
 %.futurefgcDau.Rout: %.df.Rout futurefgcDau.R
 		     $(run-R)
 
-
-
 all.%.Rout: ke5.%.Rds ng5.%.Rds sl5.%.Rds ml5.%.Rds %_fit.R
 	    $(run-R)
 
@@ -70,6 +68,7 @@ all.%.clmm.Rout: ke5.%.Rds ng5.%.Rds sl5.%.Rds ml5.%.Rds %_clmm.R
 
 all_countries_%: ke5.%.Rout ng5.%.Rout sl5.%.Rout ml5.%.Rout
 		 $(run)
+
 ######################################################################
 
 ## Mike, why do we have so many .mk files? Can we pull these into a Makefile, would that be easier to read and navigate/
