@@ -25,9 +25,6 @@ decision:
 + We agree on using spline for age and wealth (to keep more power, correct?)
 + Cluster is treated as the only random effect; while ethinicity and religion are fixed.
 + We used score (instead of PCA) to represent Media use, FGC benefits, gender awareness.
-+ to include wealth, and education at the community level.
-+ to make ethnicity a random because we don't need the power for the result.  We have enough levels for our reason; and we are not particularly interested in ethinicity for our study.
-
-
-
+* to include wealth, and education at the community level.
+* to make ethnicity a random because we don't need the power for the result.  We have enough levels for our reason; and we are not particularly interested in ethnicity for our study.
 

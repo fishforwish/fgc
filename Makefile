@@ -3,13 +3,13 @@
 
 current: target
 
-target pngtarget pdftarget vtarget acrtarget: all.multivariate.Rout 
+target pngtarget pdftarget vtarget acrtarget: all.futurefgc.Rout 
 
 ##################################################################
 
 # make files
 
-Sources = Makefile .gitignore README.md LICENSE.md journal.txt stuff.mk
+Sources = Makefile .gitignore README.md LICENSE.md journal.txt stuff.mk notes.md
 
 include stuff.mk
 
@@ -60,8 +60,9 @@ ke5.df.Rout: ke5.benePCA.Rout ke5.recode.Rout df.R
 all_countries_%: ke5.%.Rout ng5.%.Rout sl5.%.Rout ml5.%.Rout
 		 $(run)
 
-all.futurefgc.Rout:
-all.multivariate.Rout:
+all.futurefgc.Rout: futurefgc_fit.R
+all.multivariate.Rout: multivariate_fit.R
+
 all.%.Rout: all_countries_% ke5.%.Rds ng5.%.Rds sl5.%.Rds ml5.%.Rds %_fit.R
 	    $(run-R)
 
