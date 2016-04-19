@@ -1,5 +1,5 @@
 library(MCMCglmm)
-nitt <- 5000
+nitt <- 50000
 for (r in grep("Rds$", input_files, value=TRUE)){
   if (exists("dat"))
     dat <- rbind(dat, readRDS(r))
@@ -17,9 +17,9 @@ MCMCmod <- MCMCglmm(
   cbind(as.factor(futurefgc),as.factor(futurefgcDau)) ~ CC*trait * (
     fgcstatusMom
     + bene + media + att
-    + group_bene + group_media + group_att + group_fgc + group_edu + group_wealth
+    + group_bene + group_media + group_att + group_fgc + group_edu
     + splines::ns(age, 4) + splines::ns(wealth, 4) 
-    + edu + wealth + maritalStat + job + urRural 
+    + edu + maritalStat + job + urRural 
     + ethni + religion
   ) - 1
   , random=~us(trait):clusterId
