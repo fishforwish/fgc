@@ -77,6 +77,7 @@ combinedDat <- (combinedDat
     , group_media = mean(media,na.rm=TRUE)
     , group_fgc = mean(fgcstatusMom,na.rm=TRUE)
     , group_edu = mean(edu,na.rm=TRUE)
+    , group_wealth = mean(wealth, na.rm=TRUE)
     )
 )
 

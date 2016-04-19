@@ -18,7 +18,7 @@ MCMCmod <- MCMCglmm(
     fgcstatusMom
     + bene + media + att
     + group_bene + group_media + group_att + group_fgc + group_edu
-    + splines::ns(age, 4) + splines::ns(wealth, 4) 
+    + splines::ns(age, 4) + splines::ns(wealth, 4) + splines:::ns(group_wealth,4)
     + edu + maritalStat + job + urRural 
     + ethni + religion
   ) - 1
