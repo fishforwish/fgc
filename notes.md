@@ -1,6 +1,6 @@
 
 Basically, this paper is about norm and behaviors.
-We studied KMNS: Kenya 2008/9, Mali 2006 cf{the report was in French}, and Nigeria 2008 and Senegal 2005.
+We studied KMNS: Kenya 2008/9, Mali 2006 cf{the report was in French}, and Nigeria 2008 and Sierra Leone 2008.
 
 Research Questions:
 
@@ -17,17 +17,14 @@ other issues and questions:
 + There is a problem with the big model.  Originally, we wanted to include all the women (with daughters to FGC or not) for their opinion in future FGC practice.  They seemed to be dropped out in the big model, right?
 + How about our secondary question?
 + studying threshold/tipping point: to test if when FGC prevalence reaches certain point , the behaviors start to change (either direction), and if the association of benefit and prevalence also play a crucial role in the "tipping point"?
-+ to add Sierra Leone 2008
++ What can this paper tell us about heterogeniety ("a singel critical threshold is unlikely to exist" in Efferson etc '15)
 
 
 decision:
 + This study is about testing hypothesis not prediction.
-+ We agree on using spline for age and wealth keep more power (correct?)
++ We agree on using spline for age and wealth (to keep more power, correct?)
 + Cluster is treated as the only random effect; while ethinicity and religion are fixed.
 + We used score (instead of PCA) to represent Media use, FGC benefits, gender awareness.
-+ to include wealth, and educationat the community level.
-+ to make ethnicity a random because because we don't need the power for the result.  We have enough levels for our reason; and we are not particularly interested in ethinicity for our study.
-
-
-
+* to include wealth, and education at the community level.
+* to make ethnicity a random because we don't need the power for the result.  We have enough levels for our reason; and we are not particularly interested in ethnicity for our study.
 
