@@ -14,7 +14,7 @@ rightfactor <- function(x){
   y <- as.numeric(x)-1
   return(y)
 }
-
+  
 scoring <- function(dat, type,funct,idvec=NULL,colnam=NULL){
   if(is.null(colnam)) colnam = type
   if(!is.null(idvec))(dat <- dat %>% filter(id %in% idvec))
@@ -68,11 +68,15 @@ combinedDat <- (tempcombDat
 )
 
 combinedDat <- (combinedDat 
+  %>% mutate(edu = rightfactor(edu)/mean(edu,na.rm=TRUE)
+    , wealth = wealth/mean(wealth))
   %>% group_by(clusterId)
   %>% mutate(group_bene = mean(bene,na.rm=TRUE)
     , group_att = mean(att,na.rm=TRUE)
-    , group_media= mean(media,na.rm=TRUE)
-    , group_fgc= mean(fgcstatusMom,na.rm=TRUE)
+    , group_media = mean(media,na.rm=TRUE)
+    , group_fgc = mean(fgcstatusMom,na.rm=TRUE)
+    , group_edu = mean(edu,na.rm=TRUE)
+    , group_wealth = mean(wealth,na.rm=TRUE)
     )
 )
 
