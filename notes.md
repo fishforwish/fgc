@@ -7,6 +7,7 @@ Research Questions:
 + The main research question is what the associations are among women's beliefs in FGC benefits, their position on whether to continue FGC practice in the future, and whether to cut their daughters. (only women with daughter to be cut are included)
 + The secondary question:  what the associations are among women's beliefs in FGC benefits and their position on whether to continue FGC practice in the future (all the women are included)
 + Third question:  daughter vs. whether to continue (only women with daughter included) (We migh need it.  This is a model we hope can provide more details to explain the first question).
++ We are going to run versions of our two main models, but without group level covariates.
 
 
 variables:
@@ -27,6 +28,8 @@ decision and facts:
 + att (gender awareness: no=0, DK=1 and yes=2):  the higher the score is, the LESS aware of gender equality a woman feels.  FGC bene (no=0, yes=1):  the higher the score, the stronger in believing FGC beneifts.  Media use (not at all=0..., almost everyday=3):  the higher the score, the more in using media.
 + Cluster is treated as the only random effect; while ethinicity and religion are fixed.
 + We used score (instead of PCA) to represent Media use, FGC benefits, gender awareness.
-* to include wealth, and education at the community level.
-* to make ethnicity a random because we don't need the power for the result.  We have enough levels for our reason; and we are not particularly interested in ethnicity for our study.  BUT we latter decided to put it back as fixed.
++ to include wealth, and education at the community level.
++ to make ethnicity a random because we don't need the power for the result.  We have enough levels for our reason; and we are not particularly interested in ethnicity for our study.  BUT we latter decided to put it back as a fixed variable.
++ We decided to run versionso our two main models, but without group level covariates. (Apr 20, 15)
+
 
