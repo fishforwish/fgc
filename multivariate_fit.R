@@ -32,3 +32,5 @@ MCMCmod <- MCMCglmm(
 )
 
 print(summary(MCMCmod))
+
+# rdsave(MCMCmod)

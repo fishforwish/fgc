@@ -50,11 +50,12 @@ responseDat <- (Answers
 )
 
 covDat <- (Answers
-  %>% select(c(fgc,clusterId,age,id,edu,wealth,ethni
+  %>% select(c(fgc,continueFgc,clusterId,age,id,edu,wealth,ethni
     ,religion,maritalStat, job,urRural,CC,beneAcceptance,attArgue,mediaRadio 
     ))
-  %>% mutate(fgcstatusMom = rightfactor(fgc))
-  %>% select(-fgc)
+  %>% mutate(fgcstatusMom = rightfactor(fgc)
+    , futurefgc = rightfactor(contfgc(continueFgc)))
+  %>% select(-c(fgc,continueFgc))
 )
 
 tempcombDat <- (left_join(responseDat,covDat,by="id") 
@@ -74,11 +75,17 @@ combinedDat <- (tempcombDat
 )
 
 combinedDat <- (combinedDat 
+  %>% mutate(edu = rightfactor(edu)
+    , edu = edu/mean(edu,na.rm=TRUE)
+    )
   %>% group_by(clusterId)
   %>% mutate(group_bene = mean(bene,na.rm=TRUE)
     , group_att = mean(att,na.rm=TRUE)
     , group_media= mean(media,na.rm=TRUE)
     , group_fgc= mean(fgcstatusMom,na.rm=TRUE)
+    , group_futurefgc = mean(futurefgc,na.rm=TRUE)
+    , group_edu = mean(edu,na.rm=TRUE)
+    , group_wealth = mean(wealth, na.rm=TRUE)
   )
 )
 

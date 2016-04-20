@@ -16,10 +16,10 @@ print(summary(dat))
 
 MCMCmod <- MCMCglmm(
   as.factor(futurefgcDau) ~
-    fgcstatusMom
+    fgcstatusMom + futurefgc 
   + bene + media + att
-  + group_bene + group_media + group_att + group_fgc
-  + splines::ns(age, 4) + splines::ns(wealth, 4) 
+  + group_bene + group_media + group_att + group_fgc + group_edu
+  + splines::ns(age, 4) + splines::ns(wealth, 4) + splines::ns(group_wealth,4)
   + edu + maritalStat + job + urRural + CC
   + ethni + religion
   - 1
@@ -28,8 +28,9 @@ MCMCmod <- MCMCglmm(
   , prior=prior.c
   , nitt = nitt
   , data=dat
-  , verbose=FALSE
+  , verbose=TRUE
   , family="ordinal"
 )
 
-print(MCMCmod)
+# rdsave(MCMCmod)
+print(summary(MCMCmod))

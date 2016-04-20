@@ -1,9 +1,9 @@
 # fgc
 ### Hooks for the editor to set the default target
 
-current: target
+current: all
 
-target pngtarget pdftarget vtarget acrtarget: all.futurefgc.Rout 
+target pngtarget pdftarget vtarget acrtarget: all.futurefgcDau.Rout 
 
 ##################################################################
 
@@ -54,6 +54,9 @@ ke5.df.Rout: ke5.benePCA.Rout ke5.recode.Rout df.R
 %.futurefgc.Rout: %.df.Rout futurefgc.R
 		  $(run-R)
 
+%.futurefgcDau.Rout: %.df.Rout futurefgcDau.R
+		     $(run-R)
+
 %.multivariate.Rout: %.df.Rout multivariate_df.R
 			$(run-R)
 
@@ -61,11 +64,13 @@ all_countries_%: ke5.%.Rout ng5.%.Rout sl5.%.Rout ml5.%.Rout
 		 $(run)
 
 all.futurefgc.Rout: futurefgc_fit.R
+all.futurefgcDau.Rout: futurefgcDau_fit.R
 all.multivariate.Rout: multivariate_fit.R
-
 all.%.Rout: all_countries_% ke5.%.Rds ng5.%.Rds sl5.%.Rds ml5.%.Rds %_fit.R
 	    $(run-R)
 
+
+all: all.futurefgc.Rout all.futurefgcDau.Rout all.multivariate.Rout
 
 ######################################################################
 
