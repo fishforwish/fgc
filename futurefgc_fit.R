@@ -7,19 +7,19 @@ for (r in grep("Rds$", input_files, value=TRUE)){
     dat <- readRDS(r)
 }
 
-# rdsave(dat)
 
 prior.c <- list(R=list(list(V=diag(1),nu=5)),
                 G=list(list(V=diag(1),nu=5)))
 
 print(summary(dat))
 
-MCMCmod <- MCMCglmm(
+futurefgc_full <- MCMCglmm(
     as.factor(futurefgc) ~ CC*(
     fgcstatusMom
     + bene + media + att
-    + group_bene + group_media + group_att + group_fgc + group_edu 
-    + splines::ns(age, 4) + splines::ns(wealth, 4) + splines:::ns(group_wealth,4)
+    + group_bene + group_media + group_att 
+    + group_fgc + group_edu + splines:::ns(group_wealth,4)
+    + splines::ns(age, 4) + splines::ns(wealth, 4) 
     + edu + maritalStat + job + urRural
     + ethni + religion)
    - 1
@@ -28,9 +28,32 @@ MCMCmod <- MCMCglmm(
   , prior=prior.c
   , nitt = nitt
   , data=dat
-  , verbose=TRUE
+  , slice=TRUE
+  , verbose=FALSE
   , family="ordinal"
 )
 
-print(summary(MCMCmod))
+print(summary(futurefgc_full))
+
+futurefgc_ind <- MCMCglmm(
+  as.factor(futurefgc) ~ CC*(
+    fgcstatusMom
+    + bene + media + att
+    + splines::ns(age, 4) + splines::ns(wealth, 4)
+    + edu + maritalStat + job + urRural
+    + ethni + religion)
+  - 1
+  , random=~clusterId
+  , rcov=~units
+  , prior=prior.c
+  , nitt = nitt
+  , data=dat
+  , verbose=FALSE
+  , slice = TRUE
+  , family="ordinal"
+)
+
+print(summary(futurefgc_ind))
+
+
 # rdsave(MCMCmod)
