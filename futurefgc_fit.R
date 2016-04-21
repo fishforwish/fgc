@@ -54,6 +54,3 @@ futurefgc_ind <- MCMCglmm(
 )
 
 print(summary(futurefgc_ind))
-
-
-# rdsave(MCMCmod)

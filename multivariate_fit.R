@@ -54,4 +54,3 @@ multivariate_ind <- MCMCglmm(
 
 print(summary(multivariate_ind))
 
-# rdsave(MCMCmod)
