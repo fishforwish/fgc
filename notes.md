@@ -14,7 +14,7 @@ variables:
 + In the main model, the predictors are women’s FGC status and FGC benefits  (see the list of FGC benefits at table--) and the response variables are women’s opinion on whether the practice of FGC, and whether to cut their daughters.  In the secondary model, women’s gender awareness is the predictor and beliefs of FGC benefits the response.
 + other covariates:  country \cf{We don’t need this if we analyze each country separately}, age, education, wealth, ethnicity, religion, marital status, work status, residence (urban vs. rural), media use (another PCA or score?) and gender awareness.
 + covariates at a community level:  education, wealth, media use, FGC benefits, gender awareness and FGC prevalence
-+ 
+
 other issues and questions:
 + to think about the fourth question?
 + studying threshold/tipping point: to test if when FGC prevalence reaches certain point , the behaviors start to change (either direction), and if the association of benefit and prevalence also play a crucial role in the "tipping point"?
@@ -25,7 +25,7 @@ other issues and questions:
 Background:
 + att (gender awareness: no=0, DK=1 and yes=2):  the higher the score is, the LESS aware of gender equality a woman feels.  FGC bene (no=0, yes=1):  the higher the score, the stronger in believing FGC beneifts.  Media use (not at all=0..., almost everyday=3):  the higher the score, the more in using media.
 + media scores from 0-3 (3 questions), att 0-2 (5 questions), bene 0-2 (9 questions).
-+ 
+
 Decisions:
 + This study is about testing hypothesis not prediction.
 + We agree on using spline for age and wealth (to keep more power, correct?)
