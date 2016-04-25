@@ -10,12 +10,12 @@ Research Questions:
 + We are going to run versions of our two main models, but without group level covariates.
 
 
-variables:
+Variables:
 + In the main model, the predictors are women’s FGC status and FGC benefits  (see the list of FGC benefits at table--) and the response variables are women’s opinion on whether the practice of FGC, and whether to cut their daughters.  In the secondary model, women’s gender awareness is the predictor and beliefs of FGC benefits the response.
 + other covariates:  country \cf{We don’t need this if we analyze each country separately}, age, education, wealth, ethnicity, religion, marital status, work status, residence (urban vs. rural), media use (another PCA or score?) and gender awareness.
 + covariates at a community level:  education, wealth, media use, FGC benefits, gender awareness and FGC prevalence
 
-other issues and questions:
+Other issues and questions:
 + to think about the fourth question?
 + studying threshold/tipping point: to test if when FGC prevalence reaches certain point , the behaviors start to change (either direction), and if the association of benefit and prevalence also play a crucial role in the "tipping point"?
 + Efferson etc's paper (15):  What can it tell us about heterogeniety ("a singel critical threshold is unlikely to exist"). They argued that FGC is not a socially conditined norm.  Will our findings support or rebut it?
