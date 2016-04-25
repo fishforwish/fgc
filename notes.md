@@ -4,8 +4,8 @@ We studied KMNS: Kenya 2008/9, Mali 2006 (C: the report was in French), Nigeria 
 
 Research Questions:
 
-+ The main research question is what the associations are among women's beliefs in FGC benefits, their position on whether to continue FGC practice in the future, and whether to cut their daughters. (only women with daughter to be cut are included)
-+ The secondary question:  what the associations are among women's beliefs in FGC benefits and their position on whether to continue FGC practice in the future (all the women are included)
++ The main research question (all multivariate) is what the associations are among women's beliefs in FGC benefits, their position on whether to continue FGC practice in the future, and whether to cut their daughters. (only women with daughter to be cut are included)
++ The secondary question (all future fgc):  what the associations are among women's beliefs in FGC benefits and their position on whether to continue FGC practice in the future (all the women are included)
 + Third question:  daughter vs. whether to continue (only women with daughter included) (We migh need it.  This is a model we hope can provide more details to explain the first question).
 + We are going to run versions of our two main models, but without group level covariates.
 
