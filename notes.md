@@ -34,3 +34,14 @@ Decisions:
 + to include wealth, and education at the community level.
 + to make ethnicity a random because we don't need the power for the result.  We have enough levels for our reason; and we are not particularly interested in ethnicity for our study.  BUT we latter decided to put it back as a fixed variable.
 + We decided to run versionso our two main models, but without group level covariates. (Apr 20, 15)
+
+## 26 Apr 2016
+
+* Can we get medians instead of means in the main summary? If not, where do we get medians and how do we manipulate them?
+
+* Two different (?) things about contrasts and manipulating co-ordinates:
+  * Make _prediction_ plots that show the effect of each variable with respect to the model center
+    * This is also important for the splined variables
+  * Use _contrasts_ to have the main effects show up as _averaged_ over countries
+    * BB says that `broom` is "relevant" but not "ready"
+
