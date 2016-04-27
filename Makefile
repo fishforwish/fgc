@@ -63,6 +63,9 @@ ke5.df.Rout: ke5.benePCA.Rout ke5.recode.Rout df.R
 all_countries_%: ke5.%.Rout ng5.%.Rout sl5.%.Rout ml5.%.Rout
 		 $(run)
 
+all.%_clmm.Rout: all_countries_% ke5.%.Rds ng5.%.Rds sl5.%.Rds ml5.%.Rds futurefgc_clmm.R
+			 $(run-R)
+
 all.futurefgc.Rout: futurefgc_fit.R
 all.futurefgcDau.Rout: futurefgcDau_fit.R
 all.multivariate.Rout: multivariate_fit.R
