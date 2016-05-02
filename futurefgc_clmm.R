@@ -19,7 +19,7 @@ fullmod <- clmm(futurefgc~
     + edu + maritalStat + job + urRural
     + ethni + religion
     + (1|clusterId),
-    data=dat
+    data=dat2
 )
 
 print(summary(fullmod))
