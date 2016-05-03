@@ -34,20 +34,19 @@ print(summary(dat))
 # )
 # 
 # print(summary(futurefgc_full))
-
+dat2 <- head(dat,4000)
 futurefgc_ind <- MCMCglmm(
-  as.factor(futurefgc) ~CC:fgcstatusMom
+  as.factor(futurefgc) ~ CC:fgcstatusMom
     + CC:bene + CC:media + CC:att + CC:edu
-#     + CC:splines::ns(age, 4) + CC:splines::ns(wealth, 4)
-#     + CC:maritalStat 
-#     + CC:job
-#     + CC:urRural + CC:ethni + CC:religion
-  - 1
+    + CC:splines::ns(age, 4) + CC:splines::ns(wealth, 4)
+    + CC:maritalStat 
+    + CC:job
+    + CC:urRural + CC:ethni + CC:religion
   , random=~clusterId
   , rcov=~units
   , prior=prior.c
   , nitt = nitt
-  , data=dat
+  , data=dat2
   , singular.ok = TRUE
   , verbose=TRUE
   , slice = TRUE
