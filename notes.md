@@ -50,3 +50,7 @@ Decisions:
     * BB says that `broom` is "relevant" but not "ready"
 
 * Should we try to make general manipulation tools, or should we be taking advantage of our current Bayesian framework to do stuff the easy way?
+
+
+## 3rd May 2016
+Meng, X. L. (1994). Posterior predictive p-values. Ann. Statist. 22, 1142-1160. 
