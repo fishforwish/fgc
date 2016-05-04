@@ -32,7 +32,7 @@ Decisions:
 * We agree on using spline for age and wealth (to keep more power, correct?)
 * We used score (instead of PCA) to represent Media use, FGC benefits, gender awareness.
 * to include wealth, and education at the community level.
-* to make ethnicity a random because we don't need the power for the result.  We have enough levels for our reason; and we are not particularly interested in ethnicity for our study.  BUT we latter decided to put it back as a fixed variable.
+* to make ethnicity a random because we don't need the power for the result.  We have enough levels for our reason; and we are not particularly interested in ethnicity for our study.  __BUT__ we latter decided to put it back as a fixed variable.
 * We decided to run versionso our two main models, but without group level covariates. (Apr 20, 15)
 
 ## 20 Apr 2016
@@ -65,3 +65,42 @@ We can test "norms" now via anova LRT.
 Question: Are we happy? Does it make sense? More validation? Use MCMCglmm vs ordinal? 
 * Is there a guideline for baseline?  e.g., ethinicity?
 
+
+----------------------------------------------------------------------
+
+4 May
+
+We don't want to wait until we're able to do multivariate-response models, so we are going forward with a set of "structural" univariate-response models:
+
+futurefgc ~ indiv-level covariates
+fgcDau ~ indiv-level covariates
+fgcDau ~ indiv-level covariates + futurefgc
+
+We're defining this as the main model
+
+The next step will be to try to disentangle individual vs group effects from these models. The idea will be that if we put in normalized individual-level and group-level covariates, they should compete to explain the effects seen in the individual-level models. We're putting this off a bit because we're not sure how we will visualize this for the multi-parameter variables wealth and age, so we want to see what we can do with the individual-level models first.
+
+----------------------------------------------------------------------
+
+Unfortunately, we can't put country back in in this framework! Should we go back to mcmcglmm, but still try to simplify?
+
+One idea, an mcmcglmm model with
+* ethnicity, country and cluster all as random effects
+* country should be associated with random slopes for all the key variables as well. In lme4 syntax
+
+futurefgc~
+  fgcstatusMom
+  + bene + media + att
+  + splines::ns(age, 4) + splines::ns(wealth, 4)
+  + edu + maritalStat + job + urRural
+  + religion
+  + (1 | ethnicity) + (1 | clusterId)
+  + (bene + media + att 
+    + splines::ns(age, 4) + splines::ns(wealth, 4)
+  | country)
+
+Alternatively, we could use the similar model we already have (with country as a fixed effect with interactions) if we can solve part of the centering problem (maybe simply by using weighted sum-to-zero contrasts on country).
+
+Another option that we considered is to simply do a different model for each country because of this computer problem. JD is against that. ML thinks that these proposals are too hard.
+
+ML will do a better job documenting and sharing important obstacles. Maybe we can overcome some of them.
