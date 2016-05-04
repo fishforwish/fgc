@@ -53,4 +53,14 @@ Decisions:
 
 
 ## 3rd May 2016
-Meng, X. L. (1994). Posterior predictive p-values. Ann. Statist. 22, 1142-1160. 
+Meng, X. L. (1994). Posterior predictive p-values. Ann. Statist. 22, 1142-1160.
+
+## 4th May 2016
+Let's simplify the problem and do the countries separately. The baseline problem is actually a big deal because we don't want to compare against the "baseline" ie. ke.no_job to ml.yes_job..." 
+MCMCglmm does not seem to have anova/ something to test variable level statistics, ie, don't have something to test the question "does ethnicity in general affect futurefgc"
+Went back and have a better understanding of ordinal and clmm's. clmm (or clmm1) can do multiple RE but via LA and blows up/ spits back NAs for sd.err. clmm2 can do AGQ but only do one RE (back then we were trying to do response AND dlusterID and didn't follow up and gave up). 
+
+We can test "norms" now via anova LRT. 
+
+Question: Are we happy? Does it make sense? More validation? Use MCMCglmm vs ordinal? 
+
