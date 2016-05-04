@@ -63,4 +63,5 @@ Went back and have a better understanding of ordinal and clmm's. clmm (or clmm1)
 We can test "norms" now via anova LRT. 
 
 Question: Are we happy? Does it make sense? More validation? Use MCMCglmm vs ordinal? 
+* Is there a guideline for baseline?  e.g., ethinicity?
 
