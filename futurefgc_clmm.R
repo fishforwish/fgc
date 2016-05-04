@@ -21,8 +21,6 @@ system.time(fullmod <- clmm2(futurefgc~
     , Hess = TRUE
 ))
 
-print(summary(fullmod))
-
 system.time(indmod <- clmm2(futurefgc~
   fgcstatusMom
   + bene + media + att
