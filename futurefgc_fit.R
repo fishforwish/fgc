@@ -24,7 +24,6 @@ print(summary(dat))
 
 futurefgc_ind <- MCMCglmm(
   as.factor(futurefgc) ~ fgcstatusMom
-    + CC
     + bene + media + att + edu
     + splines::ns(age, 4) + splines::ns(wealth, 4)
     + maritalStat 
