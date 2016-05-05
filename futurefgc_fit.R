@@ -12,9 +12,10 @@ dat <- dat[sample(1:nrow(dat),5000),]
 prior.c <- list(R=list(list(V=diag(1),nu=5)),
                 G=list(list(Vcomm=diag(1),nu=5)
                        , list(Veth=diag(1),nu=5)
-                       , list(VCCB=diag(4),nu=5)
-                       , list(VCCA=diag(4),nu=5)
-                       , list(VCCM=diag(4),nu=5)
+                       , list(VCC=diag(1),nu=5)
+                       , list(VCCB=diag(1),nu=5)
+                       , list(VCCA=diag(1),nu=5)
+                       , list(VCCM=diag(1),nu=5)
 #                        , list(VCCAGE=diag(1),nu=5)
 #                        , list(VCCW=diag(1),nu=5)
 ))
@@ -30,8 +31,8 @@ futurefgc_ind <- MCMCglmm(
     + job
     + urRural + religion
     - 1
-  , random=~clusterId + ethni 
-    + us(CC):bene + us(CC):att + us(CC):media 
+  , random=~clusterId + ethni + CC 
+    + bene:CC + att:CC + media:CC 
     # + CC:splines::ns(age,4) + CC:splines::ns(wealth,4) 
   , rcov=~units
   , prior=prior.c
