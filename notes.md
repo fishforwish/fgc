@@ -104,3 +104,9 @@ Alternatively, we could use the similar model we already have (with country as a
 Another option that we considered is to simply do a different model for each country because of this computer problem. JD is against that. ML thinks that these proposals are too hard.
 
 ML will do a better job documenting and sharing important obstacles. Maybe we can overcome some of them.
+
+----------------------------------------------------------------------
+
+May 9th
+
+ML: The reason why ns (spline) did not work the before thus via splines:::ns is because MCMCglmm has its own spline function (spl) and it __claims__ it does orthgonial spline design. I figured out how to do the proposed models from last meeting and now running futurefgc_ind and futurefgc_full on yushan. I still have 4 more models to do (daughter_ind/full and futuredau_ind/full) 
