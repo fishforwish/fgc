@@ -37,7 +37,7 @@ futurefgc_ind <- MCMCglmm(
   , rcov=~units
   , prior=prior.ind
   , nitt = nitt
-  , data=dat
+  , data=dat2
 #   , singular.ok = TRUE
    , verbose=TRUE
 #   , slice = TRUE

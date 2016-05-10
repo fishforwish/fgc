@@ -41,7 +41,7 @@ daughterfgc_ind <- MCMCglmm(
   , rcov=~units
   , prior=prior.ind
   , nitt = nitt
-  , data=dat2
+  , data=dat
   #   , singular.ok = TRUE
   , verbose=TRUE
   #   , slice = TRUE
