@@ -114,6 +114,7 @@ ML: The reason why ns (spline) did not work the before thus via splines:::ns is 
 ----------------------------------------------------------------------
 
 May 10th
+
 DO NOT DO ANY DPLYR RIGHT BEFORE MCMCGLMM
 Running into a lot of trouble with priors.
 Error in MCMCglmm(as.factor(futurefgc) ~ fgcstatusMom + bene + media +  : 
@@ -126,4 +127,4 @@ Error in MCMCglmm(as.factor(futurefgc) ~ fgcstatusMom + bene + media +  :
 
 nu=0.0002 with singular.ok or high nu no singular.ok
 
-I am taking out spl(age) and spl(wealth) country RE. Finished all models, running on yushan now.
+We are out spl(age) and spl(wealth) country RE __because of the G/R problem__. Finished all models, running on yushan now.
