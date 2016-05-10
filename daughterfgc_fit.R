@@ -14,15 +14,15 @@ for (r in grep("Rds$", input_files, value=TRUE)){
 # dat <- dat[sample(1:nrow(dat),5000),]
 
 set.seed(101)
-prior.ind <- list(R=list(list(V=diag(1),nu=5)),
-                  G=list(list(Vcomm=diag(1),nu=5)
-                         , list(Veth=diag(1),nu=5)
-                         , list(VCC=diag(1),nu=5)
-                         , list(VCCB=diag(1),nu=5)
-                         , list(VCCA=diag(1),nu=5)
-                         , list(VCCM=diag(1),nu=5)
-                         , list(VCCAGE=diag(4),nu=5)
-                         , list(VCCW=diag(4),nu=5)
+prior.ind <- list(R=list(list(V=diag(1),nu=10)),
+                  G=list(list(Vcomm=diag(1),nu=10)
+                         , list(Veth=diag(1),nu=10)
+                         , list(VCC=diag(1),nu=10)
+                         , list(VCCB=diag(1),nu=10)
+                         , list(VCCA=diag(1),nu=10)
+                         , list(VCCM=diag(1),nu=10)
+                         , list(VCCAGE=diag(4),nu=10)
+                         , list(VCCW=diag(4),nu=10)
                   ))
 
 print(summary(dat))

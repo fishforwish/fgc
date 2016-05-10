@@ -1,4 +1,3 @@
-library(dplyr)
 library(MCMCglmm)
 nitt <- 20000
 for (r in grep("Rds$", input_files, value=TRUE)){
@@ -7,9 +6,6 @@ for (r in grep("Rds$", input_files, value=TRUE)){
   else
     dat <- readRDS(r)
 }
-aa <- names(table(dat$clusterId)[table(dat$clusterId)>1])
-
-dat <- dat %>% filter(clusterId %in% aa)
 
 # dat <- dat[sample(1:nrow(dat),5000),]
 
