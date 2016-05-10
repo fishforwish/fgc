@@ -115,3 +115,14 @@ ML: The reason why ns (spline) did not work the before thus via splines:::ns is 
 
 May 10th
 DO NOT DO ANY DPLYR RIGHT BEFORE MCMCGLMM
+Running into a lot of trouble with priors.
+Error in MCMCglmm(as.factor(futurefgc) ~ fgcstatusMom + bene + media +  : 
+  ill-conditioned cross-product: can't form Cholesky factor 
+
+with nu=0.0002 without singular.ok
+
+Error in MCMCglmm(as.factor(futurefgc) ~ fgcstatusMom + bene + media +  : 
+  ill-conditioned G/R structure (CN = 8630392281685741.000000): use proper priors if you haven't or rescale data if you have 
+
+nu=0.0002 with singular.ok or high nu no singular.ok
+
