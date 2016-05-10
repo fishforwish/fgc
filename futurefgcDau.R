@@ -20,9 +20,9 @@ rightfactor <- function(x){
   y <- as.numeric(x)-1
   return(y)
 }
-aa <- names(table(Answers$clusterId)[table(Answers$clusterId)>1])
-
-Answers <- Answers %>% filter(clusterId %in% aa)
+# aa <- names(table(Answers$clusterId)[table(Answers$clusterId)>1])
+# 
+# Answers <- Answers %>% filter(clusterId %in% aa)
 
 
 scoring <- function(dat, type,funct,idvec=NULL,colnam=NULL){

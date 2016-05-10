@@ -6,12 +6,6 @@ for (r in grep("Rds$", input_files, value=TRUE)){
   else
     dat <- readRDS(r)
 }
-# 
-# aa <- names(table(dat$clusterId)[table(dat$clusterId)>1])
-# 
-# dat <- dat %>% filter(clusterId %in% aa)
-
-# dat <- dat[sample(1:nrow(dat),5000),]
 
 set.seed(101)
 prior.ind <- list(R=list(list(V=diag(1),nu=10)),
@@ -21,8 +15,8 @@ prior.ind <- list(R=list(list(V=diag(1),nu=10)),
                          , list(VCCB=diag(1),nu=10)
                          , list(VCCA=diag(1),nu=10)
                          , list(VCCM=diag(1),nu=10)
-                         , list(VCCAGE=diag(4),nu=10)
-                         , list(VCCW=diag(4),nu=10)
+#                          , list(VCCAGE=diag(4),nu=10)
+#                          , list(VCCW=diag(4),nu=10)
                   ))
 
 print(summary(dat))
@@ -37,7 +31,7 @@ daughterfgc_ind <- MCMCglmm(
   - 1
   , random=~clusterId + ethni + CC 
   + bene:CC + att:CC + media:CC 
-  + us(spl(age,k=4)):CC + us(spl(wealth,k=4)):CC 
+  # + us(spl(age,k=4)):CC + us(spl(wealth,k=4)):CC 
   , rcov=~units
   , prior=prior.ind
   , nitt = nitt
@@ -57,12 +51,12 @@ prior.full <- list(R=list(list(V=diag(1),nu=5)),
                           , list(VCCB=diag(1),nu=5)
                           , list(VCCA=diag(1),nu=5)
                           , list(VCCM=diag(1),nu=5)
-                          , list(VCCAGE=diag(4),nu=5)
-                          , list(VCCW=diag(4),nu=5)
+#                           , list(VCCAGE=diag(4),nu=5)
+#                           , list(VCCW=diag(4),nu=5)
                           , list(VCCGB=diag(1),nu=5)
                           , list(VCCGA=diag(1),nu=5)
                           , list(VCCGM=diag(1),nu=5)
-                          , list(VCCGW=diag(4),nu=5)
+                          # , list(VCCGW=diag(4),nu=5)
                    ))
 
 daughterfgc_full <- MCMCglmm(
@@ -75,9 +69,9 @@ daughterfgc_full <- MCMCglmm(
   - 1
   , random=~clusterId + ethni + CC
   + bene:CC + att:CC + media:CC 
-  + us(spl(age,k=4)):CC + us(spl(wealth,k=4)):CC 
+  # + us(spl(age,k=4)):CC + us(spl(wealth,k=4)):CC 
   + group_bene:CC + group_att:CC + group_media:CC
-  + us(spl(group_wealth,k=4)):CC
+  # + us(spl(group_wealth,k=4)):CC
   , rcov=~units
   , prior=prior.full
   , nitt = nitt
