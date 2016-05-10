@@ -1,11 +1,14 @@
 library(MCMCglmm)
-nitt <- 20000
+nitt <- 5000
 for (r in grep("Rds$", input_files, value=TRUE)){
   if (exists("dat"))
     dat <- rbind(dat, readRDS(r))
   else
     dat <- readRDS(r)
 }
+
+dat <- dat[sample(1:nrow(dat),5000),]
+
 set.seed(101)
 prior.ind <- list(R=list(list(V=diag(1),nu=5)),
                 G=list(list(Vcomm=diag(1),nu=5)
@@ -36,7 +39,7 @@ futurefgc_ind <- MCMCglmm(
   , nitt = nitt
   , data=dat
 #   , singular.ok = TRUE
-   , verbose=FALSE
+   , verbose=TRUE
 #   , slice = TRUE
   , family="ordinal"
 )
