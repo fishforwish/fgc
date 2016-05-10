@@ -1,5 +1,5 @@
 library(MCMCglmm)
-nitt <- 5000
+nitt <- 20000
 for (r in grep("Rds$", input_files, value=TRUE)){
   if (exists("dat"))
     dat <- rbind(dat, readRDS(r))
@@ -7,9 +7,9 @@ for (r in grep("Rds$", input_files, value=TRUE)){
     dat <- readRDS(r)
 }
 
-aa <- names(table(dat$clusterId)[table(dat$clusterId)>1])
-
-dat2 <- dat %>% filter(clusterId %in% aa)
+# aa <- names(table(dat$clusterId)[table(dat$clusterId)>1])
+# 
+# dat2 <- dat %>% filter(clusterId %in% aa)
 
 # dat <- dat[sample(1:nrow(dat),5000),]
 
@@ -43,7 +43,7 @@ daughterfgc_ind <- MCMCglmm(
   , nitt = nitt
   , data=dat
   #   , singular.ok = TRUE
-  , verbose=TRUE
+  , verbose=FALSE
   #   , slice = TRUE
   , family="ordinal"
 )
