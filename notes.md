@@ -126,3 +126,4 @@ Error in MCMCglmm(as.factor(futurefgc) ~ fgcstatusMom + bene + media +  :
 
 nu=0.0002 with singular.ok or high nu no singular.ok
 
+I am taking out spl(age) and spl(wealth) country RE. Finished all models, running on yushan now.

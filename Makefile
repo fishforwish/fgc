@@ -74,7 +74,7 @@ all.%.Rout: all_countries_% ke5.%.Rds ng5.%.Rds sl5.%.Rds ml5.%.Rds %_fit.R
 	    $(run-R)
 
 
-all: all.futurefgc.Rout all.multivariate.Rout
+all: all.futurefgc.Rout all.daughterfgc.Rout all.futurefgcDau.Rout
 
 ######################################################################
 

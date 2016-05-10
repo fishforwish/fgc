@@ -1,5 +1,5 @@
 library(MCMCglmm)
-nitt <- 20000
+nitt <- 5000
 for (r in grep("Rds$", input_files, value=TRUE)){
   if (exists("dat"))
     dat <- rbind(dat, readRDS(r))
@@ -65,7 +65,7 @@ daughterfgc_full <- MCMCglmm(
   + group_bene + group_media + group_att 
   + group_fgc + group_edu + spl(group_wealth,4)
   + spl(age, 4) + spl(wealth, 4) 
-  + maritalStat + CC:job + CC:urRural
+  + maritalStat + job + urRural
   - 1
   , random=~clusterId + ethni + CC
   + bene:CC + att:CC + media:CC 
