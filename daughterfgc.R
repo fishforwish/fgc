@@ -80,7 +80,7 @@ combinedDat <- (combinedDat
   %>% mutate(group_bene = mean(bene,na.rm=TRUE)
     , group_att = mean(att,na.rm=TRUE)
     , group_media = mean(media,na.rm=TRUE)
-    , group_fgc = mean(fgcstatusMom,na.rm=TRUE)
+    , group_fgcstatusMom = mean(fgcstatusMom,na.rm=TRUE)
     , group_edu = mean(edu,na.rm=TRUE)
     , group_wealth = mean(wealth, na.rm=TRUE)
     )

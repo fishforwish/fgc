@@ -1,5 +1,5 @@
 library(MCMCglmm)
-nitt <- 5000
+nitt <- 50000
 for (r in grep("Rds$", input_files, value=TRUE)){
   if (exists("dat"))
     dat <- rbind(dat, readRDS(r))
@@ -28,7 +28,6 @@ daughterfgc_ind <- MCMCglmm(
   + maritalStat 
   + job
   + urRural + religion
-  - 1
   , random=~clusterId + ethni + CC 
   + bene:CC + att:CC + media:CC 
   # + us(spl(age,k=4)):CC + us(spl(wealth,k=4)):CC 
@@ -61,12 +60,14 @@ prior.full <- list(R=list(list(V=diag(1),nu=5)),
 
 daughterfgc_full <- MCMCglmm(
   as.factor(futurefgcDau) ~ fgcstatusMom
-  + bene + media + att
-  + group_bene + group_media + group_att 
-  + group_fgc + group_edu + spl(group_wealth,4)
-  + spl(age, 4) + spl(wealth, 4) 
-  + maritalStat + job + urRural
-  - 1
+  + group_fgcstatusMom
+  + bene + group_bene 
+  + media + group_media 
+  + att + group_att 
+  + edu + group_edu 
+  + spl(wealth, 4) + spl(group_wealth,4)
+  + spl(age, 4)  
+  + maritalStat + job + urRural + religion
   , random=~clusterId + ethni + CC
   + bene:CC + att:CC + media:CC 
   # + us(spl(age,k=4)):CC + us(spl(wealth,k=4)):CC 
