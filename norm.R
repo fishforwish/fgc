@@ -1,3 +1,4 @@
+library(MCMCglmm)
 library(dplyr)
 library(ggplot2)
 input_files <- c("all_countries_futurefgc", "ke5.futurefgc.Rds", "ng5.futurefgc.Rds", "sl5.futurefgc.Rds", "ml5.futurefgc.Rds")
@@ -41,4 +42,4 @@ adjust_full <- (adjust(pred_full,predsd,full_df)
   %>% summarise_each(funs(mean))
 )
 
-print(adjust_ind)
+print(adjust_full)

@@ -1,5 +1,6 @@
 library(MCMCglmm)
-nitt <- 50000
+nitt <- 5000
+
 for (r in grep("Rds$", input_files, value=TRUE)){
   if (exists("dat"))
     dat <- rbind(dat, readRDS(r))
@@ -7,7 +8,7 @@ for (r in grep("Rds$", input_files, value=TRUE)){
     dat <- readRDS(r)
 }
 
-# dat <- dat[sample(1:nrow(dat),5000),]
+dat <- dat[sample(1:nrow(dat),5000),]
 
 set.seed(101)
 prior.ind <- list(R=list(list(V=diag(1),nu=5)),
