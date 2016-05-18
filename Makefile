@@ -76,6 +76,9 @@ all.%.Rout: all_countries_% ke5.%.Rds ng5.%.Rds sl5.%.Rds ml5.%.Rds %_fit.R
 
 all: all.futurefgc.Rout all.daughterfgc.Rout all.futurefgcDau.Rout
 
+adjust.Rout:		norm.R
+			$(run-R)
+
 ######################################################################
 
 ## Mike, why do we have so many .mk files? Can we pull these into a Makefile, would that be easier to read and navigate/
