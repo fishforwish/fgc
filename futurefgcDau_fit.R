@@ -7,8 +7,6 @@ for (r in grep("Rds$", input_files, value=TRUE)){
     dat <- readRDS(r)
 }
 
-# rdsave(dat)
-
 
 set.seed(101)
 prior.ind <- list(R=list(list(V=diag(1),nu=10)),
