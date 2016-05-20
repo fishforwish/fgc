@@ -1,6 +1,8 @@
 library(ggplot2)
 
-combined_df <- rbind(futurefgc_df,daughterfgc_df,futurefgcDau_df)
+combined_df <- rbind(futurefgc_df,daughterfgc_df
+                     # ,futurefgcDau_df
+                     )
 
 g1 <- (ggplot(combined_df,aes(x=model_cov,y=value,group=model_cov))
        + geom_line()
