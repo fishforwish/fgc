@@ -22,6 +22,7 @@ ind_df <- summary(futurefgc_ind)$solution[pred_ind,interval]
 ind_scaled <- as.numeric(predsd_ind)*ind_df
 ind_scaled <- data.frame(ind_scaled
   , model="ind"
+  , covtype="ind"
   , type=row.names(ind_scaled)
   , cov=row.names(ind_scaled))
 
@@ -40,12 +41,14 @@ full_df <- summary(futurefgc_full)$solution[pred_full,interval]
 full_scaled <- as.numeric(predsd_full)*full_df
 full_scaled <- data.frame(full_scaled
   , model="full"
+  , covtype=rep(c("full_ind","full_group"),nrow(ind_scaled))
   , type=rep(row.names(ind_scaled),each=2)
-  , cov=row.names(full_scaled))
+  , cov=row.names(full_scaled)
+  )
 
 all_df <- rbind(ind_scaled,full_scaled)
 
-melt_df <- melt(all_df,id.vars = c("model","type","cov"))
+melt_df <- melt(all_df,id.vars = c("model","type","cov","covtype"))
 futurefgc_df <- (melt_df 
   %>% unite(model_cov,model,cov)
   %>% mutate(model="futurefgc")

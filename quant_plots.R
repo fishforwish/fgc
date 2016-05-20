@@ -8,7 +8,7 @@ combined_df <- rbind(futurefgc_df,daughterfgc_df
                     ,futurefgcDau_df
                     )
 
-g1 <- (ggplot(combined_df,aes(x=model_cov,y=value,group=model_cov))
+g1 <- (ggplot(combined_df,aes(x=model_cov,y=value,group=model_cov,color=covtype))
        + geom_line()
        + geom_point()
        + facet_grid(model~type,scale="free")
