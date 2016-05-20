@@ -2,6 +2,8 @@ library(ggplot2)
 
 load(".futurefgc.norm.RData")
 load(".daughterfgc.norm.RData")
+load(".futurefgcDau.norm.RData")
+
 combined_df <- rbind(futurefgc_df,daughterfgc_df
                     ,futurefgcDau_df
                     )
