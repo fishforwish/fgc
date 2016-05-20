@@ -76,8 +76,13 @@ all.%.Rout: all_countries_% ke5.%.Rds ng5.%.Rds sl5.%.Rds ml5.%.Rds %_fit.R
 
 all: all.futurefgc.Rout all.daughterfgc.Rout all.futurefgcDau.Rout
 
-adjust.Rout:		norm.R
+%.norm.Rout: %.norm.R
 			$(run-R)
+			
+quant_plot.Rout: futurefgc.norm.Rout daughterfgc.norm.Rout futurefgcDau.norm.Rout quant_plot.R
+	$(run-R)
+	
+	
 
 ######################################################################
 
