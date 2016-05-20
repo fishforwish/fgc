@@ -14,7 +14,7 @@ pred_full <- c("fgcstatusMom","group_fgcstatusMom"
 interval <- c("post.mean","l-95% CI","u-95% CI")
 predsd_ind <- (dat
                %>% ungroup() 
-               %>% select(c(fgcstatusMom,bene,att,media,edu))
+               %>% select(c(fgcstatusMom,futurefgc,bene,att,media,edu))
                %>% summarise_each(funs(sd))
 )
 
@@ -29,6 +29,7 @@ ind_scaled <- data.frame(ind_scaled
 predsd_full <- (dat
                 %>% ungroup() 
                 %>% select(c(fgcstatusMom, group_fgcstatusMom
+                             , futurefgc, group_futurefgc
                              , bene, group_bene
                              , att, group_att
                              , media, group_media
