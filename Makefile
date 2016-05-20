@@ -79,7 +79,7 @@ all: all.futurefgc.Rout all.daughterfgc.Rout all.futurefgcDau.Rout
 %.norm.Rout: %.norm.R
 			$(run-R)
 			
-quant_plot.Rout: futurefgc.norm.Rout daughterfgc.norm.Rout quant_plot.R
+quant_plot.Rout: futurefgc.norm.Rout daughterfgc.norm.Rout futurefgcDau.Rout quant_plot.R
 	$(run-R)
 	
 	
