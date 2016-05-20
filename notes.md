@@ -128,3 +128,11 @@ Error in MCMCglmm(as.factor(futurefgc) ~ fgcstatusMom + bene + media +  :
 nu=0.0002 with singular.ok or high nu no singular.ok
 
 We are out spl(age) and spl(wealth) country RE __because of the G/R problem__. Finished all models, running on yushan now.
+
+----------------------------------------------------------------------
+
+20 May
+
+Mike has made a beautiful picture, but we're having trouble interpreting some of the details. Should we be worried about the mixing in MCMCglmm? Can we try to address with priors? 
+
+We apparently didn't switch back to ordinal because of something to do with random effects. Can that be overcome? Mike also thinks there's a problem with the quadrature.
