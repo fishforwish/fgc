@@ -73,16 +73,17 @@ all.multivariate.Rout: multivariate_fit.R
 all.%.Rout: all_countries_% ke5.%.Rds ng5.%.Rds sl5.%.Rds ml5.%.Rds %_fit.R
 	    $(run-R)
 
+all.futurefgc_clmm.Rout: futurefgc_clmm.R
+all.%_clmm.Rout: all_countries_% ke5.%.Rds ng5.%.Rds sl5.%.Rds ml5.%.Rds %_clmm.R
+	$(run-R) 
+
 
 all: all.futurefgc.Rout all.daughterfgc.Rout all.futurefgcDau.Rout
 
 %.norm.Rout: %.norm.R
 			$(run-R)
-			
 quant_plot.Rout: futurefgc.norm.Rout daughterfgc.norm.Rout futurefgcDau.Rout quant_plot.R
 	$(run-R)
-	
-	
 
 ######################################################################
 

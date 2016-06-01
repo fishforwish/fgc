@@ -1,38 +1,25 @@
 library(ordinal)
+library(splines)
 
-# for (r in grep("Rds$", input_files, value=TRUE)){
-#   if (exists("dat"))
-#     dat <- rbind(dat, readRDS(r))
-#   else
-#     dat <- readRDS(r)
-# }
+for (r in grep("Rds$", input_files, value=TRUE)){
+  if (exists("dat"))
+    dat <- rbind(dat, readRDS(r))
+  else
+    dat <- readRDS(r)
+}
 
-system.time(fullmod <- clmm2(futurefgc~
-    fgcstatusMom
-    + bene + media + att
-    + group_bene + group_media + group_att 
-    + group_fgc + group_edu + splines::ns(group_wealth,4)
-    + splines::ns(age, 4) + splines::ns(wealth, 4) 
-    + edu + maritalStat + job + urRural
-    + ethni + religion
-    , random= clusterId
-    , data=combinedDat
-    , nAGQ = 5
-    , Hess = TRUE
-))
+set.seed(101)
+dat <- dat[sample(1:nrow(dat),2000),]
 
-system.time(indmod <- clmm2(futurefgc~
-  fgcstatusMom
-  + bene + media + att
-  + splines::ns(age, 4) + splines::ns(wealth, 4)
-  + edu + maritalStat + job + urRural
-  + ethni + religion
-  , random= clusterId
-  , data=combinedDat
-  , nAGQ = 5
-  , Hess = TRUE
-))
 
-print(summary(fullmod))
-print(summary(indmod))
-print(anova(fullmod,indmod))
+system.time(futurefgc_ind <- clmm(
+  futurefgc ~ fgcstatusMom
+  + bene + media + att + edu
+  + ns(age,k=4) + ns(wealth,k=4)
+  + maritalStat 
+  + job
+  + urRural + religion
+  + (1|clusterId) + (1|ethni) +
+  + (1 + bene + media + att + ns(age, k=4) + ns(wealth, k=4)| CC)
+  , data=dat)
+)
