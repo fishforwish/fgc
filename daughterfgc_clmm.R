@@ -8,9 +8,8 @@ for (r in grep("Rds$", input_files, value=TRUE)){
     dat <- readRDS(r)
 }
 
-
-system.time(futurefgc_ind <- clmm(
-  futurefgc ~ fgcstatusMom
+system.time(daughterfgc_ind <- clmm(
+  futurefgcDau ~ fgcstatusMom
   + bene + media + att + edu
   + ns(age,k=4) + ns(wealth,k=4)
   + maritalStat 
@@ -21,23 +20,24 @@ system.time(futurefgc_ind <- clmm(
   , data=dat)
 )
 
-#ns(group_wealth,k=4) has a problem
+print(daughterfgc_ind)
+
 # 
-# system.time(futurefgc_full <- clmm(
-#   futurefgc ~ fgcstatusMom
+# system.time(daughter_full <- clmm(
+#   futurefgcDau ~ fgcstatusMom
 #   + bene + group_bene
 #   + media + group_media 
 #   + att + group_att 
 #   + edu + group_edu
-#   + ns(wealth,k=4) + ns(group_wealth,k=4)
+#   + ns(wealth,k=4) + ns(group_wealth,k=3)
 #   + ns(age,k=4) 
 #   + maritalStat 
 #   + job
 #   + urRural + religion
 #   + (1|clusterId) + (1|ethni)
-#     + (1 + bene + media + att + edu + ns(age,k=4)
-#        + group_bene + group_media + group_att + group_edu
-#        + ns(wealth,k=4)
-#        + ns(group_wealth,k=4)| CC)
+#   + (1 + bene + media + att + edu + ns(age,k=4)
+#      + group_bene + group_media + group_att + group_edu
+#      + ns(wealth,k=4)
+#      + ns(group_wealth,k=3)| CC)
 #   , data=dat)
 # )

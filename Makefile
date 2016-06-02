@@ -74,6 +74,8 @@ all.%.Rout: all_countries_% ke5.%.Rds ng5.%.Rds sl5.%.Rds ml5.%.Rds %_fit.R
 	    $(run-R)
 
 all.futurefgc_clmm.Rout: futurefgc_clmm.R
+all.daughterfgc_clmm.Rout: daughterfgc_clmm.R
+all.futurefgcDau_clmm.Rout: futurefgcDau_clmm.R
 all.%_clmm.Rout: all_countries_% ke5.%.Rds ng5.%.Rds sl5.%.Rds ml5.%.Rds %_clmm.R
 	$(run-R) 
 
