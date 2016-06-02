@@ -21,6 +21,8 @@ system.time(futurefgc_ind <- clmm(
   , data=dat)
 )
 
+print(futurefgc_ind)
+
 #ns(group_wealth,k=4) has a problem
 # 
 # system.time(futurefgc_full <- clmm(
