@@ -11,17 +11,17 @@ for (r in grep("Rds$", input_files, value=TRUE)){
 system.time(daughterfgc_ind <- clmm(
   futurefgcDau ~ fgcstatusMom
   + bene + media + att + edu
-  + ns(age,k=4) + ns(wealth,k=4)
+  + ns(age,k=4) + ns(wealth,k=3)
   + maritalStat 
   + job
   + urRural + religion
   + (1|clusterId) + (1|ethni)
-  + (1 + bene + media + att 
-    + edu + ns(age, k=4) + ns(wealth, k=4)| CC)
+  + (1 + bene + media + att |CC)
+    # + edu + ns(age, k=4) + ns(wealth, k=4)| CC)
   , data=dat)
 )
 
-print(daughterfgc_ind)
+print(summary(daughterfgc_ind))
 
 
 system.time(daughterfgc_full <- clmm(
@@ -30,18 +30,19 @@ system.time(daughterfgc_full <- clmm(
   + media + group_media 
   + att + group_att 
   + edu + group_edu
-  + ns(wealth,k=4) + ns(group_wealth,k=3)
+  + ns(wealth,k=3) + ns(group_wealth,k=3)
   + ns(age,k=4) 
   + maritalStat 
   + job
   + urRural + religion
   + (1|clusterId) + (1|ethni)
-  + (1 + bene + media + att + edu + ns(age,k=4)
-     + group_bene + group_media + group_att + group_edu
-     + ns(wealth,k=4)
-     + ns(group_wealth,k=3)| CC)
+  + (1 + bene + media + att 
+#      + edu + ns(age,k=4)
+     + group_bene + group_media + group_att |CC)
+#      + group_edu + ns(wealth,k=3)
+     # + ns(group_wealth,k=3)| CC)
   , data=dat)
 )
 
 
-print(daughterfgc_full)
+print(summary(daughterfgc_full))
