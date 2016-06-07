@@ -58,7 +58,7 @@ Meng, X. L. (1994). Posterior predictive p-values. Ann. Statist. 22, 1142-1160.
 ## 4th May 2016
 Let's simplify the problem and do the countries separately. The baseline problem is actually a big deal because we don't want to compare against the "baseline" ie. ke.no_job to ml.yes_job..." 
 MCMCglmm does not seem to have anova/ something to test variable level statistics, ie, don't have something to test the question "does ethnicity in general affect futurefgc"
-Went back and have a better understanding of ordinal and clmm's. clmm (or clmm1) can do multiple RE but via LA and blows up/ spits back NAs for sd.err. clmm2 can do AGQ but only do one RE (back then we were trying to do response AND dlusterID and didn't follow up and gave up). 
+Went back and have a better understanding of ordinal and clmm's. clmm (or clmm1) can do multiple RE but via LA and blows up/ spits back NAs for sd.err. clmm2 can do AGQ but only do one RE (back then we were trying to do response AND clusterID and didn't follow up and gave up). 
 
 We can test "norms" now via anova LRT. 
 
@@ -136,3 +136,10 @@ We are out spl(age) and spl(wealth) country RE __because of the G/R problem__. F
 Mike has made a beautiful picture, but we're having trouble interpreting some of the details. Should we be worried about the mixing in MCMCglmm? Can we try to address with priors? 
 
 We apparently didn't switch back to ordinal because of something to do with random effects. Can that be overcome? Mike also thinks there's a problem with the quadrature.
+
+---------------------------------------------------------------------
+
+7 June
+
+The largest model took 81 hours to fit via clmm. The errors are consistent with the problems noted on May 4th. We have more than one RE and clmm spits back NA's for se.error. Quadrature methods are not available with more than one RE term. 
+
