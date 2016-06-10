@@ -19,7 +19,7 @@ system.time(futurefgc_ind <- clmm(
   + (1|clusterId) + (1|ethni)
   + (1 + bene + media + att |CC)
      # + edu + ns(age,4) + ns(wealth,3)| CC)
-  , data=dat2)
+  , data=dat)
 )
 
 print(summary(futurefgc_ind))
