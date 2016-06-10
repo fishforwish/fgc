@@ -11,13 +11,13 @@ for (r in grep("Rds$", input_files, value=TRUE)){
 system.time(futurefgcDau_ind <- clmm(
   futurefgcDau ~ futurefgc + fgcstatusMom
   + bene + media + att + edu
-  + ns(age,k=4) + ns(wealth,k=3)
+  + ns(age,4) + ns(wealth,3)
   + maritalStat 
   + job
   + urRural + religion
   + (1|clusterId) + (1|ethni)
   + (1 + bene + media + att |CC)
-     # + edu + ns(age, k=4) + ns(wealth, k=3)| CC)
+     # + edu + ns(age, 4) + ns(wealth, 3)| CC)
   , data=dat)
 )
 
@@ -31,17 +31,17 @@ system.time(futurefgcDau_full <- clmm(
   + media + group_media 
   + att + group_att 
   + edu + group_edu
-  + ns(wealth,k=3) + ns(group_wealth,k=3)
-  + ns(age,k=4) 
+  + ns(wealth,3) + ns(group_wealth,3)
+  + ns(age,4) 
   + maritalStat 
   + job
   + urRural + religion
   + (1|clusterId) + (1|ethni)
   + (1 + bene + media + att 
-     # + edu + ns(age,k=4)
+     # + edu + ns(age,4)
      + group_bene + group_media + group_att |CC)
-#      + group_edu + ns(wealth,k=4)
-#      + ns(group_wealth,k=3)| CC)
+#      + group_edu + ns(wealth,3)
+#      + ns(group_wealth,3)| CC)
   , data=dat)
 )
 
