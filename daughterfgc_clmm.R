@@ -16,8 +16,7 @@ system.time(daughterfgc_ind <- clmm(
   + job
   + urRural + religion
   + (1|clusterId) + (1|ethni)
-  + (1 + bene + media + att |CC)
-    # + edu + ns(age,4) + ns(wealth,3)| CC)
+  + (1 + bene + media + att| CC)
   , data=dat)
 )
 
@@ -37,10 +36,7 @@ system.time(daughterfgc_full <- clmm(
   + urRural + religion
   + (1|clusterId) + (1|ethni)
   + (1 + bene + media + att 
-#      + edu + ns(age,4)
      + group_bene + group_media + group_att |CC)
-#      + group_edu + ns(wealth,3)
-     # + ns(group_wealth,3)| CC)
   , data=dat)
 )
 
