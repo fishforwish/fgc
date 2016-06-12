@@ -16,7 +16,7 @@ system.time(daughterfgc_ind <- clmm(
   + job
   + urRural + religion
   + (1|clusterId) + (1|ethni)
-  + (1|CC)
+  + (1 + bene + media + att| CC)
   , data=dat)
 )
 
