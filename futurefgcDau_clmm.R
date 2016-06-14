@@ -25,7 +25,7 @@ print(summary(futurefgcDau_ind))
 
 system.time(futurefgcDau_full <- clmm(
   futurefgcDau ~ futurefgc + group_futurefgc
-  + fgcstatusMom + fgcstatusMom
+  + fgcstatusMom + group_fgcstatusMom
   + bene + group_bene
   + media + group_media 
   + att + group_att 
