@@ -147,6 +147,10 @@ The largest model took 81 hours to fit via clmm. The errors are consistent with 
 
 14 June
 
-Futurefgc and FuturefgcDau ran without problems but daughterfgc_ind *failed* to estimate variance-covariance for fixed effects. Can we bottleneck the daughter model and move on with futurefgc and futurefgcDau because futurefgc and futurefgcDau are the models of interest. How much do we *lose* skipping the daughter model? BB suggest we can extract the hessian from the clmm object and compute the vcov ourselves (daughterfgc_ind). This leads to my next question of how to do *effect* plots. The hessian and vcov have a bunch of extra stuff (ST's) and the effects packages does work with our model (maybe RE's). I can always extract what I need and feed into effects, but not sure if it is correct. 
++ Futurefgc and FuturefgcDau ran without problems but daughterfgc_ind *failed* to estimate variance-covariance for fixed effects. Can we bottleneck the daughter model and move on with futurefgc and futurefgcDau because futurefgc and futurefgcDau are the models of interest. How much do we *lose* skipping the daughter model? BB suggest we can extract the hessian from the clmm object and compute the vcov ourselves (daughterfgc_ind). This leads to my next question of how to do *effect* plots. The hessian and vcov have a bunch of extra stuff (ST's) and the effects packages does work with our model (maybe RE's). I can always extract what I need and feed into effects, but not sure if it is correct. 
+
++ Based on the results of the 6 models (futurefgc, daughter fgc with future, and daughter fgc; each with individual and full models), we will go ahead and do plots, etc. despite the fact that there are still some confusions with the individual daughter fgc model.
++ Jonathan emailed Ben about all the NA and ST in the individual daughter fgc model.
++ Mike will add group mom fgc in the daughter fgc full model.
 
    
