@@ -143,3 +143,10 @@ We apparently didn't switch back to ordinal because of something to do with rand
 
 The largest model took 81 hours to fit via clmm. The errors are consistent with the problems noted on May 4th. We have more than one RE and clmm spits back NA's for se.error. Quadrature methods are not available with more than one RE term. 
 
+---------------------------------------------------------------------
+
+14 June
+
+Futurefgc and FuturefgcDau ran without problems but daughterfgc_ind *failed* to estimate variance-covariance for fixed effects. Can we bottleneck the daughter model and move on with futurefgc and futurefgcDau because futurefgc and futurefgcDau are the models of interest. How much do we *lose* skipping the daughter model? BB suggest we can extract the hessian from the clmm object and compute the vcov ourselves (daughterfgc_ind). This leads to my next question of how to do *effect* plots. The hessian and vcov have a bunch of extra stuff (ST's) and the effects packages does work with our model (maybe RE's). I can always extract what I need and feed into effects, but not sure if it is correct. 
+
+   
