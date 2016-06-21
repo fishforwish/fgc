@@ -4,11 +4,7 @@ library(splines)
 library(dplyr)
 library(ggplot2)
 
-load(".all.futurefgc_clmm.RData")
-
-
-load(".all.futurefgcDau_clmm.RData")
-all <- allEffects(mod=futurefgc_full)
+# all <- allEffects(mod=futurefgc_full)
 
 sum.df <- function(modobj,mod,model){
   pred_full <- c("futurefgc", "group_futurefgc"
