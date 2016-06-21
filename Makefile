@@ -15,6 +15,10 @@ include stuff.mk
 
 ##################################################################
 
+## Personal make files
+
+Sources += dushoff.mk crib.mk
+
 ### Data folder (since we can't make DHS data public)
 
 Makefile: data
