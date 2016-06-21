@@ -5,6 +5,8 @@ library(dplyr)
 library(ggplot2)
 
 load(".all.futurefgc_clmm.RData")
+
+
 load(".all.futurefgcDau_clmm.RData")
 all <- allEffects(mod=futurefgc_full)
 
@@ -25,7 +27,7 @@ sum.df <- function(modobj,mod,model){
     ifelse(length(iname)==1,iname<-c("ind",iname[1]),iname)
     tdf <- (tempdf 
             %>% filter(Variable == i)
-            %>% mutate(Variable = paste(i,mod,sep="_")
+            %>% mutate(Variable = paste(mod,i,sep="_")
                , Var = iname[2]
                , Type = ifelse(mod=="full",paste("full",iname[1],sep="_"),iname[1])
                , Model = model
