@@ -1,30 +1,59 @@
-# fgc
+::# FGC
 ### Hooks for the editor to set the default target
-
 current: target
 
-target pngtarget pdftarget vtarget acrtarget: effects.Rout 
+target pngtarget pdftarget vtarget acrtarget: recodes.summary.output 
 
 ##################################################################
 
 # make files
 
-Sources = Makefile .gitignore README.md LICENSE.md journal.txt stuff.mk notes.md
-
+Sources = Makefile .gitignore README.md stuff.mk LICENSE.md
 include stuff.mk
+# include $(ms)/perl.def
+
+Sources += dushoff.mk
+
+Makefile: datadir
+
+datadir:
+	/bin/ln -s $(MC)/MC\ DHS\ data/ $@
+
+cribdir:
+	/bin/ln -s /home/dushoff/Dropbox/Downloads/MC/WorkingWiki-export/MC_risk_Africa// $@
+
+ww.mk: cribdir
+	cat cribdir/Makefile > $@
+	cat cribdir/*.mk >> $@
+
 
 ##################################################################
 
-## Personal make files
+# New set import. Carefully
 
-Sources += dushoff.mk crib.mk
+newwomen = $(newsets:%=datadir/%.women.RData)
 
-### Data folder (since we can't make DHS data public)
+######################################################################
 
-Makefile: data
+## You need to uncomment these rules to import new data sets, apparently
 
-data:
-	ln -fs $(Drop)/fgc $@
+## This did not work until I made it completely implicit, which is insane. 
+## Changing back because working version is dangerous
+# datadir/%.RData: convert_dataset.R
+# 	$(MAKE) datadir/$*.Rout
+# 	cd datadir && /bin/ln -fs .$*.RData $*.RData
+
+# More danger
+# datadir/%.Rout: convert_dataset.R
+# 	$(run-R)
+
+######################################################################
+
+
+datadir/ke5.women.Rout: datadir/KEIR52SV/KEIR52FL.SAV
+datadir/ml5.women.Rout: datadir/MLIR53SV/MLIR53FL.SAV
+datadir/ng5.women.Rout: datadir/NGIR53SV/NGIR53FL.SAV
+datadir/sl5.women.Rout: datadir/SLIR51SV/SLIR51FL.SAV
 
 ##################################################################
 
@@ -32,24 +61,45 @@ data:
 
 Sources += $(wildcard *.R)
 
-Sources += $(wildcard *.ccsv *.tsv)
-
+### Data sets
 sets = ke5 ml5 ng5 sl5
 
-#### Recodes
- 
-.PRECIOUS: %.recode.Rout
-%.recode.Rout: data/%.women.RData recodeFuns.Rout religion_basic.ccsv partnership_basic.ccsv recode.R
+######################################################################
+
+### Selecting
+select=$(sets:%=%.select.Rout)
+
+## wselect.R needs to be moved to a general place
+$(select): %.select.Rout: datadir/%.women.RData select.csv wselect.R
 	$(run-R)
- 
+
+select.output: $(sets:%=%.select.Routput)
+	cat $^ > $@
+select.objects.output: $(sets:%=%.select.objects.Routput)
+	cat $^ > $@
+
+select.summary.output: $(sets:%=%.select.summary.Routput)
+	cat $^ > $@
+
+######################################################################
+
+### Recoding
+Sources += $(wildcard *.ccsv *.tsv)
+
+.PRECIOUS: %.recode.Rout
+%.recode.Rout: %.select.Rout recodeFuns.Rout religion_basic.ccsv partnership_basic.ccsv recode.R
+	$(run-R)
+
 recodes.output: $(sets:%=%.recode.Routput)
 	cat $^ > $@
  
 recodes.objects.output: $(sets:%=%.recode.objects.Routput)
 	cat $^ > $@
- 
+
 recodes.summary.output: $(sets:%=%.recode.summary.Routput)
 	cat $^ > $@
+
+######################################################################
 
 ke5.df.Rout: ke5.benePCA.Rout ke5.recode.Rout df.R
 %.df.Rout: %.recode.Rout df.R
