@@ -48,7 +48,7 @@ beneRedPromis, G117G,
 beneRedSTD, G117H
 beneOther, G117X, FG119X
 # Response 1: daughter FGC status
-# numDaughterFgced, G108, FG110, S631I
+numDaughterFgced, G108, FG110, S631I
 # daughterNotFgced, G115
 daughterToFgc, G116, FG118
 # Response 2: FGC future
