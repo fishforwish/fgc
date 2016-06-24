@@ -17,14 +17,7 @@ Sources += dushoff.mk
 Makefile: datadir
 
 datadir:
-	/bin/ln -s $(fgc)/fgc\ DHS\ data/ $@
-
-cribdir:
-	/bin/ln -s /home/fishforwish/Dropbox/Downloads/fgc/WorkingWiki-export/FGC// $@
-
-ww.mk: cribdir
-	cat cribdir/Makefile > $@
-	cat cribdir/*.mk >> $@
+	/bin/ln -s $(fgc)/DHS\ data/ $@
 
 
 ##################################################################
