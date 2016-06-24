@@ -17,8 +17,7 @@ Sources += dushoff.mk
 Makefile: datadir
 
 datadir:
-	/bin/ln -s $(fgc)/DHS\ data/ $@
-
+	/bin/ln -fs $(fgc)/DHS\ data/ $@
 
 ##################################################################
 
@@ -42,11 +41,10 @@ newwomen = $(newsets:%=datadir/%.women.RData)
 
 ######################################################################
 
-
-datadir/ke5.women.Rout: datadir/KEIR52SV/KEIR52FL.SAV
-datadir/ml5.women.Rout: datadir/MLIR53SV/MLIR53FL.SAV
-datadir/ng5.women.Rout: datadir/NGIR53SV/NGIR53FL.SAV
-datadir/sl5.women.Rout: datadir/SLIR51SV/SLIR51FL.SAV
+datadir/ke5.new.Rout: datadir/KEIR52SV/KEIR52FL.SAV
+datadir/ml5.new.Rout: datadir/MLIR53SV/MLIR53FL.SAV
+datadir/ng5.new.Rout: datadir/NGIR53SV/NGIR53FL.SAV
+datadir/sl5.new.Rout: datadir/SLIR51SV/SLIR51FL.SAV
 
 ##################################################################
 
@@ -63,7 +61,7 @@ sets = ke5 ml5 ng5 sl5
 select=$(sets:%=%.select.Rout)
 
 ## wselect.R needs to be moved to a general place
-$(select): %.select.Rout: datadir/%.women.RData select.csv wselect.R
+$(select): %.select.Rout: datadir/%.new.Rout select.csv wselect.R
 	$(run-R)
 
 select.output: $(sets:%=%.select.Routput)
