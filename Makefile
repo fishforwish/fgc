@@ -2,7 +2,7 @@
 ### Hooks for the editor to set the default target
 current: target
 
-target pngtarget pdftarget vtarget acrtarget: recodes.summary.output 
+target pngtarget pdftarget vtarget acrtarget: datadir/ke5.new.Rout 
 
 ##################################################################
 
@@ -23,7 +23,7 @@ datadir:
 
 # New set import. Carefully
 
-newwomen = $(newsets:%=datadir/%.women.RData)
+# newwomen = $(newsets:%=datadir/%.women.RData)
 
 ######################################################################
 
@@ -32,12 +32,12 @@ newwomen = $(newsets:%=datadir/%.women.RData)
 ## This did not work until I made it completely implicit, which is insane. 
 ## Changing back because working version is dangerous
 # datadir/%.RData: convert_dataset.R
-# 	$(MAKE) datadir/$*.Rout
-# 	cd datadir && /bin/ln -fs .$*.RData $*.RData
+#  	$(MAKE) datadir/$*.Rout
+#  	cd datadir && /bin/ln -fs .$*.RData $*.RData
 
 # More danger
-# datadir/%.Rout: convert_dataset.R
-# 	$(run-R)
+datadir/%.Rout: convert_dataset.R
+	$(run-R)
 
 ######################################################################
 
@@ -83,7 +83,7 @@ Sources += $(wildcard *.ccsv *.tsv)
 
 recodes.output: $(sets:%=%.recode.Routput)
 	cat $^ > $@
- 
+
 recodes.objects.output: $(sets:%=%.recode.objects.Routput)
 	cat $^ > $@
 
@@ -94,22 +94,22 @@ recodes.summary.output: $(sets:%=%.recode.summary.Routput)
 
 ke5.df.Rout: ke5.benePCA.Rout ke5.recode.Rout df.R
 %.df.Rout: %.recode.Rout df.R
-	   $(run-R)
+	$(run-R)
 
 %.futurefgc.Rout: %.df.Rout futurefgc.R
-		  $(run-R)
+	$(run-R)
 
 %.daughterfgc.Rout: %.df.Rout daughterfgc.R
-		    $(run-R)
+	$(run-R)
 
 %.futurefgcDau.Rout: %.df.Rout futurefgcDau.R
-		     $(run-R)
+	$(run-R)
 
 %.multivariate.Rout: %.df.Rout multivariate_df.R
 			$(run-R)
 
 all_countries_%: ke5.%.Rout ng5.%.Rout sl5.%.Rout ml5.%.Rout
-		 $(run)
+	$(run)
 
 all.futurefgc.Rout: futurefgc_fit.R
 all.daughterfgc.Rout: daughterfgc_fit.R
@@ -159,10 +159,6 @@ Sources += qual.mk quant.mk plots.mk comPlots.mk bioPlots.mk PCA.mk
 -include bioPlots.mk
 
 ######################################################################
-### Crib
-
-%: data/%
-	$(copy)
 
 ### Makestuff
 
