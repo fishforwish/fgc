@@ -17,10 +17,10 @@ Sources += dushoff.mk
 Makefile: datadir
 
 datadir:
-	/bin/ln -s $(MC)/MC\ DHS\ data/ $@
+	/bin/ln -s $(FGC)/FGC\ DHS\ data/ $@
 
 cribdir:
-	/bin/ln -s /home/dushoff/Dropbox/Downloads/MC/WorkingWiki-export/MC_risk_Africa// $@
+	/bin/ln -s /home/fishforwish/Dropbox/Downloads/FGC/WorkingWiki-export/FGC// $@
 
 ww.mk: cribdir
 	cat cribdir/Makefile > $@
