@@ -13,14 +13,14 @@ visitorResident, V135
 wealth, V191
 maritalStat, V501
 job, V714
-# daughter
-genderChild, B4
-LNchild, B16
-daughterHome, V203
-daughterElsewhere, V205
-daughterDead, V207
-LNdaughterFgced, G109
-ageDaughterFgced, G113
+# daughter:
+# genderChild, B4
+# LNchild, B16
+# daughterHome, V203
+# daughterElsewhere, V205
+# daughterDead, V207
+# LNdaughterFgced, G109
+# ageDaughterFgced, G113
 # Confounders 1
 mediaNpmg, V157
 mediaRadio, V158
@@ -48,8 +48,8 @@ beneRedPromis, G117G,
 beneRedSTD, G117H
 beneOther, G117X, FG119X
 # Response 1: daughter FGC status
-numDaughterFgced, G108, FG110, S631I
-daughterNotFgced, G115
+# numDaughterFgced, G108, FG110, S631I
+# daughterNotFgced, G115
 daughterToFgc, G116, FG118
 # Response 2: FGC future
 continueFgc, G119, S1012, S631G, FG123
