@@ -49,7 +49,7 @@ beneRedSTD, G117H
 beneOther, G117X, FG119X
 # Response 1: daughter FGC status
 numDaughterFgced, G108, FG110, S631I
-# daughterNotFgced, G115
+daughterNotFgced, G115
 daughterToFgc, G116, FG118
 # Response 2: FGC future
 continueFgc, G119, S1012, S631G, FG123
