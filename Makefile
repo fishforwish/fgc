@@ -17,7 +17,7 @@ Sources += dushoff.mk
 Makefile: datadir
 
 datadir:
-	/bin/ln -fs $(fgc)/DHS\ data/ $@
+	/bin/ln -fs $(Drop)/fgc/DHS\ data/ $@
 
 ##################################################################
 
