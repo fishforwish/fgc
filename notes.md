@@ -35,39 +35,67 @@ Decisions:
 * to make ethnicity a random because we don't need the power for the result.  We have enough levels for our reason; and we are not particularly interested in ethnicity for our study.  __BUT__ we latter decided to put it back as a fixed variable.
 * We decided to run versionso our two main models, but without group level covariates. (Apr 20, 15)
 
+---------------------------------------------------------------------
+July 14:
++ The higher the score of gender attitude (att), the less awareness of gender equality.  For example:
++ V744E: Wife beating justified if she burns the food
++ Categories    score
++ No               0
++ Yes              2
++ Don't know       1
++ 
++ On the contrary, it is the higher the score of fgc benefit, the more benefits seen of fgc
++ Circumcision benefits: social acceptance
++ Categories   score
++ No             0
++ Yes            1
+----------------------------------------------------------------------
+
+14 June
+
++ Futurefgc and FuturefgcDau ran without problems but daughterfgc_ind *failed* to estimate variance-covariance for fixed effects. Can we bottleneck the daughter model and move on with futurefgc and futurefgcDau because futurefgc and futurefgcDau are the models of interest. How much do we *lose* skipping the daughter model? BB suggest we can extract the hessian from the clmm object and compute the vcov ourselves (daughterfgc_ind). This leads to my next question of how to do *effect* plots. The hessian and vcov have a bunch of extra stuff (ST's) and the effects packages does work with our model (maybe RE's). I can always extract what I need and feed into effects, but not sure if it is correct. 
+
++ Based on the results of the 6 models (futurefgc, daughter fgc with future, and daughter fgc; each with individual and full models), we will go ahead and do plots, etc. despite the fact that there are still some confusions with the individual daughter fgc model.
++ Jonathan emailed Ben about all the NA and ST in the individual daughter fgc model.
++ Mike will add group mom fgc in the daughter fgc full model.
 ## 20 Apr 2016
 
 * We want to start with a model that has no group-level covariates. The idea is mostly about power: it will often be hard to see whether a covariate is operating at the individual level, group level, or both: first we want to know whether it's operating at all.
+---------------------------------------------------------------------
+7 June
 
-## 26 Apr 2016
+The largest model took 81 hours to fit via clmm. The errors are consistent with the problems noted on May 4th. We have more than one RE and clmm spits back NA's for se.error. Quadrature methods are not available with more than one RE term. 
 
-* Can we get medians instead of means in the main summary? If not, where do we get medians and how do we manipulate them?
+---------------------------------------------------------------------
+20 May
 
-* Two different (?) things about contrasts and manipulating co-ordinates:
-  * Make _prediction_ plots that show the effect of each variable with respect to the model center
-    * This is also important for the splined variables, since we don't have variable-level P values (what does it mean that we don't understand what this would mean in a Bayesian context?)
-  * Use _contrasts_ to have the main effects show up as _averaged_ over countries
-    * BB says that `broom` is "relevant" but not "ready"
+Mike has made a beautiful picture, but we're having trouble interpreting some of the details. Should we be worried about the mixing in MCMCglmm? Can we try to address with priors? 
 
-* Should we try to make general manipulation tools, or should we be taking advantage of our current Bayesian framework to do stuff the easy way?
-
-
-## 3rd May 2016
-Meng, X. L. (1994). Posterior predictive p-values. Ann. Statist. 22, 1142-1160.
-
-## 4th May 2016
-Let's simplify the problem and do the countries separately. The baseline problem is actually a big deal because we don't want to compare against the "baseline" ie. ke.no_job to ml.yes_job..." 
-MCMCglmm does not seem to have anova/ something to test variable level statistics, ie, don't have something to test the question "does ethnicity in general affect futurefgc"
-Went back and have a better understanding of ordinal and clmm's. clmm (or clmm1) can do multiple RE but via LA and blows up/ spits back NAs for sd.err. clmm2 can do AGQ but only do one RE (back then we were trying to do response AND clusterID and didn't follow up and gave up). 
-
-We can test "norms" now via anova LRT. 
-
-Question: Are we happy? Does it make sense? More validation? Use MCMCglmm vs ordinal? 
-* Is there a guideline for baseline?  e.g., ethinicity?
-
+We apparently didn't switch back to ordinal because of something to do with random effects. Can that be overcome? Mike also thinks there's a problem with the quadrature.
 
 ----------------------------------------------------------------------
 
+May 10th
+
+DO NOT DO ANY DPLYR RIGHT BEFORE MCMCGLMM
+Running into a lot of trouble with priors.
+Error in MCMCglmm(as.factor(futurefgc) ~ fgcstatusMom + bene + media +  : 
+  ill-conditioned cross-product: can't form Cholesky factor 
+
+with nu=0.0002 without singular.ok
+
+Error in MCMCglmm(as.factor(futurefgc) ~ fgcstatusMom + bene + media +  : 
+  ill-conditioned G/R structure (CN = 8630392281685741.000000): use proper priors if you haven't or rescale data if you have 
+
+nu=0.0002 with singular.ok or high nu no singular.ok
+
+We are out spl(age) and spl(wealth) country RE __because of the G/R problem__. Finished all models, running on yushan now.
+----------------------------------------------------------------------
+
+May 9th
+
+ML: The reason why ns (spline) did not work the before thus via splines:::ns is because MCMCglmm has its own spline function (spl) and it __claims__ it does orthgonial spline design. I figured out how to do the proposed models from last meeting and now running futurefgc_ind and futurefgc_full on yushan. I still have 4 more models to do (daughter_ind/full and futuredau_ind/full) 
+---------------------------------------------------------------------
 4 May
 
 We don't want to wait until we're able to do multivariate-response models, so we are going forward with a set of "structural" univariate-response models:
@@ -82,6 +110,18 @@ The next step will be to try to disentangle individual vs group effects from the
 
 ----------------------------------------------------------------------
 
+## 4th May 2016
+Let's simplify the problem and do the countries separately. The baseline problem is actually a big deal because we don't want to compare against the "baseline" ie. ke.no_job to ml.yes_job..." 
+MCMCglmm does not seem to have anova/ something to test variable level statistics, ie, don't have something to test the question "does ethnicity in general affect futurefgc"
+Went back and have a better understanding of ordinal and clmm's. clmm (or clmm1) can do multiple RE but via LA and blows up/ spits back NAs for sd.err. clmm2 can do AGQ but only do one RE (back then we were trying to do response AND clusterID and didn't follow up and gave up). 
+
+We can test "norms" now via anova LRT. 
+
+Question: Are we happy? Does it make sense? More validation? Use MCMCglmm vs ordinal? 
+* Is there a guideline for baseline?  e.g., ethinicity?
+
+
+----------------------------------------------------------------------
 Unfortunately, we can't put country back in in this framework! Should we go back to mcmcglmm, but still try to simplify?
 
 One idea, an mcmcglmm model with
@@ -106,61 +146,28 @@ Another option that we considered is to simply do a different model for each cou
 ML will do a better job documenting and sharing important obstacles. Maybe we can overcome some of them.
 
 ----------------------------------------------------------------------
-
-May 9th
-
-ML: The reason why ns (spline) did not work the before thus via splines:::ns is because MCMCglmm has its own spline function (spl) and it __claims__ it does orthgonial spline design. I figured out how to do the proposed models from last meeting and now running futurefgc_ind and futurefgc_full on yushan. I still have 4 more models to do (daughter_ind/full and futuredau_ind/full) 
-
+3rd May 2016
+Meng, X. L. (1994). Posterior predictive p-values. Ann. Statist. 22, 1142-1160.
 ----------------------------------------------------------------------
+26 Apr 2016
 
-May 10th
+* Can we get medians instead of means in the main summary? If not, where do we get medians and how do we manipulate them?
 
-DO NOT DO ANY DPLYR RIGHT BEFORE MCMCGLMM
-Running into a lot of trouble with priors.
-Error in MCMCglmm(as.factor(futurefgc) ~ fgcstatusMom + bene + media +  : 
-  ill-conditioned cross-product: can't form Cholesky factor 
+* Two different (?) things about contrasts and manipulating co-ordinates:
+  * Make _prediction_ plots that show the effect of each variable with respect to the model center
+    * This is also important for the splined variables, since we don't have variable-level P values (what does it mean that we don't understand what this would mean in a Bayesian context?)
+  * Use _contrasts_ to have the main effects show up as _averaged_ over countries
+    * BB says that `broom` is "relevant" but not "ready"
 
-with nu=0.0002 without singular.ok
+* Should we try to make general manipulation tools, or should we be taking advantage of our current Bayesian framework to do stuff the easy way?
 
-Error in MCMCglmm(as.factor(futurefgc) ~ fgcstatusMom + bene + media +  : 
-  ill-conditioned G/R structure (CN = 8630392281685741.000000): use proper priors if you haven't or rescale data if you have 
 
-nu=0.0002 with singular.ok or high nu no singular.ok
 
-We are out spl(age) and spl(wealth) country RE __because of the G/R problem__. Finished all models, running on yushan now.
 
-----------------------------------------------------------------------
 
-20 May
 
-Mike has made a beautiful picture, but we're having trouble interpreting some of the details. Should we be worried about the mixing in MCMCglmm? Can we try to address with priors? 
 
-We apparently didn't switch back to ordinal because of something to do with random effects. Can that be overcome? Mike also thinks there's a problem with the quadrature.
 
----------------------------------------------------------------------
-
-7 June
-
-The largest model took 81 hours to fit via clmm. The errors are consistent with the problems noted on May 4th. We have more than one RE and clmm spits back NA's for se.error. Quadrature methods are not available with more than one RE term. 
-
----------------------------------------------------------------------
-
-14 June
-
-+ Futurefgc and FuturefgcDau ran without problems but daughterfgc_ind *failed* to estimate variance-covariance for fixed effects. Can we bottleneck the daughter model and move on with futurefgc and futurefgcDau because futurefgc and futurefgcDau are the models of interest. How much do we *lose* skipping the daughter model? BB suggest we can extract the hessian from the clmm object and compute the vcov ourselves (daughterfgc_ind). This leads to my next question of how to do *effect* plots. The hessian and vcov have a bunch of extra stuff (ST's) and the effects packages does work with our model (maybe RE's). I can always extract what I need and feed into effects, but not sure if it is correct. 
-
-+ Based on the results of the 6 models (futurefgc, daughter fgc with future, and daughter fgc; each with individual and full models), we will go ahead and do plots, etc. despite the fact that there are still some confusions with the individual daughter fgc model.
-+ Jonathan emailed Ben about all the NA and ST in the individual daughter fgc model.
-+ Mike will add group mom fgc in the daughter fgc full model.
-+ 
----------------------------------------------------------------------
-July 14:
-+ The higher the score of gender attitude (att), the less awareness of gender equality.  For example:
-+ V744E: Wife beating justified if she burns the food
-Categories    score
-No                       0
-Yes                      2
-Don't know          1
 
 
    
