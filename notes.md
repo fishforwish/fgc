@@ -39,22 +39,10 @@ Decisions:
 July 14:
 + The higher the score of gender attitude (att), the less awareness of gender equality.  For example:
 + V744E: Wife beating justified if she burns the food
-+ Categories    score
-
-No               0
-
-Yes              2
-
-Don't know       1
-
-On the other hand, the higher the score of fgc benefit, the more benefits seen of fgc
++ Categories/score: No/0, Yes/2, Don't know/1
++ On the other hand, the higher the score of fgc benefit, the more benefits seen of fgc
 + Circumcision benefits: social acceptance
-
-Categories   score
-
-No             0
-
-Yes            1
++ Categories/score: No/0, Yes/1
 
 ----------------------------------------------------------------------
 
