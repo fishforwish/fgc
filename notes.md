@@ -37,6 +37,16 @@ Decisions:
 
 ---------------------------------------------------------------------
 July 14:
+* Due to all the NAs in the daughter future (individual) model which seems hard to solve and that also questions how reliable our other models are, we decide to do the following:
+
++ to do profile likelihood and CI for ordinal models?
+
++ to simplify the model by keeping only media in the random slope
+
++ If the above both do not work, we will try “brms.”  We will explore "brms" anyway and hope it will solve all the problems in the future.
+
+---------------------------------------------------------------------
+July 13:
 * The higher the score of gender attitude (att), the less awareness of gender equality.  For example:
 + V744E- Wife beating justified if she burns the food:
 + Categories/score: No/0, Yes/2, Don't know/1
