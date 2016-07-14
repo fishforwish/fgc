@@ -18,7 +18,7 @@ Variables:
 
 Basic Information:
 * att (gender awareness: no=0, DK=1 and yes=2):  the higher the score is, the LESS aware of gender equality a woman feels.  FGC bene (no=0, yes=1):  the higher the score, the stronger in believing FGC beneifts.  Media use (not at all=0..., almost everyday=3):  the higher the score, the more in using media.
-* media scores from 0-3 (3 questions), att 0-2 (5 questions), bene 0-2 (9 questions).
+* media scores from 0-3 (3 questions), att 0-2 (5 questions), bene 0-1 (9 questions).
 
 Other issues and questions:
 * to think about the fourth question?
