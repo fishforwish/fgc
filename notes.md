@@ -152,5 +152,15 @@ The largest model took 81 hours to fit via clmm. The errors are consistent with 
 + Based on the results of the 6 models (futurefgc, daughter fgc with future, and daughter fgc; each with individual and full models), we will go ahead and do plots, etc. despite the fact that there are still some confusions with the individual daughter fgc model.
 + Jonathan emailed Ben about all the NA and ST in the individual daughter fgc model.
 + Mike will add group mom fgc in the daughter fgc full model.
++ 
+---------------------------------------------------------------------
+July 14:
++ The higher the score of gender attitude (att), the less awareness of gender equality.  For example:
++ V744E: Wife beating justified if she burns the food
+Categories    score
+No                       0
+Yes                      2
+Don't know          1
+
 
    
