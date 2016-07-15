@@ -16,7 +16,7 @@ system.time(futurefgcDau_ind <- clmm(
   + job
   + urRural + religion
   + (1|clusterId) + (1|ethni)
-  + (1 + bene + media + att| CC)
+  + (1 + media| CC)
   , data=dat)
 )
 
@@ -36,8 +36,8 @@ system.time(futurefgcDau_full <- clmm(
   + job
   + urRural + religion
   + (1|clusterId) + (1|ethni)
-  + (1 + bene + media + att 
-     + group_bene + group_media + group_att |CC)
+  + (1 + media  
+     + group_media |CC)
   , data=dat)
 )
 
