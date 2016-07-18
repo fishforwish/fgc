@@ -124,10 +124,20 @@ all.futurefgcDau_clmm.Rout: futurefgcDau_clmm.R
 all.%_clmm.Rout: all_countries_% ke5.%.Rds ng5.%.Rds sl5.%.Rds ml5.%.Rds %_clmm.R
 	$(run-R) 
 
+
+all.futurefgc_brms.Rout: futurefgc_brms.R
+all.daughterfgc_brms.Rout: daughterfgc_brms.R
+all.futurefgcDau_brms.Rout: futurefgcDau_brms.R
+all.%_brms.Rout: all_countries_% ke5.%.Rds ng5.%.Rds sl5.%.Rds ml5.%.Rds %_brms.R
+	$(run-R) 
+
 effects.Rout: all.futurefgc_clmm.Rout all.futurefgcDau_clmm.Rout effects.R
 	$(run-R)
 
-all: all.futurefgc_clmm.Rout all.daughterfgc_clmm.Rout all.futurefgcDau_clmm.Rout
+all_clmm: all.futurefgc_clmm.Rout all.daughterfgc_clmm.Rout all.futurefgcDau_clmm.Rout
+
+all_brms: all.futurefgc_brms.Rout all.daughterfgc_brms.Rout all.futurefgcDau_brms.Rout
+
 
 %.norm.Rout: %.norm.R
 			$(run-R)
