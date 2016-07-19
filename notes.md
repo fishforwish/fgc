@@ -36,6 +36,12 @@ Decisions:
 * We decided to run versionso our two main models, but without group level covariates. (Apr 20, 15)
 
 ---------------------------------------------------------------------
+July 19:
+* We want to switch to brms (for fgc and mc; and we want to push this method in our projects in general).  
+* Use effect plots with baysina.  Since there is no standard way of doing p values, we will not going to do variable p-values.
+* p value is twice the probablaity of the sign is different than you think. Jonathan wants Mike to find citation and no one shall argue about it.
+
+---------------------------------------------------------------------
 July 14:
 * Due to all the NAs in the daughter future (individual) model which seems hard to solve and that also questions how reliable our other models are, we decide to do the following:
 
