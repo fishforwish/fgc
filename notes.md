@@ -159,7 +159,9 @@ ML will do a better job documenting and sharing important obstacles. Maybe we ca
 ----------------------------------------------------------------------
 3rd May 2016
 Meng, X. L. (1994). Posterior predictive p-values. Ann. Statist. 22, 1142-1160.
+
 ----------------------------------------------------------------------
+
 26 Apr 2016
 
 * Can we get medians instead of means in the main summary? If not, where do we get medians and how do we manipulate them?
@@ -172,7 +174,11 @@ Meng, X. L. (1994). Posterior predictive p-values. Ann. Statist. 22, 1142-1160.
 
 * Should we try to make general manipulation tools, or should we be taking advantage of our current Bayesian framework to do stuff the easy way?
 
+----------------------------------------------------------------------
 
+July 25th 2016
+
+ML reimplemented all models via brms and all models ran. There was one problematic model (futurefgcDau_full) and the current solution is increase the HMC sample size. It looks a little better. Moving onto effect plots now.
 
 
 

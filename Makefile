@@ -128,7 +128,15 @@ all.%_clmm.Rout: all_countries_% ke5.%.Rds ng5.%.Rds sl5.%.Rds ml5.%.Rds %_clmm.
 all.futurefgc_brms.Rout: futurefgc_brms.R
 all.daughterfgc_brms.Rout: daughterfgc_brms.R
 all.futurefgcDau_brms.Rout: futurefgcDau_brms.R
+
+all.futurefgc_full_brms.Rout: futurefgc_full_brms.R
+all.daughterfgc_full_brms.Rout: daughterfgc_full_brms.R
+all.futurefgcDau_full_brms.Rout: futurefgcDau_full_brms.R
+
 all.%_brms.Rout: all_countries_% ke5.%.Rds ng5.%.Rds sl5.%.Rds ml5.%.Rds %_brms.R
+	$(run-R) 
+
+all.%_full_brms.Rout: all_countries_% ke5.%.Rds ng5.%.Rds sl5.%.Rds ml5.%.Rds %_full_brms.R
 	$(run-R) 
 
 effects.Rout: all.futurefgc_clmm.Rout all.futurefgcDau_clmm.Rout effects.R
