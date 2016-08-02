@@ -142,14 +142,7 @@ all.%_full_brms.Rout: all_countries_% ke5.%.Rds ng5.%.Rds sl5.%.Rds ml5.%.Rds %_
 effects.Rout: all.futurefgc_clmm.Rout all.futurefgcDau_clmm.Rout effects.R
 	$(run-R)
 
-all_clmm: all.futurefgc_clmm.Rout all.daughterfgc_clmm.Rout all.futurefgcDau_clmm.Rout
-
-all_brms: all.futurefgc_brms.Rout all.daughterfgc_brms.Rout all.futurefgcDau_brms.Rout
-
-
-%.norm.Rout: %.norm.R
-			$(run-R)
-quant_plot.Rout: futurefgc.norm.Rout daughterfgc.norm.Rout futurefgcDau.Rout quant_plot.R
+all.futurefgc.effects_brms.Rout: all.futurefgc_brms.Rout effects_brms.Rout
 	$(run-R)
 
 ######################################################################
