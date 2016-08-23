@@ -118,12 +118,12 @@ all.multivariate.Rout: multivariate_fit.R
 all.%.Rout: all_countries_% ke5.%.Rds ng5.%.Rds sl5.%.Rds ml5.%.Rds %_fit.R
 	$(run-R)
 
-all.futurefgc_clmm.Rout: futurefgc_clmm.R
-all.daughterfgc_clmm.Rout: daughterfgc_clmm.R
-all.futurefgcDau_clmm.Rout: futurefgcDau_clmm.R
-all.%_clmm.Rout: all_countries_% ke5.%.Rds ng5.%.Rds sl5.%.Rds ml5.%.Rds %_clmm.R
+all.%_ind_clmm.Rout: all_countries_% ke5.%.Rds ng5.%.Rds sl5.%.Rds ml5.%.Rds %_ind_clmm.R
 	$(run-R) 
 
+
+all.%_full_clmm.Rout: all_countries_% ke5.%.Rds ng5.%.Rds sl5.%.Rds ml5.%.Rds %_full_clmm.R
+	$(run-R) 
 
 all.futurefgc_brms.Rout: futurefgc_brms.R
 all.daughterfgc_brms.Rout: daughterfgc_brms.R
