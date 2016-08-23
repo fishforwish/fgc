@@ -123,7 +123,13 @@ all.%_ind_clmm.Rout: all_countries_% ke5.%.Rds ng5.%.Rds sl5.%.Rds ml5.%.Rds %_i
 
 
 all.%_full_clmm.Rout: all_countries_% ke5.%.Rds ng5.%.Rds sl5.%.Rds ml5.%.Rds %_full_clmm.R
-	$(run-R) 
+	$(run-R)
+
+all.%_ind_varlvlsum.Rout: all.%_ind_clmm.Rout %_ind_varlvlsum.R
+	$(run-R)
+
+all.%_full_varlvlsum.Rout: all.%_full_clmm.Rout %_full_varlvlsum.R
+	$(run-R)
 
 all.futurefgc_brms.Rout: futurefgc_brms.R
 all.daughterfgc_brms.Rout: daughterfgc_brms.R
