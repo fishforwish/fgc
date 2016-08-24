@@ -14,8 +14,8 @@ modAns <- model.frame(
   + media + group_media 
   + att + group_att 
   + edu + group_edu
-  + group_wealth
-  + age + wealth + maritalStat + job + urRural + religion
+  + wealth + group_wealth
+  + age + maritalStat + job + urRural + religion
   + clusterId + ethni + CC
   , data=dat, na.action=na.exclude, drop.unused.levels=TRUE
 )

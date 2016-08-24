@@ -32,19 +32,59 @@ isoList <- lapply(predNames, function(n){
   ordpred(mod, n, modAns)
 })
 
-# print(
-# grid.arrange(varPlot(rename(isoList[[1]],c(age="Age")),P=varlvlsum$`Pr(>Chisq)`[1]),
-#              varPlot(rename(isoList[[2]],c(wealth="Wealth")),P=varlvlsum$`Pr(>Chisq)`[2]),
-#              varPlot(rename(isoList[[3]],c(religion="Religion")),P=varlvlsum$`Pr(>Chisq)`[3]),
-#              varPlot(rename(isoList[[4]],c(edu="Education")),P=varlvlsum$`Pr(>Chisq)`[4]),
-#              varPlot(rename(isoList[[5]],c(urRural="Area")),P=varlvlsum$`Pr(>Chisq)`[5]),
-#              varPlot(rename(isoList[[6]],c(job="Job")),P=varlvlsum$`Pr(>Chisq)`[6]),
-#              varPlot(rename(isoList[[7]],c(maritalStat="Marital Status")),P=varlvlsum$`Pr(>Chisq)`[7]),
-#              varPlot(rename(isoList[[8]],c(media="Media")),P=varlvlsum$`Pr(>Chisq)`[8]),
-#              varPlot(rename(isoList[[9]],c(knowledge="Knowledge")),P=varlvlsum$`Pr(>Chisq)`[9]),
-#              nrow=3)
-# )
 
-print(listPlot(isoList))
+if(ncol(modAns)==15){
+print(
+grid.arrange(varPlot(isoList[[1]],P=varlvlsum$`Pr(>Chisq)`[1]),
+             varPlot(isoList[[2]],P=varlvlsum$`Pr(>Chisq)`[2]),
+             varPlot(isoList[[3]],P=varlvlsum$`Pr(>Chisq)`[3]),
+             varPlot(isoList[[4]],P=varlvlsum$`Pr(>Chisq)`[4]),
+             varPlot(isoList[[5]],P=varlvlsum$`Pr(>Chisq)`[5]),
+             varPlot(isoList[[6]],P=varlvlsum$`Pr(>Chisq)`[6]),
+             varPlot(isoList[[7]],P=varlvlsum$`Pr(>Chisq)`[7]),
+             varPlot(isoList[[8]],P=varlvlsum$`Pr(>Chisq)`[8]),
+             varPlot(isoList[[9]],P=varlvlsum$`Pr(>Chisq)`[9]),
+             varPlot(isoList[[9]],P=varlvlsum$`Pr(>Chisq)`[10]),
+             varPlot(isoList[[9]],P=varlvlsum$`Pr(>Chisq)`[11]),
+             nrow=4)
+)
+}
+
+if(ncol(modAns)==15){
+  print(
+    grid.arrange(varPlot(isoList[[1]],P=varlvlsum$`Pr(>Chisq)`[1]),
+                 varPlot(isoList[[2]],P=varlvlsum$`Pr(>Chisq)`[2]),
+                 varPlot(isoList[[3]],P=varlvlsum$`Pr(>Chisq)`[3]),
+                 varPlot(isoList[[4]],P=varlvlsum$`Pr(>Chisq)`[4]),
+                 varPlot(isoList[[5]],P=varlvlsum$`Pr(>Chisq)`[5]),
+                 varPlot(isoList[[6]],P=varlvlsum$`Pr(>Chisq)`[6]),
+                 varPlot(isoList[[7]],P=varlvlsum$`Pr(>Chisq)`[7]),
+                 varPlot(isoList[[8]],P=varlvlsum$`Pr(>Chisq)`[8]),
+                 varPlot(isoList[[9]],P=varlvlsum$`Pr(>Chisq)`[9]),
+                 varPlot(isoList[[9]],P=varlvlsum$`Pr(>Chisq)`[10]),
+                 varPlot(isoList[[9]],P=varlvlsum$`Pr(>Chisq)`[11]),
+                 nrow=4)
+  )
+}
+
+if(ncol(modAns)==21){
+  print(
+    grid.arrange(varPlot(isoList[[1]],P=varlvlsum$`Pr(>Chisq)`[1]),
+                 varPlot(isoList[[2]],P=varlvlsum$`Pr(>Chisq)`[2]),
+                 varPlot(isoList[[3]],P=varlvlsum$`Pr(>Chisq)`[3]),
+                 varPlot(isoList[[4]],P=varlvlsum$`Pr(>Chisq)`[4]),
+                 varPlot(isoList[[5]],P=varlvlsum$`Pr(>Chisq)`[5]),
+                 varPlot(isoList[[6]],P=varlvlsum$`Pr(>Chisq)`[6]),
+                 varPlot(isoList[[7]],P=varlvlsum$`Pr(>Chisq)`[7]),
+                 varPlot(isoList[[8]],P=varlvlsum$`Pr(>Chisq)`[8]),
+                 varPlot(isoList[[9]],P=varlvlsum$`Pr(>Chisq)`[9]),
+                 varPlot(isoList[[9]],P=varlvlsum$`Pr(>Chisq)`[10]),
+                 varPlot(isoList[[9]],P=varlvlsum$`Pr(>Chisq)`[11]),
+                 nrow=4)
+  )
+}
+
+
+# print(listPlot(isoList))
 
 #rdsave(isoList,varlvlsum)

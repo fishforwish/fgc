@@ -9,14 +9,14 @@ for (r in grep("Rds$", input_files, value=TRUE)){
 }
 
 modAns <- model.frame(
-  futurefgcDau ~ fgcstatusMom + group_fgcstatusMom
-  + futurefgc + group_futurefgc
+  futurefgcDau ~ futurefgc + group_futurefgc
+  + fgcstatusMom + group_fgcstatusMom
   + bene + group_bene
   + media + group_media 
   + att + group_att 
   + edu + group_edu
-  + group_wealth
-  + age + wealth + maritalStat + job + urRural + religion
+  + wealth + group_wealth
+  + age + maritalStat + job + urRural + religion
   + clusterId + ethni + CC
   , data=dat, na.action=na.exclude, drop.unused.levels=TRUE
 )
