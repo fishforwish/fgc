@@ -4,8 +4,8 @@ library(RVAideMemoire)
 
 load(".all.daughterfgc_ind_clmm.RData")
 
-varlvlsum <- Anova.clmm(daughterfgc_ind)
+varlvlsum <- Anova.clmm(mod)
 
 print(varlvlsum)
 
-# rdsave(daughterfgc_ind, varlvlsum)
+# rdsave(mod, modAns, varlvlsum)

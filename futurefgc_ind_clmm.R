@@ -8,8 +8,16 @@ for (r in grep("Rds$", input_files, value=TRUE)){
     dat <- readRDS(r)
 }
 
+modAns <- model.frame(
+  futurefgc ~ fgcstatusMom + bene + media + att + edu 
+  + age + wealth + maritalStat + job + urRural + religion
+  + clusterId + ethni + CC
+  , data=dat, na.action=na.exclude, drop.unused.levels=TRUE
+)
 
-system.time(futurefgc_ind <- clmm(
+
+
+system.time(mod <- clmm(
   futurefgc ~ fgcstatusMom
   + bene + media + att + edu
   + ns(age,4) + ns(wealth,3)
@@ -17,8 +25,11 @@ system.time(futurefgc_ind <- clmm(
   + job
   + urRural + religion
   + (1|clusterId) + (1|ethni)
-  + (1 + media |CC)
-  , data=dat)
+  + (1 |CC)
+  , data=modAns)
 )
 
-print(summary(futurefgc_ind))
+print(summary(mod))
+
+
+# rdsave(mod, modAns)

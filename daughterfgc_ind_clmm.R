@@ -15,7 +15,7 @@ modAns <- model.frame(
   , data=dat, na.action=na.exclude, drop.unused.levels=TRUE
 )
 
-system.time(daughterfgc_ind <- clmm(
+system.time(mod <- clmm(
   futurefgcDau ~ fgcstatusMom
   + bene + media + att + edu
   + ns(age,4) + ns(wealth,3)
@@ -23,8 +23,11 @@ system.time(daughterfgc_ind <- clmm(
   + job
   + urRural + religion
   + (1|clusterId) + (1|ethni)
-  + (1 + media| CC)
+  + (1| CC)
   , data=modAns)
 )
 
-print(summary(daughterfgc_ind))
+print(summary(mod))
+
+# rdsave(mod, modAns)
+
