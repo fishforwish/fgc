@@ -131,7 +131,8 @@ all.%_ind_varlvlsum.Rout: all.%_ind_clmm.Rout %_ind_varlvlsum.R
 all.%_full_varlvlsum.Rout: all.%_full_clmm.Rout %_full_varlvlsum.R
 	$(run-R)
 
-%.isoplots.Rout: .all.%_varlvlsum.RData ordfuns.R plotFuns.R iso.R
+
+%.isoplots.Rout: fgc/.all.%_varlvlsum.RData ordfuns.R plotFuns.R iso.R
 	$(run-R)
 
 

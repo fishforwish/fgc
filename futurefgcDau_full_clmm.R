@@ -9,7 +9,7 @@ for (r in grep("Rds$", input_files, value=TRUE)){
 }
 
 modAns <- model.frame(
-  futurefgcDau ~ futurefgc + group_futurefgc
+  futureDau ~ futurefgc + group_futurefgc
   + fgcstatusMom + group_fgcstatusMom
   + bene + group_bene
   + media + group_media 
@@ -22,7 +22,7 @@ modAns <- model.frame(
 )
 
 system.time(mod<- clmm(
-  futurefgcDau ~ futurefgc + group_futurefgc
+  futureDau ~ futurefgc + group_futurefgc
   + fgcstatusMom + group_fgcstatusMom
   + bene + group_bene
   + media + group_media 

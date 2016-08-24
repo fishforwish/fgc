@@ -9,7 +9,7 @@ for (r in grep("Rds$", input_files, value=TRUE)){
 }
 
 modAns <- model.frame(
-  futurefgcDau ~ futurefgc + fgcstatusMom + bene + media + att + edu 
+  futureDau ~ futurefgc + fgcstatusMom + bene + media + att + edu 
   + age + wealth + maritalStat + job + urRural + religion
   + clusterId + ethni + CC
   , data=dat, na.action=na.exclude, drop.unused.levels=TRUE
@@ -17,7 +17,7 @@ modAns <- model.frame(
 
 
 system.time(mod <- clmm(
-  futurefgcDau ~ futurefgc + fgcstatusMom
+  futureDau ~ futurefgc + fgcstatusMom
   + bene + media + att + edu
   + ns(age,4) + ns(wealth,3)
   + maritalStat 

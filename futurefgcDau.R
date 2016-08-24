@@ -48,7 +48,7 @@ scoring <- function(dat, type,funct,idvec=NULL,colnam=NULL){
 
 responseDat <- (Answers 
   %>% select(c(daughterToFgc,id)) 
-  %>% mutate(futurefgcDau = yesnodkFactor(daughterToFgc)
+  %>% mutate(futureDau = yesnodkFactor(daughterToFgc)
     ) 
   %>% select(-c(daughterToFgc))
 )
