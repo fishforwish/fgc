@@ -2,7 +2,7 @@
 ### Hooks for the editor to set the default target
 current: target
 
-target pngtarget pdftarget vtarget acrtarget: overleaf 
+target pngtarget pdftarget vtarget acrtarget: refs.bib 
 
 ##################################################################
 
@@ -37,6 +37,13 @@ $(opush): %.po: %
 opush: $(opush)
 	cd overleaf && git add $(^:%.po=%) $ && touch Makefile && $(MAKE) sync
 
+######################################################################
+
+# Refs
+
+Sources += manual.bib auto.rmu
+refs.bib: auto.bib manual.bib
+	$(cat)
 
 ######################################################################
 
@@ -207,6 +214,11 @@ Sources += qual.mk quant.mk plots.mk comPlots.mk bioPlots.mk PCA.mk
 
 -include $(ms)/git.mk
 -include $(ms)/visual.mk
+
+-include $(ms)/linkdirs.mk
+export autorefs = autorefs
+-include autorefs/inc.mk
+
 
 -include $(ms)/wrapR.mk
 # -include $(ms)/oldlatex.mk
