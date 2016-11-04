@@ -2,7 +2,7 @@
 ### Hooks for the editor to set the default target
 current: target
 
-target pngtarget pdftarget vtarget acrtarget: datadir/ke5.new.Rout 
+target pngtarget pdftarget vtarget acrtarget: overleaf 
 
 ##################################################################
 
@@ -20,6 +20,25 @@ datadir:
 	/bin/ln -fs $(Drop)/fgc/DHS\ data/ $@
 
 ##################################################################
+
+# Overleaf
+
+overleaf:
+	git clone https://git.overleaf.com/6853862bvhsgcwxybdq $@
+
+ofiles = refs.bib
+
+opush = $(ofiles:%=%.po)
+
+$(opush): %.po: %
+	$(CP) $< overleaf
+	touch $@
+
+opush: $(opush)
+	cd overleaf && git add $(^:%.po=%) $ && touch Makefile && $(MAKE) sync
+
+
+######################################################################
 
 # New set import. Carefully
 
