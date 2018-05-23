@@ -131,3 +131,17 @@ ML I think the problem right now is we added too many covariates into the model.
 12/04/16
 
 ML will test complete separation problem with just ethni as covariate. It seems to be a problem in both fixed and random effect, not enough time to investigate, check out error_test.R
+
+----------------
+May23 2018: (after years!)
+
+There are 3 models:
+ 
+Main model: fgc daughter future ~ others (women's attitudes in fgc beliefs and their fgc status predicting daughter's fgc future)
+Structuarl model 1: fgc Future ~ others (women's attitudes in fgc beliefs predicting fgc future)
+1a:  all women
+1b: women with daughters to be fgc only
+Structuarl model 2: fgc daughter future ~ others (women's attitudes in fgc beliefs, their fgc status and their attitudes of fgc continuity predicting daughter's fgc future)
+
+How about daughters' age?
+To find out why did we decide not to use women's daughters who were fgced already.  So far, we can't decide what's the best.
