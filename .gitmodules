@@ -2,3 +2,7 @@
 	path = makestuff
 	url = https://github.com/dushoff/makestuff
 	branch = master
+[submodule "autorefs"]
+	path = autorefs
+	url = https://github.com/dushoff/autorefs.git
+	branch = master

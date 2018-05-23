@@ -1,8 +1,8 @@
+
 # FGC
 ### Hooks for the editor to set the default target
 current: target
-
-target pngtarget pdftarget vtarget acrtarget: refs.bib 
+-include target.mk
 
 ##################################################################
 
@@ -11,10 +11,7 @@ target pngtarget pdftarget vtarget acrtarget: refs.bib
 Sources += Makefile .ignore 
 Ignore += .gitignore
 
-msrepo = https://github.com/dushoff
 ms = makestuff
-Ignore += local.mk
--include local.mk
 -include $(ms)/os.mk
 
 # -include $(ms)/perl.def
@@ -32,6 +29,10 @@ fgc_DHS:
 	$(linkdir)
 fgc_DHS/%:
 	$(MAKE) fgc_DHS
+
+######################################################################
+
+manuscript.pdf: manuscript.tex
 
 ######################################################################
 
@@ -63,10 +64,10 @@ fgc_DHS/%.Rout: convert_dataset.R
 
 ######################################################################
 
-fgc_DHS/ke5.new.Rout: fgc_DHS/KEIR52SV/KEIR52FL.SAV
-fgc_DHS/ml5.new.Rout: fgc_DHS/MLIR53SV/MLIR53FL.SAV
-fgc_DHS/ng5.new.Rout: fgc_DHS/NGIR53SV/NGIR53FL.SAV
-fgc_DHS/sl5.new.Rout: fgc_DHS/SLIR51SV/SLIR51FL.SAV
+fgc_DHS/ke5.Rout: fgc_DHS/KEIR52FL.SAV
+fgc_DHS/ml5.Rout: fgc_DHS/MLIR53FL.SAV
+fgc_DHS/ng5.Rout: fgc_DHS/NGIR53FL.SAV
+fgc_DHS/sl5.Rout: fgc_DHS/SLIR51FL.SAV
 
 ##################################################################
 
@@ -83,7 +84,7 @@ sets = ke5 ml5 ng5 sl5
 select=$(sets:%=%.select.Rout)
 
 ## wselect.R needs to be moved to a general place
-$(select): %.select.Rout: fgc_DHS/%.new.Rout select.csv wselect.R
+$(select): %.select.Rout: fgc_DHS/%.Rout select.csv wselect.R
 	$(run-R)
 
 select.output: $(sets:%=%.select.Routput)
@@ -211,10 +212,8 @@ Sources += qual.mk quant.mk plots.mk comPlots.mk bioPlots.mk PCA.mk
 -include $(ms)/git.mk
 -include $(ms)/visual.mk
 
--include $(ms)/linkdirs.mk
 export autorefs = autorefs
 -include autorefs/inc.mk
 
-
 -include $(ms)/wrapR.mk
-# -include $(ms)/oldlatex.mk
+-include $(ms)/texdeps.mk
