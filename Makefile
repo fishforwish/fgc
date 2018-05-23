@@ -35,24 +35,6 @@ fgc_DHS/%:
 
 ######################################################################
 
-# Overleaf
-
-overleaf:
-	git clone https://git.overleaf.com/6853862bvhsgcwxybdq $@
-
-ofiles = refs.bib
-
-opush = $(ofiles:%=%.po)
-
-$(opush): %.po: %
-	$(CP) $< overleaf
-	touch $@
-
-opush: $(opush)
-	cd overleaf && git add $(^:%.po=%) $ && touch Makefile && $(MAKE) sync
-
-######################################################################
-
 # Refs
 
 Sources += manual.bib auto.rmu
