@@ -1,4 +1,4 @@
-::# FGC
+# FGC
 ### Hooks for the editor to set the default target
 current: target
 
@@ -8,18 +8,32 @@ target pngtarget pdftarget vtarget acrtarget: refs.bib
 
 # make files
 
-Sources = Makefile .gitignore README.md stuff.mk LICENSE.md
-include stuff.mk
-# include $(ms)/perl.def
+Sources += Makefile .ignore 
+Ignore += .gitignore
 
-Sources += dushoff.mk
+msrepo = https://github.com/dushoff
+ms = makestuff
+Ignore += local.mk
+-include local.mk
+-include $(ms)/os.mk
 
-Makefile: datadir
+# -include $(ms)/perl.def
 
-datadir:
-	/bin/ln -fs $(Drop)/fgc/DHS\ data/ $@
+Sources  += $(ms)
+## Sources += $(ms)
 
-##################################################################
+Makefile: $(ms) $(ms)/Makefile
+$(ms)/%.mk: $(ms)/Makefile ;
+$(ms)/Makefile:
+	git submodule update -i
+
+fgc_DHS: dir=~/Dropbox
+fgc_DHS:
+	$(linkdir)
+fgc_DHS/%:
+	$(MAKE) fgc_DHS
+
+######################################################################
 
 # Overleaf
 
@@ -49,7 +63,7 @@ refs.bib: auto.bib manual.bib
 
 # New set import. Carefully
 
-# newwomen = $(newsets:%=datadir/%.women.RData)
+# newwomen = $(newsets:%=fgc_DHS/%.women.RData)
 
 ######################################################################
 
@@ -57,20 +71,20 @@ refs.bib: auto.bib manual.bib
 
 ## This did not work until I made it completely implicit, which is insane. 
 ## Changing back because working version is dangerous
-# datadir/%.RData: convert_dataset.R
-#  	$(MAKE) datadir/$*.Rout
-#  	cd datadir && /bin/ln -fs .$*.RData $*.RData
+# fgc_DHS/%.RData: convert_dataset.R
+#  	$(MAKE) fgc_DHS/$*.Rout
+#  	cd fgc_DHS && /bin/ln -fs .$*.RData $*.RData
 
 # More danger
-datadir/%.Rout: convert_dataset.R
+fgc_DHS/%.Rout: convert_dataset.R
 	$(run-R)
 
 ######################################################################
 
-datadir/ke5.new.Rout: datadir/KEIR52SV/KEIR52FL.SAV
-datadir/ml5.new.Rout: datadir/MLIR53SV/MLIR53FL.SAV
-datadir/ng5.new.Rout: datadir/NGIR53SV/NGIR53FL.SAV
-datadir/sl5.new.Rout: datadir/SLIR51SV/SLIR51FL.SAV
+fgc_DHS/ke5.new.Rout: fgc_DHS/KEIR52SV/KEIR52FL.SAV
+fgc_DHS/ml5.new.Rout: fgc_DHS/MLIR53SV/MLIR53FL.SAV
+fgc_DHS/ng5.new.Rout: fgc_DHS/NGIR53SV/NGIR53FL.SAV
+fgc_DHS/sl5.new.Rout: fgc_DHS/SLIR51SV/SLIR51FL.SAV
 
 ##################################################################
 
@@ -87,7 +101,7 @@ sets = ke5 ml5 ng5 sl5
 select=$(sets:%=%.select.Rout)
 
 ## wselect.R needs to be moved to a general place
-$(select): %.select.Rout: datadir/%.new.Rout select.csv wselect.R
+$(select): %.select.Rout: fgc_DHS/%.new.Rout select.csv wselect.R
 	$(run-R)
 
 select.output: $(sets:%=%.select.Routput)

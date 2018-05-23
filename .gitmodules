@@ -1,0 +1,4 @@
+[submodule "makestuff"]
+	path = makestuff
+	url = https://github.com/dushoff/makestuff
+	branch = master
