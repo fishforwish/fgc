@@ -10,6 +10,42 @@ Research Questions:
 * We are going to run versions of our two main models, but without group level covariates.
 
 
+Models:
+* FGC continuity:
+system.time(mod <- clmm(
+  futurefgc ~ fgcstatusMom + group_fgcstatusMom
+  + bene + group_bene
+  + media + group_media 
+  + att + group_att 
+  + edu + group_edu
+  + ns(wealth,3) + ns(group_wealth,3)
+  + ns(age,4) 
+  + maritalStat 
+  + job
+  + urRural + religion
+  + (1|clusterId) + (1|ethni)
+    + (1|CC)
+  , data=modAns)
+)
+
+* Daughter future FGC:
+system.time(mod<- clmm(
+  futureDau ~ futurefgc + group_futurefgc
+  + fgcstatusMom + group_fgcstatusMom
+  + bene + group_bene
+  + media + group_media 
+  + att + group_att 
+  + edu + group_edu
+  + ns(wealth,3) + ns(group_wealth,3)
+  + ns(age,4) 
+  + maritalStat 
+  + job
+  + urRural + religion
+  + (1|clusterId) + (1|ethni)
+  + (1|CC)
+  , data=modAns)
+)
+
 Variables:
 * In the main model, the predictors are women’s FGC status and FGC benefits  (see the list of FGC benefits at table--) and the response variables are women’s opinion on whether the practice of FGC, and whether to cut their daughters.  In the secondary model, women’s gender awareness is the predictor and beliefs of FGC benefits the response.
 * other covariates:  country \cf{We don’t need this if we analyze each country separately}, age, education, wealth, ethnicity, religion, marital status, work status, residence (urban vs. rural), media use (another PCA or score?) and gender awareness.
