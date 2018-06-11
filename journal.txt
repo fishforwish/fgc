@@ -1,4 +1,4 @@
-As of May 23, 2018:
+As of Jun 11, 2018:
 
 Basically, this paper is about norm and behaviors.
 We studied KMNS: Kenya 2008/9, Mali 2006 (C: the report was in French), Nigeria 2008 and Sierra Leone 2008.
@@ -63,6 +63,11 @@ Other issues and questions:
 * Efferson etc's paper (15):  What can it tell us about heterogeniety ("a singel critical threshold is unlikely to exist"). They argued that FGC is not a socially conditined norm.  Will our findings support or rebut it?
 * to investigate the associations of women’s gender awareness, and their beliefs of FGC benefits.  It is presumed that gender awareness interrelate to FGC beliefs.  By testing the relations of the two factors allows us to gather information for a better interpretation of the main model. (which group of women?  with or withtout daughers to be cut?)
 * to study contrast of countries.
+* Who are the women we should include?  So far, we included all women in the fgc continuity model, and only women with daughters who are not fgced in the daughter model.  We have the following variables to consider how we want to make the best use of the samples.
+1. G108: Number of  daughters circumcised (we recoded it as y/n)
+2. G113: Age of daughter at circumcision (if we wanted to consider only women whose circumcised daighter is under certain age).
+3. G115: Any daughter who is not circumcised (This is the main variable we used for the daughter model)
+4. G116: Intends to have daughter(s) circumcised in future (This is the main variable we used for the daughter model)
 
 Decisions:
 * This study is about testing hypothesis not prediction.
