@@ -68,6 +68,7 @@ Other issues and questions:
 2. G113: Age of daughter at circumcision (if we wanted to consider only women whose circumcised daighter is under certain age).
 3. G115: Any daughter who is not circumcised (This is the main variable we used for the daughter model)
 4. G116: Intends to have daughter(s) circumcised in future (This is the main variable we used for the daughter model)
+We are also interested in any changes of mother's attitudes on FGC.  We can find information of this by testing women who already have daughters fgced and more to (or not to) be fgced.  This is be interesting, especially at a community level.
 
 Decisions:
 * This study is about testing hypothesis not prediction.
