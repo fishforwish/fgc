@@ -10,6 +10,18 @@ Research Questions:
 * Third question:  daughter vs. whether to continue (only women with daughter included) (We migh need it.  This is a model we hope can provide more details to explain the first question). (Chyun is trying to understand the differences between this and the main models: futureDau ~ futurefgc vs. futurefgc ~ futureDau?)
 * We are going to run versions of our two main models, but without group level covariates.
 
+* list of FGC benefits in DHS:
+G117A: Circumcision benefits: cleanliness/hygiene
+G117B: Circumcision benefits: social acceptance
+G117C: Circumcision benefits: better marriage prospects
+G117D: Circumcision benefits: virginity/prevent premarital sex
+G117E: Circumcision benefits: more sexual pleasure for men
+G117F: Circumcision benefits: religious approval
+G117G: Circumcision benefits: reduce promiscuity/ reduce sex drive
+G117H: Circumcision benefits: reduce STD and AIDS infections
+G117X: Circumcision benefits: other
+G117Y: Circumcision benefits: no benefit (Did we use this one? to check.)
+
 
 Models:
 * FGC continuity:
