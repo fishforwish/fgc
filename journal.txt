@@ -1,4 +1,5 @@
 To discuss:
+Can we test both cutting daughter and fgc future both as respose variables in one model?
 Should we also test religion at a communilty level?
 
 ======
@@ -9,22 +10,10 @@ We studied KMNS: Kenya 2008/9, Mali 2006 (C: the report was in French), Nigeria 
 
 Research Questions:
 
-* The main (all multivariate): cutting duaghers ~ women's attitudes of FGC benefits + FGC continuity.  What the associations are among women's beliefs in FGC benefits, their position on whether to continue FGC practice in the future, and whether to cut their daughters. (only women with daughter to be cut are included)
-* The secondary: FGC continuity ~ women's attitudes of FGC benefits.   What the associations are among women's beliefs in FGC benefits and their position on whether to continue FGC practice in the future (all the women are included)
-* Third question:  cutting daughter ~ FGC continuity (or FGC continuity ~ cutting daughter?) (only women with daughter included) We migh need this model in hoping to get more details to explain the first question. (Chyun:  trying to understand the differences between this and the main models: futureDau ~ futurefgc vs. futurefgc ~ futureDau?)
+* The main: cutting duaghers ~ others ((women's attitudes in fgc beliefs and their fgc status predicting daughter's fgc future).  Only women with daughter to be cut are included)
+* The secondary: FGC continuity ~ others ((women's attitudes in fgc beliefs predicting fgc future; all the women are included)
+* Third question:  cutting daughter ~ FGC continuity and others (only women with daughter included) We migh need this model in hoping to get more details to explain the first question. 
 * We are going to run versions of our two main models, but without group level covariates. (Chyun: don't remember the reasons why)
-
-* list of FGC benefits in DHS:
-G117A: Circumcision benefits: cleanliness/hygiene
-G117B: Circumcision benefits: social acceptance
-G117C: Circumcision benefits: better marriage prospects
-G117D: Circumcision benefits: virginity/prevent premarital sex
-G117E: Circumcision benefits: more sexual pleasure for men
-G117F: Circumcision benefits: religious approval
-G117G: Circumcision benefits: reduce promiscuity/ reduce sex drive
-G117H: Circumcision benefits: reduce STD and AIDS infections
-G117X: Circumcision benefits: other
-G117Y: Circumcision benefits: no benefit (Did we use this one? to check.)
 
 Models:
 * Daughter future FGC (main):
@@ -50,13 +39,32 @@ system.time(mod <- clmm(
   , data=modAns)
 )
 
+Decisions:
+* This study is about testing hypothesis not prediction.
+* We agree on using spline for age and wealth (to keep more power, correct?)
+* We used score (instead of PCA) to represent Media use, FGC benefits, gender awareness.
+* to include wealth, and education at the community level.
+* to make ethnicity a random because we don't need the power for the result.  We have enough levels for our reason; and we are not particularly interested in ethnicity for our study.  __BUT__ we latter decided to put it back as a fixed variable.
+* We decided to run versionso our two main models, but without group level covariates. (Apr 20, 15)
+
 Basic Information:
 * att (gender awareness: no=0, DK=1 and yes=2):  the higher the score is, the LESS aware of gender equality a woman feels.  FGC bene (no=0, yes=1):  the higher the score, the stronger in believing FGC beneifts.  Media use (not at all=0..., almost everyday=3):  the higher the score, the more in using media.
 * media scores from 0-3 (3 questions), att 0-2 (5 questions), bene 0-1 (9 questions).
 
+* list of FGC benefits in DHS:
+G117A: Circumcision benefits: cleanliness/hygiene
+G117B: Circumcision benefits: social acceptance
+G117C: Circumcision benefits: better marriage prospects
+G117D: Circumcision benefits: virginity/prevent premarital sex
+G117E: Circumcision benefits: more sexual pleasure for men
+G117F: Circumcision benefits: religious approval
+G117G: Circumcision benefits: reduce promiscuity/ reduce sex drive
+G117H: Circumcision benefits: reduce STD and AIDS infections
+G117X: Circumcision benefits: other
+G117Y: Circumcision benefits: no benefit (Did we use this one? to check.)
+
 Other issues and questions:
-* to think about the third question?
-* studying threshold/tipping point: to test if when FGC prevalence reaches certain point , the behaviors start to change (either direction), and if the association of benefit and prevalence also play a crucial role in the "tipping point"?
+* studying threshold/tipping point: to test if when FGC prevalence reaches certain point, the behaviors start to change (either direction), and if the association of benefit and prevalence also play a crucial role in the "tipping point"?
 * Efferson etc's paper (15):  What can it tell us about heterogeniety ("a singel critical threshold is unlikely to exist"). They argued that FGC is not a socially conditined norm.  Will our findings support or rebut it?
 * to investigate the associations of women’s gender awareness, and their beliefs of FGC benefits.  It is presumed that gender awareness interrelate to FGC beliefs.  By testing the relations of the two factors allows us to gather information for a better interpretation of the main model. (which group of women?  with or withtout daughers to be cut?)
 * to study contrast of countries.
@@ -66,14 +74,6 @@ Other issues and questions:
 3. G115: Any daughter who is not circumcised (This is the main variable we used for the daughter model)
 4. G116: Intends to have daughter(s) circumcised in future (This is the main variable we used for the daughter model)
 We are also interested in any changes of mother's attitudes on FGC.  We can find information of this by testing women who already have daughters fgced and more to (or not to) be fgced.  This is be interesting, especially at a community level.
-
-Decisions:
-* This study is about testing hypothesis not prediction.
-* We agree on using spline for age and wealth (to keep more power, correct?)
-* We used score (instead of PCA) to represent Media use, FGC benefits, gender awareness.
-* to include wealth, and education at the community level.
-* to make ethnicity a random because we don't need the power for the result.  We have enough levels for our reason; and we are not particularly interested in ethnicity for our study.  __BUT__ we latter decided to put it back as a fixed variable.
-* We decided to run versionso our two main models, but without group level covariates. (Apr 20, 15)
 
 ----------------------------------------------------------------------
 
