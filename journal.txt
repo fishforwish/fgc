@@ -1,3 +1,7 @@
+To discuss:
+Should we also test religion at a communilty level?
+
+======
 As of Jun 11, 2018:
 
 Basically, this paper is about norm and behaviors.
@@ -7,8 +11,8 @@ Research Questions:
 
 * The main (all multivariate): cutting duaghers ~ women's attitudes of FGC benefits + FGC continuity.  What the associations are among women's beliefs in FGC benefits, their position on whether to continue FGC practice in the future, and whether to cut their daughters. (only women with daughter to be cut are included)
 * The secondary: FGC continuity ~ women's attitudes of FGC benefits.   What the associations are among women's beliefs in FGC benefits and their position on whether to continue FGC practice in the future (all the women are included)
-* Third question:  cutting daughter ~ FGC continuity (or FGC continuity ~ cutting daughter) (only women with daughter included) We migh need this model in hoping to get more details to explain the first question. (Chyun is trying to understand the differences between this and the main models: futureDau ~ futurefgc vs. futurefgc ~ futureDau?)
-* We are going to run versions of our two main models, but without group level covariates. (Chyun doesn't remember the reasons why)
+* Third question:  cutting daughter ~ FGC continuity (or FGC continuity ~ cutting daughter?) (only women with daughter included) We migh need this model in hoping to get more details to explain the first question. (Chyun:  trying to understand the differences between this and the main models: futureDau ~ futurefgc vs. futurefgc ~ futureDau?)
+* We are going to run versions of our two main models, but without group level covariates. (Chyun: don't remember the reasons why)
 
 * list of FGC benefits in DHS:
 G117A: Circumcision benefits: cleanliness/hygiene
@@ -26,16 +30,10 @@ Models:
 * Daughter future FGC (main):
 system.time(mod<- clmm(
   futureDau ~ futurefgc 
-  + fgcstatusMom + bene
-  + media 
-  + att
-  + edu 
-  + ns(wealth,3) + ns(group_wealth,3)
-  + ns(age,4) 
-  + maritalStat 
-  + job
-  + urRural + religion
-  + group_futurefgc + group_fgcstatusMom+ group_bene + group_media + group_att + group_edu
+  + fgcstatusMom + bene + media + att + edu + maritalStat
+  + job + urRural + religion
+  + ns(wealth,3) + ns(age,4) 
+  + group_futurefgc + group_fgcstatusMom + group_bene + group_media + group_att + group_edu + ns(group_wealth,3)
   + (1|clusterId) + (1|ethni)
   + (1|CC)
   , data=modAns)
@@ -43,26 +41,14 @@ system.time(mod<- clmm(
 
 * FGC continuity (secondary):
 system.time(mod <- clmm(
-  futurefgc ~ fgcstatusMom + group_fgcstatusMom
-  + bene + group_bene
-  + media + group_media 
-  + att + group_att 
-  + edu + group_edu
-  + ns(wealth,3) + ns(group_wealth,3)
-  + ns(age,4) 
-  + maritalStat 
-  + job
-  + urRural + religion
+  futurefgc ~ fgcstatusMom 
+  + bene + media + att + edu  + maritalStat + job + urRural + religion
+  + ns(wealth,3) + ns(age,4) 
+  + group_fgcstatusMom + group_bene + group_media + group_att + group_edu + ns(group_wealth,3)
   + (1|clusterId) + (1|ethni)
     + (1|CC)
   , data=modAns)
 )
-
-Variables:
-* In the main model, the predictors are women’s FGC status and FGC benefits  (see the list of FGC benefits at table--) and the response variables are women’s opinion on whether the practice of FGC, and whether to cut their daughters.  In the secondary model, women’s gender awareness is the predictor and beliefs of FGC benefits the response.
-* other covariates:  country \cf{We don’t need this if we analyze each country separately}, age, education, wealth, ethnicity, religion, marital status, work status, residence (urban vs. rural), media use (another PCA or score?) and gender awareness.
-* covariates at a community level:  education, wealth, media use, FGC benefits, gender awareness and FGC prevalence
-* Cluster is treated as the only random effect; while ethinicity and religion are fixed.
 
 Basic Information:
 * att (gender awareness: no=0, DK=1 and yes=2):  the higher the score is, the LESS aware of gender equality a woman feels.  FGC bene (no=0, yes=1):  the higher the score, the stronger in believing FGC beneifts.  Media use (not at all=0..., almost everyday=3):  the higher the score, the more in using media.
