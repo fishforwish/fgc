@@ -24,6 +24,7 @@ $(ms)/%.mk: $(ms)/Makefile ;
 $(ms)/Makefile:
 	git submodule update -i
 
+Ignore += fgc_DHS
 fgc_DHS: dir=~/Dropbox
 fgc_DHS:
 	$(linkdir)
@@ -46,6 +47,7 @@ manuscript.pdf: manuscript.tex
 # Refs
 
 Sources += manual.bib auto.rmu
+Ignore += refs.bib
 refs.bib: auto.bib manual.bib
 	$(cat)
 
