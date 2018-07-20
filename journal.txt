@@ -1,23 +1,37 @@
-To discuss:
-* Can we test both cutting daughter and fgc future both as respose variables in one model?
-* Should we also test religion at a communilty level?
-* Pleas also see note on May23 2018
+
+2018 Jul 20 (Fri)
+=================
+
+* Updated Jun 11 stuff (see below)
+
+* Debated individual model again, decided again to try on different levels
+
+* Decided to not attempt to construct group-level religion (seems too complicated)
 
 ======
-As of Jun 11, 2018:
+
+Drafted Jun 11, 2018, updated 2018 Jul 20 (Fri)
 
 * Basically, this paper is about norm and behaviors.
 * We studied KMNS: Kenya 2008/9, Mali 2006 (C: the report was in French), Nigeria 2008 and Sierra Leone 2008.
 
 Research Questions:
 
-* The main: cutting duaghers ~ others ((women's attitudes in fgc beliefs and their fgc status predicting daughter's fgc future).  Only women with daughter to be cut are included)
-* The secondary: FGC continuity ~ others ((women's attitudes in fgc beliefs predicting fgc future; all the women are included)
-* Third question:  cutting daughter ~ FGC continuity and others (only women with daughter included) We migh need this model in hoping to get more details to explain the first question. 
-* We are going to run versions of our two main models, but without group level covariates. (Chyun: don't remember the reasons why)
+Main model: daughter plan ~ others (women's attitudes in fgc beliefs and their fgc status).
+*  women with daughters to be fgc
+
+Model 2: fgc future ~ others (women's attitudes in fgc beliefs predicting fgc future)
+* 2a:  all women
+* 2b: women with daughters to be fgc
+
+Model 3: daughter plan ~ fgc future and others (only women with daughter included)
+*  women with daughters to be fgc
+
+* All models to be run with and without group-level covariates
+	* We said we want to do this for power reasons
 
 Models:
-* Daughter future FGC (main):
+* Daughter plan (main):
 system.time(mod<- clmm(
   futureDau ~ futurefgc 
   + fgcstatusMom + bene + media + att + edu + maritalStat
@@ -77,21 +91,21 @@ We are also interested in any changes of mother's attitudes on FGC.  We can find
 
 ----------------------------------------------------------------------
 
-May23 2018: (after years!)
+May 23 2018: (after years!)
 
 There are 3 models:
  
-Main model: fgc daughter future ~ others (women's attitudes in fgc beliefs and their fgc status predicting daughter's fgc future)
-Structuarl model 1: fgc Future ~ others (women's attitudes in fgc beliefs predicting fgc future)
-1a:  all women
-1b: women with daughters to be fgc only
+Main model: fgc daughter plan ~ others (women's attitudes in fgc beliefs and their fgc status predicting daughter's fgc future)
 
-Structuarl model 2: fgc daughter future ~ others (women's attitudes in fgc beliefs, their fgc status and their attitudes of fgc continuity predicting daughter's fgc future)
+Structural model 1: fgc future ~ others (women's attitudes in fgc beliefs predicting fgc future)
+* 1a:  all women
+* 1b: women with daughters to be fgc only
+
+Structural model 2: fgc daughter plan ~ others (women's attitudes in fgc beliefs, their fgc status and their attitudes of fgc continuity predicting daughter's fgc future)
 
 How about daughters' age?
 To find out why did we decide not to use women's daughters who were fgced already.  So far, we can't decide what's the best.
-CF:  One of our main insterests is community level of effect, therefore all women's attitudes and the fgc status of their own and their daughter should count.  Yet, our main resonse is whether to fgc daughters or not, so how will this work? 
-
+CF:  One of our main interests is community level of effect, therefore all women's attitudes and the fgc status of their own and their daughter should count.  Yet, our main response is whether to fgc daughters or not, so how will this work? 
 
 ----------------------------------------------------------------------
 
@@ -106,7 +120,7 @@ July 19:
 
 ---------------------------------------------------------------------
 July 14:
-* Due to all the NAs in the daughter future (individual) model which seems hard to solve and that also questions how reliable our other models are, we decide to do the following:
+* Due to all the NAs in the daughter plan (individual) model which seems hard to solve and that also questions how reliable our other models are, we decide to do the following:
 
 + to do profile likelihood and CI for ordinal models?
 
@@ -132,17 +146,23 @@ July 13:
 + Based on the results of the 6 models (futurefgc, daughter fgc with future, and daughter fgc; each with individual and full models), we will go ahead and do plots, etc. despite the fact that there are still some confusions with the individual daughter fgc model.
 + Jonathan emailed Ben about all the NA and ST in the individual daughter fgc model.
 + Mike will add group mom fgc in the daughter fgc full model.
+
+
+----------------------------------------------------------------------
+
 ## 20 Apr 2016
 
 * We want to start with a model that has no group-level covariates. The idea is mostly about power: it will often be hard to see whether a covariate is operating at the individual level, group level, or both: first we want to know whether it's operating at all.
 
 
 ---------------------------------------------------------------------
+
 7 June
 
 The largest model took 81 hours to fit via clmm. The errors are consistent with the problems noted on May 4th. We have more than one RE and clmm spits back NA's for se.error. Quadrature methods are not available with more than one RE term. 
 
 ---------------------------------------------------------------------
+
 20 May
 
 Mike has made a beautiful picture, but we're having trouble interpreting some of the details. Should we be worried about the mixing in MCMCglmm? Can we try to address with priors? 

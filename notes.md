@@ -1,4 +1,8 @@
 
+THIS IS OUT OF DATE, SEE journal.txt
+
+----------------------------------------------------------------------
+
 Basically, this paper is about norm and behaviors.
 We studied KMNS: Kenya 2008/9, Mali 2006 (C: the report was in French), Nigeria 2008 and Sierra Leone 2008.
 

@@ -32,6 +32,12 @@ fgc_DHS/%:
 
 ######################################################################
 
+## notes
+
+Sources += journal.txt notes.md
+
+######################################################################
+
 Sources += manuscript.tex
 manuscript.pdf: manuscript.tex
 
