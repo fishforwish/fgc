@@ -94,6 +94,7 @@ select=$(sets:%=%.select.Rout)
 $(select): %.select.Rout: fgc_DHS/%.Rout select.csv wselect.R
 	$(run-R)
 
+Ignore += select.output
 select.output: $(sets:%=%.select.Routput)
 	cat $^ > $@
 select.objects.output: $(sets:%=%.select.objects.Routput)
@@ -219,8 +220,7 @@ Sources += qual.mk quant.mk plots.mk comPlots.mk bioPlots.mk PCA.mk
 -include $(ms)/git.mk
 -include $(ms)/visual.mk
 
-export autorefs = autorefs
--include autorefs/inc.mk
-
+-include $(ms)/autorefs.mk
+-include $(ms)/pandoc.mk
 -include $(ms)/wrapR.mk
 -include $(ms)/texdeps.mk
