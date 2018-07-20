@@ -1,13 +1,13 @@
 To discuss:
-Can we test both cutting daughter and fgc future both as respose variables in one model?
-Should we also test religion at a communilty level?
-Pleas also see note on May23 2018
+* Can we test both cutting daughter and fgc future both as respose variables in one model?
+* Should we also test religion at a communilty level?
+* Pleas also see note on May23 2018
 
 ======
 As of Jun 11, 2018:
 
-Basically, this paper is about norm and behaviors.
-We studied KMNS: Kenya 2008/9, Mali 2006 (C: the report was in French), Nigeria 2008 and Sierra Leone 2008.
+* Basically, this paper is about norm and behaviors.
+* We studied KMNS: Kenya 2008/9, Mali 2006 (C: the report was in French), Nigeria 2008 and Sierra Leone 2008.
 
 Research Questions:
 
