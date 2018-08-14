@@ -150,16 +150,16 @@ ke5.df.Rout: ke5.benePCA.Rout ke5.recode.Rout df.R
 all_countries_%: ke5.%.Rout ng5.%.Rout sl5.%.Rout ml5.%.Rout
 	$(run)
 
-all.futurefgc.Rout: futurefgc_fit.R
-all.daughterfgc.Rout: daughterfgc_fit.R
-all.futurefgcDau.Rout: futurefgcDau_fit.R
-all.multivariate.Rout: multivariate_fit.R
-all.%.Rout: all_countries_% ke5.%.Rds ng5.%.Rds sl5.%.Rds ml5.%.Rds %_fit.R
-	$(run-R)
-
 all.%_ind_clmm.Rout: all_countries_% ke5.%.Rds ng5.%.Rds sl5.%.Rds ml5.%.Rds %_ind_clmm.R
 	$(run-R) 
 
+all.daughterfgc_ind_clmm.Rout: daughterfgc_ind_clmm.R
+all.futurefgc_ind_clmm.Rout: futurefgc_ind_clmm.R
+all.futurefgcDau_ind_clmm.Rout: futurefgcDau_ind_clmm.R
+
+all.daughterfgc_full_clmm.Rout: daughterfgc_full_clmm.R
+all.futurefgc_full_clmm.Rout: futurefgc_full_clmm.R
+all.futurefgcDau_ind_clmm.Rout: futurefgcDau_full_clmm.R
 
 all.%_full_clmm.Rout: all_countries_% ke5.%.Rds ng5.%.Rds sl5.%.Rds ml5.%.Rds %_full_clmm.R
 	$(run-R)
@@ -176,25 +176,7 @@ all.%_full_varlvlsum.Rout: all.%_full_clmm.Rout %_full_varlvlsum.R
 
 
 
-
-all.futurefgc_brms.Rout: futurefgc_brms.R
-all.daughterfgc_brms.Rout: daughterfgc_brms.R
-all.futurefgcDau_brms.Rout: futurefgcDau_brms.R
-
-all.futurefgc_full_brms.Rout: futurefgc_full_brms.R
-all.daughterfgc_full_brms.Rout: daughterfgc_full_brms.R
-all.futurefgcDau_full_brms.Rout: futurefgcDau_full_brms.R
-
-all.%_brms.Rout: all_countries_% ke5.%.Rds ng5.%.Rds sl5.%.Rds ml5.%.Rds %_brms.R
-	$(run-R) 
-
-all.%_full_brms.Rout: all_countries_% ke5.%.Rds ng5.%.Rds sl5.%.Rds ml5.%.Rds %_full_brms.R
-	$(run-R) 
-
 effects.Rout: all.futurefgc_clmm.Rout all.futurefgcDau_clmm.Rout effects.R
-	$(run-R)
-
-all.futurefgc.effects_brms.Rout: all.futurefgc_brms.Rout effects_brms.Rout
 	$(run-R)
 
 ######################################################################
