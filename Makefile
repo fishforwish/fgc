@@ -159,7 +159,7 @@ all.futurefgcDau_ind_clmm.Rout: futurefgcDau_ind_clmm.R
 
 all.daughterfgc_full_clmm.Rout: daughterfgc_full_clmm.R
 all.futurefgc_full_clmm.Rout: futurefgc_full_clmm.R
-all.futurefgcDau_ind_clmm.Rout: futurefgcDau_full_clmm.R
+all.futurefgcDau_full_clmm.Rout: futurefgcDau_full_clmm.R
 
 all.%_full_clmm.Rout: all_countries_% ke5.%.Rds ng5.%.Rds sl5.%.Rds ml5.%.Rds %_full_clmm.R
 	$(run-R)

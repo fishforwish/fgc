@@ -15,15 +15,14 @@ modAns <- model.frame(
   , data=dat, na.action=na.exclude, drop.unused.levels=TRUE
 )
 
-system.time(mod <- clmm(
-  futurefgcDau ~ fgcstatusMom
+system.time(mod <- clmm(futurefgcDau ~ fgcstatusMom
+  + CC
   + bene + media + att + edu
   + ns(age,4) + ns(wealth,3)
   + maritalStat 
   + job
   + urRural + religion
   + (1|clusterId) + (1|ethni)
-  + (1| CC)
   , data=modAns)
 )
 

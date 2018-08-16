@@ -24,6 +24,7 @@ modAns <- model.frame(
 system.time(mod<- clmm(
   futureDau ~ futurefgc + group_futurefgc
   + fgcstatusMom + group_fgcstatusMom
+  + CC
   + bene + group_bene
   + media + group_media 
   + att + group_att 
@@ -34,7 +35,6 @@ system.time(mod<- clmm(
   + job
   + urRural + religion
   + (1|clusterId) + (1|ethni)
-  + (1|CC)
   , data=modAns)
 )
 
