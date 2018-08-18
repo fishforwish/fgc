@@ -171,10 +171,17 @@ all.%_full_varlvlsum.Rout: all.%_full_clmm.Rout %_full_varlvlsum.R
 	$(run-R)
 
 
-%.isoplots.Rout: fgc/.all.%_varlvlsum.RData ordfuns.R plotFuns.R iso.R
+%.isoplots.Rout: temp_results/all.%_varlvlsum.RData ordfuns.R plotFuns.R iso.R
 	$(run-R)
 
+daughterfgc_ind.isoplots.Rout: iso.R
+daughterfgc_full.isoplots.Rout: iso.R
 
+futurefgc_ind.isoplots.Rout: iso.R
+futurefgc_full.isoplots.Rout: iso.R
+
+futurefgcDau_ind.isoplots.Rout: iso.R
+futurefgcDau_full.isoplots.Rout: iso.R
 
 effects.Rout: all.futurefgc_clmm.Rout all.futurefgcDau_clmm.Rout effects.R
 	$(run-R)
