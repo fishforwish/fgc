@@ -40,6 +40,17 @@ Decisions:
 * We decided to run versionso our two main models, but without group level covariates. (Apr 20, 15)
 
 ---------------------------------------------------------------------
+Aug 28:
+We looked at the restuls of the three models (3 community levels and 3 individual levels).
+
+We want to exame more clearly about the benefit PCA pattern to udnerstand better of fgc norm
+We have to look at the country factor which seems confusing.
+
+We will read the science paper by Efferson (http://science.sciencemag.org/content/349/6255/1446.long) and the one in the Nature (https://www.nature.com/articles/nature20100).
+
+
+
+---------------------------------------------------------------------
 July 19:
 * We want to switch to brms (for fgc and mc; and we want to push this method in our projects in general).  
 * Use effect plots with baysina.  Since there is no standard way of doing p values, we will not going to do variable p-values.
