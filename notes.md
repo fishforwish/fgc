@@ -46,6 +46,8 @@ We looked at the restuls of the three models (3 community levels and 3 individua
 We want to exame more clearly about the benefit PCA pattern to udnerstand better of fgc norm
 We have to look at the country factor which seems confusing.
 
+We want to have histograms of fgc prevalence by mother, daughter and future.
+
 We will read the science paper by Efferson (http://science.sciencemag.org/content/349/6255/1446.long) and the one in the Nature (https://www.nature.com/articles/nature20100).
 
 
