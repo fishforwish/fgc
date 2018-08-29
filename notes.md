@@ -40,6 +40,11 @@ Decisions:
 * We decided to run versionso our two main models, but without group level covariates. (Apr 20, 15)
 
 ---------------------------------------------------------------------
+Aug 29:
+
+We want all the women, not just women with daughters to be cut, included in the models for the community level of effect.
+
+---------------------------------------------------------------------
 Aug 28:
 We looked at the restuls of the three models (3 community levels and 3 individual levels).
 
