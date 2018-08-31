@@ -75,7 +75,10 @@ groupdat <- (dat
 
 print(hist(groupdat$group_fgc))
 print(hist(groupdat$group_daughterToFgc))
-#print(hist(groupdat$group_bene))
+
+## Craziness!
+print(hist(groupdat$group_bene))
+
 #print(hist(groupdat$group_att))
 #print(hist(groupdat$group_media))
 #print(hist(groupdat$group_edu))

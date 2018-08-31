@@ -50,6 +50,7 @@ hist.Rout: hist.R
 
 # Refs
 
+# auto.html: auto.rmu
 Sources += manual.bib auto.rmu
 Ignore += refs.bib
 refs.bib: auto.bib manual.bib
@@ -141,7 +142,8 @@ ke5.df.Rout: ke5.benePCA.Rout ke5.recode.Rout df.R
 %.df.Rout: %.recode.Rout df.R
 	$(run-R)
 
-prevalance.Rout: ke5.df.Rds ng5.df.Rds sl5.df.Rds ml5.df.Rds prevalance.R
+
+prevalence.Rout: ke5.df.Rds ng5.df.Rds sl5.df.Rds ml5.df.Rds prevalence.R
 	$(run-R)
 
 %.futurefgc.Rout: %.df.Rout futurefgc.R
