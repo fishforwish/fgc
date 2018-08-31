@@ -143,12 +143,20 @@ ke5.df.Rout: ke5.benePCA.Rout ke5.recode.Rout df.R
 
 %.futurefgc.Rout: %.df.Rout futurefgc.R
 	$(run-R)
+ke5.futurefgc.Rout: futurefgc.R
 
 %.daughterfgc.Rout: %.df.Rout daughterfgc.R
 	$(run-R)
 
+ke5.daughterfgc.Rout: daughterfgc.R
+ng5.daughterfgc.Rout:
+sl5.daughterfgc.Rout:
+ml5.daughterfgc.Rout:
+
+
 %.futurefgcDau.Rout: %.df.Rout futurefgcDau.R
 	$(run-R)
+ke5.futurefgcDau.Rout: futurefgcDau.R
 
 %.multivariate.Rout: %.df.Rout multivariate_df.R
 			$(run-R)

@@ -41,6 +41,36 @@ scoring <- function(dat, type,funct,idvec=NULL,colnam=NULL){
   return(tempdat)
 }
 
+
+beneframe <- scoring(Answers, "bene", rightfactor, Answers$id)
+attframe <- scoring(Answers, "att", yesnodk, Answers$id)
+mediaframe <- scoring(Answers, "media", rightfactor, Answers$id)
+
+
+covDat <- (Answers
+	%>% select(fgc, clusterId, age, id, edu, wealth, ethni
+		, religion , maritalStat, job, urRural
+		)
+	%>% left_join(., beneframe, by = "id")
+	%>% left_join(., attframe, by = "id")
+	%>% left_join(., mediaframe, by = "id")
+	%>% mutate(fgcstatusMom = fgc
+		, fgc = rightfactor(fgc)
+		, edu = rightfactor(edu)
+		, edu = edu / mean(edu, na.rm = TRUE)
+		)
+	%>% group_by(clusterId)
+	%>% mutate(group_bene = mean(bene, na.rm = TRUE)
+		, group_att = mean(att, na.rm = TRUE)
+		, group_media = mean(media, na.rm = TRUE)
+		, group_fgc = mean(fgc, na.rm = TRUE)
+		, group_edu = mean(edu, na.rm = TRUE)
+		, group_wealth = mean(wealth, na.rm = TRUE)
+		)
+  %>% select(-fgc)
+)
+
+
 responseDat <- (Answers 
   %>% select(c(daughterToFgc,id)) 
   %>% mutate(futurefgcDau = yesnodkFactor(daughterToFgc)
@@ -48,43 +78,11 @@ responseDat <- (Answers
   %>% select(-c(daughterToFgc))
 )
 
-covDat <- (Answers
-  %>% select(c(fgc,clusterId,age,id,edu,wealth,ethni
-    ,religion,maritalStat, job,urRural,CC,beneAcceptance,attArgue,mediaRadio 
-    ))
-  %>% mutate(fgcstatusMom = rightfactor(fgc))
-  %>% select(-fgc)
-)
-
-tempcombDat <- (left_join(responseDat,covDat,by="id") 
+combinedDat <- (left_join(responseDat,covDat,by="id") 
   %>% filter(complete.cases(.)) 
-  %>% select(-c(beneAcceptance,attArgue,mediaRadio))
 )
 
 
-beneframe <- scoring(Answers,"bene",rightfactor,tempcombDat$id)
-attframe <- scoring(Answers,"att",yesnodk,tempcombDat$id)
-mediaframe <- scoring(Answers, "media",rightfactor,tempcombDat$id)
-
-combinedDat <- (tempcombDat 
-  %>% left_join(.,beneframe,by="id") 
-  %>% left_join(.,attframe,by="id") 
-  %>% left_join(.,mediaframe, by= "id")
-)
-
-combinedDat <- (combinedDat 
-  %>% mutate(edu = rightfactor(edu)
-    , edu = edu/mean(edu,na.rm=TRUE)
-    )
-  %>% group_by(clusterId)
-  %>% mutate(group_bene = mean(bene,na.rm=TRUE)
-    , group_att = mean(att,na.rm=TRUE)
-    , group_media = mean(media,na.rm=TRUE)
-    , group_fgcstatusMom = mean(fgcstatusMom,na.rm=TRUE)
-    , group_edu = mean(edu,na.rm=TRUE)
-    , group_wealth = mean(wealth, na.rm=TRUE)
-    )
-)
 
 # rdsave(combinedDat)
 
