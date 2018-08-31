@@ -46,6 +46,7 @@ beneframe <- scoring(Answers, "bene", rightfactor, Answers$id)
 attframe <- scoring(Answers, "att", yesnodk, Answers$id)
 mediaframe <- scoring(Answers, "media", rightfactor, Answers$id)
 
+print(summary(beneframe))
 
 covDat <- (Answers
 	%>% select(fgc, clusterId, age, id, edu, wealth, ethni

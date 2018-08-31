@@ -141,9 +141,15 @@ ke5.df.Rout: ke5.benePCA.Rout ke5.recode.Rout df.R
 %.df.Rout: %.recode.Rout df.R
 	$(run-R)
 
+prevalance.Rout: ke5.df.Rds ng5.df.Rds sl5.df.Rds ml5.df.Rds prevalance.R
+	$(run-R)
+
 %.futurefgc.Rout: %.df.Rout futurefgc.R
 	$(run-R)
 ke5.futurefgc.Rout: futurefgc.R
+ng5.futurefgc.Rout:
+sl5.futurefgc.Rout:
+ml5.futurefgc.Rout:
 
 %.daughterfgc.Rout: %.df.Rout daughterfgc.R
 	$(run-R)
