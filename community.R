@@ -5,27 +5,6 @@ library(dplyr)
 Answers <- (Answers 
   %>% mutate(id=1:nrow(.))
   )
-
-scoring <- function(dat, type,funct,idvec=NULL,colnam=NULL){
-	if(is.null(colnam)) colnam = type
-	if(!is.null(idvec))(dat <- dat %>% filter(id %in% idvec))
-	if(is.null(idvec)) idvec <- 1:nrow(dat)
-	typeNames <- grepl(type, names(Answers))
-	cols <- sum(typeNames)
-	tempdat <- (dat[typeNames] 
-		%>% rowwise()
-		%>% summarise_each(funs(funct)) 
-		%>% mutate(id=idvec) 
-		%>% transmute(total = rowMeans(.[,1:cols],na.rm=TRUE)
-			, id=id
-			)
-		%>% ungroup() 
-		%>% mutate(Score=total/mean(total,na.rm=TRUE)) 
-		%>% select(-total)
-		)
-	colnames(tempdat) <- c("id", colnam)
-	return(tempdat)
-}
 																			 
 																			 
 beneframe <- scoring(Answers, "beneframe", rightfactor, Answers$id)

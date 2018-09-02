@@ -1,3 +1,5 @@
+## Helper functions to recode DHS answers
+
 
 tfun <- function(q, qmax, qmin=-1e7, dk=98, nalist=c(99)){
 	q[q==dk] <- qmax
@@ -59,5 +61,46 @@ tableRecode <- function(v, tableName,
 		if(length(levels(w))>maxCat)
 			stop("Too many levels", paste(levels(w), collapse=" : "))
 	return(w)
+}
+
+scoring <- function(dat, type,funct,idvec=NULL,colnam=NULL){
+  if(is.null(colnam)) colnam = type
+  if(!is.null(idvec))(dat <- dat %>% filter(id %in% idvec))
+  if(is.null(idvec)) idvec <- 1:nrow(dat)
+  typeNames <- grepl(type, names(Answers))
+  cols <- sum(typeNames)
+  tempdat <- (dat[typeNames] 
+              %>% rowwise()
+              %>% summarise_each(funs(funct)) 
+              %>% mutate(id=idvec) 
+              %>% transmute(total = rowMeans(.[,1:cols],na.rm=TRUE)
+                            , id=id
+              )
+              %>% ungroup() 
+              %>% mutate(Score=total/mean(total,na.rm=TRUE)) 
+              %>% select(-total)
+  )
+  colnames(tempdat) <- c("id", colnam)
+  return(tempdat)
+}
+
+yesnodk <- function(x){
+  y <- as.numeric(factor(x,levels(x)[c(1,3,2)]))-1
+  return(y)
+}
+
+yesnodkFactor <- function(x){
+  y <- factor(x,levels(x)[c(1,3,2)])
+  return(y)
+}
+
+contfgc <- function(x){
+  y <- factor(x,levels(x)[c(2,3,1)])
+  return(y)
+}
+
+rightfactor <- function(x){
+  y <- as.numeric(x)-1
+  return(y)
 }
 

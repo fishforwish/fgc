@@ -121,7 +121,7 @@ select.summary.output: $(sets:%=%.select.summary.Routput)
 Sources += $(wildcard *.ccsv *.tsv)
 
 .PRECIOUS: %.recode.Rout
-%.recode.Rout: %.select.Rout recodeFuns.Rout religion_basic.ccsv partnership_basic.ccsv recode.R
+%.recode.Rout: %.select.Rout recodeFuns.R religion_basic.ccsv partnership_basic.ccsv recode.R
 	$(run-R)
 
 recodes.output: $(sets:%=%.recode.Routput)
@@ -137,12 +137,17 @@ recodes.summary.output: $(sets:%=%.recode.summary.Routput)
 
 # sl5.benePCA.Rout ml5.benePCA.Rout ng5.benePCA.Rout
 
-ke5.df.Rout: ke5.benePCA.Rout ke5.recode.Rout df.R
-%.df.Rout: %.recode.Rout df.R
+ke5.community.Rout: ke5.recode.Rout community.R
+%.community.Rout: %.recode.Rout community.R
 	$(run-R)
 
-prevalance.Rout: ke5.df.Rds ng5.df.Rds sl5.df.Rds ml5.df.Rds prevalance.R
+
+
+prevalance.Rout: ke5.community.Rds ng5.community.Rds sl5.community.Rds ml5.community.Rds prevalance.R
 	$(run-R)
+
+
+### stop here
 
 %.futurefgc.Rout: %.df.Rout futurefgc.R
 	$(run-R)
