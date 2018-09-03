@@ -1,3 +1,9 @@
+2018 Sept 3
+
+We did not switch over to tidyverse for this project.
+We will start with the recoding step.
+
+
 For basic proposal of this study, see note on Jun 11, 2018
 ---------------------------------------------------------------------
 
