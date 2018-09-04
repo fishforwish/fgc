@@ -121,6 +121,8 @@ select.summary.output: $(sets:%=%.select.summary.Routput)
 Sources += $(wildcard *.ccsv *.tsv)
 
 .PRECIOUS: %.recode.Rout
+ke5.recode.Rout: recode.R
+
 %.recode.Rout: %.select.Rout recodeFuns.R religion_basic.ccsv partnership_basic.ccsv recode.R
 	$(run-R)
 

@@ -2,21 +2,19 @@
 
 print("#######################  RTARGET ####################")
 library(gdata)
-
+library(dplyr)
 ## Reweight before subsetting.
-Answers <- within(Answers, {
-	sampleWeight <- sampleWeight/sum(sampleWeight)
-})
 
-## subsets
-# Don't want people who never heard of FGC (heardFGC and heardGC) and visitors:
-Answers <- subset(Answers,
-	(!is.na(heardFGC) & substr(heardFGC, 1, 3)=="Yes") |
-	(!is.na(heardGC) & substr(heardGC, 1, 3)=="Yes")
+Answers <- (Answers
+## Reweight before subsetting
+	%>% mutate(sampleWeight = sampleWeight/sum(sampleWeight))
+## subset: Don't want people who never heard of FGC (heardFGC and heardGC) and visitors
+	%>% filter((!is.na(heardFGC) & substr(heardFGC, 1, 3) == "Yes")
+		| (!is.na(heardGC) & substr(heardGC, 1, 3) == "Yes")
+		)
+	%>% filter(!is.na(visitorResident) & !grepl("Visitor", visitorResident))
 )
-Answers <- subset(Answers,
-	!is.na(visitorResident) & !grepl("Visitor", visitorResident)
-)
+
 
 # Ideally, I like to have a variable as daughterFGC (daughter's FGC status) which involves a few variables:  numDaughterFgced (already cut; 95 and 0=none cut), and daughterToFgc.  Those variables provides answers of yes (already cut), no (none cut), plan to cut, plan not to be cut, and don't know the plan yet.  I like to make it a single outcome measurement with 6 levels: yes/to be cut, yes/not to be cut, no/to be cut, no/not to be cut, yes/don't know, no/don't know.
 

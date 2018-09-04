@@ -2,6 +2,8 @@
 
 We did not switch over to tidyverse for this project.
 We will start with the recoding step.
+Still trying to work on cleaning up refactoring levels and recoding levels.
+
 
 
 For basic proposal of this study, see note on Jun 11, 2018
