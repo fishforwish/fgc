@@ -18,7 +18,7 @@ Answers <- (Answers
 
 # Ideally, I like to have a variable as daughterFGC (daughter's FGC status) which involves a few variables:  numDaughterFgced (already cut; 95 and 0=none cut), and daughterToFgc.  Those variables provides answers of yes (already cut), no (none cut), plan to cut, plan not to be cut, and don't know the plan yet.  I like to make it a single outcome measurement with 6 levels: yes/to be cut, yes/not to be cut, no/to be cut, no/not to be cut, yes/don't know, no/don't know.
 
-Answers <- (Answers
+aa <- (Answers
 	%>% mutate(daughterFgced = ifelse(numDaughterFgced == 95, "No", "Yes")
 		, daughterFgced = ifelse(numDaughterFgced == 0, "Yes", daughterFgced)
 		, daughterFgced = factor(daughterFgced)
@@ -30,32 +30,13 @@ Answers <- (Answers
 		, CC = factor(CC)
 		, recode = substring(survey, 3, 3)
 		, recode = as.numeric(recode)
+		, region = factor(paste(CC, region, sep="_"))
+		, clusterId = factor(paste(survey, clusterId, sep="_"))
+	  , ethni = factor(paste(CC, ethni, sep="_"))
+    , religion = tableRecode(religion, "religion", maxCat=4)
+    , maritalStat = tableRecode(maritalStat, "partnership", maxCat=4)
+    , wealth = wealth/100000
 		)
 )
-
-
-aa <- within(Answers, {
-	recode <- as.numeric(substring(survey, 3, 3))
-})
-
-Answers <- within(Answers, {
-	region <- as.factor(paste(CC, region, sep="_"))
-	clusterId <- as.factor(paste(survey, clusterId, sep="_"))
-
-	ethni <- as.factor(paste(CC, ethni, sep="_"))
-
-	religion <- tableRecode(religion, "religion", maxCat=4)
-
-	maritalStat <- tableRecode(maritalStat, "partnership", maxCat=4)
-
-	wealth <- wealth/100000
-
-	# Make cluster ID into a factor!
-	clusterId <- as.factor(clusterId)
-})
-
-
-
-
 
 # rdsave(Answers)
