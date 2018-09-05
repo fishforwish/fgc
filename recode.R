@@ -18,24 +18,23 @@ Answers <- (Answers
 
 # Ideally, I like to have a variable as daughterFGC (daughter's FGC status) which involves a few variables:  numDaughterFgced (already cut; 95 and 0=none cut), and daughterToFgc.  Those variables provides answers of yes (already cut), no (none cut), plan to cut, plan not to be cut, and don't know the plan yet.  I like to make it a single outcome measurement with 6 levels: yes/to be cut, yes/not to be cut, no/to be cut, no/not to be cut, yes/don't know, no/don't know.
 
-Answers <- within(Answers, {
+Answers <- (Answers
+	%>% mutate(daughterFgced = ifelse(numDaughterFgced == 95, "No", "Yes")
+		, daughterFgced = ifelse(numDaughterFgced == 0, "Yes", daughterFgced)
+		, daughterFgced = factor(daughterFgced)
+		, continueFgc = ifelse(continueFgc == "Don't know", "Depends", as.character(continueFgc))
+		, continueFgc = factor(continueFgc)
+		, daughterNotFgced = ifelse(daughterNotFgced == "Don't know", NA, as.character(daughterNotFgced))
+		, daughterNotFgced = factor(daughterNotFgced)
+		, CC = substring(survey, 1, 2)
+		, CC = factor(CC)
+		, recode = substring(survey, 3, 3)
+		, recode = as.numeric(recode)
+		)
+)
 
-	# make numDaughterFgced as a binary:
-	daughterFgced <- ifelse(numDaughterFgced==95, "No", "Yes")
-	daughterFgced[numDaughterFgced==0] <- "Yes"
-	daughterFgced <- as.factor(daughterFgced)
 
-	if(sum(!is.na(continueFgc))>0){
-		levels(continueFgc)[levels(continueFgc)=="Don't know"] <- "Depends"
-	}
-
-	if(sum(!is.na(daughterNotFgced))>0){
-		levels(daughterNotFgced)[levels(daughterNotFgced)=="Don't know"] <- NA}
-})
-
-Answers <- within(Answers, {
-	CC <- substring(survey, 1, 2)
-	CC <- as.factor(CC)
+aa <- within(Answers, {
 	recode <- as.numeric(substring(survey, 3, 3))
 })
 
