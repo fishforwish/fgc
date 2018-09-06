@@ -5,22 +5,29 @@ library(dplyr)
 Answers <- (Answers 
   %>% mutate(id=1:nrow(.))
   )
-																			 
-																			 
-beneframe <- scoring(Answers, "beneframe", rightfactor, Answers$id)
-attframe <- scoring(Answers, "attframe", yesnodk, Answers$id)
-mediaframe <- scoring(Answers, "mediaframe", rightfactor, Answers$id)
+
+# number of Yes/ total and then divided by the mean. 
+# mean score will be 1
+beneframe <- scoring(Answers, "bene", rightfactor, Answers$id)
+attframe <- scoring(Answers, "att", yesnodk, Answers$id)
+mediaframe <- scoring(Answers, "media", rightfactor, Answers$id)
 
 Answers <- (Answers
 	%>% left_join(., beneframe)
 	%>% left_join(., attframe)
 	%>% left_join(., mediaframe)
 	%>% group_by(clusterId)
-	%>% mutate(group_benef = mean(beneframe, na.rm = TRUE)
-		, group_attf = mean(attframe, na.rm = TRUE)
-		, group_mediaf = mean(mediaframe, na.rm = TRUE)
-		)
+	%>% mutate(group_fgc = mean(fgc, na.rm = TRUE)
+      , group_futurefgcDau = mean(futurefgcDau01, na.rm = TRUE)
+	    , group_bene = mean(bene, na.rm = TRUE)
+	    , group_att = mean(att, na.rm = TRUE)
+	    , group_media = mean(media, na.rm = TRUE)
+	    , group_edu = mean(edu, na.rm = TRUE)
+	    , group_wealth = mean(wealth, na.rm = TRUE)
 )
+)
+
+print(summary(Answers))
 
 # rdsave(Answers)
 saveRDS(Answers, rdsname)

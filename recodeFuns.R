@@ -67,7 +67,7 @@ scoring <- function(dat, type,funct,idvec=NULL,colnam=NULL){
   if(is.null(colnam)) colnam = type
   if(!is.null(idvec))(dat <- dat %>% filter(id %in% idvec))
   if(is.null(idvec)) idvec <- 1:nrow(dat)
-  typeNames <- grepl(type, names(Answers))
+  typeNames <- grepl(type, names(dat))
   cols <- sum(typeNames)
   tempdat <- (dat[typeNames] 
               %>% rowwise()
@@ -77,7 +77,7 @@ scoring <- function(dat, type,funct,idvec=NULL,colnam=NULL){
                             , id=id
               )
               %>% ungroup() 
-              %>% mutate(Score=total/mean(total,na.rm=TRUE)) 
+              %>% mutate(Score=total/max(total,na.rm=TRUE)) 
               %>% select(-total)
   )
   colnames(tempdat) <- c("id", colnam)
@@ -85,18 +85,27 @@ scoring <- function(dat, type,funct,idvec=NULL,colnam=NULL){
 }
 
 yesnodk <- function(x){
-  y <- as.numeric(factor(x,levels(x)[c(1,3,2)]))-1
+  y <- as.numeric(yesnodkFactor(x))-1
   return(y)
 }
 
+yesnodk01 <- function(x){
+  yesnodk(x)/max(yesnodk(x),na.rm=TRUE)
+}
+
 yesnodkFactor <- function(x){
-  y <- factor(x,levels(x)[c(1,3,2)])
+  y <- factor(x,levels = c("No", "Don't know", "Yes"))
   return(y)
 }
 
 contfgc <- function(x){
-  y <- factor(x,levels(x)[c(2,3,1)])
+  y <- factor(x,levels=c("Discontinued","Depends","Continued"))
   return(y)
+}
+
+contfgc01 <- function(x){
+  y = as.numeric(contfgc(x)) -1
+  return(y/max(y, na.rm=TRUE))
 }
 
 rightfactor <- function(x){

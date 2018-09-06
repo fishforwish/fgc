@@ -1,29 +1,29 @@
+library(dplyr)
 library(ordinal)
 library(splines)
 
-for (r in grep("Rds$", input_files, value=TRUE)){
-  if (exists("dat"))
-    dat <- rbind(dat, readRDS(r))
-  else
-    dat <- readRDS(r)
-}
+combined_dat <- (combined_dat
+	%>% group_by(clusterId)
+	%>% mutate(group_futurefgc = mean(futurefgc01, na.rm=TRUE))
+)
 
 modAns <- model.frame(
-  futureDau ~ futurefgc + group_futurefgc
-  + fgcstatusMom + group_fgcstatusMom
+  futurefgcDau ~ futurefgc + group_futurefgc
+  + fgcstatus + group_fgc
+  + CC
   + bene + group_bene
   + media + group_media 
   + att + group_att 
   + edu + group_edu
   + wealth + group_wealth
   + age + maritalStat + job + urRural + religion
-  + clusterId + ethni + CC
-  , data=dat, na.action=na.exclude, drop.unused.levels=TRUE
+  + clusterId + ethni
+  , data=combined_dat, na.action=na.exclude, drop.unused.levels=TRUE
 )
 
 system.time(mod<- clmm(
-  futureDau ~ futurefgc + group_futurefgc
-  + fgcstatusMom + group_fgcstatusMom
+  futurefgcDau ~ futurefgc + group_futurefgc
+  + fgcstatus + group_fgc
   + CC
   + bene + group_bene
   + media + group_media 

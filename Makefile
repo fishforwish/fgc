@@ -139,68 +139,48 @@ recodes.summary.output: $(sets:%=%.recode.summary.Routput)
 
 # sl5.benePCA.Rout ml5.benePCA.Rout ng5.benePCA.Rout
 
-ke5.community.Rout: ke5.recode.Rout community.R
-%.community.Rout: %.recode.Rout community.R
+ke5.community.Rout: community.R
+%.community.Rout: %.recode.Rout recodeFuns.R community.R
+	$(run-R)
+
+prevalence.Rout: ke5.community.Rds ng5.community.Rds sl5.community.Rds ml5.community.Rds prevalence.R
+	$(run-R)
+
+## fitting using clmm
+
+daughterfgc_ind_clmm.Rout: prevalence.Rout daughterfgc_ind_clmm.R
+futurefgc_ind_clmm.Rout: prevalence.Rout futurefgc_ind_clmm.R
+futurefgcDau_ind_clmm.Rout: prevalence.Rout futurefgcDau_ind_clmm.R
+
+daughterfgc_full_clmm.Rout: prevalence.Rout daughterfgc_full_clmm.R
+futurefgc_full_clmm.Rout: prevalence.Rout futurefgc_full_clmm.R
+futurefgcDau_full_clmm.Rout: prevalence.Rout futurefgcDau_full_clmm.R
+
+## calculating variable level p-values
+
+daughterfgc_ind_varlvlsum.Rout: daughterfgc_ind_clmm.Rout daughterfgc_ind_varlvlsum.R
+	$(run-R)
+futurefgc_ind_varlvlsum.Rout: futurefgc_ind_clmm.Rout futurefgc_ind_varlvlsum.R
+	$(run-R)
+futurefgcDau_ind_varlvlsum.Rout: futurefgcDau_ind_clmm.Rout futurefgcDau_ind_varlvlsum.R
+	$(run-R)
+
+
+daughterfgc_full_varlvlsum.Rout: daughterfgc_full_clmm.Rout daughterfgc_full_varlvlsum.R
+	$(run-R)
+futurefgc_full_varlvlsum.Rout: futurefgc_full_clmm.Rout futurefgc_full_varlvlsum.R
+	$(run-R)
+futurefgcDau_full_varlvlsum.Rout: futurefgcDau_full_clmm.Rout futurefgcDau_full_varlvlsum.R
 	$(run-R)
 
 
 
-prevalance.Rout: ke5.community.Rds ng5.community.Rds sl5.community.Rds ml5.community.Rds prevalance.R
+
+
+
+daughterfgc_ind.isoplots.Rout: daughterfgc_ind_varlvlsum.Rout ordfuns.R plotFuns.R iso.R
 	$(run-R)
 
-
-### stop here
-
-%.futurefgc.Rout: %.df.Rout futurefgc.R
-	$(run-R)
-ke5.futurefgc.Rout: futurefgc.R
-ng5.futurefgc.Rout:
-sl5.futurefgc.Rout:
-ml5.futurefgc.Rout:
-
-%.daughterfgc.Rout: %.df.Rout daughterfgc.R
-	$(run-R)
-
-ke5.daughterfgc.Rout: daughterfgc.R
-ng5.daughterfgc.Rout:
-sl5.daughterfgc.Rout:
-ml5.daughterfgc.Rout:
-
-
-%.futurefgcDau.Rout: %.df.Rout futurefgcDau.R
-	$(run-R)
-ke5.futurefgcDau.Rout: futurefgcDau.R
-
-%.multivariate.Rout: %.df.Rout multivariate_df.R
-			$(run-R)
-
-all_countries_%: ke5.%.Rout ng5.%.Rout sl5.%.Rout ml5.%.Rout
-	$(run)
-
-all.%_ind_clmm.Rout: all_countries_% ke5.%.Rds ng5.%.Rds sl5.%.Rds ml5.%.Rds %_ind_clmm.R
-	$(run-R) 
-
-all.daughterfgc_ind_clmm.Rout: daughterfgc_ind_clmm.R
-all.futurefgc_ind_clmm.Rout: futurefgc_ind_clmm.R
-all.futurefgcDau_ind_clmm.Rout: futurefgcDau_ind_clmm.R
-
-all.daughterfgc_full_clmm.Rout: daughterfgc_full_clmm.R
-all.futurefgc_full_clmm.Rout: futurefgc_full_clmm.R
-all.futurefgcDau_full_clmm.Rout: futurefgcDau_full_clmm.R
-
-all.%_full_clmm.Rout: all_countries_% ke5.%.Rds ng5.%.Rds sl5.%.Rds ml5.%.Rds %_full_clmm.R
-	$(run-R)
-
-all.%_ind_varlvlsum.Rout: all.%_ind_clmm.Rout %_ind_varlvlsum.R
-	$(run-R)
-
-all.%_full_varlvlsum.Rout: all.%_full_clmm.Rout %_full_varlvlsum.R
-	$(run-R)
-
-%.isoplots.Rout: temp_results/all.%_varlvlsum.RData ordfuns.R plotFuns.R iso.R
-	$(run-R)
-
-daughterfgc_ind.isoplots.Rout: iso.R
 daughterfgc_full.isoplots.Rout: iso.R
 
 futurefgc_ind.isoplots.Rout: iso.R
