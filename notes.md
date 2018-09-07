@@ -45,12 +45,26 @@ Sep7:
 
 Agenda:
 * to discuss results of the histograms
-* to discuss heterogeniety:  if the group_bene is not clearly detected, what does it mean?  
-* draft
-* Efferson papers
+	* Added a histogram, we are pretty happy with results
+
+* heterogeneity:  if the group_bene is not clearly detected, what does it mean?  
+	* Always tricky to know what ns means. JD is not very concerned with this…
+
+* draft manuscript.tex
+	* comments needed
+	* Efferson papers
+
 * religion at a community level?
+	* Too hard
+
 * What is new in our findings? It is expected that women fgced will more likely to have their daughters cut and support fgc practice.  So what does our finding propose?
-* threshold
+	* Shows evidence of binary outcomes
+	* Gender attitudes and group gender attitudes
+	* Need to look at histograms (or threshold-styles) by country as well.
+
+* make threshold-style plots
+
+* Mike to look at bene structure, PCA
 
 ---------------------------------------------------------------------
 Aug 29:

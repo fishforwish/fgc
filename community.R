@@ -26,10 +26,14 @@ Answers <- (Answers
 	   , group_media = mean(media, na.rm = TRUE)
 	   , group_edu = mean(edu, na.rm = TRUE)
 	   , group_wealth = mean(wealth, na.rm = TRUE)
+	)
 )
-)
+
+print(hist(Answers$group_fgc))
+print(hist(Answers$group_futurefgc))
+print(hist(Answers$group_futurefgcDau))
 
 print(summary(Answers))
-
-# rdsave(Answers)
 saveRDS(Answers, rdsname)
+
+# rdnosave

@@ -21,8 +21,8 @@ groupdat <- (combined_dat
 print(summary(groupdat))
 
 print(hist(groupdat$group_fgc))
-print(hist(groupdat$group_futurefgcDau))
 print(hist(groupdat$group_futurefgc))
+print(hist(groupdat$group_futurefgcDau))
 
 print(hist(groupdat$group_bene))
 print(hist(groupdat$group_att))

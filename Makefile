@@ -139,6 +139,7 @@ recodes.summary.output: $(sets:%=%.recode.summary.Routput)
 
 # sl5.benePCA.Rout ml5.benePCA.Rout ng5.benePCA.Rout
 
+## Does Rds chain? If so, how?????????
 ke5.community.Rout: community.R
 %.community.Rout: %.recode.Rout recodeFuns.R community.R
 	$(run-R)
