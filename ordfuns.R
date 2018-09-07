@@ -53,6 +53,9 @@ varpred <- function(mod, varname, frame, isolate=FALSE, isoValue=NULL, level=0.0
   # print(pat); print(fnames)
   fCol <- grep(pat, fnames)
   
+  ## in case grepping response variable
+  fCol <- fCol[which(fCol != 1)] 
+  
   print(paste("Selected variable", fnames[fCol]))
   if(length(fCol)<1) {
     stop(paste("No matches to", varname, "in the frame", collapse=" "))

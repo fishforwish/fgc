@@ -181,13 +181,20 @@ futurefgcDau_full_varlvlsum.Rout: futurefgcDau_full_clmm.Rout futurefgcDau_full_
 daughterfgc_ind.isoplots.Rout: daughterfgc_ind_varlvlsum.Rout ordfuns.R plotFuns.R iso.R
 	$(run-R)
 
-daughterfgc_full.isoplots.Rout: iso.R
+futurefgc_ind.isoplots.Rout: futurefgc_ind_varlvlsum.Rout ordfuns.R plotFuns.R iso.R
+	$(run-R)
 
-futurefgc_ind.isoplots.Rout: iso.R
-futurefgc_full.isoplots.Rout: iso.R
+futurefgcDau_ind.isoplots.Rout: futurefgcDau_ind_varlvlsum.Rout ordfuns.R plotFuns.R iso.R
+	$(run-R)
 
-futurefgcDau_ind.isoplots.Rout: iso.R
-futurefgcDau_full.isoplots.Rout: iso.R
+daughterfgc_full.isoplots.Rout: daughterfgc_full_varlvlsum.Rout ordfuns.R plotFuns.R iso.R
+	$(run-R)
+
+futurefgc_full.isoplots.Rout: futurefgc_full_varlvlsum.Rout ordfuns.R plotFuns.R iso.R
+	$(run-R)
+
+futurefgcDau_full.isoplots.Rout: futurefgcDau_full_varlvlsum.Rout ordfuns.R plotFuns.R iso.R
+	$(run-R)
 
 effects.Rout: all.futurefgc_clmm.Rout all.futurefgcDau_clmm.Rout effects.R
 	$(run-R)
