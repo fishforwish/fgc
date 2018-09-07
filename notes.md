@@ -40,6 +40,7 @@ Decisions:
 * We decided to run versionso our two main models, but without group level covariates. (Apr 20, 15)
 
 ---------------------------------------------------------------------
+
 Sep7:
 
 Agenda:
@@ -214,11 +215,3 @@ July 25th 2016
 
 ML reimplemented all models via brms and all models ran. There was one problematic model (futurefgcDau_full) and the current solution is increase the HMC sample size. It looks a little better. Moving onto effect plots now.
 
-
-
-
-
-
-
-
-   
