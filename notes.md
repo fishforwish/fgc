@@ -40,6 +40,16 @@ Decisions:
 * We decided to run versionso our two main models, but without group level covariates. (Apr 20, 15)
 
 ---------------------------------------------------------------------
+Sep7:
+
+Agenda:
+* to discuss results of the histograms
+* to discuss heterogeniety:  if the group_bene is not clearly detected, what does it mean?  
+* draft
+* religion at a community level?
+* threshold
+
+---------------------------------------------------------------------
 Aug 29:
 
 We want all the women, not just women with daughters to be cut, included in the models for the community level of effect.
