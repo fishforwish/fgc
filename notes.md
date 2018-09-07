@@ -48,6 +48,7 @@ Agenda:
 * draft
 * Efferson papers
 * religion at a community level?
+* What is new in our findings? It is expected that women fgced will more likely to have their daughters cut and support fgc practice.  So what does our finding propose?
 * threshold
 
 ---------------------------------------------------------------------
