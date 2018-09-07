@@ -46,6 +46,7 @@ Agenda:
 * to discuss results of the histograms
 * to discuss heterogeniety:  if the group_bene is not clearly detected, what does it mean?  
 * draft
+* Efferson papers
 * religion at a community level?
 * threshold
 
