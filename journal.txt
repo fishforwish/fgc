@@ -1,4 +1,17 @@
-Proposl of this study is at read.md
+Proposl of this study is at https://github.com/fishforwish/fgc/blob/master/README.md
+
+
+Sep 14:
+
+Agenda:
+
+* threshold-style plots
+
+* histograms by country
+
+* look at bene structure, PCA
+
+* draft
 
 ----------------------------------------------------------------------
 Sep7:
