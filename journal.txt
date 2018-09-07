@@ -1,3 +1,32 @@
+Proposl of this study is at read.md
+
+----------------------------------------------------------------------
+Sep7:
+
+Agenda:
+* to discuss results of the histograms
+	* Added a histogram, we are pretty happy with results
+
+* heterogeneity:  if the group_bene is not clearly detected, what does it mean?  
+	* Always tricky to know what ns means. JD is not very concerned with this…
+
+* draft manuscript.tex
+	* comments needed
+	* Efferson papers
+
+* religion at a community level?
+	* Too hard
+
+* What is new in our findings? It is expected that women fgced will more likely to have their daughters cut and support fgc practice.  So what does our finding propose?
+	* Shows evidence of binary outcomes
+	* Gender attitudes and group gender attitudes
+	* Need to look at histograms (or threshold-styles) by country as well.
+
+* make threshold-style plots
+
+* Mike to look at bene structure, PCA
+
+---------------------------------------------------------------------
 2018 Sept 3
 
 We did not switch over to tidyverse for this project.
@@ -6,10 +35,23 @@ Still trying to work on cleaning up refactoring levels and recoding levels.
 
 
 
-For basic proposal of this study, see note on Jun 11, 2018
+---------------------------------------------------------------------
+Aug 29:
+
+We want all the women, not just women with daughters to be cut, included in the models for the community level of effect.
 
 ---------------------------------------------------------------------
+Aug 28:
+We looked at the restuls of the three models (3 community levels and 3 individual levels).
 
+We want to exame more clearly about the benefit PCA pattern to udnerstand better of fgc norm
+We have to look at the country factor which seems confusing.
+
+We want to have histograms of fgc prevalence by mother, daughter, future and community size.
+
+We will read the science paper by Efferson (http://science.sciencemag.org/content/349/6255/1446.long) and the one in the Nature (https://www.nature.com/articles/nature20100).
+
+---------------------------------------------------------------------
 2018 Jul 20 (Fri)
 
 * Updated Jun 11 stuff (see below)
@@ -17,6 +59,43 @@ For basic proposal of this study, see note on Jun 11, 2018
 * Debated individual model again, decided again to try on different levels
 
 * Decided to not attempt to construct group-level religion (seems too complicated)
+
+---------------------------------------------------------------------
+July 19:
+* We want to switch to brms (for fgc and mc; and we want to push this method in our projects in general).  
+* Use effect plots with baysina.  Since there is no standard way of doing p values, we will not going to do variable p-values.
+* p value is twice the probablaity of the sign is different than you think. Jonathan wants Mike to find citation and no one shall argue about it.
+
+---------------------------------------------------------------------
+July 14:
+* Due to all the NAs in the daughter future (individual) model which seems hard to solve and that also questions how reliable our other models are, we decide to do the following:
+
++ to do profile likelihood and CI for ordinal models?
+
++ to simplify the model by keeping only media in the random slope
+
++ If the above both do not work, we will try “brms.”  We will explore "brms" anyway and hope it will solve all the problems in the future.
+
+---------------------------------------------------------------------
+14 June
+
++ Futurefgc and FuturefgcDau ran without problems but daughterfgc_ind *failed* to estimate variance-covariance for fixed effects. Can we bottleneck the daughter model and move on with futurefgc and futurefgcDau because futurefgc and futurefgcDau are the models of interest. How much do we *lose* skipping the daughter model? BB suggest we can extract the hessian from the clmm object and compute the vcov ourselves (daughterfgc_ind). This leads to my next question of how to do *effect* plots. The hessian and vcov have a bunch of extra stuff (ST's) and the effects packages does work with our model (maybe RE's). I can always extract what I need and feed into effects, but not sure if it is correct. 
+
++ Based on the results of the 6 models (futurefgc, daughter fgc with future, and daughter fgc; each with individual and full models), we will go ahead and do plots, etc. despite the fact that there are still some confusions with the individual daughter fgc model.
++ Jonathan emailed Ben about all the NA and ST in the individual daughter fgc model.
++ Mike will add group mom fgc in the daughter fgc full model.
+## 20 Apr 2016
+
+* We want to start with a model that has no group-level covariates. The idea is mostly about power: it will often be hard to see whether a covariate is operating at the individual level, group level, or both: first we want to know whether it's operating at all.
+
+---------------------------------------------------------------------
+July 13:
+* The higher the score of gender attitude (att), the less awareness of gender equality.  For example:
++ V744E- Wife beating justified if she burns the food:
++ Categories/score: No/0, Yes/2, Don't know/1
+* On the other hand, the higher the score of fgc benefit, the more benefits seen of fgc
++ Circumcision benefits - social acceptance: 
++ Categories/score: No/0, Yes/1
 
 ---------------------------------------------------------------------
 
@@ -75,18 +154,6 @@ Basic Information:
 * att (gender awareness: no=0, DK=1 and yes=2):  the higher the score is, the LESS aware of gender equality a woman feels.  FGC bene (no=0, yes=1):  the higher the score, the stronger in believing FGC beneifts.  Media use (not at all=0..., almost everyday=3):  the higher the score, the more in using media.
 * media scores from 0-3 (3 questions), att 0-2 (5 questions), bene 0-1 (9 questions).
 
-* list of FGC benefits in DHS:
-G117A: Circumcision benefits: cleanliness/hygiene
-G117B: Circumcision benefits: social acceptance
-G117C: Circumcision benefits: better marriage prospects
-G117D: Circumcision benefits: virginity/prevent premarital sex
-G117E: Circumcision benefits: more sexual pleasure for men
-G117F: Circumcision benefits: religious approval
-G117G: Circumcision benefits: reduce promiscuity/ reduce sex drive
-G117H: Circumcision benefits: reduce STD and AIDS infections
-G117X: Circumcision benefits: other
-G117Y: Circumcision benefits: no benefit (Did we use this one? to check.)
-
 Other issues and questions:
 * studying threshold/tipping point: to test if when FGC prevalence reaches certain point, the behaviors start to change (either direction), and if the association of benefit and prevalence also play a crucial role in the "tipping point"?
 * Efferson etc's paper (15):  What can it tell us about heterogeniety ("a singel critical threshold is unlikely to exist"). They argued that FGC is not a socially conditined norm.  Will our findings support or rebut it?
@@ -99,7 +166,76 @@ Other issues and questions:
 4. G116: Intends to have daughter(s) circumcised in future (This is the main variable we used for the daughter model)
 We are also interested in any changes of mother's attitudes on FGC.  We can find information of this by testing women who already have daughters fgced and more to (or not to) be fgced.  This is be interesting, especially at a community level.
 
+
 ----------------------------------------------------------------------
+7 June
+
+The largest model took 81 hours to fit via clmm. The errors are consistent with the problems noted on May 4th. We have more than one RE and clmm spits back NA's for se.error. Quadrature methods are not available with more than one RE term. 
+
+---------------------------------------------------------------------
+20 May
+
+Mike has made a beautiful picture, but we're having trouble interpreting some of the details. Should we be worried about the mixing in MCMCglmm? Can we try to address with priors? 
+
+We apparently didn't switch back to ordinal because of something to do with random effects. Can that be overcome? Mike also thinks there's a problem with the quadrature.
+
+----------------------------------------------------------------------
+
+May 10th
+
+DO NOT DO ANY DPLYR RIGHT BEFORE MCMCGLMM
+Running into a lot of trouble with priors.
+Error in MCMCglmm(as.factor(futurefgc) ~ fgcstatusMom + bene + media +  : 
+  ill-conditioned cross-product: can't form Cholesky factor 
+
+with nu=0.0002 without singular.ok
+
+Error in MCMCglmm(as.factor(futurefgc) ~ fgcstatusMom + bene + media +  : 
+  ill-conditioned G/R structure (CN = 8630392281685741.000000): use proper priors if you haven't or rescale data if you have 
+
+nu=0.0002 with singular.ok or high nu no singular.ok
+
+We are out spl(age) and spl(wealth) country RE __because of the G/R problem__. Finished all models, running on yushan now.
+----------------------------------------------------------------------
+
+May 9th
+
+ML: The reason why ns (spline) did not work the before thus via splines:::ns is because MCMCglmm has its own spline function (spl) and it __claims__ it does orthgonial spline design. I figured out how to do the proposed models from last meeting and now running futurefgc_ind and futurefgc_full on yushan. I still have 4 more models to do (daughter_ind/full and futuredau_ind/full) 
+---------------------------------------------------------------------
+4 May 2018
+
+We don't want to wait until we're able to do multivariate-response models, so we are going forward with a set of "structural" univariate-response models:
+
+futurefgc ~ indiv-level covariates
+fgcDau ~ indiv-level covariates
+fgcDau ~ indiv-level covariates + futurefgc
+
+We're defining this as the main model
+
+The next step will be to try to disentangle individual vs group effects from these models. The idea will be that if we put in normalized individual-level and group-level covariates, they should compete to explain the effects seen in the individual-level models. We're putting this off a bit because we're not sure how we will visualize this for the multi-parameter variables wealth and age, so we want to see what we can do with the individual-level models first.
+
+Unfortunately, we can't put country back in in this framework! Should we go back to mcmcglmm, but still try to simplify?
+
+One idea, an mcmcglmm model with
+* ethnicity, country and cluster all as random effects
+* country should be associated with random slopes for all the key variables as well. In lme4 syntax
+
+futurefgc~
+  fgcstatusMom
+  + bene + media + att
+  + splines::ns(age, 4) + splines::ns(wealth, 4)
+  + edu + maritalStat + job + urRural
+  + religion
+  + (1 | ethnicity) + (1 | clusterId)
+  + (bene + media + att 
+    + splines::ns(age, 4) + splines::ns(wealth, 4)
+  | country)
+
+Alternatively, we could use the similar model we already have (with country as a fixed effect with interactions) if we can solve part of the centering problem (maybe simply by using weighted sum-to-zero contrasts on country).
+
+Another option that we considered is to simply do a different model for each country because of this computer problem. JD is against that. ML thinks that these proposals are too hard.
+
+ML will do a better job documenting and sharing important obstacles. Maybe we can overcome some of them.
 
 May 23 2018: (after years!)
 
@@ -160,13 +296,6 @@ July 13:
 
 ----------------------------------------------------------------------
 
-## 20 Apr 2016
-
-* We want to start with a model that has no group-level covariates. The idea is mostly about power: it will often be hard to see whether a covariate is operating at the individual level, group level, or both: first we want to know whether it's operating at all.
-
-
----------------------------------------------------------------------
-
 7 June
 
 The largest model took 81 hours to fit via clmm. The errors are consistent with the problems noted on May 4th. We have more than one RE and clmm spits back NA's for se.error. Quadrature methods are not available with more than one RE term. 
@@ -201,18 +330,17 @@ We are out spl(age) and spl(wealth) country RE __because of the G/R problem__. F
 May 9th
 
 ML: The reason why ns (spline) did not work the before thus via splines:::ns is because MCMCglmm has its own spline function (spl) and it __claims__ it does orthgonial spline design. I figured out how to do the proposed models from last meeting and now running futurefgc_ind and futurefgc_full on yushan. I still have 4 more models to do (daughter_ind/full and futuredau_ind/full) 
----------------------------------------------------------------------
-4 May
+----------------------------------------------------------------------
 
-We don't want to wait until we're able to do multivariate-response models, so we are going forward with a set of "structural" univariate-response models:
+## 4th May 2016
+Let's simplify the problem and do the countries separately. The baseline problem is actually a big deal because we don't want to compare against the "baseline" ie. ke.no_job to ml.yes_job..." 
+MCMCglmm does not seem to have anova/ something to test variable level statistics, ie, don't have something to test the question "does ethnicity in general affect futurefgc"
+Went back and have a better understanding of ordinal and clmm's. clmm (or clmm1) can do multiple RE but via LA and blows up/ spits back NAs for sd.err. clmm2 can do AGQ but only do one RE (back then we were trying to do response AND clusterID and didn't follow up and gave up). 
 
-futurefgc ~ indiv-level covariates
-fgcDau ~ indiv-level covariates
-fgcDau ~ indiv-level covariates + futurefgc
+We can test "norms" now via anova LRT. 
 
-We're defining this as the main model
-
-The next step will be to try to disentangle individual vs group effects from these models. The idea will be that if we put in normalized individual-level and group-level covariates, they should compete to explain the effects seen in the individual-level models. We're putting this off a bit because we're not sure how we will visualize this for the multi-parameter variables wealth and age, so we want to see what we can do with the individual-level models first.
+Question: Are we happy? Does it make sense? More validation? Use MCMCglmm vs ordinal? 
+* Is there a guideline for baseline?  e.g., ethinicity?
 
 ----------------------------------------------------------------------
 
@@ -269,6 +397,12 @@ Meng, X. L. (1994). Posterior predictive p-values. Ann. Statist. 22, 1142-1160.
 
  ----------------------------------------------------------------------
 
+## 20 Apr 2016
+
+* We want to start with a model that has no group-level covariates. The idea is mostly about power: it will often be hard to see whether a covariate is operating at the individual level, group level, or both: first we want to know whether it's operating at all.
+
+
+---------------------------------------------------------------------
 
 12/04/16
 
