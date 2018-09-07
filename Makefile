@@ -126,6 +126,7 @@ ke5.recode.Rout: recode.R
 %.recode.Rout: %.select.Rout recodeFuns.R religion_basic.ccsv partnership_basic.ccsv recode.R
 	$(run-R)
 
+Ignore += *.output
 recodes.output: $(sets:%=%.recode.Routput)
 	cat $^ > $@
 
