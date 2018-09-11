@@ -15,9 +15,9 @@ Research Questions:
 
 Variables:
 * In the main model, the predictors are women’s FGC status and FGC benefits  (see the list of FGC benefits at table--) and the response variables are women’s opinion on whether the practice of FGC, and whether to cut their daughters.  In the secondary model, women’s gender awareness is the predictor and beliefs of FGC benefits the response.
-* other covariates:  country \cf{We don’t need this if we analyze each country separately}, age, education, wealth, ethnicity, religion, marital status, work status, residence (urban vs. rural), media use (another PCA or score?) and gender awareness.
+* other covariates:  country \cf{We don’t need this if we analyze each country separately}, age, education, wealth, religion, marital status, work status, residence (urban vs. rural), media use (another PCA or score?) and gender awareness.
 * covariates at a community level:  education, wealth, media use, FGC benefits, gender awareness and FGC prevalence
-* Cluster is treated as the only random effect; while ethinicity and religion are fixed.
+* Cluster and ethnicity are treated as the only random effect.
 
 Basic Information:
 * att (gender awareness: no=0, DK=1 and yes=2):  the higher the score is, the LESS aware of gender equality a woman feels.  FGC bene (no=0, yes=1):  the higher the score, the stronger in believing FGC beneifts.  Media use (not at all=0..., almost everyday=3):  the higher the score, the more in using media.
