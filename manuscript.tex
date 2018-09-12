@@ -107,41 +107,28 @@ The main constrcuts analyzing FGC practice were based on the theory of planned b
 
 The main response variables in this study were woman's intention to cut their daughters in the daughter's FGC status model and the daughter-future model, and woman's attitude on whether they think FGC should be continued in the FGC future model.  The main predictors were attitudes of FGC benefits and woman's FGC status.  In order to test other theories mentioned above, we also included woman's gender awareness and other socio demogramic variables (see below).
 
-The sociodemographic variables included age, education, religion (see the list of religion recode at table xx in appendix; with a footnote on how we recoded it), marital status, work status, and residence (urban vs. rural).  The followings were treated as random variables:  cluster ID (villages) and ethnicity (see the list of ethnicity recode at table xx in appendix; with a footnote on how we recoded it).  (We did not treat media effect  in the random effect (slope?) because we presumed that each country carried media content different from each other.  Why not?)
+The sociodemographic variables included age, education, religion (see the list of religion recode at table xx in appendix; with a footnote on how we recoded it), marital status, work status, and residence (urban vs. rural) in addition to country.  The followings were treated as random variables:  cluster ID (villages) and ethnicity (see the list of ethnicity recode at table xx in appendix; with a footnote on how we recoded it).
 
-In order to address the significance of community impact on the practice were education, wealth, media use, FGC beliefs, gender awareness and FGC prevalence at the community level (on a cluster leve, not national, right?), which represented the degrees of modernization, conventional values and gender awareness within- and among-community (see \cite{Achi14, BoylMcMo02, Hayf05, KandNwak09, ModrLiu13, OdukAfol17}). Cluster, which is usually larger than a village but small enough to be a social community, was used to represent a community level of impact \cite{Hayf05} (is Hayf05 correct or DHS method changes afterwards?).
+In order to address the significance of community impact on the practice of fgc, education, wealth, media use, FGC beliefs, gender awareness and FGC prevalence were also tested at the community level \cf{on a cluster leve, not national, right?} in response to the degrees of modernization, conventional values and gender awareness within- and among-community (see \cite{Achi14, BoylMcMo02, Hayf05, KandNwak09, ModrLiu13, OdukAfol17}).
 
-
-\_\_{[}CF:cluster is not a random effect in FGC, is it?{]}
-\_\_{[}JD: Ideally, we would make ethnicity a random effect, but we are back to the Gilmour problem I guess. CF: Ethnicity is an important factor (see Hayf05), more so than religion, associating with FGC status, and I don't think it shall be coded as a random factor.  Same reason as for clusterID{]} %“explicitly including ethnicity is a means of assessing another dimension of the collective aspect of circumcision behavior. “ \cite{Hayf05}
-
-\_\_{[}CF:The concept of heterogeneity and threshold is important.  How to address these 2 concepts, if necessary.{]}
+\_\_{[}CF: Cluster, which is usually larger than a village but small enough to be a social community, was used to represent a community level of impact \cite{Hayf05} (is Hayf05 correct or DHS method changes afterwards?{]}
+\_\_{[}JD: Ideally, we would make ethnicity a random effect, but we are back to the Gilmour problem I guess. CF: Ethnicity is an important factor (see Hayf05), more so than religion, associating with FGC status, and I don't think it shall be coded as a random factor.  But as J said, it is too hard! {]} %“explicitly including ethnicity is a means of assessing another dimension of the collective aspect of circumcision behavior. “ \cite{Hayf05}
 \_\_{[}CF:Spatial Bayesian model \cite{KandNwak09} "Conversely, one cannot assume that the clusters selected in each district are fully representative of the states in which they are located because surveys only attempted to generate a fully representative sample at the regional level. Consequently, the spatial analysis will be affected by some random fluctuations.  Some of this random variation can be reduced through structured spatial effects because it includes neighboring observations in the analysis. However, it should be pointed out that such a spatial analysis should preferably be applied to census data, where the precision of the spatial analysis would be much higher." (p. 788){]}
-
-
------stop reading -----
-
 
 \subsubsection{Statistical Model}\label{statistical-model}
 
-\_\_{[}CF: J and M, please confirm this.{]} 
+We used cumulative link mixed models (CLMMs) in the statistics package R \cite{Rstats,Rpackage_ordinal} to analyze the models.  The CLMM framework allows us to model a binary or ordinal response variable (i.e., intention of cutting daughters and whether to continue FGC practice), while treating clusters and ethnicity as random effects.
 
-We used cumulative link mixed models (CLMMs) in the statistics package R \cite{Rstats,Rpackage_ordinal} to examine the models.  The CLMM framework allows us to model a binary or ordinal response variable (e.g., daughter's FGC, while treating clusters and country as random effects.
-
-\_\_{[}CF: We have two main predictors:  mother's FGC status and FGC beliefs.  Mother's FGC status is binary categorical variable, and FGC belief is continuous.  The responses are daughter's FGC status and whether to continue FGC; both are categorical with 3 levels (yes, no, and dk/depends).{]} 
+\_\_{[}CF:  Our response ARE categorical not binary; AND still need to explain why ethinicity is a random effect. AND media use was supposed to be incorporated as a random factor at the country level, based on the assumption that media content likely varied among countries.{]}
 
 \_\_{[}CF: reference: Methods and the first paragraph of Discussion\cite{Chia14}{]}
-\_\_{[}CF: spatial patterns?{]}
 
-\_\_{[}JD: What is the difference between clmm and clmm2?{]}
-
-This line of code essentially assumes that the response is ordinal. But I don't think it is...it actually seems pretty complex. So the best thing to do would probably be to figure out the total number of categories your response variable has and use MCMCglmm. Not sure specifically how the MCMCglmm approach would work, but this blog post might help: http://hlplab.wordpress.com/2009/05/07/multinomial-random-effects-models-in-r/
-
-More about response -- to clarify what model to use, it might help to ask yourself: what are the possible combinations of outcomes of the various response variables?  i.e. collapse all of the response variables into one single categorical response with many categories. \_\_{[}CF: I like this idea and actually have been thinking about this possibility.{]}
-
-\_\_{[}jd: Probably we can start with binary responses, and with exploring patterns of type, before we worry to much about these details.{]}
 
 \subsubsection{Scripts}\label{scripts}
+
+Codes are be available upon request. 
+
+-----stop reading -----
 
 \subsection{Results}\label{results-1}
 
