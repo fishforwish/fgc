@@ -1,5 +1,11 @@
 
 ke5.benePCA.Rout: ke5.beneQuant.Rout catPCA.R
+ml5.benePCA.Rout: ml5.beneQuant.Rout catPCA.R
+sl5.benePCA.Rout:
+ng5.benePCA.Rout:
+
+all_PCA.Rout: ke5.benePCA.Rds ml5.benePCA.Rds sl5.benePCA.Rds ng5.benePCA.Rds all_PCA.R
+	$(run-R)
 
 %.benePCA.Rout: %.beneQuant.Rout catPCA.R
 	$(run-R)
