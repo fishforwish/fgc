@@ -1,6 +1,33 @@
 Proposl of this study is at https://github.com/fishforwish/fgc/blob/master/README.md
 
 
+----------------------------------------------------------------------
+
+2018 Sep 20 (Thu)
+=================
+
+Current models
+* keep only the models with community covariates. It seems that we have enough power to stick to these, and they are also closer to our key questions, so it makes everything simpler.
+* Use all three community models. The main one is the full "daughterfgc". We decompose it into two "structural" models:
+	* Step 1 "futurefgc" – what do women think about societal values?
+	* Step 2 "futurefgcDau" – how do these thought change the main model?
+
+Results
+-------
+Main model git_push/daughterfgc_full.isoplots.Rout.pdf
+* fgc status is a strong predictor at both scales (indiv and comm)
+* perceived benefit works as predicted, but group benefit has little effect (no clear effect)
+	* consistent with group perceptions working via individual perceptions
+	* because individual benefit is in the model, we don't see the indirect effect of group benefit, only the direct effect. Not so surprising that there isn't one
+
+git_push/all_PCA.Rout.pdf
+git_push/futurefgcDau_full.isoplots.Rout.pdf
+git_push/futurefgc_full.isoplots.Rout.pdf
+git_push/manuscript.pdf
+git_push/prevalence.Rout.pdf
+
+----------------------------------------------------------------------
+
 Sep 14:
 
 Agenda:
