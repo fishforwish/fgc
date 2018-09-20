@@ -12,6 +12,8 @@ Current models
 	* Step 1 "futurefgc" – what do women think about societal values?
 	* Step 2 "futurefgcDau" – how do these thought change the main model?
 
+* Replace att variable with gender_awareness = 1-att
+
 Results
 -------
 Main model git_push/daughterfgc_full.isoplots.Rout.pdf
