@@ -1,33 +1,38 @@
 library(dplyr)
 library(ggplot2)
+library(tidyr)
+library(ggforce)
 
 combined_dat <- data.frame()
 for(r in input_files){
   combined_dat <- bind_rows(combined_dat, readRDS(r))
 }
 
+print(head(combined_dat))
+
 combined_dat <- (combined_dat
 	%>% mutate_if(sapply(.,is.character),as.factor)
 )
 
 
-print(summary(combined_dat))
 groupdat <- (combined_dat
-	%>% select(clusterId, contains("group"))
+	%>% select(clusterId, CC,contains("group"))
 	%>% distinct()
+	%>% gather(key = type, value = prevalence, -c(CC, clusterId))
+	%>% mutate_if(sapply(.,is.character),as.factor)
 )
 
+print(ggplot(groupdat, aes(prevalence))
+	+ facet_wrap(~interaction(CC,type), scale= "free")
+	+ geom_histogram()
+	+ theme_bw()
+)
 
-print(summary(groupdat))
-
-print(hist(groupdat$group_fgc))
-print(hist(groupdat$group_futurefgc))
-print(hist(groupdat$group_futurefgcDau))
-
-print(hist(groupdat$group_bene))
-print(hist(groupdat$group_att))
-print(hist(groupdat$group_media))
-print(hist(groupdat$group_edu))
-print(hist(groupdat$group_wealth))
-
+for(i in seq_len(nlevels(groupdat$type))){
+print(ggplot(groupdat, aes(prevalence,group=CC))
+	+ facet_wrap_paginate(~interaction(CC,type), scale = "free", ncol=2, nrow=2, page = i)
+	+ geom_histogram()
+	+ theme_bw()
+)
+}
 # rdsave(combined_dat)

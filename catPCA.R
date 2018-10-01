@@ -1,6 +1,10 @@
 cat("#######################  RTARGET ####################")
 
 library(gdata)
+library(ggplot2)
+library(ggfortify)
+
+
 
 quant <- na.omit(quant)
 
@@ -13,7 +17,17 @@ print(summary(quant))
 
 pc <- prcomp(quant, scale=TRUE, center=FALSE)
 print(pc$rotation)
-plot(pc)
+print(plot(pc)) 
+
+print(PCAplot <- autoplot(pc
+	, loadings.label = TRUE
+	, loadings = TRUE
+	, loadings.colour = "black"
+	, loadings.label.colour = "blue"
+	)
+	+ theme_bw()
+	+ ggtitle(rtargetname)
+)
 
 scores <- as.data.frame(predict(pc))
 scores <- within(scores, {
@@ -36,4 +50,5 @@ quantpca <- quantpca[-1]
 # row.names(quantpca)
 # row.names(scores)
 
-# rdsave(quantpca, scores, catname, pc)
+saveRDS(PCAplot, rdsname)
+# rdsave(quantpca, scores, catname, pc, PCAplot)
