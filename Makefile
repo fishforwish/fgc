@@ -233,6 +233,5 @@ Sources += qual.mk quant.mk plots.mk comPlots.mk bioPlots.mk PCA.mk
 -include $(ms)/visual.mk
 
 -include $(ms)/autorefs.mk
--include $(ms)/pandoc.mk
 -include $(ms)/wrapR.mk
 -include $(ms)/texdeps.mk
