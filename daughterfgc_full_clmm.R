@@ -5,9 +5,10 @@ library(splines)
 modAns <- model.frame(
   futurefgcDau ~ fgcstatus + group_fgc
   + CC
-  + bene + group_bene
+  #+ bene 
+  + group_bene
   + media + group_media 
-  + att + group_att 
+  + gender + group_gender
   + edu + group_edu
   + wealth + group_wealth
   + age + maritalStat + job + urRural + religion
@@ -15,12 +16,13 @@ modAns <- model.frame(
   , data=combined_dat, na.action=na.exclude, drop.unused.levels=TRUE
 )
 
-system.time(mod<- clmm(
+fit_time <- system.time(mod<- clmm(
   futurefgcDau ~ fgcstatus + group_fgc
   + CC
-  + bene + group_bene
+  #+ bene 
+  + group_bene
   + media + group_media 
-  + att + group_att 
+  + gender + group_gender 
   + edu + group_edu
   + ns(wealth,3) + ns(group_wealth,3)
   + ns(age,4) 
@@ -34,4 +36,4 @@ system.time(mod<- clmm(
 
 print(summary(mod))
 
-# rdsave(mod, modAns)
+# rdsave(mod, modAns, fit_time)

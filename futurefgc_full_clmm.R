@@ -5,9 +5,10 @@ library(splines)
 modAns <- model.frame(
   futurefgc ~ fgcstatus + group_fgc
   + CC
-  + bene + group_bene
+#  + bene 
+  + group_bene
   + media + group_media 
-  + att + group_att 
+  + gender + group_gender
   + edu + group_edu
   + wealth + group_wealth
   + age + maritalStat + job + urRural + religion
@@ -18,9 +19,10 @@ modAns <- model.frame(
 system.time(mod <- clmm(
   futurefgc ~ fgcstatus + group_fgc
   + CC
-  + bene + group_bene
+#  + bene
+  + group_bene
   + media + group_media 
-  + att + group_att 
+  + gender + group_gender
   + edu + group_edu
   + ns(wealth,3) + ns(group_wealth,3)
   + ns(age,4) 

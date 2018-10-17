@@ -12,6 +12,10 @@ beneframe <- scoring(Answers, "bene", rightfactor, Answers$id)
 attframe <- scoring(Answers, "att", yesnodk, Answers$id)
 mediaframe <- scoring(Answers, "media", rightfactor, Answers$id)
 
+attframe <- (attframe
+	%>% mutate(gender = 1-att)
+)
+
 Answers <- (Answers
 	%>% left_join(., beneframe)
 	%>% left_join(., attframe)
@@ -22,7 +26,7 @@ Answers <- (Answers
       , group_futurefgcDau = mean(futurefgcDau01, na.rm = TRUE)
       , group_futurefgc = mean(futurefgc01, na.rm = TRUE)
 	   , group_bene = mean(bene, na.rm = TRUE)
-	   , group_att = mean(att, na.rm = TRUE)
+	   , group_gender = mean(gender, na.rm = TRUE)
 	   , group_media = mean(media, na.rm = TRUE)
 	   , group_edu = mean(edu, na.rm = TRUE)
 	   , group_wealth = mean(wealth, na.rm = TRUE)

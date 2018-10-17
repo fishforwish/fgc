@@ -150,22 +150,11 @@ prevalence.Rout: ke5.community.Rds ng5.community.Rds sl5.community.Rds ml5.commu
 
 ## fitting using clmm
 
-daughterfgc_ind_clmm.Rout: prevalence.Rout daughterfgc_ind_clmm.R
-futurefgc_ind_clmm.Rout: prevalence.Rout futurefgc_ind_clmm.R
-futurefgcDau_ind_clmm.Rout: prevalence.Rout futurefgcDau_ind_clmm.R
-
 daughterfgc_full_clmm.Rout: prevalence.Rout daughterfgc_full_clmm.R
 futurefgc_full_clmm.Rout: prevalence.Rout futurefgc_full_clmm.R
 futurefgcDau_full_clmm.Rout: prevalence.Rout futurefgcDau_full_clmm.R
 
 ## calculating variable level p-values
-
-daughterfgc_ind_varlvlsum.Rout: daughterfgc_ind_clmm.Rout daughterfgc_ind_varlvlsum.R
-	$(run-R)
-futurefgc_ind_varlvlsum.Rout: futurefgc_ind_clmm.Rout futurefgc_ind_varlvlsum.R
-	$(run-R)
-futurefgcDau_ind_varlvlsum.Rout: futurefgcDau_ind_clmm.Rout futurefgcDau_ind_varlvlsum.R
-	$(run-R)
 
 
 daughterfgc_full_varlvlsum.Rout: daughterfgc_full_clmm.Rout daughterfgc_full_varlvlsum.R
@@ -176,26 +165,13 @@ futurefgcDau_full_varlvlsum.Rout: futurefgcDau_full_clmm.Rout futurefgcDau_full_
 	$(run-R)
 
 
-
-
-
-
-daughterfgc_ind.isoplots.Rout: daughterfgc_ind_varlvlsum.Rout ordfuns.R plotFuns.R iso.R
+daughterfgc_full_rough.isoplots.Rout: daughterfgc_full_clmm.Rout ordfuns.R plotFuns.R iso.R
 	$(run-R)
 
-futurefgc_ind.isoplots.Rout: futurefgc_ind_varlvlsum.Rout ordfuns.R plotFuns.R iso.R
+futurefgc_full_rough.isoplots.Rout: futurefgc_full_clmm.Rout ordfuns.R plotFuns.R iso.R
 	$(run-R)
 
-futurefgcDau_ind.isoplots.Rout: futurefgcDau_ind_varlvlsum.Rout ordfuns.R plotFuns.R iso.R
-	$(run-R)
-
-daughterfgc_full.isoplots.Rout: daughterfgc_full_varlvlsum.Rout ordfuns.R plotFuns.R iso.R
-	$(run-R)
-
-futurefgc_full.isoplots.Rout: futurefgc_full_varlvlsum.Rout ordfuns.R plotFuns.R iso.R
-	$(run-R)
-
-futurefgcDau_full.isoplots.Rout: futurefgcDau_full_varlvlsum.Rout ordfuns.R plotFuns.R iso.R
+futurefgcDau_full_rough.isoplots.Rout: futurefgcDau_full_clmm.Rout ordfuns.R plotFuns.R iso.R
 	$(run-R)
 
 effects.Rout: all.futurefgc_clmm.Rout all.futurefgcDau_clmm.Rout effects.R
