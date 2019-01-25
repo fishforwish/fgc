@@ -1,0 +1,480 @@
+\documentclass[12pt,]{article}
+\usepackage{lmodern}
+\usepackage{adjustbox}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\usepackage{longtable}
+\usepackage{hyperref}
+\hypersetup{unicode=true,
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+
+\usepackage{longtable,booktabs}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+\newcommand{\comment}[1]{\textbf{[[#1]]}}
+\newcommand{\cfcmt}[1]{\comment{CFS: #1}}
+\newcommand{\cf}[1]{\comment{CFS only: #1}}
+\newcommand{\jdcmt}[1]{\comment{JD: #1}}
+\newcommand{\jdmlcmt}[1]{\comment{JDML: #1}}
+\newcommand{\mlcmt}[1]{\comment{MLi: #1}}
+
+
+\bibliographystyle{plain}
+
+\date{}
+
+\begin{document}
+
+\subsection{Manuscript}\label{manuscript}
+
+\subsubsection{Title}\label{title}
+
+Attitudes and Social Norms (Attitudes) of Female Genital Cutting in Kenya, Mali, Nigeria and Sierra Leon
+
+\subsubsection{Authors}\label{authors}
+
+Chyun-Fung Shi (corresponding author), Department of Biology, McMaster
+University. Michael Li, Department of Biology, McMaster University.
+Jonathan Dushoff, Department of Biology, McMaster
+University.
+
+\subsection{Abstract}\label{abstract}
+
+\subsubsection{Context}\label{context}
+
+\subsubsection{}\label{objective}
+
+\subsubsection{Methods}\label{Methods}
+
+\subsubsection{Main Outcome Measures}\label{main-outcome-measures}
+
+\subsubsection{Results}\label{results}
+
+\subsubsection{Conclusions}\label{conclusions}
+
+\subsubsection{Funding}\label{funding}
+
+\subsubsection{Keywords}\label{keywords}
+
+female genital cutting/mutilation, multilevel model, social norms, gender, DHS
+
+\subsection{Introduction}\label{introduction}
+
+It was estimated that more than 200 million women, of which 44 millions were girls under age 15, \jd{This ratio seems super-low. I would
+expect a majority under 15, no?}\cf{Most of the surveys sampled women of 15-49, girls under 15 were reported by their mothers. The ration of girls under 15 is minority} have undergone female genital cutting (FGC), mostly observed in Africa and the Middle East \cite{UNFPA14, UNIC16} (updated Sep 18).  United Nation has declared zero tolerance for FGC as it violates human rights and promoted the abundance of the practice  \cite{}.  The current progress of ending FGC is insufficient to keep up with the population growth, and girls and women undergoing FGC will rise significantly over the next 15 years if the trends continue \cite{UNIC16} (also see
+http://www.who.int/mediacentre/factsheets/fs241/en/ updated Sep, 18) \jd{This claim is surprising, and the sources are not
+academic.}\cf{UN is supposed to be reliable and often quoted by academic papers}. Breaking with the tradition can be salvaging even after migration \cite{CreiSamu19, PariSaru18, WahlJohn17a}.  FGC is also known as female genital mutilation and female circumcision;
+we use cutting instead because it implies a degree of self-awareness and is considered less judgmental \cite{KhahBark09, JohnEsse10,
+Meye00, PariSaru18, Shel01} (and is adapted by Tostan (http://www.tostan.org/)).
+
+The commonly shared position for FGC is more about eradication than intervention \cite{Toub94, Mack96, UNIC16} (more cites); but the
+progress is hindered due to the complicated history of the very practice \cite{cite}. The meanings of FGC are competitively defined by various groups from local religious community to international governmental institutes, by linking the practice to cultural and religious identity in one end and to public health and human rights on the other \cite{Boyl02, KhosBane17, KimaShell18, SchuLien13, WHO12}.  In addition, interventions based on associating FGC with violations of human rights and health dangers also encountered challenges \cite{Obio97, MuthSvan15}, for example, for overlooking a discrepant tolerance between FGC and male circumcision \cite{DarbSvob07, GaluKama15, JohnEsse10, WahlEsse18}, the complexity of woman's autonomy \cite{Meye00}, and cultural perspectives of local history and identity, therefore was often defied by local communities, despite that the practice was often endorsed by national governments \cite{Boyl02, BoylMcMo02, BoylCarb10, Grue05, Koom14, PerrSeni13, Shel08, ShelWand13, Wade11} (update cites). \jd{I think we have two choices. Either we accept the WHO ``consensus'' that it's always bad, or start discussing types.}\cf{The main purpose of this study is not to discuss types or take a position. This paragraph is to briefly present fgc in context.}
+
+\cfcmt{Culture and tradtions are guarded as main reason for FGC practice \cite{PariSaru18}, more cites}There are at least three main theoretical perspectives from outside the FGC communities shedding lights on the complexities of FGC \cite{Hayf05, Youn02}: social convention theory \cite{Mack96, Mack00, Mack06, MackLeJe09, DuncWand11}, modernization theory\cite{BoylMcMo02, Youn02} (confirm, and update), and feminist theory/human rights perspective \cite{Dell04, FrieMahm13,KhosBane17, Lewi95, Lewi09, Meye00, Morr08, Njam04, UNIC16, YirgKass12, Youn02}, such as women's autonomy \cite{Meye00} and women's body and pleasure (\cite{Morr08} on Gayatri Spivak) (confirm and update.) Convention theory posits FGC an important norm to control marriage fidelity and social prestige; this perspective views FGC as a social behaviour resulting from group practice, and it takes a ``critical mass" to initiate a change \cite{Mack00, MackLeJe09}. When norms within the communities are strong, individuals tend to self-enforce community norms \cite{Ajze02, Hayf05, KandNwak09, Mack96, Mack06, MackLeJe09, ThomMadd92}; hence, intervention of FGC should target women's social networks, which are intergenerational, interdependent and interconnected across generations and genders \cite{Mack00, DuncWand11}.
+
+Modernization
+theory proposes that traditional social relationships and values
+would be eroded by modernization (e.g., with the improvement of
+wealth and education and emphasis of individual rights)
+(see\cite{Moor13}) (and \cite{BoylMcMo02, Youn02}?). There is a wide
+range of gender theories on FGC (see\cite{Anti13, Hodg11, Lewi95})
+and woman's empowerment on making FGC decision are shared concerns:
+for example, from social position \cite{VanMeek15}, autonomy
+\cite{Meye00}, gender equality and human rights \cite{Drol11}, to
+gender identity \cite{Youn04, Koom14, WintKoom09}. Although
+convention theory was well studied and showed a larger effect on FGC
+practices than the others (e.g, \cite{BoylMcMo02, BoylCorl10,
+FreyJohn07, FrieMahm13, Hayf05, KandMwek09, Mack96, Mack06,
+ReigGonz14, YirgKass12}), these theories did not necessarily excluded
+each other, especially between modernization theory and feminist
+theory \cite{Hayf05}.
+
+
+
+
+
+
+Multiple
+theoretical frameworks would have to be incorporated to grasp a full
+explanation of the persistence and decline of FGC due to the
+heterogeneity of the population \cite{Hayf05, EffeVogt15, ModrLiu13}.
+Identifying benefits of FGC practice is crucial to promote
+sustainable change \cite{EffeVogt15}, and a community-based FGC
+perspective \cite{BoylCorl010, Drol11,Hayf05, Grue05, Hodg11,
+KandNwak09, OdukAfol17} (to confirm) should also be recognized. This
+study takes both the dynamics of attitudes and intention of FGC
+practices (beliefs of FGC benefits, and intention of cutting) into
+account at both a population and a community level to test whether
+FGC is a result of social interactions of social agents through
+interpreting norms in expectance of rewards. \jd{This P. seems
+insufficient to tie the theoretical explanation to our research
+questions. We should study Efferson's approach.} \cf{good point.
+reframed and may still need more works.}
+
+
+\subsection{Research Questions}\label{research-questions}
+The main focus of this study is to analyze associations of attitudes towards FGC benefits (see the list of FGC benefits at table xx) and intention to cut daughters in the hope that if patterns of social norms associating behavioral intenation can be detected at both a population and a community level.  If so, if social norms the most soundly 
+
+
+Additionaly, we also study the association of attitudes of FGC benefits and of FGC continuance; and the association of attitudes of FGC benefits, FGC continuance and intention (planned behavior) of cutting daughters (structural models) (to explain why) 
+\jd{I can work on the structural part, but we need a clear explanation of what we are trying to learn from the main question.} \cf{reframed the main question.}
+\jd{I guess this is also a good place to discuss our community variables?}
+
+\cf{read \cite{Aske05, Brue05}}
+
+\subsection{Methods}\label{methods}
+
+\subsubsection{Data and Samples}\label{data-and-samples}
+
+We analyzed the Demographic and Health Surveys (DHS) by USAID.  Countries with the following criteria were selected:  high FGC prevalence \cite{UNIC16}, DHS surveys with modules of FGC benefits, and index of gender awareness; and that resulted in four nations:  Kenya 2008/9, Mali 2006, Nigeria 2008 and Sierra Leone 2008.  We did not analyze the newest dataset due to the lack of FGC benefits modules before this study finished for publication (checked in 1/09/19).
+
+Only women with daughters to be considered for fgc were included in the main model (the daughter model) and the future-dughter model, while the future model included all the women in the samples; that resulted in xxx, xxx and xxx (or three more if sample sizes in individual models are different from the full models) respectively.
+\jd{We need to know how DHS decided who to ask the question.}
+\cf{Explain how we choose women}
+
+\subsubsection{Measurements and Concepts}\label{measurements-and-concepts}
+\cite{Rima08}*
+\jd{Is this s. about us or not? Why is it in our Methods?} The main constructs analyzing FGC practice were based on the theory of planned behavior \cite{Ajze91, Ajze02, ThomMadd92} and applied in fgc studies (e.g., \{IloDarf18, PashPonn16}(more cites?). The theory of planned behaviors proposed that intentions to perform behaviors could be predicted from three determinants:  attitudes toward the behavior, subjective norms, and perceived behavioral control \cite{Ajze91}.  Here, the attitudes is constructed as women's attitudes of FGC benefits (see the list of FGC benefits at table XX in Appendix); perceived behavioral control as perception of gender awareness (i.e., women's attitudes towards domestic violence (see the list of attitudes towards domestic violence against women at table xx) and their social resources (education, and job?) (feminism and modernization?); and the perceived social pressures (subjective norms) as the community level of attitudes of FGC benefits and FGC prevalence (to reflect the convention norms of FGC under the convention theory). \cf{need comments!!!} \jd{Not sure what you're trying to do here. What do you mean by ``refer''? Seems loose.}
+
+The main response variables in this study were woman's intention to cut their daughters in the daughter's FGC status model and the daughter-future model, and woman's attitude on whether they think FGC should be continued in the FGC future model.  The main predictors were attitudes of FGC benefits and woman's FGC status.  In order to test other theories mentioned above, we also included woman's gender awareness and other socio demogramic variables (see below).
+
+The sociodemographic variables included age, education, religion (see the list of religion recode at table xx in appendix; with a footnote on how we recoded it), marital status, work status, and residence (urban vs. rural) in addition to country.  The followings were treated as random variables:  cluster ID (villages) and ethnicity (see the list of ethnicity recode at table xx in appendix; with a footnote on how we recoded it).
+
+In order to address the significance of community impact on the practice of fgc, education, wealth, media use, FGC beliefs, gender awareness and FGC prevalence were also tested at the community level \cf{on a cluster leve, not national, right?} in response to the degrees of modernization, conventional values and gender awareness within- and among-community (see \cite{Achi14, BoylMcMo02, Hayf05, KandNwak09, ModrLiu13, OdukAfol17}).
+
+\jd{How did the comments get so messed up? Can it not happen again?}
+\cf{Cluster, which is usually larger than a village but small enough to be a social community, was used to represent a community level of impact \cite{Hayf05} (is Hayf05 correct or DHS method changes afterwards?}
+\jd{Ideally, we would make ethnicity a random effect, but we are back to the Gilmour problem I guess.} \cf{Ethnicity is an important factor (see Hayf05), more so than religion, associating with FGC status, and I don't think it shall be coded as a random factor.  But as J said, it is too hard! } %``explicitly including ethnicity is a means of assessing another dimension of the collective aspect of circumcision behavior. `` \cite{Hayf05}
+\cf{Bayesian model \cite{KandNwak09} ``Conversely, one cannot assume that the clusters selected in each district are fully representative of the states in which they are located because surveys only attempted to generate a fully representative sample at the regional level. Consequently, the spatial analysis will be affected by some random fluctuations.  Some of this random variation can be reduced through structured spatial effects because it includes neighboring observations in the analysis. However, it should be pointed out that such a spatial analysis should preferably be applied to census data, where the precision of the spatial analysis would be much higher." (p. 788)}
+
+\cf{Attitudes refer to the degree of favorable or unfavorable evaluation to which a person has of the behavior; subjective norm refers to the perceived social pressure to perform the behavior (or not); and perceived behavioral control refers to perception of the ease or difficulty of performing such behaviors \cite{Ajze91}.}
+
+\subsubsection{Statistical Model}\label{statistical-model}
+
+We used cumulative link mixed models (CLMMs) in the statistics package R \cite{Rstats,Rpackage_ordinal} to analyze the models.  The CLMM framework allows us to model a binary or ordinal response variable (i.e., intention of cutting daughters and whether to continue FGC practice), while treating clusters and ethnicity as random effects.
+
+\cf{Our response ARE categorical not binary; AND still need to explain why ethinicity is a random effect. AND media use was supposed to be incorporated as a random factor at the country level, based on the assumption that media content likely varied among countries.}
+
+\cf{reference: Methods and the first paragraph of Discussion\cite{Chia14}}
+
+
+\subsubsection{Scripts}\label{scripts}
+
+Codes are be available upon request. 
+
+-----stop reading -----
+
+\subsection{Results}\label{results-1}
+
+Baseline socio-demographic and sample characteristics are shown in xxx.
+
+Tables and figures including:
+table of basic sociodemographic results
+figure:  proportion of FGC daughters and FGC future
+% figure:  plots of FGC benefits (This figure will be important. It tells us what women thinks about why FGC).
+% figure: to put the first PCA of FGC believes of the 4 nations at the community level and maybe in one figure
+% figure of significant variables on modernization and pile the findings of the 4 nations into one figure.
+% a chart like figure 8-8D \cite{UNCI13}
+% figure of FGC prevalence by age and country (see Hayf05)
+% refer to https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3302551/figure/F1/  \cite{SipsChen12} for a figure on intention of cutting daughter, mom's fgc status and their thoughts on fgc continuity.
+
+Kenya 21% vs. 3% (2004-15 aged 15-49 women vs. 2010-15 aged 0-14 girls)
+Mali 89% vs. ?
+Nigeria 25% vs. 17%
+Sierra Leone 90% vs. 13%
+(We want DHS fgc rate and the rate from our samples)
+
+\cf{findings on convention theory vs. modernization theory vs. gender theory}
+
+\subsubsection{Basic Sociodemographic background}\label{Basic-Sociodemographic-background}
+% adding how many ethnic groups in each nation based on DHS data.
+
+\subsubsection{The FGC Future}\label{The-FGC-Future}
+
+\subsubsection{Daughters' FGC Status}\label{Daughters'-FGC-Status}
+
+\subsubsection{full model}\label{full-model}
+
+
+% Kenya and Nigeria both were under %30 vs. Mali and Sierra Leon over %80.  Are they different in terms of norm and beahvior?  To discuss this in the discussion.
+
+In the results of association of cutting daughter and mother's fgc status, the individual model and the community model were consistent; the effect of fgc prevalence among mothers, attitudes of fgc benefits and education were clear at the community level but not wealth, gender awareness and media consumption were not clear at the community level (meaning media use, gender awareness and education were less homogeneous?)
+
+In the results of association of fgc future and mother's fgc status, 
+
+
+
+\subsection{Discussion}\label{Discussion}
+
+--Main interpretation --
+--- conventional \cite{FreyJohn07, Hayf05, Mack96, ShelWand11} vs. modernization (cite{BoylMcMo02, Youn02}, education and wealth as index of modernization), vs. gender \cite{Dell04, FrieMahm13, Lewi04, Meye00, Njam04, YirgKass12, Youn02} (more and confirm).  
+% women's empowerment appeared to be more important in explaining differences across communities\cite{ModrLiu13} (more).
+% ``attitude is the strongest predictor of mothers' intentions to allow their daughters to undergo FGM, followed by subjective norms." \cite{PashPonn16}
+\cf{Mackie's social convention theory was supported in \cite{Shel-Wand11}; futher, \cite{Shel-Wand11} proposed that reasons for fgc practice go beyond the belief that it is advantageous for marriage prospects. FGC allows women to gain social capitals and access to networks.  Their findings also suggested that the main deterent to marriages was not men's refusal of non-fgc women, but hostility and discrimination from fgc women to non fgc women}.
+--- community levels of impact and intervention
+\cite{Drot11, Grue05, JoneEhir04} (both on cultural perspective, and maybe norm), 
+\cite{ChegAske04}(community -based approach), \cite{BrowBeec13,PatrSing15}
+--- attitudes vs. norm (beliefs) vs. intention (intended behaviors, planned behavior, controlled behavior) \cite{Ajze02, ThomMadd92}
+\cite{TerrHogg96}:  subjective norm on attitude and planned behavior.  There were three main predictors of intentio:  attitude, norm and perceived behavioroal control.
+\cite{EffeVogt15}:  Efferson proposed that cutting is not a social norm based on ``coordination."  The problem is that he and his colleages conclusion was based on a marraige market associating with cutting.  But it is likely that fgc is much less an action for marraige proposal but a social indentity to the group they indentify with.
+\cite (The social construction of reality: a treatise in the sociology of knowledge Anchor Books, New York, NY (1966))
+
+-- Second interpretation --
+--- socio demographic interpretation at both levels (link this to modernization?)
+\cite{Hayf05, PashPonn16} (more)
+% education:  \cite{IliyAbub12, KarmKand11}
+% religion:  \cite{KarmKand11}
+
+\cfcmt{feminism or women’s rights perspective:  which women?  Who are the women?  Women from the West or women from inside the fgc communities?}
+
+--- by nations
+---- Kenya: legal background:  Kenya \cite{GKEN01}; \cite{UNIC13}; 
+1. comparison: \cite{Chia14, Hayf05}, and [http://kenya.usaid.gov/programs/women/182 PEPFAR/kenya]
+---- Mali: ``The occurrence of FGM/C is also concentrated in certain West African countries where prevalence rates range from 72–96 percent: Burkina Faso, the Gambia, Guinea, and Mali. The populations of these countries share certain social and historical ties, which suggests that a strategy to eliminate FGM/C in one of these countries might be successful in others. FGM/C is practiced as part of the initiation into a secret society in Liberia and Sierra Leone. We should expect that the repercussions for mothers there who do not send their daughters to be initiated would be different than for mothers in nearby Mali or Guinea \cite{YodaWang13}
+
+---- Nigeria: ``Modernization (education and high socioeconomic status) had minimal impact on the likelihood of FGM, but education plays an important role in the mother's decision not to circumcise her daughter. It follows from these findings that community factors have a large effect on FGM, with individual factors having little effect on the distribution of FGM" \cite{KandNwak09}
+
+---- Sierra Leon: 
+\cite{ShelHern06, ShelHern13}  (Are they on Senegal or Sierra Leone?)
+
+===============================
+Concerns:
+
+We did not consider ages of women's daughters.  For those whose daufhter is over 15(?), they were not likely to fgc them, but it doesnt' mean they are againt fgc.  It might just mean the daughters were too old to be fgced. 
+===============================
+
+
+% collective action problem referring to community level of impact
+Attitude was the strongest predictor of mothers' intentions for their daughters' FGC status, followed by subjective norms \cite{PashPonn16}. It implied that community norm (social norm) was not as clear as suggested \cite{EffeVogt15}, but believed otherwise \cite{DuncWand11, Hayf06, Mack96, Mack00, Mack06, Youn02} (to confirm).
+
+
+\comment{cf: how to cite \cite{AkhmWord13,EffeVogt15} and compare these two?}
+% There are "discrepancies between attitudes and practices, especially significant under an analysis by sex as, despite manifesting less support, the percentage of female HCPs declaring to have performed medicalization is almost twice the males' average. These findings suggest that female HCPs could be facing higher demand to medicalize the practice, and that, even when brought to the medical setting, FGM/C is regarded as a women's issue to be performed by women to women." \cite{KaplSing16}
+
+% "autonomy within culture" is socially situated and entails neither endorsement of FGC nor resignation to its persistence." \cite{Meye00}:  How can we apply this feminism perspective to our findings? (Since we did not categorize types of fgc in our study, we can't know if women of autonomy prefer to have a "nick" on their daughter to preserve cultural identity or abandon fgc completely.
+
+% \cite{WahlJohn17} showed that change does occur in newly immigrants once they were relocated to a new society where FGC was defied; how does this compared to \cite{EffeVogt15}'s heterogeneous model?
+
+
+% little support for seeing FGC a prerequisite for marriage or related to marrying well, but peer pressure was an important factor on FGC decision (i.e., peer convention instead of marriage convention.) \cite{DuncWand11}
+% put religion into consideration of our findings (i.e., national distribution of religion, how many muslins in each country)
+% when influences from within the communities are strong, individuals tend to self-enforce norms of what the community expect from their behaviours \cite{Hayf05, KandNwak09, Mack96, Mack06, MackLeJe09}. (from the introduction.  try to compare our result with theirs).
+% mother-daughter: \cite{PashPonn16}
+% \cf{the structure:  cultural and legal background; comparison of our findings to previous studies; implications}
+% Wealth:  Some research showed that household wealth has nonlinear correlation with women's FGC status predictor of daughter's FGC status \cit{Hayf05}
+
+
+
+
+% If convention theory is more than just about securing marriage market (e.g., peer convention), then it is a theory about norms in general, isn't it?  That is, types of norms explain better than just marriage market.
+
+
+% Overall:
+
+
+%Because of the social aspects associated with FGC, including gender norms and power relations, it is fundamentally important that intervention of FGC practice adopts a holistic approach to focus both on individual and the wider social dynamics \cite{BrowBeec13}. 
+ \cite{Shel-Wand11}:  supporting Mackie's convetion theory ``expections regarding fgc are interdependent...."
+
+
+% contagious diffusion \cite{Mack96}
+
+% ``FGC facilitates the accumulation of social capital by younger women and of power and prestige by elder women. Based on this new evidence and reinterpretation of social convention theory, we suggest that interventions aimed at eliminating FGC should target women's social networks, which are intergenerational, and include both men and women. Our findings support Mackie's assertion that expectations regarding FGC are interdependent; change must therefore be coordinated among interconnected members of social networks." \cite{ShelWand11}
+
+FGC is still in practice or a preference among women after migrated to a western environment from their original communities where FGC was a common practice, in the hope (wording?) of preserving their ethnic and gender identity despite its conflict against the  norms and laws of the newly settled society \cite{}; however, a baseline study in Sweden showed that a majority of female immigrants, including those newly arrived, opposed all forms of FGC with increased opposition over time after migration, and suggested that an attitude change had occurred \cite{WahlJohn17}; that suggested a likely influence of convention theory.
+
+
+(There are also studies proposing various factors impacting FGC practices, such as women's education \cite{KandNwak09,VanMeek15}, social economic status \cite{} etc, community levels of influences.) (What is conventional in convention theory can also be focal points to gender awareness and modern development.  Question:  What is the differences between convention theory and community level of impact on FGC? the same or?)  
+
+
+% Others:
+
+% To compare with findings in Burkina Faso \cite{KarmKand11}, and Tostan
+
+
+% Spatial Bayesian model \cite{KandNwak09}
+% idea of purity of women reflects on the status and honor of their families \cite{Ortn87}.  Female purity is oriented to an ideal and unattainable higher class. \cite{Ortn87}
+% a possibility of a multicultural egalitarian society \cite{Wade11}
+% success in community education program to abandon FGC \cite{DiopAske09}
+%\cf{convention theory mainly work on norms or also on behaviour change?  There seems a gap between norm and behaviour in FGC, can diffusion theory brigade the gap?  As suggested, community-based education program has fallen shot tin changing FGC behaviours \cite{Shel08}}
+% "I do not deny that individuals have evolved the capability to learn and apply social norms even to situations that are completely new, but there is much evidence that we are conditional followers of norms. In fact, as the experiments reported in Bicchieri and Xiao (2009) and Bicchieri and Chavez (2010) show, manipulating information produces major changes in behavior, and the existence of a social norm is no guarantee that it will be followed. The real challenge we face is to explain how normative expectations emerge or, in other words, how the beliefs that support social norms take shape." \cite{Bicc10}.
+
+ 
+\cf{empirical norm:  enough others follow the norm-  community level of FGC \cite{Bicc10} normative norm:  enough others think we need to follow the norm -  FGC beliefs, decision on daughter's FGC status (already and future), \cite{Bicc10}}
+
+
+% get info on legal situation of FGC in those countries
+
+% "granted, recognized, and implemented by the state must not de-emphasize or delegitimize approaches recognizing the cultural significance of FGC and the potentially multiple and cascading social effects of ending the practice." \cite{(Shel08}, p. 229)
+
+
+% A society may discontinue FGC practice or maintain the practice in a different form (e.g., a less harmful type of FGC) (that is cultural change in Wade's concept \cite{Wade11})
+
+%  "Residual spatial effects of FGM have enabled us to see the inherent spatial patterns of the prevalence of FGM because the variability or noise has been removed. A more precise spatial pattern of the prevalence of FGM emerged with the estimated residual state effects compared with the crude prevalence without the control of geographic location effects." \cite{KandNwak09, p. 791}
+
+
+% From modifying the practice to discarding it through a process of conversations and understanding  \cite{Mutu02, Shel08}
+% findings in \cite{BoylMcMo02}
+%* "These finding are particularly informative because most modernization analyses only consider attitude change. The most plausible interpretation is that attitudes change before behavior, and that our analysis captured women in the midst of change." (p. 22)
+%"The greater probability of favoring FGC in Egypt was statistically significant compared to all other countries;" (p.22) (This finding is against modern theory/development theory).
+%"Our findings suggest that regional development influences attitudes and behavior, but national resistance to international norms can outweigh the influence of regional development." (p.23)
+%* "We hypothesized that those carriers of the scripts of the international system – education, mass media and working in the paid economy – would affect women's attitudes and behavior with respect to FGC. These hypotheses were confirmed" (p. 23) "Older women were less likely to favor the continuation of circumcision, although each year of age increased the probability that a woman had or planned to circumcise her daughters by 6 percent. Older women may have cut their daughters before there was international pressure opposing the practice. The reverse effect for attitudes is consistent with prior findings (see Williams and Sobieszczyk, 1997). It may be an artifact of the survey technique. Older women who oppose FGC may feel freer to say so than younger women because older women are accorded considerable independence in Muslim societies (see, for example, Geiger, 1997).20" (p.24)
+
+% "This study suggests that the adoption of a `modern' lifestyle is not an inevitable result of acquiring the tools that give a person mastery over nature. Rather, the transmission of particular ideologies through global institutionalized arrangements appears to be the critical factor in abandoning practices like FGC." \cite{(BoylMcMo02}, p. 26)  What does this mean???
+
+
+% National and cultural boundaries are not coextensive, when religious and community-based norms are considered \cite{BoylCorl10} (similar cultural approach \cite{SchuLien13}
+
+% The legitimacy of international laws banning the practice of FGC"rests on its ability to demonstrate that global and local cultures are highly interpenetrated—that global culture absorbs a full range of local values." \cite{(BoylCorl10}, p 209)
+
+% Festinger's cognitive dissonance theory:  a condition of conflict results from inconsistence between one's attitudes and one's beliefs.
+
+%\cf{a sentence on the national FGC policy of the 4 nations and gender law}
+% "In 1997, the Ministry for the Promotion of Women in Mali created a National Committee Against Violence Towards Women that links all the international organizations active in preventing FGC in Mali" "In 2001, the Kenya legislature adopted a law banning FGC." "the founding father of the country (Kenyatta, 1962) explicitly linked FGC to nationalist pride."
+
+%"This review demonstrates the strong social pressure to which women are subjected as regards the practice of female genital mutilation. However, many other factors can contribute to eroding beliefs and arguments in favour of this practice, such as the globalization, culture and social environment of countries in the West." \cite{ReigGonz14}
+
+% \cite{BergDeni13}: application/public policy ``A realist synthesis of controlled studies to determine the effectiveness of interventions to prevent genital cutting of girls.``
+
+%Except for Mali, all the studied nations have enacted decrees or legislation related to FGC \cite{WHO13}
+
+
+Gender/feminist perspective:  \cite{Meye00} Meyers questions the idea of social norm and autonomy "It seems to me that we would need far more consensus than we presently have (or are likely to get) about human nature and social justice before we could conclude that women who opt for compliance with female genital cutting norms never do so autonomously.  We would have to be persuaded, in other words, that all women's interests are such that this decision could not accord with any woman's authentic values and desires under any circumstances." 
+
+Egypt:  "Literate, better educated and employed women are more likely to oppose FGM" \cite{VanMeek15}
+Sinegal: \cite{KandComb15}
+West Africa:  \cite{SipsChen12} (law and current practices)
+Theory:  
+% gender symbol \cite{Youn04}
+% gender autonomy \cite{Meye00}: 
+%``Since autonomy-augmenting educational programs are typically developed by cultural initiates who rely on traditional modes of expression and appeal to traditional values, it is reasonable to surmise that autonomy is best extended by avoiding cultural alienation and by building on women's existing autonomy skills." 
+% ``autonomy-augmenting programs regard women in cultures that practice female genital cutting as self-determining individuals. …they have some understanding of what matters to them and how best to proceed in light of their values and commitments before they participate in such programs. … women who are subject to female genital cutting are not without autonomy. But this understanding of autonomy entails neither endorsement of female genital cutting nor resignation to its persistence. Since cultures that practice female genital cutting may have selectively nurtured and stifled women's autonomy skills, and since these cultures may shield the issue of female genital cutting from exercise of autonomy skills, developing and coordinating women's autonomy skills and extending the range of application of these skills are key to augmenting their autonomy. ``
+% convention or modernization theory?`` campaigns against FGC using educational, health, legal, and human rights–based approaches are at times ineffective and counterproductive when they frame the practice as a ``tradition" rooted in a ``primitive" and unchanging culture. We suggest that development interventions that do not address local contexts of FGC, including the complex politics and history of interventions designed to eradicate it, can in fact reify and reinscribe the practice as central to Maasai cultural identity." \cite{WintKoom09}
+
+% \cite{Koom14}: `` practices of female excision are so diverse that they may defy generalizable remedies"  ``Rather than relying on common campaign models, transferable advocacy tools, or `best practices,' scholars and anti-FGM activists must rethink female excision in terms of its diverse contextual meanings and its dynamic global politics."
+
+% "Tradition, cleanliness, and virginity were the most common motives empowering the continuation of FGM/C , followed by men's wish, esthetic factors, marriage, and religion factors.... A variety of socio-cultural myths, religious misbelievers, and hygienic and esthetic concerns were behind the FGM/C. Overall, a large proportion of the participants supported the continuation of FGM/C in spite of adverse effect and sexual dysfunction associated with FGM/C." \cite{MohaHass14}
+
+%\{cf: a few words on each nation's FGC policy}
+% read \cite{MohaHass14, MuteMill16, PashPonn16, VaroFras14}
+
+A multicultural egalitarian approach respecting both cultural identity and basic legal human rights was addressed \cite{BoylCarb10, Wade11}.  Instead of straightforward campaigns against traditional culture, "culturalconstestaion" characterized by politicized negotiation and, at times, resistance, was proposed. \cite{Koom14}.
+
+A synthesis of context studies of Africa showed that the main factors that supported FGC were tradition, religion, and reduction of women's sexual desire, and the main factors hindered FGM/C were medical complications and prevention of sexual satisfaction. \cite{BergDeni12a}.  For example, in Ethiopia, the majority of women who were aware of the negative reproductive health effects had not stopped the practice highlighted the possible fear of isolation and being alienated from the cultural system where FGC could be seen as a force of social cohesion \cite{YirgKass12}.  In Kenya, woman's decision on whether to cut their daughters' genitals were likely to relate to collective identity within ethnic groups against broader social changes \cite{Achi14, Hayf05}; similarly findings observed in Nigeria \cite{FreyJohn07, KandMwek09}.
+
+"support HCPs in the integration of FGM/C preventive interventions within the public health system, to address arguments favoring medicalization, and to use data to design appropriate strategies." \cite{KaplRiba16}
+
+% norm/attitude vs. behaviour:  attitudes towards fgc did not have a positive correlation with their behaviour:  ``within each country women from more developed regions, women who worked outside the home, and educated women were less likely to favor genital cutting and less likely to have their daughters cut. Living in an urban area decreased the likelihood of favoring genital cutting, but it had no effect on behavior. `` \cite{BoylMcMo02}
+
+%\cf{Bicchieri's norm theory—
+behaviour:  What the responder do 
+personal normative behaviour:  What the responder believes she should do
+empirical expectation:  What the responder believes others do
+normative expectation: What the responder believes others think she should do
+\cite{Bicc06}
+First, what is the association of woman's beliefs in FGC benefits (see the list of FGC benefits at table--) \cf{normative norm?}
+and their position on continuing FGC in the future (also normative norm?)  It is called FGC future model.  Second, what is the association of woman's beliefs in FGC benefits and their daughters' FGC status %\cf{empirical norm?}? 
+
+% attitude change: "migrating to and living in Sweden facilitates a transition in attitudes regarding FGC" \cite{WahlJohn17}
+\cite{UNFPA14, UNIC16}
+\subsection{suggestions and Limitations}\label{suggestions-and-Limitations}
+
+% cultural sensitivity:  It suggests that "legislative efforts to protect women's health may remain ineffective with
+out structured efforts between health systems, governments or legal institutions and the cultural society." \cite{Iyio12} and 
+% through laws \cite{AloGbad11}
+
+% `` the effectiveness of interventions was hampered by a general lack of information. However, through the realist synthesis we identified that all of the interventions were based on a theory that dissemination of information improves cognitions about FGM/C, but the interventions' success was contingent upon a range of contextual factors. `` \cite{BergDeni12a}
+
+% Education programs aimed to empower women through a broad range of educational and health-promoting activities by improvements in knowledge about and critical attitudes toward FGC had impact on behaviors and attitudes. \cite{DiopAske09}.  Legal measures must combine with social measures to effectively eradicate FGC and communities practising FGC must be involved in the planning and implementation of  intervention of FGC elimination \cite{AkoAwke09}
+
+% \cite{BrowBeec13}:  their questions of the 4 current approaches (sexuality, human rights, etc) and their suggestions
+
+% attitudes change may be followed by behaviour change, but more slowly \cite{BoylMcMo02}
+% Limitations:  without incorporating national factor in this study.
+
+% \cite{Meye00}:  rational model vs. hierarchical identification model; and plus oppression social context.  That is, knowing ≠ abling ≠ wanting ≠ doing.  How to apply this concept to theories of feminist/gender, modernization and convention.
+
+%\cite{JohaDiop13}:  Some of the most common approaches (1) health risk approaches, (2) conversion of excisers, (3) training of health professionals as change agents, (4) alternative rituals, (5) community-led approaches, (6) public statements, and (7) legal measures.
+
+% Based on our findings, are there any survey questions DHS should have included but did not?  Did our findings see something like group/community identity, womanhood \cite{Koom14}?
+% \cite{Koom14}: `` an Aang Serian activist who had addressed a village meeting saying, `The world is changing and the Maasai must change with it or risk dying out.' They argued that these appeals to cultural survival were much more persuasive and meaningful to them than the `foreign' language of rights."
+
+Analyzing why MC is a much accepted behaviour might help us to re-think the meanings of FGC (see \cite{DarbSvob07}) and, if, to certain extent, to accept a form of FGC practice (e.g, a "nick" \cite{Wade11}).
+
+% (Against common belief of a critical mass, an empirical model showed that FGC was not driven by a social norm based on coordination and there was no signal critical threshold for the practice because of various heterogeneity of the population \cite{EffeVogt15} \cf{I don't know if I want to cite \cite{EffeVogt15}.  It doesn't cite some very important papers which had addressed the concerns/questions the paper suggested}).
+
+
+% \cf{TOSTAN uses a strategy based on convention theory's critical mass to eradicate FGC (see (Wils13}}
+ * Festinger (1950?):  Social pressure in informal groups
+
+% Latikin 1995:  Norms o unsafe behaviours are not trivially changed trough information.
+% Beliefs are susceptible social confirmation (Centola)
+% Small world and "hubs" accelerate diseases but slow down behaviours change (Centola)
+% a chart to show changes of FGC prevalence from 2000 to the current surveys (Kenya 98, 03; Nigeria 99, 03; Mali 01, 06?  (see \cite{BoylCorl10}, table 1)
+
+\cite{EffeVoge15}:  Each family may have its own threshold of fgc. I think fgc norm has shifted from marraige advantage of social capital of social networking as proposed by Shell-Duncon and her colleagues \cite{ShelWand11}.  To elaborate the shifted values of fgc, what it imply and how to apply the change to policy.
+
+% suggestions: https://www.theguardian.com/global-development/2018/feb/06/battling-fgm-uganda-kenya-zero-tolerance-female-genital-mutilation "Thomas Lotongar, assistant chief in Konya Division in Kenya, says more rescue centres are needed, and schools must act as sanctuaries for girls to avoid FGM.  ``We need to find more alternatives and livelihood projects like tailoring[or] salon work to empower our girls who run away from the practice to the rescue centres.""
+
+\cite{BellNova15}: "We find that much of the variation in a woman's support for FGC can be attributed to individual- and household-level factors rather than to village-level factors or to factors beyond the village level."
+
+Suggestions: pricking (type IV\cite{WHO08})\cite{WahlJohn17a, WahlJohn17b} and medical FGC \cite{KimaShell18} vs. no-tolerance, fgc vs. mc \cite{WahlEsse18}?
+
+\subsection{Conclusion}\label{Conclusion}
+
+%"targeting women and girls is a sound investment, but outcomes are dependent on integrated approaches and the protective umbrella of policy and legislative actions" to change gender norms among women and girls \cite{KeleFran}. 
+Reasons of FGC is not universal and different from community to community and from society to society; campaigns of reducing and preventing FGC need to incorporate with local history and believes.
+% call for eduction in communication of FGC:  \cite{Koom14, Meye00}}
+
+Eradication of FGC is more controversial than expected.  FGC practice and its nature tended to be morally embraced, and deeply internalized \cite{SchuLien13}.  Decisions on undergoing FGC was often a result of a collective practice than an individual choice \cite{Dell04, Hayf06, FreyJoh07, KandMwek09, Mack96, Mack06, ShelHern06, ShelWand11, YirgKass12}. Public denouncements and anti-FGC laws could push FGC into private practices \cite{GaluKama15, VanCoen17}.  Given the regional FGC prevalence, variations among countries and the social context of FGC practices (e.g., see Burkina Faso \cite{KarmKand11} vs. Nigeria \cite{KandNwak09}), a ``one size fits all" strategy for the abandonment of FGMC would not be effective \cite{JohaDiop13, YodeWang13}.
+
+It is inevitable to compare male circumcision to female genital cutting and question how male circumcision gain its cultural recognition but not FGC.  Considering the acceptance of Alternative rights of passage \cite{GaluKama15} may be an alternative without criminalize the practice. (I'm not sure if I'm comfortable with this position, but it is an alternative thought.)
+
+To study types of FGC for the future to understand correlation/assocaition between types of fgc and fgc beneifts.
+
+--- questions worth addressing
+1. Is there a tipping point?  Can our findings disclose some ideas on fgc intervention in terms of behavioural change in order to reach a tipping point?
+\subsection{Funding}\label{Funding}
+
+CF was funded by a grant from the James S. McDonnell foundation. JD holds a New Investigator award from the Canadian Institutes of Health Research.
+
+\subsection{Conflicts of interest}\label{Conflicts-of-Interest}
+
+The James S. McDonnell foundation and the Canadian Institutes of Health Research had no role in study design; collection, analysis, and interpretation of data; the writing of the manuscript; or in the decision to submit the manuscript for publication.  The views expressed herein do not necessarily represent the views of the founding bodies.
+
+\subsection{Authors' contributions}\label{Authors'-contributions}
+
+\subsubsection{Disclaimer}\label{disclaimer}
+
+The findings and conclusions of this article are those of the authors
+and do not necessarily represent the views of the funding agency.
+
+\subsubsection{Acknowledgement}\label{Acknowledgement}
+Ben Bolker,  Marta Wayne
+
+\subsubsection{Appendix}\label{appendix-1}
+
+\bibliography{refs}
+
+\end{document}
+
