@@ -8,7 +8,7 @@ current: target
 
 # make files
 
-Sources += Makefile .ignore 
+Sources += Makefile 
 Ignore += .gitignore
 
 ms = makestuff
@@ -50,6 +50,9 @@ hist.Rout: hist.R
 
 # Refs
 
+Ignore += auto.html
+auto.html: auto.rmu
+auto.bib: auto.rmu
 Sources += manual.bib auto.rmu
 Ignore += refs.bib
 refs.bib: auto.bib manual.bib
