@@ -1,5 +1,12 @@
 Proposl of this study is at https://github.com/fishforwish/fgc/blob/master/README.md
 
+----------------------------------------------------------------------
+2019 March 25
+===============
+- make the score from 0-1 instead of 0-2 
+- double check if att variable was changed to gender_awareness = 1-att
+- norm is based on what I think you think which can be based on your action or our communication (J said and Chyun agreed).  Chyun will do more literature to make the sense out of our results.
+
 
 ----------------------------------------------------------------------
 
