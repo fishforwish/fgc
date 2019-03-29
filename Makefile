@@ -177,7 +177,7 @@ futurefgc_full_rough.isoplots.Rout: futurefgc_full_clmm.Rout ordfuns.R plotFuns.
 futurefgcDau_full_rough.isoplots.Rout: futurefgcDau_full_clmm.Rout ordfuns.R plotFuns.R iso.R
 	$(run-R)
 
-effects.Rout: all.futurefgc_clmm.Rout all.futurefgcDau_clmm.Rout effects.R
+effects.Rout: futurefgc_full_clmm.Rout futurefgcDau_full_clmm.Rout effects.R
 	$(run-R)
 
 ######################################################################

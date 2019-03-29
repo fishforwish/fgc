@@ -1,0 +1,75 @@
+> 
+> # Generated using wrapR file daughterfgc_full_clmm.wrapR.r
+> source('daughterfgc_full_clmm.R', echo=TRUE)
+
+> library(ordinal)
+
+> library(splines)
+
+> modAns <- model.frame(futurefgcDau ~ fgcstatus + group_fgc + 
++     CC + group_bene + media + group_media + gender + group_gender + 
++     edu + gro .... [TRUNCATED] 
+
+> fit_time <- system.time(mod <- clmm(futurefgcDau ~ 
++     fgcstatus + group_fgc + CC + group_bene + media + group_media + 
++         gender + group_ .... [TRUNCATED] 
+
+> print(summary(mod))
+Cumulative Link Mixed Model fitted with the Laplace approximation
+
+formula: futurefgcDau ~ fgcstatus + group_fgc + CC + group_bene + media +  
+    group_media + gender + group_gender + edu + group_edu + ns(wealth,  
+    3) + ns(group_wealth, 3) + ns(age, 4) + maritalStat + job +  
+    urRural + religion + (1 | clusterId) + (1 | ethni)
+data:    modAns
+
+ link  threshold nobs  logLik   AIC      niter       max.grad cond.H 
+ logit flexible  17984 -6173.46 12414.92 7034(28212) 1.68e-03 1.1e+04
+
+Random effects:
+ Groups    Name        Variance Std.Dev.
+ clusterId (Intercept) 0.7104   0.8428  
+ ethni     (Intercept) 0.2717   0.5212  
+Number of groups:  clusterId 1978,  ethni 50 
+
+Coefficients:
+                        Estimate Std. Error z value Pr(>|z|)    
+fgcstatusYes             2.33752    0.09905  23.599  < 2e-16 ***
+group_fgc                1.36176    0.18074   7.534 4.91e-14 ***
+CCML                     0.47751    0.28359   1.684 0.092222 .  
+CCNG                    -0.40141    0.26803  -1.498 0.134227    
+CCSL                     2.24877    0.29905   7.520 5.49e-14 ***
+group_bene               6.56750    0.55453  11.843  < 2e-16 ***
+media                   -0.87470    0.15670  -5.582 2.38e-08 ***
+group_media              1.15601    0.44887   2.575 0.010014 *  
+gender                  -0.21143    0.08861  -2.386 0.017027 *  
+group_gender            -0.70850    0.24050  -2.946 0.003219 ** 
+edu                     -0.24550    0.02929  -8.382  < 2e-16 ***
+group_edu               -0.20094    0.09061  -2.218 0.026585 *  
+ns(wealth, 3)1          -0.05921    0.34857  -0.170 0.865113    
+ns(wealth, 3)2          -2.70856    1.11973  -2.419 0.015566 *  
+ns(wealth, 3)3          -3.04607    1.15356  -2.641 0.008276 ** 
+ns(group_wealth, 3)1    -0.39652    0.37628  -1.054 0.291981    
+ns(group_wealth, 3)2    -0.29139    0.86519  -0.337 0.736275    
+ns(group_wealth, 3)3     0.09324    0.61198   0.152 0.878910    
+ns(age, 4)1             -0.78177    0.18229  -4.289 1.80e-05 ***
+ns(age, 4)2             -0.52372    0.17221  -3.041 0.002357 ** 
+ns(age, 4)3             -1.26567    0.43473  -2.911 0.003598 ** 
+ns(age, 4)4             -1.16816    0.15575  -7.500 6.37e-14 ***
+maritalStatPartnered     0.16314    0.14790   1.103 0.270005    
+maritalStatSeparated    -0.16230    0.20385  -0.796 0.425919    
+maritalStatWidowed       0.07952    0.21220   0.375 0.707859    
+jobYes                  -0.12080    0.06826  -1.770 0.076778 .  
+urRuralRural             0.14247    0.11699   1.218 0.223336    
+religionMuslim           0.23780    0.14409   1.650 0.098860 .  
+religionNone/Other       0.43927    0.13213   3.325 0.000885 ***
+religionOther Christian -0.60048    0.14364  -4.180 2.91e-05 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Threshold coefficients:
+               Estimate Std. Error z value
+No|Don't know    2.4086     0.5050   4.770
+Don't know|Yes   2.9956     0.5054   5.928
+> # Wrapped output file daughterfgc_full_clmm.wrapR.rout
+> 
