@@ -11,7 +11,7 @@ modAns <- model.frame(
   futurefgcDau ~ futurefgc + group_futurefgc
   + fgcstatus + group_fgc
   + CC
-#  + bene 
+  + bene 
   + group_bene
   + media + group_media 
   + gender + group_gender 
@@ -26,7 +26,7 @@ system.time(mod<- clmm(
   futurefgcDau ~ futurefgc + group_futurefgc
   + fgcstatus + group_fgc
   + CC
-#  + bene 
+  + bene 
   + group_bene
   + media + group_media 
   + gender + group_gender 
