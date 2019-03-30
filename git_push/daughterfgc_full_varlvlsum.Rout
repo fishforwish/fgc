@@ -1,0 +1,39 @@
+> 
+> # Generated using wrapR file daughterfgc_full_varlvlsum.wrapR.r
+> source('daughterfgc_full_varlvlsum.R', echo=TRUE)
+
+> library(ordinal)
+
+> library(splines)
+
+> library(RVAideMemoire)
+
+> varlvlsum <- Anova.clmm(mod)
+
+> print(varlvlsum)
+Analysis of Deviance Table (Type II tests)
+
+Response: futurefgcDau
+                    LR Chisq Df Pr(>Chisq)    
+fgcstatus             368.81  1  < 2.2e-16 ***
+group_fgc             123.87  1  < 2.2e-16 ***
+CC                     52.78  3  2.038e-11 ***
+bene                 1114.09  1  < 2.2e-16 ***
+group_bene              0.19  1   0.662237    
+media                  31.17  1  2.366e-08 ***
+group_media             5.09  1   0.024039 *  
+gender                  3.78  1   0.051842 .  
+group_gender            7.04  1   0.007989 ** 
+edu                    38.42  1  5.693e-10 ***
+group_edu               6.69  1   0.009703 ** 
+ns(wealth, 3)           8.95  3   0.029962 *  
+ns(group_wealth, 3)     1.16  3   0.763322    
+ns(age, 4)             86.48  4  < 2.2e-16 ***
+maritalStat             4.02  3   0.259157    
+job                     1.72  1   0.189302    
+urRural                 0.79  1   0.374209    
+religion               66.19  3  2.796e-14 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+> # Wrapped output file daughterfgc_full_varlvlsum.wrapR.rout
+> 

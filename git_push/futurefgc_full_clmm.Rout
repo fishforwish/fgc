@@ -7,71 +7,72 @@
 > library(splines)
 
 > modAns <- model.frame(futurefgc ~ fgcstatus + group_fgc + 
-+     CC + group_bene + media + group_media + gender + group_gender + 
-+     edu + group_ .... [TRUNCATED] 
++     CC + bene + group_bene + media + group_media + gender + group_gender + 
++     edu + .... [TRUNCATED] 
 
 > system.time(mod <- clmm(futurefgc ~ fgcstatus + group_fgc + 
-+     CC + group_bene + media + group_media + gender + group_gender + 
-+     edu + grou .... [TRUNCATED] 
++     CC + bene + group_bene + media + group_media + gender + group_gender + 
++     edu .... [TRUNCATED] 
     user   system  elapsed 
-2169.760    2.640 2374.253 
+1658.616    1.268 4541.292 
 
 > print(summary(mod))
 Cumulative Link Mixed Model fitted with the Laplace approximation
 
-formula: futurefgc ~ fgcstatus + group_fgc + CC + group_bene + media +  
-    group_media + gender + group_gender + edu + group_edu + ns(wealth,  
-    3) + ns(group_wealth, 3) + ns(age, 4) + maritalStat + job +  
-    urRural + religion + (1 | clusterId) + (1 | ethni)
+formula: futurefgc ~ fgcstatus + group_fgc + CC + bene + group_bene +  
+    media + group_media + gender + group_gender + edu + group_edu +  
+    ns(wealth, 3) + ns(group_wealth, 3) + ns(age, 4) + maritalStat +  
+    job + urRural + religion + (1 | clusterId) + (1 | ethni)
 data:    modAns
 
- link  threshold nobs  logLik    AIC      niter        max.grad cond.H 
- logit flexible  45515 -28288.13 56644.25 10770(72331) 7.03e-03 6.3e+03
+ link  threshold nobs  logLik    AIC      niter       max.grad cond.H 
+ logit flexible  45463 -25962.03 51994.05 9354(56559) 6.98e-03 5.7e+03
 
 Random effects:
  Groups    Name        Variance Std.Dev.
- clusterId (Intercept) 0.4662   0.6828  
- ethni     (Intercept) 0.1751   0.4184  
+ clusterId (Intercept) 0.5812   0.7624  
+ ethni     (Intercept) 0.1920   0.4381  
 Number of groups:  clusterId 2029,  ethni 51 
 
 Coefficients:
                         Estimate Std. Error z value Pr(>|z|)    
-fgcstatusYes             1.55989    0.04090  38.140  < 2e-16 ***
-group_fgc                0.87960    0.09482   9.277  < 2e-16 ***
-CCML                     0.94957    0.19891   4.774 1.81e-06 ***
-CCNG                     0.21254    0.19200   1.107 0.268311    
-CCSL                     0.62843    0.21340   2.945 0.003231 ** 
-group_bene               5.88106    0.32327  18.193  < 2e-16 ***
-media                   -0.53046    0.06618  -8.015 1.10e-15 ***
-group_media             -0.05108    0.24426  -0.209 0.834341    
-gender                  -0.18451    0.04045  -4.561 5.09e-06 ***
-group_gender            -0.20387    0.13231  -1.541 0.123355    
-edu                     -0.16925    0.01161 -14.582  < 2e-16 ***
-group_edu               -0.12972    0.04996  -2.597 0.009412 ** 
-ns(wealth, 3)1          -0.27252    0.14413  -1.891 0.058653 .  
-ns(wealth, 3)2          -1.58605    0.42983  -3.690 0.000224 ***
-ns(wealth, 3)3          -1.83249    0.32751  -5.595 2.20e-08 ***
-ns(group_wealth, 3)1     0.59220    0.20225   2.928 0.003411 ** 
-ns(group_wealth, 3)2     0.08130    0.45856   0.177 0.859285    
-ns(group_wealth, 3)3     0.74350    0.32657   2.277 0.022803 *  
-ns(age, 4)1             -0.10644    0.06639  -1.603 0.108864    
-ns(age, 4)2             -0.21410    0.06502  -3.293 0.000991 ***
-ns(age, 4)3             -0.32817    0.12619  -2.601 0.009309 ** 
-ns(age, 4)4             -0.11822    0.06533  -1.810 0.070356 .  
-maritalStatPartnered     0.11255    0.04217   2.669 0.007614 ** 
-maritalStatSeparated    -0.03779    0.08344  -0.453 0.650597    
-maritalStatWidowed       0.16025    0.08492   1.887 0.059148 .  
-jobYes                  -0.07273    0.02919  -2.492 0.012699 *  
-urRuralRural             0.11563    0.06550   1.765 0.077527 .  
-religionMuslim           0.51460    0.06891   7.468 8.16e-14 ***
-religionNone/Other       0.19793    0.06038   3.278 0.001046 ** 
-religionOther Christian -0.30521    0.07238  -4.217 2.48e-05 ***
+fgcstatusYes             1.10926    0.04317  25.695  < 2e-16 ***
+group_fgc                1.43882    0.10292  13.980  < 2e-16 ***
+CCML                     1.09813    0.21079   5.210 1.89e-07 ***
+CCNG                     0.26386    0.20267   1.302 0.192929    
+CCSL                     0.74664    0.22626   3.300 0.000967 ***
+bene                     8.06203    0.13385  60.230  < 2e-16 ***
+group_bene              -0.09838    0.36129  -0.272 0.785382    
+media                   -0.58861    0.06952  -8.467  < 2e-16 ***
+group_media             -0.03259    0.26526  -0.123 0.902221    
+gender                  -0.16070    0.04261  -3.772 0.000162 ***
+group_gender            -0.23661    0.14378  -1.646 0.099825 .  
+edu                     -0.14069    0.01236 -11.387  < 2e-16 ***
+group_edu               -0.19002    0.05460  -3.480 0.000501 ***
+ns(wealth, 3)1          -0.28265    0.15200  -1.859 0.062961 .  
+ns(wealth, 3)2          -1.80196    0.45525  -3.958 7.55e-05 ***
+ns(wealth, 3)3          -1.99886    0.35620  -5.612 2.00e-08 ***
+ns(group_wealth, 3)1     0.50817    0.21936   2.317 0.020525 *  
+ns(group_wealth, 3)2    -0.21604    0.49654  -0.435 0.663495    
+ns(group_wealth, 3)3     0.75453    0.35798   2.108 0.035052 *  
+ns(age, 4)1             -0.17376    0.06948  -2.501 0.012395 *  
+ns(age, 4)2             -0.38970    0.06861  -5.680 1.35e-08 ***
+ns(age, 4)3             -0.68227    0.13129  -5.197 2.03e-07 ***
+ns(age, 4)4             -0.26367    0.06947  -3.796 0.000147 ***
+maritalStatPartnered     0.12243    0.04417   2.772 0.005571 ** 
+maritalStatSeparated     0.01751    0.08791   0.199 0.842149    
+maritalStatWidowed       0.14195    0.08971   1.582 0.113565    
+jobYes                  -0.06082    0.03073  -1.979 0.047763 *  
+urRuralRural             0.10157    0.07159   1.419 0.156004    
+religionMuslim           0.41396    0.07273   5.692 1.26e-08 ***
+religionNone/Other       0.19663    0.06361   3.091 0.001992 ** 
+religionOther Christian -0.33301    0.07646  -4.355 1.33e-05 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 Threshold coefficients:
                      Estimate Std. Error z value
-Discontinued|Depends   1.7503     0.2555   6.849
-Depends|Continued      2.5211     0.2558   9.857
+Discontinued|Depends   1.5488     0.2732   5.670
+Depends|Continued      2.4301     0.2734   8.889
 > # Wrapped output file futurefgc_full_clmm.wrapR.rout
 > 
