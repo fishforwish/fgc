@@ -1,6 +1,16 @@
 Proposl of this study is at https://github.com/fishforwish/fgc/blob/master/README.md
 
 ----------------------------------------------------------------------
+2019 APRIL 1
+===============
+- to make a one-parameter plot first.
+Maybe also:
+- making a table to show importances of variation in terms of their contribution of effect to responses. an effect plot, a dot whisker effect plot for the one parameter variable.
+- revise the panels (e.g., https://github.com/fishforwish/fgc/blob/master/git_push/futurefgcDau_full.isoplots.Rout.pdf) into a simpler one by showing only those with more than one parameters.
+- clusters of histogram for threshold: see https://github.com/fishforwish/fgc/blob/master/git_push/prevalence.Rout.pdf
+
+
+----------------------------------------------------------------------
 2019 March 25
 ===============
 - make the score from 0-1 instead of 0-2 
