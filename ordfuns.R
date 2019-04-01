@@ -1,14 +1,14 @@
-ordTrans <- function(v, a){
+ordTrans <- function(v, a, s){
   sapply(v, function(n){
-    return(sum(plogis(n-a)))
+    return(sum(plogis(n-a))*(1/s))
   })
 }
 
 ordpred <- function(mod, n, modAns){
   v <- varpred(mod, n, modAns, isolate=TRUE)
-  v$fit <- ordTrans(v$fit, mod$alpha)
-  v$lwr <- ordTrans(v$lwr, mod$alpha)
-  v$upr <- ordTrans(v$upr, mod$alpha)
+  v$fit <- ordTrans(v$fit, mod$alpha, length(mod$alpha))
+  v$lwr <- ordTrans(v$lwr, mod$alpha, length(mod$alpha))
+  v$upr <- ordTrans(v$upr, mod$alpha, length(mod$alpha))
   return(v)
 }
 
