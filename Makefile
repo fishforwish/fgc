@@ -179,6 +179,23 @@ futurefgcDau_full.isoplots.Rout: futurefgcDau_full_clmm.Rout futurefgcDau_full_v
 
 all_full_models: futurefgc_full_clmm.Rout futurefgcDau_full_clmm.Rout daughterfgc_full_clmm.Rout
 
+futurefgc_effects.Rout: futurefgc_full_clmm.Rout single_var_effect.R
+	$(run-R)
+
+daughterfgc_effects.Rout: daughterfgc_full_clmm.Rout single_var_effect.R
+	$(run-R)
+
+futurefgcDau_effects.Rout: futurefgcDau_full_clmm.Rout single_var_effect.R
+	$(run-R)
+
+futurefgc_effects_plot.Rout: futurefgc_effects.Rout effects_plot.R
+	$(run-R)
+
+daughterfgc_effects_plot.Rout: daughterfgc_effects.Rout effects_plot.R
+	$(run-R)
+
+futurefgcDau_effects_plot.Rout: futurefgcDau_effects.Rout effects_plot.R
+	$(run-R)
 ######################################################################
 
 ## Mike, why do we have so many .mk files? Can we pull these into a Makefile, would that be easier to read and navigate/
