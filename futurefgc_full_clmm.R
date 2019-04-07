@@ -3,7 +3,8 @@ library(splines)
 
 
 modAns <- model.frame(
-  futurefgc ~ fgcstatus + group_fgc
+  futurefgc ~ group_futurefgc
+  + fgcstatus + group_fgc
   + CC
   + bene 
   + group_bene
@@ -17,7 +18,8 @@ modAns <- model.frame(
 )
 
 system.time(mod <- clmm(
-  futurefgc ~ fgcstatus + group_fgc
+  futurefgc ~ group_futurefgc
+  + fgcstatus + group_fgc
   + CC
   + bene
   + group_bene

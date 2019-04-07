@@ -8,7 +8,8 @@ combined_dat <- (combined_dat
 )
 
 modAns <- model.frame(
-  futurefgcDau ~ futurefgc + group_futurefgc
+  futurefgcDau ~ group_futurefgcDau
+  + futurefgc + group_futurefgc
   + fgcstatus + group_fgc
   + CC
   + bene 
@@ -23,7 +24,8 @@ modAns <- model.frame(
 )
 
 system.time(mod<- clmm(
-  futurefgcDau ~ futurefgc + group_futurefgc
+  futurefgcDau ~ group_futurefgcDau
+  + futurefgc + group_futurefgc
   + fgcstatus + group_fgc
   + CC
   + bene 
