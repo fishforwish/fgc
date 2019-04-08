@@ -15,24 +15,25 @@ Analysis of Deviance Table (Type II tests)
 
 Response: futurefgc
                     LR Chisq Df Pr(>Chisq)    
-fgcstatus              682.6  1  < 2.2e-16 ***
-group_fgc              192.6  1  < 2.2e-16 ***
-CC                      25.9  3  9.965e-06 ***
-bene                  4590.7  1  < 2.2e-16 ***
-group_bene               0.1  1  0.7854053    
-media                   71.9  1  < 2.2e-16 ***
-group_media              0.0  1  0.9022908    
-gender                  14.2  1  0.0001633 ***
-group_gender             2.7  1  0.1001192    
-edu                    129.9  1  < 2.2e-16 ***
-group_edu               12.1  1  0.0005033 ***
-ns(wealth, 3)           38.6  3  2.144e-08 ***
-ns(group_wealth, 3)     26.1  3  9.275e-06 ***
-ns(age, 4)              56.5  4  1.592e-11 ***
-maritalStat              9.1  3  0.0286215 *  
-job                      3.9  1  0.0477302 *  
-urRural                  2.0  1  0.1562701    
-religion               154.3  3  < 2.2e-16 ***
+group_futurefgc        525.7  1  < 2.2e-16 ***
+fgcstatus              759.1  1  < 2.2e-16 ***
+group_fgc               73.3  1  < 2.2e-16 ***
+CC                       3.9  3   0.277461    
+bene                  4786.0  1  < 2.2e-16 ***
+group_bene             321.3  1  < 2.2e-16 ***
+media                   78.6  1  < 2.2e-16 ***
+group_media              0.8  1   0.363437    
+gender                  17.9  1  2.348e-05 ***
+group_gender             0.0  1   0.851992    
+edu                    141.7  1  < 2.2e-16 ***
+group_edu                9.7  1   0.001877 ** 
+ns(wealth, 3)           37.4  3  3.741e-08 ***
+ns(group_wealth, 3)     16.9  3   0.000732 ***
+ns(age, 4)              54.4  4  4.289e-11 ***
+maritalStat              7.6  3   0.056064 .  
+job                      4.5  1   0.034533 *  
+urRural                  1.3  1   0.261928    
+religion               123.9  3  < 2.2e-16 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 > # Wrapped output file futurefgc_full_varlvlsum.wrapR.rout

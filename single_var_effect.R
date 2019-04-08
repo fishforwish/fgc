@@ -28,7 +28,9 @@ betadf <- (mm2
    %>% gather(variable,sd)
    %>% left_join(.,x_keep) ## creating keep 
    %>% mutate(variable = ifelse(variable == "fgcstatus","fgcstatusYes",variable)
-        , variable = ifelse(variable == "job","jobYes",variable))
+        , variable = ifelse(variable == "job","jobYes",variable)
+		  , variable = ifelse(variable == "urRural","urRuralRural",variable)
+		  )
    %>% left_join(.,dd) ## joining beta df
    %>% filter(complete.cases(.))
    %>% rowwise()
@@ -39,4 +41,4 @@ betadf <- (mm2
    )
 )
 
-
+print(betadf)

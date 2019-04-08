@@ -6,73 +6,75 @@
 
 > library(splines)
 
-> modAns <- model.frame(futurefgc ~ fgcstatus + group_fgc + 
-+     CC + bene + group_bene + media + group_media + gender + group_gender + 
-+     edu + .... [TRUNCATED] 
+> modAns <- model.frame(futurefgc ~ group_futurefgc + 
++     fgcstatus + group_fgc + CC + bene + group_bene + media + 
++     group_media + gender + gr .... [TRUNCATED] 
 
-> system.time(mod <- clmm(futurefgc ~ fgcstatus + group_fgc + 
-+     CC + bene + group_bene + media + group_media + gender + group_gender + 
-+     edu .... [TRUNCATED] 
+> system.time(mod <- clmm(futurefgc ~ group_futurefgc + 
++     fgcstatus + group_fgc + CC + bene + group_bene + media + 
++     group_media + gender +  .... [TRUNCATED] 
     user   system  elapsed 
-1658.616    1.268 4541.292 
+1376.952    0.728 4147.501 
 
 > print(summary(mod))
 Cumulative Link Mixed Model fitted with the Laplace approximation
 
-formula: futurefgc ~ fgcstatus + group_fgc + CC + bene + group_bene +  
-    media + group_media + gender + group_gender + edu + group_edu +  
-    ns(wealth, 3) + ns(group_wealth, 3) + ns(age, 4) + maritalStat +  
-    job + urRural + religion + (1 | clusterId) + (1 | ethni)
+formula: futurefgc ~ group_futurefgc + fgcstatus + group_fgc + CC + bene +  
+    group_bene + media + group_media + gender + group_gender +  
+    edu + group_edu + ns(wealth, 3) + ns(group_wealth, 3) + ns(age,  
+    4) + maritalStat + job + urRural + religion + (1 | clusterId) +  
+    (1 | ethni)
 data:    modAns
 
- link  threshold nobs  logLik    AIC      niter       max.grad cond.H 
- logit flexible  45463 -25962.03 51994.05 9354(56559) 6.98e-03 5.7e+03
+ link  threshold nobs  logLik    AIC      niter        max.grad cond.H 
+ logit flexible  45443 -25690.70 51453.39 11283(45136) 6.33e-03 4.7e+03
 
 Random effects:
- Groups    Name        Variance Std.Dev.
- clusterId (Intercept) 0.5812   0.7624  
- ethni     (Intercept) 0.1920   0.4381  
-Number of groups:  clusterId 2029,  ethni 51 
+ Groups    Name        Variance  Std.Dev. 
+ clusterId (Intercept) 4.452e-12 2.110e-06
+ ethni     (Intercept) 8.984e-02 2.997e-01
+Number of groups:  clusterId 2009,  ethni 51 
 
 Coefficients:
                         Estimate Std. Error z value Pr(>|z|)    
-fgcstatusYes             1.10926    0.04317  25.695  < 2e-16 ***
-group_fgc                1.43882    0.10292  13.980  < 2e-16 ***
-CCML                     1.09813    0.21079   5.210 1.89e-07 ***
-CCNG                     0.26386    0.20267   1.302 0.192929    
-CCSL                     0.74664    0.22626   3.300 0.000967 ***
-bene                     8.06203    0.13385  60.230  < 2e-16 ***
-group_bene              -0.09838    0.36129  -0.272 0.785382    
-media                   -0.58861    0.06952  -8.467  < 2e-16 ***
-group_media             -0.03259    0.26526  -0.123 0.902221    
-gender                  -0.16070    0.04261  -3.772 0.000162 ***
-group_gender            -0.23661    0.14378  -1.646 0.099825 .  
-edu                     -0.14069    0.01236 -11.387  < 2e-16 ***
-group_edu               -0.19002    0.05460  -3.480 0.000501 ***
-ns(wealth, 3)1          -0.28265    0.15200  -1.859 0.062961 .  
-ns(wealth, 3)2          -1.80196    0.45525  -3.958 7.55e-05 ***
-ns(wealth, 3)3          -1.99886    0.35620  -5.612 2.00e-08 ***
-ns(group_wealth, 3)1     0.50817    0.21936   2.317 0.020525 *  
-ns(group_wealth, 3)2    -0.21604    0.49654  -0.435 0.663495    
-ns(group_wealth, 3)3     0.75453    0.35798   2.108 0.035052 *  
-ns(age, 4)1             -0.17376    0.06948  -2.501 0.012395 *  
-ns(age, 4)2             -0.38970    0.06861  -5.680 1.35e-08 ***
-ns(age, 4)3             -0.68227    0.13129  -5.197 2.03e-07 ***
-ns(age, 4)4             -0.26367    0.06947  -3.796 0.000147 ***
-maritalStatPartnered     0.12243    0.04417   2.772 0.005571 ** 
-maritalStatSeparated     0.01751    0.08791   0.199 0.842149    
-maritalStatWidowed       0.14195    0.08971   1.582 0.113565    
-jobYes                  -0.06082    0.03073  -1.979 0.047763 *  
-urRuralRural             0.10157    0.07159   1.419 0.156004    
-religionMuslim           0.41396    0.07273   5.692 1.26e-08 ***
-religionNone/Other       0.19663    0.06361   3.091 0.001992 ** 
-religionOther Christian -0.33301    0.07646  -4.355 1.33e-05 ***
+group_futurefgc          4.31514    0.10366  41.627  < 2e-16 ***
+fgcstatusYes             1.10111    0.04042  27.239  < 2e-16 ***
+group_fgc               -0.67839    0.07938  -8.546  < 2e-16 ***
+CCML                     0.24111    0.14437   1.670 0.094907 .  
+CCNG                     0.08063    0.14035   0.575 0.565627    
+CCSL                     0.24324    0.15344   1.585 0.112899    
+bene                     7.71000    0.12359  62.381  < 2e-16 ***
+group_bene              -4.16287    0.23210 -17.936  < 2e-16 ***
+media                   -0.58309    0.06585  -8.855  < 2e-16 ***
+group_media              0.14319    0.15754   0.909 0.363385    
+gender                  -0.17004    0.04018  -4.232 2.32e-05 ***
+group_gender             0.01596    0.08549   0.187 0.851945    
+edu                     -0.13932    0.01168 -11.926  < 2e-16 ***
+group_edu                0.09581    0.03087   3.104 0.001912 ** 
+ns(wealth, 3)1          -0.24536    0.14233  -1.724 0.084722 .  
+ns(wealth, 3)2          -1.62239    0.42147  -3.849 0.000118 ***
+ns(wealth, 3)3          -1.85822    0.33281  -5.583 2.36e-08 ***
+ns(group_wealth, 3)1     0.34894    0.14078   2.479 0.013188 *  
+ns(group_wealth, 3)2     0.14375    0.31947   0.450 0.652732    
+ns(group_wealth, 3)3     0.47900    0.21453   2.233 0.025564 *  
+ns(age, 4)1             -0.16449    0.06718  -2.448 0.014347 *  
+ns(age, 4)2             -0.36719    0.06644  -5.527 3.27e-08 ***
+ns(age, 4)3             -0.65083    0.12701  -5.124 2.99e-07 ***
+ns(age, 4)4             -0.25086    0.06713  -3.737 0.000186 ***
+maritalStatPartnered     0.10796    0.04212   2.563 0.010382 *  
+maritalStatSeparated     0.02412    0.08454   0.285 0.775393    
+maritalStatWidowed       0.13201    0.08636   1.529 0.126359    
+jobYes                  -0.06070    0.02872  -2.113 0.034564 *  
+urRuralRural             0.04270    0.03806   1.122 0.261846    
+religionMuslim           0.26516    0.06305   4.205 2.61e-05 ***
+religionNone/Other       0.15026    0.05629   2.669 0.007602 ** 
+religionOther Christian -0.33996    0.06835  -4.974 6.57e-07 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 Threshold coefficients:
                      Estimate Std. Error z value
-Discontinued|Depends   1.5488     0.2732   5.670
-Depends|Continued      2.4301     0.2734   8.889
+Discontinued|Depends   1.8816     0.1931   9.745
+Depends|Continued      2.7388     0.1934  14.159
 > # Wrapped output file futurefgc_full_clmm.wrapR.rout
 > 
