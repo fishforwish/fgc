@@ -1,6 +1,17 @@
-Proposl of this study is at https://github.com/fishforwish/fgc/blob/master/README.md
+See also README.md
 
 ----------------------------------------------------------------------
+
+2019 Apr 08 (Mon)
+=================
+
+We are:
+* going ahead with C.'s new approach
+* renaming our response variables and models:
+	* daughterPlan is the response for Plan and Hybrid models
+	* fgcPersist is the response for the Persistence model
+* Change gender to genderAware
+
 2019 APRIL 1
 ===============
 - to make a one-parameter plot first.
