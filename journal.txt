@@ -5,6 +5,7 @@ See also README.md
 2019 Apr 15 (Mon)
 =================
 * To discuss ethnicity.  A reason for treating ethnicity as a random effect, see Hayford05 (Exploratory analy- ses showed little difference in results using indi- vidual rather than cluster ethnicity; my choice to use the group-level variable was driven by theoretical rather than empirical reasons.)
+* To show PCA of fgc beneift to determine which factor is most prominent (i.e., to compare to Mackie's marraige norm)
 
 2019 Apr 08 (Mon)
 =================
