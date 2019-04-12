@@ -4,7 +4,7 @@ See also README.md
 
 2019 Apr 15 (Mon)
 =================
-* To discuss ethnicity
+* To discuss ethnicity.  A reason for treating ethnicity as a random effect, see Hayford05 (Exploratory analy- ses showed little difference in results using indi- vidual rather than cluster ethnicity; my choice to use the group-level variable was driven by theoretical rather than empirical reasons.)
 
 2019 Apr 08 (Mon)
 =================
