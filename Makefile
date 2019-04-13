@@ -153,18 +153,18 @@ prevalence.Rout: ke5.community.Rds ng5.community.Rds sl5.community.Rds ml5.commu
 
 ## fitting using clmm
 
-daughterfgc_full_clmm.Rout: prevalence.Rout daughterfgc_full_clmm.R
-futurefgc_full_clmm.Rout: prevalence.Rout futurefgc_full_clmm.R
-futurefgcDau_full_clmm.Rout: prevalence.Rout futurefgcDau_full_clmm.R
+daughterPlan_clmm.Rout: prevalence.Rout daughterPlan_clmm.R
+fgcPersist_clmm.Rout: prevalence.Rout fgcPersist_clmm.R
+hybrid_clmm.Rout: prevalence.Rout hybrid_clmm.R
 
 ## calculating variable level p-values
 
 
-daughterfgc_full_varlvlsum.Rout: daughterfgc_full_clmm.Rout daughterfgc_full_varlvlsum.R
+daughterPlan_varlvlsum.Rout: daughterPlan_clmm.Rout varlvlsum.R
 	$(run-R)
-futurefgc_full_varlvlsum.Rout: futurefgc_full_clmm.Rout futurefgc_full_varlvlsum.R
+fgcPersist_varlvlsum.Rout: fgcPersist_clmm.Rout varlvlsum.R
 	$(run-R)
-futurefgcDau_full_varlvlsum.Rout: futurefgcDau_full_clmm.Rout futurefgcDau_full_varlvlsum.R
+hybrid_varlvlsum.Rout: hybrid_clmm.Rout varlvlsum.R
 	$(run-R)
 
 

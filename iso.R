@@ -9,8 +9,8 @@ attr(modAns,"terms") <- NULL
 
 catNames <- c("religion","urRural","job","maritalStat")
 predNames <- colnames(modAns)[2:(ncol(modAns)-2)]
-predNames <- c("CC","religion","maritalStat","age","wealth","group_wealth")
-predsummary <- c("CC","religion","maritalStat","ns(age, 4)","ns(wealth, 3)","ns(group_wealth, 3)")
+predNames <- c("CC","religion","maritalStat","age","wealth","group_wealth","futurefgc")
+predsummary <- c("CC","religion","maritalStat","ns(age, 4)","ns(wealth, 3)","ns(group_wealth, 3)","futurefgc")
 
 
 isoList <- lapply(predNames, function(n){
