@@ -9,8 +9,9 @@ attr(modAns,"terms") <- NULL
 
 catNames <- c("religion","urRural","job","maritalStat")
 predNames <- colnames(modAns)[2:(ncol(modAns)-2)]
-predNames <- c("CC","religion","maritalStat","age","wealth","group_wealth","futurefgc")
-predsummary <- c("CC","religion","maritalStat","ns(age, 4)","ns(wealth, 3)","ns(group_wealth, 3)","futurefgc")
+
+predNames <- c("CC","religion","maritalStat","age","wealth")
+predsummary <- c("CC","religion","maritalStat","ns(age, 4)","ns(wealth, 3)")
 
 
 isoList <- lapply(predNames, function(n){
@@ -28,7 +29,6 @@ print(
                varPlot(isoList[[3]] ,P=varlvlsum$`Pr(>Chisq)`[3]),
                varPlot(isoList[[4]] ,P=varlvlsum$`Pr(>Chisq)`[4]),
                varPlot(isoList[[5]] ,P=varlvlsum$`Pr(>Chisq)`[5]),
-               varPlot(isoList[[6]] ,P=varlvlsum$`Pr(>Chisq)`[6]),
 					nrow=2
 					
 					)

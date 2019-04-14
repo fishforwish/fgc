@@ -151,6 +151,9 @@ ke5.community.Rout: community.R
 prevalence.Rout: ke5.community.Rds ng5.community.Rds sl5.community.Rds ml5.community.Rds prevalence.R
 	$(run-R)
 
+wealth.Rout: prevalence.Rout wealth.R
+	$(run-R)
+
 ## fitting using clmm
 
 daughterPlan_clmm.Rout: prevalence.Rout daughterPlan_clmm.R
@@ -168,7 +171,7 @@ hybrid_varlvlsum.Rout: hybrid_clmm.Rout varlvlsum.R
 	$(run-R)
 
 
-daughterfgc_full.isoplots.Rout: daughterfgc_full_clmm.Rout daughterfgc_full_varlvlsum.Rout ordfuns.R plotFuns.R iso.R
+daughterPlan_isoplots.Rout: daughterPlan_clmm.Rout daughterPlan_varlvlsum.Rout ordfuns.R plotFuns.R iso.R
 	$(run-R)
 
 futurefgc_full.isoplots.Rout: futurefgc_full_clmm.Rout futurefgc_full_varlvlsum.Rout ordfuns.R plotFuns.R iso.R

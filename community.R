@@ -48,6 +48,9 @@ Answers <- (Answers
 		, edu_d = sum(!is.na(edu))
 		, edu_n = sum(edu, na.rm=TRUE) - edu
 		, group_edu = edu_n/(edu_d - 1) 
+		, wealth_d = sum(!is.na(wealth))
+	   , wealth_n = sum(wealth, na.rm = TRUE) - wealth
+		, group_wealth = wealth_n/ (wealth_d - 1)
 	)
 )
 

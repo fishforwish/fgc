@@ -11,7 +11,7 @@ modAns <- model.frame(
   + media + group_media 
   + genderAware + group_genderAware
   + edu + group_edu
-  + wealth
+  + wealth + group_wealth
   + age + maritalStat + job + urRural + religion
   + clusterId + ethni
   , data=combined_dat, na.action=na.exclude, drop.unused.levels=TRUE
@@ -26,7 +26,7 @@ system.time(mod <- clmm(
   + media + group_media 
   + genderAware + group_genderAware
   + edu + group_edu
-  + ns(wealth,3)
+  + ns(wealth,3) + ns(group_wealth)
   + ns(age,4) 
   + maritalStat 
   + job
