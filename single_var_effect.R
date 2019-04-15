@@ -39,6 +39,7 @@ betadf <- (mm2
               , upper = upper*sd
               , inCI = between(0,lower,upper)
    )
+	%>% left_join(.,rename_dat)
 )
 
 print(betadf)

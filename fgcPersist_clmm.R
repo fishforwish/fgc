@@ -26,7 +26,7 @@ system.time(mod <- clmm(
   + media + group_media 
   + genderAware + group_genderAware
   + edu + group_edu
-  + ns(wealth,3) + ns(group_wealth)
+  + ns(wealth,3) + ns(group_wealth, 3)
   + ns(age,4) 
   + maritalStat 
   + job

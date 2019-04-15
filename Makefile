@@ -174,30 +174,30 @@ hybrid_varlvlsum.Rout: hybrid_clmm.Rout varlvlsum.R
 daughterPlan_isoplots.Rout: daughterPlan_clmm.Rout daughterPlan_varlvlsum.Rout ordfuns.R plotFuns.R iso.R
 	$(run-R)
 
-futurefgc_full.isoplots.Rout: futurefgc_full_clmm.Rout futurefgc_full_varlvlsum.Rout ordfuns.R plotFuns.R iso.R
+fgcPersist_isoplots.Rout: fgcPersist_clmm.Rout ordfuns.R plotFuns.R iso.R
 	$(run-R)
 
-futurefgcDau_full.isoplots.Rout: futurefgcDau_full_clmm.Rout futurefgcDau_full_varlvlsum.Rout ordfuns.R plotFuns.R iso.R
+hybrid_isoplots.Rout: hybrid_clmm.Rout hybrid_varlvlsum.Rout ordfuns.R plotFuns.R iso.R
 	$(run-R)
 
 all_full_models: futurefgc_full_clmm.Rout futurefgcDau_full_clmm.Rout daughterfgc_full_clmm.Rout
 
-futurefgc_effects.Rout: futurefgc_full_clmm.Rout single_var_effect.R
+fgcPersist_effects.Rout: fgcPersist_clmm.Rout rename_dat.Rout single_var_effect.R
 	$(run-R)
 
-daughterfgc_effects.Rout: daughterfgc_full_clmm.Rout single_var_effect.R
+daughterPlan_effects.Rout: daughterPlan_clmm.Rout rename_dat.Rout single_var_effect.R
 	$(run-R)
 
-futurefgcDau_effects.Rout: futurefgcDau_full_clmm.Rout single_var_effect.R
+hybrid_effects.Rout: hybrid_clmm.Rout rename_dat.Rout single_var_effect.R
 	$(run-R)
 
-futurefgc_effects_plot.Rout: futurefgc_effects.Rout effects_plot.R
+fgcPersist_effects_plot.Rout: fgcPersist_effects.Rout effects_plot.R
 	$(run-R)
 
-daughterfgc_effects_plot.Rout: daughterfgc_effects.Rout effects_plot.R
+daughterPlan_effects_plot.Rout: daughterPlan_effects.Rout effects_plot.R
 	$(run-R)
 
-futurefgcDau_effects_plot.Rout: futurefgcDau_effects.Rout effects_plot.R
+hybrid_effects_plot.Rout: hybrid_effects.Rout effects_plot.R
 	$(run-R)
 ######################################################################
 

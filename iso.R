@@ -10,8 +10,14 @@ attr(modAns,"terms") <- NULL
 catNames <- c("religion","urRural","job","maritalStat")
 predNames <- colnames(modAns)[2:(ncol(modAns)-2)]
 
-predNames <- c("CC","religion","maritalStat","age","wealth")
-predsummary <- c("CC","religion","maritalStat","ns(age, 4)","ns(wealth, 3)")
+predNames <- c("CC","religion","maritalStat","age","wealth", "group_wealth")
+predsummary <- c("CC","religion","maritalStat","ns(age, 4)","ns(wealth, 3)","ns(group_wealth)")
+
+if(rtargetname == "hybrid_isoplots"){
+	predNames <- c(predNames, "Persist")
+	predsummary <- c(predsummary, "Persist")
+	predSummary <- NA
+}
 
 
 isoList <- lapply(predNames, function(n){
@@ -22,17 +28,21 @@ isoList <- lapply(predNames, function(n){
 #	print(varPlot(isoList[[i]]))
 #}
 
-varlvlsum <- varlvlsum[predsummary,]
+# varlvlsum <- varlvlsum[predsummary,]
 print(
-  grid.arrange(varPlot(isoList[[1]] ,P=varlvlsum$`Pr(>Chisq)`[1]),
-               varPlot(isoList[[2]] ,P=varlvlsum$`Pr(>Chisq)`[2]),
-               varPlot(isoList[[3]] ,P=varlvlsum$`Pr(>Chisq)`[3]),
-               varPlot(isoList[[4]] ,P=varlvlsum$`Pr(>Chisq)`[4]),
-               varPlot(isoList[[5]] ,P=varlvlsum$`Pr(>Chisq)`[5]),
+  grid.arrange(varPlot(isoList[[1]] ),#P=varlvlsum$`Pr(>Chisq)`[1]),
+               varPlot(isoList[[2]] ),#P=varlvlsum$`Pr(>Chisq)`[2]),
+               varPlot(isoList[[3]] ),#P=varlvlsum$`Pr(>Chisq)`[3]),
+               varPlot(isoList[[4]] ),#P=varlvlsum$`Pr(>Chisq)`[4]),
+               varPlot(isoList[[5]] ),#P=varlvlsum$`Pr(>Chisq)`[5]),
+					varPlot(isoList[[6]] ),#P=varlvlsum$`Pr(>Chisq)`[6]),
 					nrow=2
-					
 					)
 )
+if(rtargetname == "hybrid_isoplots"){
+	print(varPlot(isoList[[7]], ),#P=varlvlsum$`Pr(>Chisq)`[7]))
+	)
+}
 
 quit()
 

@@ -1,0 +1,33 @@
+varnames <- c("group_Persist"
+, "fgcstatusYes"
+, "group_fgc"
+, "bene" 
+, "group_bene"
+, "media"
+, "group_media"
+, "genderAware"
+, "group_genderAware"
+, "edu"
+, "group_edu"
+, "jobYes"
+, "urRuralRural"
+, "group_daughterPlan"
+) 
+
+plotnames <- c("Persistence Norm"
+, "FGCed"
+, "FGC Norm"
+, "Benefit"
+, "Benefit Norm"
+, "Media"
+, "Media Norm"
+, "Gender Awareness"
+, "Gender Awareness Norm"
+, "Education"
+, "Education Norm"
+, "Job"
+, "Rural Residence"
+, "Daughter Plan Norm"
+)  
+
+rename_dat <- data.frame(variable=varnames, plotnames)
