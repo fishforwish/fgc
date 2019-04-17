@@ -11,12 +11,21 @@ catNames <- c("religion","urRural","job","maritalStat")
 predNames <- colnames(modAns)[2:(ncol(modAns)-2)]
 
 predNames <- c("CC","religion","maritalStat","age","wealth", "group_wealth")
-predsummary <- c("CC","religion","maritalStat","ns(age, 4)","ns(wealth, 3)","ns(group_wealth)")
+predsummary <- c("CC","religion","maritalStat","ns(age, 4)","ns(wealth, 3)","ns(group_wealth, 3)")
 
 if(rtargetname == "hybrid_isoplots"){
 	predNames <- c(predNames, "Persist")
 	predsummary <- c(predsummary, "Persist")
-	predSummary <- NA
+	respLab <- "Hybrid Score"
+}
+if(rtargetname == "fgcPersist_isoplots"){
+	varlvlnames <- varlvlnames[-which(varlvlnames == "group_daughterPlan")]
+	respLab <- "FGC Persistence Score"
+}
+
+if(rtargetname == "daughterPlan_isoplots"){
+	varlvlnames <- varlvlnames[-which(varlvlnames == "group_Persist")]
+	respLab <- "Daughter Plan Score"
 }
 
 
@@ -24,83 +33,55 @@ isoList <- lapply(predNames, function(n){
   ordpred(mod, n, modAns)
 })
 
-#for(i in 1:length(isoList)){
-#	print(varPlot(isoList[[i]]))
-#}
 
-# varlvlsum <- varlvlsum[predsummary,]
+varlvlsum1 <- varlvlsum[predsummary,]
 print(
-  grid.arrange(varPlot(isoList[[1]] ),#P=varlvlsum$`Pr(>Chisq)`[1]),
-               varPlot(isoList[[2]] ),#P=varlvlsum$`Pr(>Chisq)`[2]),
-               varPlot(isoList[[3]] ),#P=varlvlsum$`Pr(>Chisq)`[3]),
-               varPlot(isoList[[4]] ),#P=varlvlsum$`Pr(>Chisq)`[4]),
-               varPlot(isoList[[5]] ),#P=varlvlsum$`Pr(>Chisq)`[5]),
-					varPlot(isoList[[6]] ),#P=varlvlsum$`Pr(>Chisq)`[6]),
-					nrow=2
+  grid.arrange(varPlot(rename(isoList[[1]], c(CC = "Country")) ,P=varlvlsum1$`Pr(>Chisq)`[1],ylab=""),
+               varPlot(rename(isoList[[2]], c(religion = "Religion")) ,P=varlvlsum1$`Pr(>Chisq)`[2], ylab=""),
+               varPlot(rename(isoList[[3]], c(maritalStat = "Marital Status")) ,P=varlvlsum1$`Pr(>Chisq)`[3], ylab=respLab),
+               varPlot(rename(isoList[[4]], c(age = "Age")) ,P=varlvlsum1$`Pr(>Chisq)`[4], ylab=""),
+               varPlot(rename(isoList[[5]], c(wealth = "Wealth")) ,P=varlvlsum1$`Pr(>Chisq)`[5], ylab=""),
+					varPlot(rename(isoList[[6]], c(group_wealth = "Group Wealth")) ,P=varlvlsum1$`Pr(>Chisq)`[6], ylab=""),
+					nrow=3
 					)
 )
 if(rtargetname == "hybrid_isoplots"){
-	print(varPlot(isoList[[7]], ),#P=varlvlsum$`Pr(>Chisq)`[7]))
-	)
+	print(varPlot(isoList[[7]],P=varlvlsum1$`Pr(>Chisq)`[7], ylab=respLab))
 }
 
-quit()
 
-## All iso plots
+## Single var iso plots
+
+varlvlsum2 <- varlvlsum[varlvlnames,]
+isoList2 <- lapply(varlvlnames, function(n){
+	ordpred(mod, n, modAns)
+})
+
 
 
 ## futurefgc_ind, daughterfgc_ind
 print(
-grid.arrange(varPlot(isoList[[1]] ,P=varlvlsum$`Pr(>Chisq)`[1]),
-             varPlot(isoList[[2]] ,P=varlvlsum$`Pr(>Chisq)`[2]),
-             varPlot(isoList[[3]] ,P=varlvlsum$`Pr(>Chisq)`[3]),
-             varPlot(isoList[[4]] ,P=varlvlsum$`Pr(>Chisq)`[4]),
-             varPlot(isoList[[5]] ,P=varlvlsum$`Pr(>Chisq)`[5]),
-             varPlot(isoList[[6]] ,P=varlvlsum$`Pr(>Chisq)`[6]),
-             varPlot(isoList[[7]] ,P=varlvlsum$`Pr(>Chisq)`[7]),
-             varPlot(isoList[[8]] ,P=varlvlsum$`Pr(>Chisq)`[8]),
-             varPlot(isoList[[9]] ,P=varlvlsum$`Pr(>Chisq)`[9]),
-             varPlot(isoList[[10]],P=varlvlsum$`Pr(>Chisq)`[10]),
-             varPlot(isoList[[11]],P=varlvlsum$`Pr(>Chisq)`[11]),
-             varPlot(isoList[[12]],P=varlvlsum$`Pr(>Chisq)`[[12]]),
-             nrow=4,ncol=3)
+grid.arrange(varPlot(isoList2[[1]] ,P=varlvlsum2$`Pr(>Chisq)`[1],ylab=""),
+             varPlot(isoList2[[2]] ,P=varlvlsum2$`Pr(>Chisq)`[2],ylab=""),
+             varPlot(isoList2[[3]] ,P=varlvlsum2$`Pr(>Chisq)`[3],ylab=""),
+             varPlot(isoList2[[4]] ,P=varlvlsum2$`Pr(>Chisq)`[4],ylab=""),
+             varPlot(isoList2[[5]] ,P=varlvlsum2$`Pr(>Chisq)`[5], ylab=respLab),
+             varPlot(isoList2[[6]] ,P=varlvlsum2$`Pr(>Chisq)`[6],ylab=""),
+             varPlot(isoList2[[7]] ,P=varlvlsum2$`Pr(>Chisq)`[7],ylab=""),
+             varPlot(isoList2[[8]] ,P=varlvlsum2$`Pr(>Chisq)`[8],ylab=""),
+             varPlot(isoList2[[9]] ,P=varlvlsum2$`Pr(>Chisq)`[9],ylab=""),
+             varPlot(isoList2[[10]],P=varlvlsum2$`Pr(>Chisq)`[10],ylab=""),
+             varPlot(isoList2[[11]],P=varlvlsum2$`Pr(>Chisq)`[11],ylab=""),
+             varPlot(isoList2[[12]],P=varlvlsum2$`Pr(>Chisq)`[[12]],ylab=""),
+             nrow=3,ncol=4)
 )
 
 
 
 ## futurefgc_full, daughterfgc_full
-if(nrow(varlvlsum)==19){
-  print(
-    grid.arrange(varPlot(isoList[[13]],P=varlvlsum$`Pr(>Chisq)`[13]),
-                 varPlot(isoList[[14]],P=varlvlsum$`Pr(>Chisq)`[14]),
-                 varPlot(isoList[[15]],P=varlvlsum$`Pr(>Chisq)`[15]),
-                 varPlot(isoList[[16]],P=varlvlsum$`Pr(>Chisq)`[16]),
-                 varPlot(isoList[[17]],P=varlvlsum$`Pr(>Chisq)`[17]),
-                 varPlot(isoList[[18]],P=varlvlsum$`Pr(>Chisq)`[18]),
-					  varPlot(isoList[[19]],P=varlvlsum$`Pr(>Chisq)`[19]),
-                 nrow=4,ncol=3)
+if(nrow(varlvlsum2)==14){
+  print(varPlot(isoList2[[13]],P=varlvlsum2$`Pr(>Chisq)`[13],ylab=respLab)
   )
 }
-
-
-## futurefgcDau_full
-if(nrow(varlvlsum)==21){
-  print(
-    print(
-      grid.arrange(varPlot(isoList[[13]],P=varlvlsum$`Pr(>Chisq)`[13]),
-                   varPlot(isoList[[14]],P=varlvlsum$`Pr(>Chisq)`[14]),
-                   varPlot(isoList[[15]],P=varlvlsum$`Pr(>Chisq)`[15]),
-                   varPlot(isoList[[16]],P=varlvlsum$`Pr(>Chisq)`[16]),
-                   varPlot(isoList[[17]],P=varlvlsum$`Pr(>Chisq)`[17]),
-                   varPlot(isoList[[18]],P=varlvlsum$`Pr(>Chisq)`[18]),
-                   varPlot(isoList[[19]],P=varlvlsum$`Pr(>Chisq)`[19]),
-                   varPlot(isoList[[20]],P=varlvlsum$`Pr(>Chisq)`[20]),
-						 varPlot(isoList[[21]],P=varlvlsum$`Pr(>Chisq)`[21]),
-                   nrow=4,ncol=3)
-    )
-  )
-}
-
-# print(listPlot(isoList))
 
 # rdsave(isoList,varlvlsum)

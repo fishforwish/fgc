@@ -173,13 +173,13 @@ hybrid_varlvlsum.Rout: hybrid_clmm.Rout varlvlsum.R
 	$(run-R)
 
 
-daughterPlan_isoplots.Rout: daughterPlan_clmm.Rout daughterPlan_varlvlsum.Rout ordfuns.R plotFuns.R iso.R
+daughterPlan_isoplots.Rout: daughterPlan_clmm.Rout daughterPlan_varlvlsum.Rout ordfuns.Rout plotFuns.Rout rename_dat.Rout iso.R
 	$(run-R)
 
-fgcPersist_isoplots.Rout: fgcPersist_clmm.Rout ordfuns.R plotFuns.R iso.R
+fgcPersist_isoplots.Rout: fgcPersist_clmm.Rout fgcPersist_varlvlsum.Rout ordfuns.Rout plotFuns.Rout rename_dat.Rout iso.R
 	$(run-R)
 
-hybrid_isoplots.Rout: hybrid_clmm.Rout hybrid_varlvlsum.Rout ordfuns.R plotFuns.R iso.R
+hybrid_isoplots.Rout: hybrid_clmm.Rout hybrid_varlvlsum.Rout ordfuns.Rout plotFuns.Rout rename_dat.Rout iso.R
 	$(run-R)
 
 all_full_models: futurefgc_full_clmm.Rout futurefgcDau_full_clmm.Rout daughterfgc_full_clmm.Rout
