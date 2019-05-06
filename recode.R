@@ -47,6 +47,8 @@ Answers <- (Answers
 		, daughterPlan01 = yesnodk01(daughterToFgc)
 		, Religion = religion
 		, MaritalStatus = maritalStat
+		, Residence = urRural
+		, Job = job
 		)
 )
 
