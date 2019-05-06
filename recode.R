@@ -38,12 +38,15 @@ Answers <- (Answers
     , wealth = wealth/100000
 		, fgcstatus = fgc
 		, fgc = rightfactor(fgc)
+		, Education = edu
 		, edu = rightfactor(edu)
 		, edu = edu / mean(edu, na.rm = TRUE)
 		, Persist = contfgc(continueFgc)
 		, Persist01 = contfgc01(continueFgc)
 		, daughterPlan = yesnodkFactor(daughterToFgc)
-		, daughterPlan01 = yesnodk01(daughterToFgc) 
+		, daughterPlan01 = yesnodk01(daughterToFgc)
+		, Religion = religion
+		, MaritalStatus = maritalStat
 		)
 )
 

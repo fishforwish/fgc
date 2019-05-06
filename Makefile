@@ -156,6 +156,12 @@ prevalence.Rout: ke5.community.Rds ng5.community.Rds sl5.community.Rds ml5.commu
 wealth.Rout: prevalence.Rout wealth.R
 	$(run-R)
 
+
+## Table
+
+tables.Rout: prevalence.Rout tables.R
+	$(run-R)
+
 ## fitting using clmm
 
 daughterPlan_clmm.Rout: prevalence.Rout daughterPlan_clmm.R
