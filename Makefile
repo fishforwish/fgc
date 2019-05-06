@@ -162,6 +162,16 @@ wealth.Rout: prevalence.Rout wealth.R
 tables.Rout: prevalence.Rout tables.R
 	$(run-R)
 
+tabletex.Rout: tables.Rout table_funs.R tabletex.R
+	$(run-R)
+
+Ignore += table_output.tex
+table_output.tex: tabletex.Rout ; touch $@
+
+Sources += fgc_table.tex
+fgc_table.pdf: fgc_table.tex
+
+
 ## fitting using clmm
 
 daughterPlan_clmm.Rout: prevalence.Rout daughterPlan_clmm.R

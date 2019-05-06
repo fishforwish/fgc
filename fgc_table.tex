@@ -1,0 +1,66 @@
+\documentclass[hidelinks,10pt,letterpaper]{article}
+\usepackage[top=0.75in,footskip=0.75in,bottom=0.75in]{geometry}
+\usepackage{float}
+\usepackage{changepage}
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp,marvosym}
+\usepackage{amsmath,amssymb}
+\usepackage{cite}
+\usepackage{nameref,hyperref}
+\usepackage[right]{lineno}
+\usepackage{microtype}
+% \DisableLigatures[f]{encoding = *, family = * }
+% \raggedright
+\setlength{\parindent}{0.5cm}
+\textwidth 5.25in 
+%% \textheight 8.75in
+\usepackage[aboveskip=1pt,labelfont=bf,labelsep=period,justification=raggedright,singlelinecheck=off]{caption}
+\makeatletter
+\renewcommand{\@biblabel}[1]{\quad#1.}
+\makeatother
+\date{}
+\usepackage{lastpage,fancyhdr,graphicx}
+\pagestyle{myheadings}
+\pagestyle{fancy}
+
+% \fancyhf{}
+% \setlength{\headheight}{27.023pt}
+% \rfoot{\thepage/\pageref{LastPage}}
+% \renewcommand{\footrule}{\hrule height 2pt \vspace{2mm}}
+% \fancyheadoffset[L]{2.25in}
+% \fancyfootoffset[L]{2.25in}
+
+\usepackage{setspace}
+
+\begin{document}
+% \vspace*{0.35in}
+\section*{Supplementary Table: Sample Characteristics}
+
+\setcounter{table}{0}
+\renewcommand\thetable{\Alph{table}}
+
+%% small blurb here 
+
+\begin{table}[H]
+
+\caption{FGC table}
+\scalebox{0.9}{
+\tiny{
+\begin{tabular}{|l|rrrr|r|}
+\hline
+\bf{Country} & KE & ML & NG & SL & Total \\
+\hline
+\input{table_output.tex}
+\hline
+\end{tabular}
+}
+}
+\\
+\\
+\textrm{The following samples were excluded from this study: never heard of AIDS, never had sexual intercourse prior to the surveys, unaware of their circumcision status, or had NA answers to any of the variables. Condom use referred to whether a condom was used with the riskiest sexual partner of the most recent three sexual conducts. A riskiest sexual partner referred to the partner with the highest sexual risk score among the sexual partners a respondent reported to have sex with during the most recent three sexual conducts.
+Media use referred to frequency samples reported on time spending on newspaper, radio and television.
+HIV knowledge referred to questions of ``Reduce risk of getting HIV: always use condoms during sex," ``Reduce chance of AIDS: have one sex partner with no other partner," and ``A healthy looking person can have HIV."}
+\label{fgc_table}
+\end{table}
+
+\end{document}

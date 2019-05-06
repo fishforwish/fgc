@@ -101,6 +101,7 @@ tabtotal <- (ddtab3
 
 ddtab4 <- ddtab3 %>% mutate(totalper = round(Total*100/tabtotal[[1]],1))
 
-print(ddtab4)
+print(ddtab4,n=100)
+print(summary(ddtab4))
 
 # print(ddtab4[,10:13])
