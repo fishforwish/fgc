@@ -25,6 +25,7 @@ Ans <- (combined_dat
 		, ifelse(between(age,40,44),"40-44"
 		, ifelse(between(age,45,49),"45-49",NA)
 		))))))
+		, Persist = factor(Persist,labels=c("No","Depends", "Yes"))
 		)
 )
 
@@ -49,6 +50,8 @@ combdf <- function(pred,lldf){
   return(df)
 }
 
+
+print(combdf)
 
 
 ddtab <- data.frame()

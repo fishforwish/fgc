@@ -10,7 +10,7 @@ Country <- (ddtab4
 print(latex(Country))
 
 
-cat("\\bf{Survey Year} & 2015 & 2015 & 2015 & 2015 &\\\\"
+cat("\\bf{Survey Year} & 2008/09 & 2006 & 2008 & 2008 &\\\\"
   , "\\bf{Sample Size} &" , latex(Country) ## sample size 
   , "\\bf{Category (in percentage)}", spaces
   , hline
@@ -34,7 +34,7 @@ cat("\\bf{Survey Year} & 2015 & 2015 & 2015 & 2015 &\\\\"
   , latex(dfill(ddtab4,"daughterPlan"))
   , "\\bf{Daughter FGCed}" , spaces
   , latex(dfill(ddtab4,"daughterFgced"))
-  , "\\bf{Persist}" , spaces
+  , "\\bf{Should FGC be continued?}" , spaces
   , latex(dfill(ddtab4,"Persist"))
   , "\\bf{Media}" , spaces
   , space , "\\bf{Newspaper and Magazines}" , spaces
@@ -43,31 +43,31 @@ cat("\\bf{Survey Year} & 2015 & 2015 & 2015 & 2015 &\\\\"
   , latex(dfill(ddtab4,"mediaRadio"),space=TRUE)
   , space , "\\bf{TV}" , spaces
   , latex(dfill(ddtab4,"mediaTv"),space=TRUE)
-  , "\\bf{Benefit}", spaces
+  , "\\bf{FGC Benefit}", spaces
   , space , "\\bf{Hygiene}", spaces
   , latex(dfill(ddtab4,"beneHygiene"),space=TRUE)
-  , space , "\\bf{Acceptance}", spaces
+  , space , "\\bf{Social Acceptance}", spaces
   , latex(dfill(ddtab4,"beneAcceptance"),space=TRUE)
-  , space , "\\bf{Marriage}", spaces
+  , space , "\\bf{Better Marriage}", spaces
   , latex(dfill(ddtab4,"beneMarriage"),space=TRUE)
-  , space , "\\bf{Prevent Pre-Sex}", spaces
+  , space , "\\bf{Prevent Premartial Sex}", spaces
   , latex(dfill(ddtab4,"benePreventPreSex"),space=TRUE)
   , space , "\\bf{Religion}", spaces
   , latex(dfill(ddtab4,"beneReligion"),space=TRUE)
   , space , "\\bf{Reduce STD}", spaces
   , latex(dfill(ddtab4,"beneRedSTD"),space=TRUE)
-  , space , "\\bf{Pleasure}", spaces
+  , space , "\\bf{Sexual Pleasure for Men}", spaces
   , latex(dfill(ddtab4,"benePleasureM"),space=TRUE)
-  , space , "\\bf{Reduce Promiscuous}", spaces
+  , space , "\\bf{Reduce Promiscuity}", spaces
   , latex(dfill(ddtab4,"beneRedPromis"),space=TRUE)
   , space , "\\bf{Other}", spaces
   , latex(dfill(ddtab4,"beneOther"),space=TRUE)
-  , "\\bf{Attitude}" , spaces
-  , space , "\\bf{No Tell}" , spaces
+  , "\\bf{Gender Awareness: Wife beaten justified}" , spaces
+  , space , "\\bf{Going out without telling}" , spaces
   , latex(dfill(ddtab4,"attNoTell"),space=TRUE)
-  , space , "\\bf{Neg Kids}" , spaces
+  , space , "\\bf{Neglict Kids}" , spaces
   , latex(dfill(ddtab4,"attNegKids"),space=TRUE)
-  , space , "\\bf{Argue}" , spaces
+  , space , "\\bf{Arguing}" , spaces
   , latex(dfill(ddtab4,"attArgue"),space=TRUE)
   , space , "\\bf{Refuse Sex}" , spaces
   , latex(dfill(ddtab4,"attRefuseSex"),space=TRUE)

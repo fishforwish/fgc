@@ -169,7 +169,7 @@ Ignore += table_output.tex
 table_output.tex: tabletex.Rout ; touch $@
 
 Sources += fgc_table.tex
-fgc_table.pdf: fgc_table.tex
+fgc_table.pdf: table_output.tex
 
 
 ## fitting using clmm
