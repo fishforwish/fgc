@@ -2,6 +2,12 @@ See also README.md
 
 ----------------------------------------------------------------------
 
+Next
+=================
+
+* Why is hybrid model not the main model?
+
+
 2019 Apr 15 (Mon)
 =================
 * To discuss ethnicity.  A reason for treating ethnicity as a random effect, see Hayford05 (Exploratory analyses showed little difference in results using individual rather than cluster ethnicity; my choice to use the group-level variable was driven by theoretical rather than empirical reasons.)
