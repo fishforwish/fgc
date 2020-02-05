@@ -1,7 +1,8 @@
 
 Grant opportunity:
 https://cihr-irsc.gc.ca/e/8673.html (planning and dissemnination)
-https://www.researchnet-recherchenet.ca/rnr16/vwOpprtntyDtls.do?prog=3209&printfriendly=true#partnerdescription https://cihr-irsc.gc.ca/e/36396.html (sex and gender)
+
+https://www.researchnet-recherchenet.ca/rnr16/vwOpprtntyDtls.do?prog=3209&printfriendly=true#partnerdescription-icrh (gender and health)
 
 Project proposal:
 
