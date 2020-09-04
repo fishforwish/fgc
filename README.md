@@ -1,8 +1,17 @@
 
-Grant opportunity:
-https://cihr-irsc.gc.ca/e/8673.html (planning and dissemnination)
+# Journals to consider:
 
-https://www.researchnet-recherchenet.ca/rnr16/vwOpprtntyDtls.do?prog=3209&printfriendly=true#partnerdescription-icrh (gender and health)
+BMJ
+Am J Public Health
+Sexually Transmitted Infections
+Soc Sci Med
+Plos one
+BMC Public Health
+Glob Public Health
+BMJ Open
+J Health Soc Behav
+Reproductive Health
+Cult Health Sexuality
 
 Project proposal:
 
