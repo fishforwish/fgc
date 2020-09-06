@@ -35,10 +35,10 @@
 
 \newcommand{\comment}[1]{\textbf{[[#1]]}}
 \newcommand{\cfcmt}[1]{\comment{CFS: #1}}
-\newcommand{\cfonly}[1]{\comment{CFS only: #1}}
+\newcommand{\cfonly}[1]{\comment{CFS (note): #1}}
+\newcommand{\cf}[1]{\comment{CFS (comment or note?): #1}}
 \newcommand{\jdcmt}[1]{\comment{JD: #1}}
 \newcommand{\mlcmt}[1]{\comment{MLi: #1}}
-
 
 \bibliographystyle{plain}
 
@@ -98,7 +98,7 @@ Although studies of FGC norms were abundant \cf{seems too strong. a better word 
 
 In this study, we focused on women’s intention of whether they will have their daughter’s genital modified in the context of group FGC norms and geographic estimates of community FGC prevalence.  The research presumption was based on the studies aforementioned that women’s intention on practicing FGC on their daughters was dependent on other women’s intention of this practice \cfonly{descriptive norms?!} in their community. We used index of attitudinal evaluation of FGC benefits to represent FGC norm.  Attitudes is a sensible proxy of social norm \cfonly {norm theory \cite{Ajze91, Ajze02, Bicc10, BiccMari15, Mack96, Mack00, MackLeJe08, RimaLapi15, Youn11} and has been applied on fgc studies \cite{CislHeis18, EffeVogt15, Harf06, ModrLiu13 , PashPonn16, ShelHern06,}} \cfonly{check cites}.  However, there has bee little quantitative research on the relationship between attitudes and intention of cutting daughters at both an individual and community level incorporating beliefs of FGC benefits.
 
-There were three models in this study.  The main one is the “daughter” model, which analyzed associations of beliefs of FGC benefits (see the list of FGC benefits at table xx) and intention to have their daughters undergoing FGC to understand patterns of social norms (i.e., aggregation of values of FGC benefits) associating behavioral intention.  Additionally, we decomposed the model into two “structural” models:  structural one “persistence” model to study women’s beliefs of FGC benefits and FGC continuance; and structural two “daughter_persistence”  \cf{Should we go back to the word “mixed” model?  It seems less jargon and easier to grasp the idea} model to examine the association of beliefs of FGC benefits, FGC persistence and intention of genitally cutting daughters.  We used the two structural models to further understand how such positions change the main model.
+There were three models in this study.  The main one is the “daughter” model, which analyzed associations of beliefs of FGC benefits (see the list of FGC benefits at table xx) and intention to have their daughters undergoing FGC to understand patterns of social norms (i.e., aggregation of values of FGC benefits) associating behavioral intention.  Additionally, we decomposed the model into two “structural” models:  structural one “persistence” model to study women’s beliefs of FGC benefits and FGC continuance; and structural two “daughter persistence”  \cf{Should we go back to the word “mixed” model?  It seems less jargon and easier to grasp the idea} model to examine the association of beliefs of FGC benefits, FGC persistence and intention of genitally cutting daughters.  We used the two structural models to further understand how such positions change the main model.
 
 \subsection{Methods}\label{methods}
 
@@ -128,8 +128,8 @@ Woman's FGC status and beliefs of FGC benefits (see supp for the benefit questio
 \subsubsection{Statistical Model}\label{statistical-model}
 
 We used cumulative link mixed models (CLMMs) in the statistics package R \cite{Rstats,Rpackage_ordinal} to analyze the models.  The CLMM framework allows us to model a binary or ordinal response variable (i.e., intention of applying fgc to daughters and whether to continue FGC practice), while treating clusters and ethnicity as random effects.  
-We subtracted respondent (-1) from the cluster when testing the community effect \cfjdml{Please rewrite this. Also, do we need to mention how we treat cluster with only one sample (if that happens).}
-\cfjdml{Please explain why we didn’t do sampling weight.}
+We subtracted respondent (-1) from the cluster when testing the community effect \cfcmt{Please rewrite this. Also, do we need to mention how we treat cluster with only one sample (if that happens).}
+\cfcmt{Please explain why we didn’t do sampling weight.}
 \cfcmt{Do we explain conveyance of uncertainty}
 
 \cfcmt{Our response ARE categorical not binary and need to explain how we quantify it into scores.; AND still need to explain why ethnicity is a random effect.}
@@ -184,7 +184,7 @@ In Ethiopia, the majority of women who were aware of the negative reproductive h
 
 Although FGC prevalence was a main factor predicting daughter’s FGC status \cite{BoylSvec19} \cf{more cites}, we found that overall community intention explained more variance than FGC prevalence on respondents’ intention of cutting daughters cfonly{ show daughter effect plot}:  What their community members will do is likely to determine what a mother intends to do with their daughters’ FGC status. In this case, what people did (descriptive norm?) was less a force than what they will do.  In other words, - descriptive norm (i.e., FGC prevalence) was undermined by subjective norm (community intentional behaviour of . \cf{One confusing finding is that all the three models showed group fgc benefits are robustly and negatively associated with the responses.}.  Norms sustained through communications and evolve through social interactions \cite{FishAjze10, RimaLapi15}.   FGC is conventional \cite{FreyJohn07, Hayf05, KandShel19, Mack96, ShelWand11} which may evolve into various forms of conventional norms, such as peer convention \cite{GrosHayd19 (confirm), ShelWand11} (more)
 
-Regarding community beliefs of FGC benefits, it had a negative correlation with both women’s intention of cutting their daughters and FGC continuance:  the stronger the overall FGC benefits was, the less likely a mother to cut their daughters and less likely to support the practice.  This was against common wisdom \cite{}.  One possible explanation is that “it's left over after we include community behaviour. If the community believes in it, they'll probably do it, and then I'll probably do it. But if I_control for_ community behaviour, there's no reason to think that community belief is still explanatory. In fact, if I see myself as different from the community I'm more likely to break the norm than if I don’t.” \cfjd{J:  This is basically your words.  Can you rewrite it?  And I don’t understand the last sentence.}  It was noted that sum of benefits does not equal norm \cite{RimaLapi15}  \cfonly{Need to add Hayf05}
+Regarding community beliefs of FGC benefits, it had a negative correlation with both women’s intention of cutting their daughters and FGC continuance:  the stronger the overall FGC benefits was, the less likely a mother to cut their daughters and less likely to support the practice.  This was against common wisdom \cite{}.  One possible explanation is that “it's left over after we include community behaviour. If the community believes in it, they'll probably do it, and then I'll probably do it. But if I_control for_ community behaviour, there's no reason to think that community belief is still explanatory. In fact, if I see myself as different from the community I'm more likely to break the norm than if I don’t.” \cfcmt{J:  This is basically your words.  Can you rewrite it?  And I don’t understand the last sentence.}  It was noted that sum of benefits does not equal norm \cite{RimaLapi15}  \cfonly{Need to add Hayf05}
 
 — socio demographic factors —
 
@@ -285,7 +285,7 @@ Ben Bolker,  Marta Wayne
 
 \end{document}
 
-=======================================================================
+%%% ======================================================================
 ===== stop reading =======
 
 \cite{Drot11, Grue05, JoneEhir04} (both on cultural perspective, and maybe norm), 
