@@ -12,16 +12,16 @@ Sources += Makefile
 Ignore += .gitignore
 
 ms = makestuff
--include $(ms)/os.mk
+-include makestuff/os.mk
 
-# -include $(ms)/perl.def
+# -include makestuff/perl.def
 
-Sources  += $(ms)
-## Sources += $(ms)
+Sources  += makestuff
+## Sources += makestuff
 
-Makefile: $(ms) $(ms)/Makefile
-$(ms)/%.mk: $(ms)/Makefile ;
-$(ms)/Makefile:
+Makefile: makestuff makestuff/Makefile
+makestuff/%.mk: makestuff/Makefile ;
+makestuff/Makefile:
 	git submodule update -i
 
 Ignore += fgc_DHS
@@ -245,9 +245,11 @@ Sources += qual.mk quant.mk plots.mk comPlots.mk bioPlots.mk PCA.mk
 
 ### Makestuff
 
--include $(ms)/git.mk
--include $(ms)/visual.mk
+ms = makestuff
 
--include $(ms)/autorefs.mk
--include $(ms)/wrapR.mk
--include $(ms)/texdeps.mk
+-include makestuff/git.mk
+-include makestuff/visual.mk
+
+-include makestuff/autorefs.mk
+-include makestuff/wrapR.mk
+-include makestuff/texdeps.mk
