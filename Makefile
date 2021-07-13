@@ -19,11 +19,6 @@ ms = makestuff
 Sources  += makestuff
 ## Sources += makestuff
 
-Makefile: makestuff makestuff/Makefile
-makestuff/%.mk: makestuff/Makefile ;
-makestuff/Makefile:
-	git submodule update -i
-
 Ignore += fgc_DHS
 fgc_DHS: dir=~/Dropbox
 fgc_DHS:
@@ -245,7 +240,12 @@ Sources += qual.mk quant.mk plots.mk comPlots.mk bioPlots.mk PCA.mk
 
 ### Makestuff
 
-ms = makestuff
+msrepo = https://github.com/dushoff
+
+Makefile: makestuff/Makefile
+makestuff/Makefile:
+	git clone $(msrepo)/makestuff
+	ls makestuff/Makefile
 
 -include makestuff/git.mk
 -include makestuff/visual.mk
