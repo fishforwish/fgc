@@ -6,18 +6,9 @@ current: target
 
 ##################################################################
 
-# make files
-
-Sources += Makefile 
 Ignore += .gitignore
 
-ms = makestuff
--include makestuff/os.mk
-
 # -include makestuff/perl.def
-
-Sources  += makestuff
-## Sources += makestuff
 
 Ignore += fgc_DHS
 fgc_DHS: dir=~/Dropbox
@@ -40,6 +31,8 @@ Sources += manuscript.tex
 manuscript.pdf: manuscript.tex
 
 ######################################################################
+
+autowrapR = defined
 
 hist.Rout: hist.R
 
@@ -247,9 +240,11 @@ makestuff/Makefile:
 	git clone $(msrepo)/makestuff
 	ls makestuff/Makefile
 
--include makestuff/git.mk
--include makestuff/visual.mk
+-include makestuff/os.mk
 
 -include makestuff/autorefs.mk
--include makestuff/wrapR.mk
--include makestuff/texdeps.mk
+-include makestuff/pipeR.mk
+-include makestuff/texi.mk
+
+-include makestuff/git.mk
+-include makestuff/visual.mk
