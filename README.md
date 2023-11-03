@@ -17,10 +17,11 @@ Project proposal:
 
 Basically, this paper is about norm and behaviors.
 We studied KMNS: Kenya 2008/9, Mali 2006 (C: the report was in French), Nigeria 2008 and Sierra Leone 2008. *** Guinea 2005 shall be included (The 2012, 2018 include only basic fgc questions)!!!***
-Updated: by March 9, 2023, the newest data of Kenya (Kenya 2014, Mali 2012-3/18, Nigeria 2013/18 and Sierra Leon 2019) did not have comparable datasets for this study, so we sticked to the current older datasets).  However Sierra leone 2013 DHS does have similar data (and its 2019 asked if FGC was required by religion) and that will allow us to do a quasi longitudinal comparison.
+Updated: by Nov 3, 2023, the newer data of Kenya (Kenya 2014, Mali 2012-3/18, Nigeria 2013/18 and Sierra Leon 2019) did not have comparable datasets for the goals of this study, so we sticked to the current older datasets).  However Sierra leone 2013 DHS and Kenya 2022 do have similar data and that will allow us to do a quasi longitudinal comparison.
 We can do:
 - KMNS data with similar years
 - Sierra Leone 2008 vs. 2013 (and 2019)
+- The set of FGC questions in the Kenya 2022 data can be comparable to its 2008/9 data.
 
 Research Questions:
 
