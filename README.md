@@ -1,27 +1,28 @@
 
 # Journals to consider:
 
-BMJ
-Am J Public Health
-Sexually Transmitted Infections
-Soc Sci Med
-Plos one
-BMC Public Health
-Glob Public Health
-BMJ Open
-J Health Soc Behav
-Reproductive Health
-Cult Health Sexuality
+- BMJ
+- Am J Public Health
+- Sexually Transmitted Infections
+- Soc Sci Med
+- Plos one
+- BMC Public Health
+- Glob Public Health
+- BMJ Open
+- J Health Soc Behav
+- Reproductive Health
+- Cult Health Sexuality
 
 Project proposal:
 
-Basically, this paper is about norm and behaviors.
-We studied KMNS: Kenya 2008/9, Mali 2006 (C: the report was in French), Nigeria 2008 and Sierra Leone 2008. *** Guinea 2005 shall be included (The 2012, 2018 include only basic fgc questions)!!!***
+Basically, this paper is about "norm and behaviors".
+We studied KMNS: Kenya 2008/9, Mali 2006 (C: the report was in French), Nigeria 2008 and Sierra Leone 2008. (To add Guinea 2005?)
 Updated: by Nov 6, 2023, the newer data (Kenya 2014, Mali 2012-3/18, Nigeria 2013/18 and Sierra Leon 2019) did not have comparable datasets for the goals of this study, so we sticked to the current older datasets).  We also checked the other African countries with high FGC prevalene (i.e., countries with more than 20% of FGC prevalence:  Burkina Faso** (2010, 2021), Central African Republic(nd, no data), Chad**(2014-5), Cote Dlvoire**(2011-2), Djibouti(nd), Egypt(nd), Eritrea(nd), Ethiopia**(2016), Gambia (nd), Guinea Bissau (nd), Guinea** (2018), Liberia, Senegal**(2019, 2018, 2017,2016,2015,2014,2010-1,2005,), Somalia(na), and Sudan(na)) and found no data met our critera.  However Sierra leone 2013 DHS and Kenya 2022 do have similar data and that will allow us to do a quasi longitudinal comparison.  (** data with questions of religion and whether to continue the practice). Data before 2000 were not considered due to limited access and/or no related questionnaires found.
 There are other perspectives we can explore beside the KMNS data with similar years: 
 - Sierra Leone 2008 vs. 2013 (with norm questions)
 - Sierra Leone 2008 vs. 2013 vs. 2019 (with religion and whether to stop the questions)
 - The set of FGC questions in the Kenya 2022 (queations under "SGC") data can be comparable to its 2008/9 data.  The norm quations in 2022 are different from the 2008/9 but with some similarity.
+- *** To add Guinea 2005 to the KMNS? ***
 
 Research Questions:
 
