@@ -58,6 +58,60 @@ G117H: Circumcision benefits: reduce STD and AIDS infections
 G117X: Circumcision benefits: other
 G117Y: Circumcision benefits: no benefit (Did we use this one? to check.)
 
+* list of variables included or to be considered:
+# Blocks
+clusterId, V001
+region, SREGNAT, V101
+ethni, V131
+# Basic
+survey, V000
+sampleWeight, V005
+age, V012
+urRural, V025
+edu, V106
+religion, V130
+visitorResident, V135
+wealth, V191
+maritalStat, V501
+job, V714
+# daughter:
+# genderChild, B4
+# LNchild, B16
+# daughterHome, V203
+# daughterElsewhere, V205
+# daughterDead, V207
+# LNdaughterFgced, G109
+# ageDaughterFgced, G113
+# Confounders 1
+mediaNpmg, V157
+mediaRadio, V158
+mediaTv, V159
+# Confounders 1:  gender attitude (or as a counfounder?)
+attNoTell, V744A
+attNegKids, V744B
+attArgue, V744C
+attRefuseSex, V744D
+attBurnFood, V744E
+# FGC Basic Info
+requirReligion, G118, FG122
+heardFGC, G100, FG100, S631D
+heardGC, G101, S631E
+# Predictors 1:
+fgc, G102, FG103, S821, S1002, S631F
+# predictor 2: FGC benefit
+beneHygiene, G117A, FG119A
+beneAcceptance, G117B, FG119B
+beneMarriage, G117C, FG119C
+benePreventPreSex, G117D, FG119D, FG121
+benePleasureM, G117E, FG119E
+beneReligion, G117F, FG119F
+beneRedPromis, G117G,
+beneRedSTD, G117H
+beneOther, G117X, FG119X
+# Response 1: daughter FGC status
+numDaughterFgced, G108, FG110, S631I
+daughterNotFgced, G115
+daughterToFgc, G116, FG118
 -------------------------------
 
 * We are also interested in __GPS__ data.  We can map fgc concentration and location by showing where fgc are mostly practiced.  Here are some articles we can learn from: http://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1001626: "WSS data were sourced from national household cluster-sample surveys undertaken as part of multiple indicator cluster surveys (MICS) (http://www.childinfo.org/mics4_surveys.html; implementation supported by UNICEF), Demographic and Health Surveys (DHS) and national malaria and AIDS indicator surveys (MIS/AIS) (http://www.measuredhs.com/data/available-datasets.cfm; USAID) and living standard measurement studies (LSMS) (http://iresearch.worldbank.org/lsms/lsmssurveyFinder.htm; World Bank). "
