@@ -13,9 +13,9 @@ There are other perspectives we can explore beside the KMNS data within a reason
 - *** To add Guinea 2005 to the KMNS? ***
 
 Research Questions:
-* The first question (all multivariate, only women with daughter to be cut are included): beliefs in FGC benefits (see the list of FGC benefits at table--) --> FGC continuance + to cut daughters.
-* The second question (all future fgc, all the women are included):  beliefs in FGC benefits --> to FGC continuance.
-* The third question (only women with daughter included):  to cut daughter --> FGC continuance (We might need it.  This is a model which we hope can provide more details to explain the first question).
+* The first question - daughter model (all multivariate, only women with daughter to be cut are included): beliefs in FGC benefits (see the list of FGC benefits at table--) --> FGC continuance + to cut daughters.
+* The second question - continuance model (all future fgc, all the women are included):  beliefs in FGC benefits --> to FGC continuance.
+* The third question - persistence model (only women with daughter included):  to cut daughter --> FGC continuance (We might need it.  This is a model which we hope can provide more details to explain the first question).
 * We are going to run versions of our two main models, but without group level covariates.
 
 Variables:
