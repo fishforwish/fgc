@@ -1,6 +1,8 @@
 Project proposal:  The Associations of Women's belief in Female Genital Cutting and the Likelihood of  Their Daughters' Circumcision Likelihood
 (The manuscript format for now refers to https://github.com/covid19awareness/YouTube.  CS is confused why there are so many versions of ms in the Youtube projects!)
 
+The reference should be from auto.bib and manual.bib
+
 Basically, this paper is about 'norm and behaviors'.
 We studied 'KMNS': Kenya 2008/9, Mali 2006 (C: the report was in French), Nigeria 2008 and Sierra Leone 2008. (To add Guinea 2005?)
 DHS archives was updated by Nov 6, 2023, and the newer sets (Kenya 2014, Mali 2012-3/18, Nigeria 2013/18 and Sierra Leon 2019) did not have comparable questionnaire for this study, so we sticked to the older datasets 
