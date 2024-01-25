@@ -1,4 +1,5 @@
 Project proposal:  The Associations of Women's belief in Female Genital Cutting and the Likelihood of  Their Daughters' Circumcision Likelihood
+(The manuscript format for now refers to https://github.com/covid19awareness/YouTube.  CS is confused why there are so many versions of ms in the Youtube projects!)
 
 Basically, this paper is about 'norm and behaviors'.
 We studied 'KMNS': Kenya 2008/9, Mali 2006 (C: the report was in French), Nigeria 2008 and Sierra Leone 2008. (To add Guinea 2005?)
@@ -8,18 +9,24 @@ We also checked the other African countries with high FGC prevalence (i.e., coun
 
 There are other perspectives we can explore beside the KMNS data within a reasonable year range: 
 - Sierra Leone 2008 vs. 2013 (with norm questions)
-- Sierra Leone 2008 vs. 2013 vs. 2019 (with religion and whether to stop the questions)
-- Kenya 2008/9 vs. 2022.  The Kenya 2022 (questions under "SGC") FGC data is different but similar and comparable to its 2008/9 data.
+- Sierra Leone 2008 vs. 2013 vs. 2019 (with questions of religious requirement and of whether to continue the practice)
+- Kenya 2008/9 vs. 2022.  The Kenya 2022 (questions under "SGC") FGC data is different but similar and comparable to its 2008/9 data. (see https://github.com/fishforwish/fgc_Kenya)
 - *** To add Guinea 2005 to the KMNS? ***
 
 Research Questions:
-* The first question - daughter model (all multivariate, only women with daughter to be cut are included): beliefs in FGC benefits (see the list of FGC benefits at table--) --> FGC continuance + to cut daughters.
-* The second question - continuance model (all future fgc, all the women are included):  beliefs in FGC benefits --> to FGC continuance.
-* The third question - persistence model (only women with daughter included):  to cut daughter --> FGC continuance (We might need it.  This is a model which we hope can provide more details to explain the first question).
+* The first question: the association of daughter's FGC future and FGC beliefs.  
+* The second question:  the association of FGC continuance and FGC beliefs.
+
+Models:
+Three models were made in response to the three questions above accordingly:
+* A daughter model (all multivariate, only women with daughter to be cut are included): beliefs in FGC benefits (see the list of FGC benefits at table--) --> FGC continuance + to cut daughters.
+* A continuance model (all future FGC, all the women are included), a structural model:  beliefs in FGC benefits --> to FGC continuance.  This model included all the women in the DHS data, whether they had or had no daughter for FGC consideration.
+* A persistence model (only women with daughter included) for this:  FGC benefits and FGC continuance --> FGC intention on daughters (We might need it.  This is a model which we hope can provide more details to explain the first question).  This was a mixed and a structural model to understand how FGC continuance affect 
+
 * We are going to run versions of our two main models, but without group level covariates.
 
 Variables:
-* The main response variables: FGC continuance, and to circumcise daughters.
+* The main response variables: FGC continuance, and to FGC daughters.
 * The main predictors: women’s FGC status, and beliefs in FGC benefits.
 * other covariates:  country \cf{We don’t need this if we analyze each country separately}, age, education, wealth, religion, marital status, work status, residence (urban vs. rural), media use (another PCA or score?) and gender awareness.
 * covariates at a community level:  education, wealth, media use, FGC benefits, gender awareness and FGC prevalence
