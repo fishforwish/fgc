@@ -3,10 +3,23 @@ See also README.md
 ----------------------------------------------------------------------
 
 Next
+====================
+
+
+
+2024 Jan 19 (Fri)
+====================
+
+* There are 3 models:
+	* The daughter model: futurefgcDau ~ bene + fgcstatusMom (daughterfgc  brms model in the repo)
+	* The continuance model: futurefgc ~ bene + fgcstatusMom (futurefgc brms model)
+	* The persistence model: futurefgcDau ~ futurefgc + bene + fgcstatusMom(futurefgcDau  brms model)
+		*  How was futurefgcDau coded (the main response variable, which should be daughter plan in record.R) and where is it in the repo?  Not fundable to me!
+* A persistence model vs. a model of daughter plan + futurefgc ~ bene + fgcstatusMom? How do they differ from each other?
+* clmm vs. bros (see note on July 19, 2018):  It seemed that we decided to use arms instead of clmm.
+* need to generate new citation pages flow:  from https://www.bioinformatics.org/texmed/ to auto.bib?  For now, all the citations are at https://github.com/fishforwish/fgc/blob/master/auto.rmu
+
 =================
-
-* Why is hybrid model not the main model?
-
 
 2019 Apr 15 (Mon)
 =================
@@ -421,7 +434,7 @@ Went back and have a better understanding of ordinal and clmm's. clmm (or clmm1)
 We can test "norms" now via anova LRT. 
 
 Question: Are we happy? Does it make sense? More validation? Use MCMCglmm vs ordinal? 
-* Is there a guideline for baseline?  e.g., ethinicity?
+* Is there a guideline for baseline?  e.g., ethnicity?
 
 ----------------------------------------------------------------------
 
@@ -619,7 +632,7 @@ Ian suggested trying to fit the model in stan
 
 03/30/16:  
 Mike did the statistics of the four countries separately, usig ? model?  
-We now lean towards doing a big model (using MCMC?) by merging all the data. The big modle givs us more statistical power, 
+We now lean towards doing a big model (using MCMC?) by merging all the data. The big model gives us more statistical power, 
 but also allows us to compare the differences among the countries.  Some questions remains before proceeding to a big model:
 
 ----------------
