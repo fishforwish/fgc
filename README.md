@@ -13,6 +13,7 @@ There are other perspectives we can explore beside the KMNS data within a reason
 - Sierra Leone 2008 vs. 2013 (with norm questions)
 - Sierra Leone 2008 vs. 2013 vs. 2019 (with questions of religious requirement and of whether to continue the practice)
 - Kenya 2008/9 vs. 2022.  The Kenya 2022 (questions under "SGC") FGC data is different but similar and comparable to its 2008/9 data. (see https://github.com/fishforwish/fgc_Kenya)
+    - We can incorporate turning point, threshold concept or Bicchieri's norm theory
 - *** To add Guinea 2005 to the KMNS? ***
 
 Research Questions:
