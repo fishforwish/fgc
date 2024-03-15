@@ -1,5 +1,5 @@
 
-Norm Comparison of Female Genital Cutting in Kenya
+Norm Comparison of Female Genital Cutting in Kenya between 2008 and 2022
 
 
 Chyun-Fung Shi (1), Mike Li (2,3), Jonathan Dushoff (1,2,4)
