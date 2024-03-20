@@ -15,7 +15,13 @@ There are other perspectives we can explore beside the KMNS data within a reason
 - Kenya 2008/9 vs. 2022.  The Kenya 2022 (questions under "SGC") FGC data is different but similar and comparable to its 2008/9 data. (see https://github.com/fishforwish/fgc_Kenya)
     - We can incorporate turning point, threshold concept or Bicchieri's norm theory
 - *** To add Guinea 2005 to the KMNS? ***
-- *** Chyun thinks we should include men in our continuance model?
+- *** Chyun thinks we should include men in our continuance model?  Kenya 2022 include men's attitude on fgc under MG100-- and SGCM03--. E.g.,
+  -- MG100: Ever heard of female circumcision
+  -- MG118: Female circumcision required by religion
+  -- MG119: Female circumcision: continue or be stopped
+  -- SGCM03A: Do you believe that female circumcision is required by culture
+  -- SGCM03B: Do you believe that female circumcision is required by society
+  
 
 Research Questions:
 * The first question: the association of daughter's FGC future and FGC beliefs.  
