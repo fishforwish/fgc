@@ -1,5 +1,14 @@
+<<<<<<< HEAD
 Project proposal:  The Associations of Women's belief in Female Genital Cutting and the Likelihood of  Their Daughters' Circumcision Likelihood
 (The manuscript format for now refers to https://github.com/covid19awareness/YouTube.  CS is confused why there are so many versions of ms in the Youtube projects!)
+=======
+DHS login:  Study
+
+Project proposal:  The Associations of Women's belief in Female Genital Cutting and the Likelihood of  Their Daughters' Circumcision Likelihood
+* (The manuscript format for now refers to https://github.com/covid19awareness/YouTube.  CS is confused why there are so many versions of ms in the Youtube projects, such ms.md vs. ms.tex vs. ms.jansub.md etc.!)
+
+The reference should be from auto.bib and manual.bib (and in a way from https://www.bioinformatics.org/texmed/)
+>>>>>>> d3becf80f23f51c3af76f228e074f8140c4aa4b7
 
 Basically, this paper is about 'norm and behaviors'.
 We studied 'KMNS': Kenya 2008/9, Mali 2006 (C: the report was in French), Nigeria 2008 and Sierra Leone 2008. (To add Guinea 2005?)
@@ -11,7 +20,18 @@ There are other perspectives we can explore beside the KMNS data within a reason
 - Sierra Leone 2008 vs. 2013 (with norm questions)
 - Sierra Leone 2008 vs. 2013 vs. 2019 (with questions of religious requirement and of whether to continue the practice)
 - Kenya 2008/9 vs. 2022.  The Kenya 2022 (questions under "SGC") FGC data is different but similar and comparable to its 2008/9 data. (see https://github.com/fishforwish/fgc_Kenya)
+<<<<<<< HEAD
+=======
+    - We can incorporate turning point, threshold concept or Bicchieri's norm theory
+>>>>>>> d3becf80f23f51c3af76f228e074f8140c4aa4b7
 - *** To add Guinea 2005 to the KMNS? ***
+- *** Chyun thinks we should include men in our continuance model?  Kenya 2022 include men's attitude on fgc under MG100-- and SGCM03--. E.g.,
+  -- MG100: Ever heard of female circumcision
+  -- MG118: Female circumcision required by religion
+  -- MG119: Female circumcision: continue or be stopped
+  -- SGCM03A: Do you believe that female circumcision is required by culture
+  -- SGCM03B: Do you believe that female circumcision is required by society
+  
 
 Research Questions:
 * The first question: the association of daughter's FGC future and FGC beliefs.  
