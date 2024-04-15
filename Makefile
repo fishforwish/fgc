@@ -21,14 +21,8 @@ fgc_DHS/%:
 
 ## notes
 
-Sources += journal.txt notes.md
-
-######################################################################
-
-manuscript.tex.f53310.oldfile:
-
-Sources += manuscript.tex
-manuscript.pdf: manuscript.tex
+Sources += journal.txt README.md
+Sources += $(wildcard *.md)
 
 ######################################################################
 
