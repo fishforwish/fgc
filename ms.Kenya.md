@@ -10,78 +10,80 @@ Chyun-Fung Shi (1), Mike Li (2,3), Jonathan Dushoff (1,2,4)
 4 Michael G. DeGroote Institute for Infectious Disease Research, McMaster University, Hamilton, ON, Canada.
 
 Background
-=================
-\hypertarget{Background}{%
-\section{Background}\label{Background}}
+============
 
-Female genital cutting (FGC), circumcision or mutilation is a form of altering or injuring female's genitalia for non-medical reasons [Momo17, UNIC21].  While the exact prevalence might be underreported due to a deeply embedded local social-cultural practice that is mostly deemed illegal [StevKell22], it is estimated that at least 200 million women and girls are survivors of FGC in 2024 [Unit24], mostly in Africa and the Middle East and with most girls cut before the age of 15 [UNIC21].  FGC is embodied with dissension from cultural and religious identity in one end, and public health and human rights concerns on the other [AhmeKare18, BergDeni13a, Joha22, KhosBane17, Mack00, McCaBroe19, Momo17, LienSchu13, PalmElme23, RoveUlri22, TordBish22], as traditional norms vs. international norms [JohaAhme21].  The common international position of FGC is about abolishment than intervention [KhosBane17, Unit22].  While the goal towards zero new cases of FGC by 2030 was observed [Unit22], progress of intervention is impeded [TordBish22] because of the complicated FGC history [BergDeni12, Cami16] and of cross-border and transnational practices [Unit22].  Following Tostan [Tost15], we used cutting instead of circumcision or mutilation in this study without excusing the negative impact of the practice while recognizing a sense of self-awareness in making decision about FGC [JohnEsse10, KawoAllw22, Meye00, Shel01, Tost15].
+Female genital cutting (FGC), circumcision or mutilation, a form of nicking, altering, injuring or completely removal of female's genitalia for non-medical reasons [Momo17, UNIC21], is a violation of human rights with an irreparable consequences [].  An eradication of FGC was a common goal among the international community [].  There would be more than 230 millions of women and girls in the world with any form of FGC by 2024, mostly in Africa and the Middle East [UNIC24].  A zero new cases of FGC by 2030 was proposed [], but is not likely to achieve because of rooted traditional, religious and cultural circumstances of FGC, in high FGC prevalence communities [] and beyond, as found in immigrated groups situated in a western society [OdukAfol17] where FGC is rarely practiced and deemed with negative public images [].
 
-Knowledge and attitudes in supporting FGC abolishment did not easily translate to abandon the practice [ChegAske04, Bicc10, Cami15, CislHeis18, McCaBroe19] \cfonly{less cites}, as FGC was morally embraced [SchuLien13] and deeply rooted in social-cultural expectations [Mack00, Hayf05, Momo17].  Unpacking social norm, a form of values driving behavioural patterns which are self-enforcing within a group [Youn15], is a crucial task in the intervention of FGC tradition [Bicc10, KawoAllw22, Mack96, MataEeke23, Momo17, Youn15] \cfonly{check andm update cites} in order to comprehend reasons and values attached to FGC and recognize the persistence of the practice [Bicc10, Cami15, CislHeis18, Youn15] \cfonly{update}.  Social convention theory, a leading theory probing FGC tradition (e.g., see [BoylMcMo02, BoylCorl10, FreyJohn07, FrieMahm13, Hayf05, KandMwek09, Mack06, MackLeJe09, ReigGonz14, YirgKass12] \cfonly{update}) initially proposed that FGC was a marriageability convention through coordination [Mack96] and later extended to broader social norms, such as social prestige, adolescent rite of passage, and female honour and modesty [Mack96, Mack00, MackLeJe09].  The theory, with some challenges [AgolRich20 EffeVogt15], lays a foundation of understanding and researching the complexity of FGC practice with its normatively rooted community [GutiSola22, Haye05].
+The thousand year old ancient practice [KoubMuas85] has been extensively studied.  Besides concerns of human rights violations and health impact [WHO16, Will18...], the research mostly examined its normative embodiment to understand the dynamics of FGC practice [](systematic review references). One of the original research presented FGC  as a marriageability convention [Mack96], then to a broader social expectations, such as social prestige, adolescent rite of passage, and female honor and modesty [Mack96, Mack00, MackLeJe09]. The behavior was viewed as a result of a social coordination for social acceptance and recognition (for example, see [BiccMari15, BoylMcMo02, Hayf05, GrosHayf19, KandMwek09, Mack96, MataEeke23, Momo17, Powe17]) and religious requirement [GreiBarn20]. Some studies also looked at if modernization [] and gender awareness [] contributed to eradicating the practice. FGC was found in countries where social and economic conditions were worse but no clear link between the fundamental situations and the abandonment of the practice was found; it was social expectations that mattered [BiccMari15].
 
-The social convention theory regards FGC a social expectation of interdependent behavior among and coordinated by members in their social network as observed in various communities (for examples, see [GreiBarn20, Haye05, MackLeJe09, ShelWand11, WandShel20]) \cfonly{more cites}.  The normative factors have underlined women’s decisions of undergoing FGC [AlcaGonz13, ForsIsak21, GutiSola22, Hayf05, Mack09, PashPonn16, Rima08, ShelWand11] (update and more specific).  The conventional factors ranged from social advantages by showing respect to the authority of the cut elders [ShelWand11], to demonstrating appreciation to the tradition, feminine virtue, and group support [WandShel20], obeying religious requirement [GreiBarn20], and avoiding the ongoing socially psychological suffering [OmigBell22].  FGC was also viewed as a form of social and symbolic capital [Bour84], differentiated cut women from the uncuts for inclusion and respect within their social groups [OmigBell22, ShelWand11, WandShel20].  Beliefs of justifying FGC practice was as much rooted in cultural values as those against the cuts [DoucDela22], and strongly correlated with social expectation (i.e., what other people do or what other people believe one should do)[BiccMari15,MataEeke23] \cfonly{more cites}.  Basically, when FGC norms within the communities are strong, individuals tend to self-enforce and coordinate such norms [Ajze02, Hayf05, KandNwak09, KandShel19, Mack96, Mack06, MackLeJe09, ThomMadd92] \cfonly{add [Bicc15]]\cfonly{more cites}.
+The meanings of FGC values were perceived differently within communities; for example, young males showed stronger positions in maintaining the practice while their elders and females held different and more flexible attitudes [Miya23].  FGC is more a result of a community expectation than merely a personal choice.  In questioning the persistence of the practice, the normative approach tried to entangle how FGC beliefs bound the community, strengthen its group identify and preserve its religious requirement and gender purity (wording?)[].  There were various social advantages of FGC in a community where FGC was expected, such as group support [WandShel20], respect within their social groups [OmigBell22, ShelWand11, WandShel20] and recognition of group identity [CoynCoyn14], and avoidance of the ongoing socially psychological suffering for not being cut [OmigBell22].  Even outside a traditional setting, community normative expectation of FGC were observed in migrants in spreaded geological areas [AbidRamn22, VanOrte16]. It implied a sense of disopra [AbidRamn22].  Yet, that why community norms of FGC persist for centuries remains puzzled [].  A heterogeneous thresholds might not happen in a community with high FGC prevalence and a FGC norm change not guaranteed at a tipping point [EffeVogt15, Nova20] (CF to elaborate).
 
-The normative conditions of FGC decision provides insights of the FGC continuum from the violation of human rights and ready to abandon the practice to support of the traditional FGC values, and ambivalent contemplations of the practice in between [EarpJohn20, GrueEarp20, Joha19, JohaAhme21, Leon20].  In this study, we analyzed types of social norms women attached to FGC individually and collectively.  Although there have been studies on FGC norms as aforementioned and analyses of FGC persistence using DHS data (such as  [AyenWol23, AzezWill20, TordBish22, YounCheo20]), there was limited clarification of types of individual normative attitudes (e.g., attitudinal position of FGC values) and behavioural intention in response to the community persistence.  We believe this is the first FGC study exploring quantitative modules of FGC normative attitudes to model the FGC intention by utilizing the norm in the context of community influence, and hope to extend understandings of the persistence of FGC practice. 
+More research have weighted community influence on FGC persistence (e.g., []). In this study, we incorporated gender awareness [], in addition to community factor, to examine normative attitudes of FGC practice individually and collectively. This study compared changes of FGC attitudes over time based on the analysis of two sets of Kenya Demographic and Health Surveys (DHS).  To our knowledge, this was the first quasi longitudinal study using quantitative FGC normative questions of DHS to examine norms priority and changes by accounting gender awareness, community backgrounds and FGC prevalence.  Kenya is one of the countries experienced clear drop of FGC practices over the decades [].  It made the Kenya FGC data a good case to comprehend the patterns of FGC norms through time.  Hopefully, this study could add some perceptions of the FGC obstinacy.
+
 
 Research Questions
 =================
-\hypertarget{Research-Questions}{%
-\section{Research Questions}\label{Research-Questions}}
 
-\hypertarget{methods}{%
-\section{Methods}\label{methods}}
+There were two main research questions in this study:  first, what is the association of mothers' FGC beliefs and daughter's FGC future over time?  Secondly, what is the association of woman's FGC beliefs and FGC continuance over times?  They were tested with a daughter future model and a continuance model, respectively. In addition, we also tested a structural model, named a persistence model, to examine how woman's views of FGC future and their decision on daughters' FGC future together associate with their FGC status and beliefs. \cfcmt{I don't really understand how the theory works on the thrid model but feel it makes sense...}.  We tested the persistence model to further understand how the position of the daughter future model could be changed (or mediated/moderated?) under mother's attitude on FGC continuance.
 
-\hypertarget{data-selection}{%
-\subsection{Data selection}\label{data-selection}}
+methods
+======
+
+data-and-sample-selection
+=================
+=================
+
+The secondary data of women aged 15-49 from the Kenya Demographic and Health Surveys (DHS) of 2008 and 2022 were analyzed.  The FGC prevalence in Kenya decreased over years and were \% in 2008 to \% in 2022 [UNIC16]; Kenya DHS offered a rare view of the FGC belief changes over time since only a few countries were surveyed with the DHS quantified FGC norm modules {for FGC module see \url{https://dhsprogram.com/pubs/pdf/DHSQMP/DHS5_Module_Female_Genital_Cutting.pdf}} in various years.  Although it was a quasi longitudinal comparison, the results would be valid. The daughter future model and the persistence model analyzed only women who had daughters to be considered for cutting.  The continuance model included all the women in the datasets.
 
 
-We analyzed the secondary data of women aged 15-49 from the Demographic and Health Surveys (DHS) when it met the research criteria:  countries with high FGC prevalence [UNIC16], and with the modules of FGC status, FGC benefit, and gender awareness. As a result, four countries of the most recent datasets were selected: Kenya 2008/9, Mali 2006, Nigeria 2008 and Sierra Leone 2008 \cfcmt{checked and updated in Nov 6, 2023.}   Although the datasets seemed outdated, it should not affect the study object to understand FGC norms and behaviors.  \cfcmt{See https://github.com/fishforwish/fgc/blob/master/README.md for updated info}.
 
-Only women with daughters for FGC options were included in the the daughter model and the persistence model.   The continuance model included all the women in the datasets; and that resulted in xxx, xxx, xxx and xxx, and 7861, 13071, 18311 and 7231 in Kenya, Mali, Nigeria and Sierra Leon respectively.  \cfcmt{FGC module at \url{https://dhsprogram.com/pubs/pdf/DHSQMP/DHS5_Module_Female_Genital_Cutting.pdf}}
+\cfcmt{for FGC module see \url{https://dhsprogram.com/pubs/pdf/DHSQMP/DHS5_Module_Female_Genital_Cutting.pdf}}
 
-\hypertarget{Measurements}{%
-\subsection{Measurements}\label{Measurements}}
+Measurements
+==========
+==========
 
-\cfonly{[Rima08]]}*
+The main response variable were daughter's FGC future and FGC continuance for the daughter model and the FGC future model respectively.  The main predictors included woman's FGC beliefs, gender awareness and FGC status.  For the structure model, we tested two response variables, daughters' FGC future status and FGC future predicted by the same predictors as in the two main model.
+The FGC benefits were scored \cfcmt{pls confirm] to show the strength of FGC beliefs associating with FGC practice.  The FGC benefits and gender awareness were also quantified using average score \cfcmt{pls confirm]for the same reason.
 
-The main responses and predictors in the models are as: FGC benefits (predictor) -->  to FGC daughters (response) in the daughter model, FGC benefits --> FGC future in the continuance model, and FGC benefits and FGC continuance --> to FGC daughters in the persistence model.  The beliefs of FGC benefits were quantified using average score \cfcmt{pls confirm] to identify the strength of FGC beliefs associating with FGC practice.
+The basic co-variables were country, education, job, residence (rural vs. urban), ethnicity, religion, marital status, age, media use, and wealth.  Media use (and wealth?) was quantified.  Cluster ID (i.e., villages where the samples were from) was treated as a random variable.  Gender awareness served as a proxy interacted with woman's intention to cut their daughters and their position on FGC practice overall [BoylSvec19].
 
-The co-variables were basic social demographic factors (i.e., country, education, job, residence (rural vs. urban), religion, marital status, age, media use, and wealth) in addition to gender awareness [HayfGarv20, KandNwak09].  Gender awareness (see — for questions of gender awareness proxy) was included to test if women’s gender awareness interacted with their intention of FGC daughters and their position of FGC practice overall \cfonly{cite{Dell04, FrieMahm13,KhosBane17, Lewi95, Lewi09, Meye00, Morr08, Njam04, UNIC16, YirgKass12, Youn02, YounCheo20] check and cut].  Media use and gender awareness were also scored.  Cluster ID (i.e., villages where the samples were from) and ethnicity (see the list of ethnicity recode at table xx in appendix) \cfonly{with a footnote on how we recoded it] were treated as random variables.  Ethnicity was treated as a random effect based on previous study which showed little differences in results using individual rather than cluster ethnicity [Hayf05, HayfGarv20].
 
-As FGC is deeply intertwined with group-level perception [Hayf05, HayfGarv20], the following factors were also tested at a community level:  mothers' intention on FGC daughters, FGC continuance, and FGC benefits as well as the basic social-demographic factors:  education, wealth, media use, gender awareness and FGC prevalence \cfcmt{to confirm:  it's on a cluster level, not national.  Correct?] with cluster as a proxy to represent a community level of impact [AligRen06, BoylSvec19, Hayf05, Krav02].
- 
-\cfcmt{Regarding FGC benefits modules, there were 9 questions.  Kenya had all the 9, Mali and SL 7 missing promiscuity and STD, NG 8 missing STD).  Should we drop STD since 3 out of 4 missed this variable?]
-\jdcmt{Ideally, we would make ethnicity a random effect, but we are back to the Gilmour problem I guess.] \cfcmt{Ethnicity is an important factor (see Hayf05), more so than religion, associating with FGC status, and I don't think it shall be coded as a random factor.  But as J said, it is too hard! ] \cfcmt{Whatever we decide, we need a reason in this section to justify our decision. After all, ethnicity is better to be a fixed factor but we can’t because it breaks down the models!]
+\cfcmt{Do we consider all three types of FGC prevalence in the models:  national, community and Mother's status?}
 
-\cfcmt{“explicitly including ethnicity is a means of assessing another dimension of the collective aspect of circumcision behavior” [Hayf05]]
+Regarding community normative influence, the following factors were also tested at a community level:  mothers' intention on cutting daughters, FGC continuance, FGC benefits, FGC prevalence and gender awareness as well as education, wealth, and media use \cfcmt{ethnicity or not?}.  Also, cluster was treated as a proxy to represent a community level of impact [AliaRen06, HayfGarv20, KohlBehr00, Krav02].
+
+\cfcmt{"Some factors that may affect FGC could not be tested because of data limitations. In some communities, ethnic divisions ... could be influential in the perpetuation of FGC.... We could not capture these things in our statistical models"[BoylSvec19]).  "For maternal ethnicity, we include all ethnic groups except in Côte d'Ivoire. In that country, the DHS provides a collapsed ethnicity variable combining over 60 ethnic groups into five broad categories.. [HayfGarv20].   Although [Hayf05] treated ethnicity as random in the Kenya 1998 study, that seemed the only one if it was used at all.}
+
+\cfcmt{Should we explain how we dealt with a cluter where the sample was too small?}
+
 \cfcmt{Bayesian model [KandNwak09] “Conversely, one cannot assume that the clusters selected in each district are fully representative of the states in which they are located because surveys only attempted to generate a fully representative sample at the regional level. Consequently, the spatial analysis will be affected by some random fluctuations.  Some of this random variation can be reduced through structured spatial effects because it includes neighboring observations in the analysis. However, it should be pointed out that such a spatial analysis should preferably be applied to census data, where the precision of the spatial analysis would be much higher." (p. 788)]
 
-\cfonly {in response to the degrees of modernization, conventional values and gender awareness within- and among-community (see [Achi14, BoylMcMo02, Hayf05, KandNwak09, ModrLiu13, Moor13, OdukAfol17, Youn02])}
+Statistical Model
+=================
+=================
 
-
-\hypertarget{Statistical-Model}{%
-\subsection{Statistical Model}\label{Statistical-Model}}
-
-We used cumulative link mixed models (CLMMs) in the statistics package R [Rstats,Rpackage_ordinal] to analyze the models.  The CLMM framework allows us to model a binary or ordinal response variable (i.e., intention of applying FGC to daughters and whether to continue FGC practice), while treating clusters and ethnicity as random effects.  
-We subtracted respondent (-1) from the cluster when testing the community effect \cfcmt{Please rewrite this. Also, do we need to mention how we treat cluster with only one sample (if that happens).}
-\cfcmt{Please explain why we didn’t do sampling weight.}
+The research questions were tested with cumulative link mixed models (CLMMs) in the statistics package R [Rstats,Rpackage_ordinal].  The CLMM framework analyzes a binary or ordinal response variable (i.e., whether to continue FGC practice and intention of cutting daughters), while treating clusters as a random effect.  
+We subtracted respondent (-1) from the cluster when testing the community effect \cfcmt{Please rewrite this. Also, do we need to mention how we treat some clusters which had only one sample (if that happens).}
+\cfcmt{Please explain why we didn’t do sampling weight.} "Multivariate models do not include weights because the DHS does not release the cluster-level sampling weights necessary for estimating weighted multilevel models" [HayfGarv20]
 \cfcmt{Do we explain conveyance of uncertainty}
-
-\cfcmt{Our response ARE categorical not binary and need to explain how we quantify it into scores.; AND still need to explain why ethnicity is a random effect.}
 
 \cfcmt{Do we do any within-community variation and between-community variation?  Is it a thing?
 
 }
 
+
 \cfonly{reference: Methods and the first paragraph of Discussion[Chia14]}
 
-\hypertarget{Scripts}{%
-\subsection{Scripts}\label{Scripts}}
+Scripts
+=======
 
 Codes are available upon request. 
 
-\hypertarget{results}{%
-\section{Results}\label{results}}
+=========== stop reading ==========
 
+results
+========
 
 The positive impact modernization [BoylMcMo02, Youn02] and gender/feminist perspectives [BoylSvec19, DalaLawo10, Dell04, FrieMahm13, KandNwak09, Lewi04, Meye00, Njam04, YirgKass12, Youn02] on intention of cutting daughters were not obvious than the convention approach in our findings as well as previously concluded [Hayf05] \cfonly{to confirm]. While a daughter’s FGC risk was higher if she was in a community with a higher community-level of women’s extra familial opportunities (e.g., education, paid work and marital background) [GrosHayf19], our findings showed that community level of education was not a clear determinant of daughter’s FGC risk, compare to a previous study showed that community education had no clear effect on the likelihood of daughter’s FGC future, while the individual education did in Kenya [Hayf05].
 
@@ -106,8 +108,8 @@ to cite [ForsIsak21, ] for community level impact
 To cite [BoylMcMo02] to compare their 5 countries findings
 To use [JohaDiop13] for the future intervention 
 
-\hypertarget{conclusion}{%
-\section{Conclusion:}\label{conclusion}}
+conclusion
+===========
 
 ———— stop reading —————
 =========

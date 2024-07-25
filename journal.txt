@@ -19,6 +19,17 @@ Next
 * clmm vs. bros (see note on July 19, 2018):  It seemed that we decided to use arms instead of clmm.
 * need to generate new citation pages flow:  from https://www.bioinformatics.org/texmed/ to auto.bib?  For now, all the citations are at https://github.com/fishforwish/fgc/blob/master/auto.rmu
 
+* Whe women could be included in the daughter model:
+  * had daughter cut and more daughter to be considered for cut
+  * had daughter cut and no more dauther to be considered 
+  * no daughter cut (too old to be cut and/or not yet cut) and yes daughters to be considered
+We will use only women who has daughter to be considered for the practice whether they already had daughters cut or not.
+
+* What factor to use for community FGC prevalence?
+  * women's fgc status
+  * women's fgc status plus daughter's fgc status?
+  
+
 =================
 
 2019 Apr 15 (Mon)
