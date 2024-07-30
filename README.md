@@ -1,5 +1,7 @@
 DHS login:  Mac email. Study
 
+2024 Jul 30 (Tue): Old-data paper is ms.md; comparison paper is ms.kenya.md. Should just build a new repo??
+
 Project proposal:  The Associations of Woman's belief in Female Genital Cutting and the Likelihood of  having Daughters to be cut.
 
 The reference sites are at auto.bib and manual.bib (and in a way from https://www.bioinformatics.org/texmed/)
