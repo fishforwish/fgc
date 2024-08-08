@@ -11,11 +11,10 @@ Ignore += .gitignore
 # -include makestuff/perl.def
 
 Ignore += fgc_DHS
-fgc_DHS: dir=~/Dropbox
+fgc_DHS: dir=~/Dropbox/academic/dhs_arc
 fgc_DHS:
 	$(linkdir)
-fgc_DHS/%:
-	$(MAKE) fgc_DHS
+fgc_DHS/%: | fgc_DHS
 
 ######################################################################
 
@@ -26,7 +25,7 @@ Sources += $(wildcard *.md)
 
 ######################################################################
 
-autowrapR = defined
+alwayspipeR = defined
 
 hist.Rout: hist.R
 
@@ -65,15 +64,13 @@ fgc_DHS/%.Rout: convert_dataset.R
 ######################################################################
 
 fgc_DHS/ke5.Rout: fgc_DHS/KEIR52FL.SAV convert_dataset.R
-	$(run-R)
+	$(pipeR)
 fgc_DHS/ml5.Rout: fgc_DHS/MLIR53FL.SAV convert_dataset.R
 	$(run-R)
 fgc_DHS/ng5.Rout: fgc_DHS/NGIR53FL.SAV convert_dataset.R
 	$(run-R)
 fgc_DHS/sl5.Rout: fgc_DHS/SLIR51FL.SAV convert_dataset.R
 	$(run-R)
-
-
 
 ##################################################################
 
@@ -90,8 +87,8 @@ sets = ke5 ml5 ng5 sl5
 select=$(sets:%=%.select.Rout)
 
 ## wselect.R needs to be moved to a general place
-$(select): %.select.Rout: fgc_DHS/%.Rout select.csv wselect.R
-	$(run-R)
+$(select): %.select.Rout: fgc_DHS/%.rda select.csv wselect.R
+## ke5.select.Rout: wselect.R
 
 Ignore += select.output
 select.output: $(sets:%=%.select.Routput)
@@ -101,6 +98,7 @@ select.objects.output: $(sets:%=%.select.objects.Routput)
 
 select.summary.output: $(sets:%=%.select.summary.Routput)
 	cat $^ > $@
+
 
 ######################################################################
 
@@ -137,7 +135,6 @@ prevalence.Rout: ke5.community.Rds ng5.community.Rds sl5.community.Rds ml5.commu
 
 wealth.Rout: prevalence.Rout wealth.R
 	$(run-R)
-
 
 ## Table
 
