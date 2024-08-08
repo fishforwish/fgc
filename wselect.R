@@ -1,4 +1,5 @@
-cat("######################  RTARGET  ########################\n\n")
+
+library(shellpipes)
  
 raw <- readLines(input_files[[1]])
 sel <- grep("^[^#]", raw, value=TRUE)
