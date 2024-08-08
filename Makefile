@@ -1,4 +1,3 @@
-
 # FGC
 ### Hooks for the editor to set the default target
 current: target
@@ -20,7 +19,7 @@ fgc_DHS/%: | fgc_DHS
 
 ## notes
 
-Sources += journal.txt README.md
+Sources += journal.txt README.md Makefile
 Sources += $(wildcard *.md)
 
 ######################################################################
@@ -33,7 +32,7 @@ hist.Rout: hist.R
 
 # Refs
 
-Ignore += auto.html
+Ignore += auto.html bibdir
 auto.html: auto.rmu
 auto.bib: auto.rmu
 Sources += manual.bib auto.rmu
@@ -233,7 +232,7 @@ makestuff/Makefile:
 
 -include makestuff/os.mk
 
--include makestuff/autorefs.mk
+## -include makestuff/autorefs.mk
 -include makestuff/pipeR.mk
 -include makestuff/texi.mk
 
