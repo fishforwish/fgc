@@ -6,6 +6,8 @@
 ## new_denominator (d2) = d1-1
 ## new group mean = new_numerator/new_denominator
 
+library(shellpipes); manageConflicts()
+
 library(dplyr)
 
 Answers <- (Answers 

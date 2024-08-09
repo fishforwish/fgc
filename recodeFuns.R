@@ -1,5 +1,7 @@
 ## Helper functions to recode DHS answers
 
+library(shellpipes)
+
 
 tfun <- function(q, qmax, qmin=-1e7, dk=98, nalist=c(99)){
 	q[q==dk] <- qmax
@@ -11,9 +13,9 @@ tfun <- function(q, qmax, qmin=-1e7, dk=98, nalist=c(99)){
 tableRecode <- function(v, tableName, 
 	matchStart=FALSE, matchEnd=FALSE, matchCase=FALSE, maxCat=NULL
 ){
-	inf <- grep(tableName, input_files, value=1)
+	inf <- grep(tableName, fileSelect(), value=1)
 	if(length(inf)!=1){
-		stop("Wrong number of ", tableName, " files in: ", paste(input_files, collapse=" "))
+		stop("Wrong number of ", tableName, " files in: ", paste(fileSelect(), collapse=" "))
 	}
 	tab <- read.table(inf, sep=":", strip.white=TRUE, header=FALSE,
 		stringsAsFactors=FALSE, na.strings=""
@@ -113,3 +115,4 @@ rightfactor <- function(x){
   return(y)
 }
 
+saveEnvironment()

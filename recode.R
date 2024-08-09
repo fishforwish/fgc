@@ -17,7 +17,6 @@ Answers <- (Answers
 	%>% filter(!is.na(visitorResident) & !grepl("Visitor", visitorResident))
 )
 
-
 # Ideally, I like to have a variable as daughterFGC (daughter's FGC status) which involves a few variables:  numDaughterFgced (already cut; 95 and 0=none cut), and daughterToFgc.  Those variables provides answers of yes (already cut), no (none cut), plan to cut, plan not to be cut, and don't know the plan yet.  I like to make it a single outcome measurement with 6 levels: yes/to be cut, yes/not to be cut, no/to be cut, no/not to be cut, yes/don't know, no/don't know.
 
 Answers <- (Answers
@@ -54,4 +53,5 @@ Answers <- (Answers
 		)
 )
 
+summary(Answers)
 rdsSave(Answers)

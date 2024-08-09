@@ -19,7 +19,7 @@ fgc_DHS/%: | fgc_DHS
 
 ## notes
 
-Sources += journal.txt README.md Makefile
+Sources += journal.txt README.md Makefile notes.md
 Sources += $(wildcard *.md)
 
 ######################################################################
@@ -105,8 +105,10 @@ Sources += $(wildcard *.ccsv *.tsv)
 
 ## ke5.recode.Rout: recode.R
 .PRECIOUS: %.recode.Rout
-%.recode.Rout: recode.R %.select.rda recodeFuns.R religion_basic.ccsv partnership_basic.ccsv
+%.recode.Rout: recode.R %.select.rda recodeFuns.rda religion_basic.ccsv partnership_basic.ccsv
 	$(pipeR)
+
+recodeFuns.Rout: recodeFuns.R
 
 Ignore += *.output
 recodes.output: $(sets:%=%.recode.Routput)
@@ -120,12 +122,14 @@ recodes.summary.output: $(sets:%=%.recode.summary.Routput)
 
 ######################################################################
 
+## Code for this is in PCA.mk
 # sl5.benePCA.Rout ml5.benePCA.Rout ng5.benePCA.Rout
+# sl5.benePCA.Rout:
 
-## Does Rds chain? If so, how?????????
-ke5.community.Rout: community.R
-%.community.Rout: %.recode.Rout recodeFuns.R community.R
-	$(run-R)
+## Make community-level variables
+## ke5.community.Rout: community.R
+%.community.Rout: community.R %.recode.rds recodeFuns.rda
+	$(pipeR)
 
 prevalence.Rout: ke5.community.Rds ng5.community.Rds sl5.community.Rds ml5.community.Rds prevalence.R
 	$(run-R)
