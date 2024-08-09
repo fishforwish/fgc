@@ -1,7 +1,9 @@
-## Recode all problematic DHS entries
+## Recode problematic DHS entries
 
-print("#######################  RTARGET ####################")
-library(gdata)
+library(shellpipes); manageConflicts()
+loadEnvironments()
+
+## library(gdata)
 library(dplyr)
 ## Reweight before subsetting.
 
@@ -52,4 +54,4 @@ Answers <- (Answers
 		)
 )
 
-# rdsave(Answers)
+rdsSave(Answers)

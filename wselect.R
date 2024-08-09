@@ -1,7 +1,9 @@
 
 library(shellpipes)
+
+loadEnvironments()
  
-raw <- readLines(input_files[[1]])
+raw <- readLines(matchFile(ext="csv"))
 sel <- grep("^[^#]", raw, value=TRUE)
  
 NewAnswers <- data.frame(row.names=row.names(Answers))
@@ -44,4 +46,4 @@ Questions <- NewQuestions
  
 print(data.frame(Question=Questions))
  
-# rdsave(Answers, Questions)
+saveVars(Answers, Questions)

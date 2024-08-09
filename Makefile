@@ -98,17 +98,15 @@ select.objects.output: $(sets:%=%.select.objects.Routput)
 select.summary.output: $(sets:%=%.select.summary.Routput)
 	cat $^ > $@
 
-
 ######################################################################
 
 ### Recoding
 Sources += $(wildcard *.ccsv *.tsv)
 
+## ke5.recode.Rout: recode.R
 .PRECIOUS: %.recode.Rout
-ke5.recode.Rout: recode.R
-
-%.recode.Rout: %.select.Rout recodeFuns.R religion_basic.ccsv partnership_basic.ccsv recode.R
-	$(run-R)
+%.recode.Rout: recode.R %.select.rda recodeFuns.R religion_basic.ccsv partnership_basic.ccsv
+	$(pipeR)
 
 Ignore += *.output
 recodes.output: $(sets:%=%.recode.Routput)
