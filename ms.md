@@ -236,6 +236,8 @@ Considering the acceptance of Alternative rights of passage [GaluKama15] without
 
 [NabMuul19]: legal and ethnical background in African countries
 
+- Any questions can be added to the DHS fgc module to gather more relavent and udpated reasaons why continue FGC?
+
 -- Limitation --
 While beliefs of FGC benefits was a clear factor associating with women’s intention of cutting their daughters, our findings could not clarify what benefits exactly the women believed?  As proposed that social norm and the behavior it compels cannot be inferred from personal attitude [Mack18] (in rebuttal letter), a further analysis to entangle the FGC beliefs is expected.
 
