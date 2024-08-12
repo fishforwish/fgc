@@ -13,7 +13,7 @@ Why do we have separate variables for heardGC and heardFGC? Should those have be
 CF: make sense to me.  Is select.csv the upstream place to change them?
 
 How does the comment at L20 relate to current code? Is this stuff we need to do?
-CF:  not yet.  It was a comment based on an old result.
+* Updated now 2024 Aug 12 (Mon)
 
 What is the logic for daughterFgced? We force it to "no" when the number is 95 or yes otherwise?? Then we force it to yes when numDaughterFgced is 0, but it will have already been forced above.
 CF:  you are right.  I think we shall change numDaughterFgced to yes and no because we don't need data of how many daughters were cut.

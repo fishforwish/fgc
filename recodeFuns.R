@@ -2,7 +2,6 @@
 
 library(shellpipes)
 
-
 tfun <- function(q, qmax, qmin=-1e7, dk=98, nalist=c(99)){
 	q[q==dk] <- qmax
 	q[q>qmax] <- qmax
