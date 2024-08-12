@@ -1,4 +1,6 @@
 
+Try to combine heardGC and heardFGC; look at descriptions first.
+
 2024 Aug 09 (Fri)
 =================
 
