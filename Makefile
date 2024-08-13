@@ -87,7 +87,7 @@ select=$(sets:%=%.select.Rout)
 
 ## wselect.R needs to be moved to a general place
 $(select): %.select.Rout: fgc_DHS/%.rda select.csv wselect.R
-## ke5.select.Rout: wselect.R
+## ke5.select.Routput: wselect.R
 
 Ignore += select.output
 select.output: $(sets:%=%.select.Routput)
