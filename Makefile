@@ -9,8 +9,13 @@ Ignore += .gitignore
 
 # -include makestuff/perl.def
 
+######################################################################
+
 Ignore += fgc_DHS
-fgc_DHS: dir=~/Dropbox/academic/dhs_arc
+-include local.mk
+drop ?= ~/Dropbox
+
+fgc_DHS: dir=$(drop)
 fgc_DHS:
 	$(linkdir)
 fgc_DHS/%: | fgc_DHS
