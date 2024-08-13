@@ -11,6 +11,10 @@ Ignore += .gitignore
 
 ######################################################################
 
+Sources += $(wildcard *.lmk)
+
+## ln -s jd.lmk local.mk ##
+
 Ignore += fgc_DHS
 -include local.mk
 drop ?= ~/Dropbox
@@ -67,6 +71,8 @@ fgc_DHS/%.Rout: convert_dataset.R
 
 ######################################################################
 
+ifdef convert_files
+
 fgc_DHS/ke5.Rout: fgc_DHS/KEIR52FL.SAV convert_dataset.R
 	$(pipeR)
 fgc_DHS/ml5.Rout: fgc_DHS/MLIR53FL.SAV convert_dataset.R
@@ -75,6 +81,8 @@ fgc_DHS/ng5.Rout: fgc_DHS/NGIR53FL.SAV convert_dataset.R
 	$(run-R)
 fgc_DHS/sl5.Rout: fgc_DHS/SLIR51FL.SAV convert_dataset.R
 	$(run-R)
+
+endif
 
 ##################################################################
 
