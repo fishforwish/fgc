@@ -23,7 +23,8 @@ drop ?= ~/Dropbox
 fgc_DHS: dir=$(drop)
 fgc_DHS:
 	$(linkdir)
-fgc_DHS/%: | fgc_DHS
+fgc_DHS/%:
+	$(MAKE) fgc_DHS
 
 ######################################################################
 
