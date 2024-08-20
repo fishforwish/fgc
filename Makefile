@@ -33,7 +33,7 @@ Sources += $(wildcard *.md)
 
 ######################################################################
 
-alwayspipeR = defined
+autopipeR = defined
 
 hist.Rout: hist.R
 
