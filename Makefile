@@ -13,7 +13,8 @@ Ignore += .gitignore
 
 Sources += $(wildcard *.lmk)
 
-## ln -s jd.lmk local.mk ##
+testsetup:
+	ln -s jd.lmk local.mk
 
 Ignore += fgc_DHS
 -include local.mk
