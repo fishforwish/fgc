@@ -114,10 +114,10 @@ select.summary.output: $(sets:%=%.select.summary.Routput)
 ######################################################################
 
 ### Recoding
-Sources += $(wildcard *.ccsv *.tsv)
+Sources += $(wildcard *.ccsv *.tsv *.csv)
 
-## ke5.recode.Rout: recode.R
 .PRECIOUS: %.recode.Rout
+## ke5.recode.Rout: recode.R
 %.recode.Rout: recode.R %.select.rda recodeFuns.rda religion_basic.ccsv partnership_basic.ccsv
 	$(pipeR)
 
