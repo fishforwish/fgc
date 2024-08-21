@@ -50,12 +50,12 @@ beneOther, G117X, FG119X
 # Response 1: daughter FGC status
 numDaughterFgced, G108, FG110, S631I
 ## We shall change it to daughterFgced
-## For fgc module, see https://dhsprogram.com/pubs/pdf/DHSQM/DHS8-Module-FGCut-Qnnaire-EN-23Jan2020-DHSQM.pdf
+## For fgc module, see https://dhsprogram.com/pubs/pdf/DHSQMP/DHS5_Module_Female_Genital_Cutting.pdf (or https://dhsprogram.com/pubs/pdf/DHSQM/DHS8-Module-FGCut-Qnnaire-EN-23Jan2020-DHSQM.pdf)
 daughterNotFgced, G115
 daughterToFgc, G116, FG118
 ## G108: Number of  daughters circumcised (95: No daughter circumcised)
-## G115: Any daughter who is not circumcised
-## G116: Intends to have daughter(s) circumcised in future.  This question include women who has daughter "now" or "if" they have daughter in the future.
+## G115: Any daughter who is not circumcised (for those from G108)
+## G116: Intends to have daughter(s) circumcised in future.  This question was answered by women who has daughter not yet cut. They were from G115 (Any daughter who is not circumcise) who answered yes and from G108 (Number of  daughters circumcised) who answered 95 (No daughter circumcised).  This shall be our main predictor.  A side test can be about womem who had daughters cut but not going to for uncut daughters.
 # Response 2: FGC future
 continueFgc, G119, S1012, S631G, FG123
 # potential interest: ageFgc, G106, S1003; whoDidFgc, G107; gender control (contrJealous/D101A, contrAccusesUnfaith/ D101B, contrProhibitFriend/D101C, contrLimitFamily/D101D, contrWhere, D101E, contrMoney/D101F, conTotal/D102), daughterAgeFgc, G113, fgcT2, G103, fgcT1, G104, fgcT3, G105, fgcRemoved, G103, FG104, fgcNicked, G104, FG105, fgcSewn, G105, FG106, daughterFgcRemoved, G110, FG112, daughterFgcNicked, G111, FG113, daughterFgcSewn, G112, FG114
