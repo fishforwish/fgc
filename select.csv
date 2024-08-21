@@ -50,6 +50,7 @@ beneOther, G117X, FG119X
 # Response 1: daughter FGC status
 numDaughterFgced, G108, FG110, S631I
 ## We shall change it to daughterFgced
+## For fgc module, see https://dhsprogram.com/pubs/pdf/DHSQM/DHS8-Module-FGCut-Qnnaire-EN-23Jan2020-DHSQM.pdf
 daughterNotFgced, G115
 daughterToFgc, G116, FG118
 ## G108: Number of  daughters circumcised (95: No daughter circumcised)
