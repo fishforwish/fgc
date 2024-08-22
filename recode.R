@@ -5,11 +5,8 @@ loadEnvironments()
 
 ## library(gdata)
 library(dplyr)
-## Reweight before subsetting.
 
 Answers <- (Answers
-## Reweight before subsetting
-	%>% mutate(sampleWeight = sampleWeight/sum(sampleWeight))
 ## subset: Don't want people who never heard of FGC (heardFGC and heardGC) and visitors
 	%>% filter((!is.na(heardFGC) & substr(heardFGC, 1, 3) == "Yes")
 		| (!is.na(heardGC) & substr(heardGC, 1, 3) == "Yes")
@@ -20,8 +17,13 @@ Answers <- (Answers
 ## Maybe use G116 daughterToFgc as the main response variable for daughterFuture analysis
 
 Answers <- (Answers
-	%>% mutate(daughterFgced = ifelse(numDaughterFgced == 95, "No", "Yes")
-		, daughterFgced = ifelse(numDaughterFgced == 0, "Yes", daughterFgced)
+	%>% mutate(
+		daughterFgced = if_else(is.numeric(numDaughterFgced) 
+			& as.numeric(numDaughterFgced) > 0 
+			& as.numeric(numDaughterFgced) < 90
+			, "Yes", "No"
+		)
+		, daughterFgced = if_else(is.na(numDaughterFgced), NA, daughterFgced)
 		, daughterFgced = factor(daughterFgced)
 		, continueFgc = ifelse(continueFgc == "Don't know", "Depends", as.character(continueFgc))
 		, continueFgc = factor(continueFgc)

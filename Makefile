@@ -103,7 +103,7 @@ select=$(sets:%=%.select.Rout)
 ## wselect.R needs to be moved to a general place
 $(select): %.select.Rout: fgc_DHS/%.rda select.csv wselect.R
 	$(pipeR)
-## ke5.select.Rout: wselect.R
+## ke5.select.Routput: wselect.R
 
 Ignore += select.output
 select.output: $(sets:%=%.select.Routput)
@@ -120,7 +120,7 @@ select.summary.output: $(sets:%=%.select.summary.Routput)
 Sources += $(wildcard *.ccsv *.tsv *.csv)
 
 .PRECIOUS: %.recode.Rout
-## ke5.recode.Rout: recode.R
+## ke5.recode.Routput: recode.R
 %.recode.Rout: recode.R %.select.rda recodeFuns.rda religion_basic.ccsv partnership_basic.ccsv
 	$(pipeR)
 
