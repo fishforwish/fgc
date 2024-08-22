@@ -23,7 +23,7 @@ Answers <- (Answers
 			& as.numeric(numDaughterFgced) < 90
 			, "Yes", "No"
 		)
-		, daughterFgced = if_else(is.na(numDaughterFgced), NA, daughterFgced)
+		, daughterFgced = if_else(is.na(numDaughterFgced), as.character(NA), daughterFgced)
 		, daughterFgced = factor(daughterFgced)
 		, continueFgc = ifelse(continueFgc == "Don't know", "Depends", as.character(continueFgc))
 		, continueFgc = factor(continueFgc)
