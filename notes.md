@@ -4,6 +4,8 @@ G116: Intends to have daughter(s) circumcised in future.  This question was answ
 
 Try to combine heardGC and heardFGC; look at descriptions first.
 
+Why was fgc scaled?
+
 2024 Aug 09 (Fri)
 =================
 
