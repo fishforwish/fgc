@@ -3,6 +3,7 @@
 library(shellpipes); manageConflicts()
 loadEnvironments()
 
+## library(octopus)
 ## library(gdata)
 library(dplyr)
 
