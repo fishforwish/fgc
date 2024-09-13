@@ -243,10 +243,11 @@ Sources += qual.mk quant.mk plots.mk comPlots.mk bioPlots.mk PCA.mk
 
 msrepo = https://github.com/dushoff
 
-Makefile: makestuff/Makefile
-makestuff/Makefile:
-	git clone $(msrepo)/makestuff
-	ls makestuff/Makefile
+Makefile: makestuff/00.stamp
+makestuff/%.stamp:
+	- $(RM) makestuff/*.stamp
+	(cd makestuff && $(MAKE) pull) || git clone --depth 1 $(msrepo)/makestuff
+	touch $@
 
 -include makestuff/os.mk
 
