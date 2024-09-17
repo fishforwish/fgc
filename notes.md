@@ -1,6 +1,8 @@
 2024 Aug 21 
 ===========
-G116: Intends to have daughter(s) circumcised in future.  This question was answered by women who has daughter not yet cut. They were from G115 (Any daughter who is not circumcise) who answered yes and from G108 (Number of  daughters circumcised) who answered 95 (No daughter circumcised).  This shall be our main predictor.  A side test can be about womem who had daughters cut but not going to for uncut daughters
+G116: Intends to have daughter(s) circumcised in future.  This is our main predictor.  This question was answered by women who has daughter not yet cut. They were from G115 (Any daughter who is not circumcise) who answered yes and from G108 (Number of  daughters circumcised) who answered 95 (No daughter circumcised).   
+
+Do we want to add the variable of womem who had daughters cut and yet to decide whether to cut other daughters.
 
 Try to combine heardGC and heardFGC; look at descriptions first.
 
