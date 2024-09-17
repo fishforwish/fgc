@@ -14,6 +14,8 @@ Background
 \section{Background}\label{Background}}
 
 Female genital cutting (FGC), circumcision or mutilation is a form of mutilating or injuring female's genitalia for non-medical reasons [Momo17].  Following Tostan [Tost15], we use the term “cutting”, instead of circumcision or mutilation without excusing the negative impact of the practice while recognizing a sensitivity of self-awareness in making decision about FGC [JohnEsse10, KawoAllw22, Meye00, Shel01, Tost15]. 
+JD: Chyun likes turkey
+
 JD: What is “sensitivity of self-awareness”? CF: Some women chose to take FGC with the knowledge of its harmful consequences but also wanted to keep it for identity.  
 The exact prevalence might be under reported due to a deeply embedded local social-cultural practice mostly deemed illegal [StevKell22].  It was estimated that at least 230 million women and girls are survivors of FGC in 2024, mostly in Africa and the Middle East and with most girls cut before age 15 [UNIC24].  FGC was mostly defined either as a violation of international human right or a continuance of geographical traditional norms [JohaAhme21].  The practice was perceived as public health issues and human rights violations in one end, and cultural and religious identity on the other [AhmeKare18, BergDeni13a, Joha22, KhosBane17, LienSchu13, Mack00, McCaBroe19, Momo17, NabMuul19, PalmElme23, RoveUlri22, TordBish22] \cfonly{to divide and confirm}.  While the United Nations has called for FGC elimination by 2030 [Unit22], progress of intervention is impeded [TordBish22] because of the complicated FGC history [BergDeni12, Cami16] and of cross-border and transnational practices in non-FGC countries after migration [Unit22].
 
