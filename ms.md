@@ -30,8 +30,8 @@ Research Questions
 \hypertarget{Research-Questions}{%
 \section{Research Questions}\label{Research-Questions}}
 
-There are two research questions:  first, what is the association between mothers' beliefs about the benefits of FGC and their plans for their daughters' FGC future; second, what is the association between women's beliefs and their opinion about whether FGC should be continued.  
-The two questions were tested as the daughter model, and the continuance model respectively.  The continuance model added insights of national prevalence in association with woman's position on whether FGC should be continued.  In addition, we also tested a “persistence” model, to examine the association of mothers' intention on cutting their daughters and their view of FGC continuance predicted by mother's FGC status and their FGC beliefs.  
+There are two research questions:  first, what is the association between mothers' beliefs about the benefits of FGC and their plans for their daughters' FGC future; second, what is the association between woman's beliefs and their opinion about whether FGC should be continued.  
+The two questions were tested as the daughter model, and the continuance model respectively.  In addition, we also tested a “persistence” model, to examine the association of mothers' intention on cutting their daughters and their view of FGC continuance predicted by mother's FGC status and their FGC beliefs.  
 JD: Can you clarify following sentence?  CF:  there are two predictors in the persistence model:  mother's position on fgc continuance and their fgc status.
 The persistence model, the third model, was developed to further understand how the position of the main model could be changed (or mediated/moderated?) under mother's position on whether to continue FGC practice in general. \cfcmt{Do we test countries separately and all together in one big dataset?}
 
@@ -41,13 +41,12 @@ The persistence model, the third model, was developed to further understand how 
 \hypertarget{data-selection}{%
 \subsection{Data selection}\label{data-selection}}
 
-We analyzed women aged 15-49 from the Demographic and Health Surveys (DHS) when it met the research criteria:  countries with clear FGC Practice [KoskHeym17, UNIC16], and with FGC module including status, position and FGC benefit, and gender awareness.  
-As a result, four countries of the most recent available datasets were Kenya 2008/9, Mali 2006, Nigeria 2008 and Sierra Leone 2008 \cfcmt{checked and updated in Aug 6, 2024.}. 
-The FGC prevalence in Kenya and Nigeria were over 20\% and Mali and Sierra Leon were over 85\% during that time, which represented the middle-lower vs. high prevalence of FGC [UNIC16].  
+We analyzed women aged 15-49 from the Demographic and Health Surveys (DHS) when it met the research criteria:  countries with clear FGC Practice [KoskHeym17, UNIC16], and with FGC benefit module.  As a result, four countries of the most recent available datasets were selected:  Kenya 2008/9, Mali 2006, Nigeria 2008 and Sierra Leone 2008 \cfcmt{checked and updated in Aug 6, 2024.}. 
+The FGC prevalence in Kenya and Nigeria were over 20\% and Mali and Sierra Leon over 85\% during that time, which represented the middle-lower vs. high prevalence of FGC [UNIC16].  
 In addition, Kenya and Nigeria were observed a declined prevalence of FGC, while the prevalence in Mali and Sierra Leone were stably high or increasing [KoskHeym17]. CF:  to update with fgc rate.
 Although the datasets seemed outdated, it should not affect the study purpose which is to understand associations of FGC norms and behaviors.  \cfcmt{See https://github.com/fishforwish/fgc/blob/master/README.md for updated info}. 
 
-Only women with daughters for FGC options were included in the the daughter future model and the persistence model.  We did not consider whether women had daughters already cut \cfcmt{"G108: Number of  daughters circumcised"}, instead the samples were women who had daughters to be considered for cutting during the survey time \cfcmt{"G116: Intends to have daughter(s) circumcised in future"}  The continuance model included all the women in the datasets; and that resulted in xxx, xxx, xxx and xxx, and 7861, 13071, 18311 and 7231 in Kenya, Mali, Nigeria and Sierra Leon respectively. \cfcmt{FGC module at \url{https://dhsprogram.com/pubs/pdf/DHSQMP/DHS5_Module_Female_Genital_Cutting.pdf}}
+Only women with daughters for FGC options were included in the the daughter future model and the persistence model.  We did not consider whether women had daughters already cut, nor the ages of their uncut daughters.  The information was collected from the question of whether to intend "to have daughter(s) circumcised in future" answered by women who had daughter(s) not cut yet based on the DHS phase 5 survey \{https://dhsprogram.com/pubs/pdf/DHSQMP/DHS5_Module_Female_Genital_Cutting.pdf, https://dhsprogram.com/pubs/pdf/DHSG4/Recode5DHS_23August2012.pdf}.  The continuance model included all the women in the surveys who heard of FGC; and that resulted in xxx, xxx, xxx and xxx, and 7861, 13071, 18311 and 7231 in Kenya, Mali, Nigeria and Sierra Leon respectively. \cfcmt{FGC module at \url{https://dhsprogram.com/pubs/pdf/DHSQMP/DHS5_Module_Female_Genital_Cutting.pdf}}
 
 \hypertarget{Measurements}{%
 \subsection{Measurements}\label{Measurements}}
