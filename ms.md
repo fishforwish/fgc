@@ -53,19 +53,18 @@ Only women with daughters for FGC options were included in the the daughter futu
 
 The main responses and predictors in the models are: FGC daughters predicted by FGC benefits in the daughter future model, FGC future predicted by FGC benefits in the continuance model, and FGC daughters predicted by both FGC benefits and FGC continuance in the persistence model.  Women's FGC status was also treated as a main predictor in all the three models.  The FGC benefits were quantified using average score \cfcmt{pls confirm] to identify the strength of FGC beliefs associating with FGC practice.
 
-The co-variables were basic social demographic factors:  country, education, job, residence (rural vs. urban), religion, marital status, age, media use, and wealth in addition to gender awareness.  Gender awareness (see — for questions of gender awareness proxy) was included to test if women’s gender awareness interacted with their intention to cut their daughters and their position on FGC practice overall [BoylSvec19].  Media use and gender awareness were also scored.  Cluster ID (i.e., villages where the samples were from) and ethnicity (see the list of ethnicity recode at table xx in appendix) \cfonly{with a footnote on how we recoded it] were treated as random variables.  Ethnicity was treated as a random effect based on previous study which showed little differences in results [Hayf05].
+The co-variables were basic social demographic factors:  country, education, job, residence (rural vs. urban), religion, marital status, age, media use, and wealth in addition to gender awareness.  Gender awareness (see — for questions of gender awareness proxy) was considered a sensible factor in FGC decision [BoylSvec19?] and therefore was included to test its association with FGC decision overall [BoylSvec19].  Media use and gender awareness were also scored.  Cluster ID (i.e., villages where the samples were from) and ethnicity (see the list of ethnicity recode at table xx in appendix) \cfonly{with a footnote on how we recoded it] were treated as random variables.
 
-\cfcmt{Do we consider all three types of FGC prevalence in the models:  national, community and Mother's status?}
+\cfcmt{ETHNICITY:  numbers of ethnicity groups in DHS:  Kenya 13, Mali 13, Nigeria 11, SL 10 groups.  Is it possible to treat ethnicity as a explanatory variable?  "Some factors that may affect FGC could not be tested because of data limitations. In some communities, ethnic divisions ... could be influential in the perpetuation of FGC.... We could not capture these things in our statistical models"[BoylSvec19]).  "For maternal ethnicity, we include all ethnic groups except in Côte d'Ivoire. In that country, the DHS provides a collapsed ethnicity variable combining over 60 ethnic groups into five broad categories.. [HayfGarv20].
 
-The following factors were also tested as a response at a community level to assess the collective aspect of FGC behavior:  mothers' intention on FGC daughters, FGC continuance, FGC benefits and FGC prevalence as well as the basic social-demographic factors:  education, wealth, media use, gender awareness \cfcmt{ethnicity or not?}.  Also, cluster was treated as a proxy to represent a community level of impact [AliaRen06, HayfGarv20, KohlBehr00, Krav02].
-
-\cfcmt{ETHNICITY:  numbers of ethnicity groups in DHS:  Kenya 13, Mali13, Nigeria 399, SL 10!  Is it possible to treat ethnicity as a explanatory variable of SL is excluded as other study did?  "Some factors that may affect FGC could not be tested because of data limitations. In some communities, ethnic divisions ... could be influential in the perpetuation of FGC.... We could not capture these things in our statistical models"[BoylSvec19]).  "For maternal ethnicity, we include all ethnic groups except in Côte d'Ivoire. In that country, the DHS provides a collapsed ethnicity variable combining over 60 ethnic groups into five broad categories.. [HayfGarv20].   Although [Hayf05] treated ethnicity as random in the Kenya 1998 study, that seemed the only one if it was used at all.}
+The following response factors were also tested at a community level to assess the collective aspect of FGC behavior:  mothers' intention on FGC daughters, FGC continuance, FGC benefits and FGC prevalence as well as the basic social-demographic factors:  education, wealth, media use, gender awareness \cfcmt{ethnicity or not?}.  Also, cluster was treated as a proxy to represent a community level of impact [AliaRen06, HayfGarv20, KohlBehr00, Krav02].
 
 \cfcmt{Should we explain how we dealt with a cluter where the sample was too small?}
 
-\cfcmt{Regarding FGC benefits modules, there were 9 questions.  Kenya had all the 9, Mali and SL 7 missing promiscuity and STD, NG 8 missing STD).  Suggestions?]
+\cfcmt{Regarding FGC benefits modules, there were 9 questions.  Kenya had all the 9, Mali and SL 7 missing promiscuity and STD, NG 8 missing STD).  Is it a problem?]
 
 \cfcmt{Bayesian model [KandNwak09] “Conversely, one cannot assume that the clusters selected in each district are fully representative of the states in which they are located because surveys only attempted to generate a fully representative sample at the regional level. Consequently, the spatial analysis will be affected by some random fluctuations.  Some of this random variation can be reduced through structured spatial effects because it includes neighboring observations in the analysis. However, it should be pointed out that such a spatial analysis should preferably be applied to census data, where the precision of the spatial analysis would be much higher." (p. 788)]
+
 
 \hypertarget{Statistical-Model}{%
 \subsection{Statistical Model}\label{Statistical-Model}}
@@ -79,7 +78,6 @@ We subtracted respondent (-1) from the cluster when testing the community effect
 
 }
 
-\cfonly{reference: Methods and the first paragraph of Discussion[Achi14]}
 
 \hypertarget{Scripts}{%
 \subsection{Scripts}\label{Scripts}}
@@ -170,6 +168,8 @@ Put countries' economic index (e.g., GPA, on the UN's Human Development Index, G
 
 \cfonly {in response to the degrees of modernization, conventional values and gender awareness within- and among-community (see [Achi14, BoylMcMo02, Hayf05, KandNwak09, ModrLiu13, Moor13, OdukAfol17, Youn02])}
 "We used random split-half samples for each country to conduct first an exploratory factor analysis (EFA) and then a confirmatory factor analysis (CFA) to identify the factor structure." [HayfGarv20]
+
+\cfonly{reference: Methods and the first paragraph of Discussion[Achi14]}
 
 \hypertarget{conclusion}{%
 \section{Conclusion:}\label{conclusion}}
