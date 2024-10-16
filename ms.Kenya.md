@@ -14,7 +14,9 @@ Background
 
 Normative beliefs is a prominent proxy to predicting behaviors [].  Evidences showed strong correlations of what people believe and how they expect to behave in response to their believes [], from xxx [], xxx[], to xxx[] (tattoo, substance use, social norms influence intentions to receive HPV vaccination in differnt cultural contexts [ZhanZhan20] decision; sexual risk behabvior [BasaChri19], alcohol and substance use [AARN16,EiseToum14,...]...).  Some beliefs are deemed as positive in behavior changes, such as xxx[], others negative, such as xxx[].  The norms we embedded can values we perceived of what people do and what people expect us to do. Norm in most cases is a collection of group beliefs [], and people abide it whether they agree on it or not.  Female genital cutting is an example which received significant amount of studies and debates.
 
-Would social norm explain the traditional persistence of female genital cutting in various part of the world, especially in Africa []? FGC is a social decision interrelated to social norms [].  Women's intention to cut their daughter was dependent on what they observe other people's behavior and how they perceive what other people in their community expect them to behave and if such a behavior is appropriate by others (injunctive norm) [].
+Would social norm explain the traditional persistence of female genital cutting in various part of the world, especially in Africa []? FGC is a social decision motivated from social norms [].  Women's intention to cut their daughter was dependent on what they observe other people's behavior and how they perceive what other people in their community expect them to behave and if such a behavior is appropriate by others (injunctive norm). "what others do, and what others expect a woman to do, matter for her ability to reject a harmful social norm like FGMC (Bicchieri 2017). " [GrosHayf19]
+
+It was also proposed that gender 
 
 Keyna has shown clear decrease of FGC prevalence over the decades.  To study if the norm has shifted and how it associated with the decline of FGC practice in a community setting can broaden our understanding of social norm impacting FGC, hence enrish our understanding on FGC intervention in social context.
 
@@ -110,6 +112,8 @@ A systematic review showed that "A lower level of maternal education, family his
 
 Norms can be rooted in what one thinks, passively or actively, others think which can be based on one's action or the communication. Change should be coordinated among interrelated members of social networks [Mack96, Mack00, MackLeJe09, ShelWand11]
 
+"a daughter’s FGMC hazard is lower if she lived in a more ethnically diverse community, regardless of maternal ethnic-group membership. This is an important contribution as it explicitly models within-community heterogeneity as a factor facilitating social change."[GrosHayf19]
+"Ethnic diversity could be a proxy for exposure to networks that oppose cutting, or for awareness of alternative practices" [GrosHayf19]
 
 Modifying DHS module of FGC
 
