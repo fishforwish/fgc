@@ -64,7 +64,7 @@ The co-variables were basic social demographic factors:  country, education, job
 
 The following response factors were also tested at a community level to assess the collective aspect of FGC behavior:  mothers' intention on FGC daughters, FGC continuance, FGC benefits and FGC prevalence as well as the basic social-demographic factors:  education, wealth, media use, gender awareness \cfcmt{ethnicity or not?}.  Also, cluster was treated as a proxy to represent a community level of impact [AliaRen06, HayfGarv20, KohlBehr00, Krav02].
 
-\fcmt{How do we define community?  Is it based on cluster?}
+\fcmt{How do we define community?  Is it based on cluster?} [See GrosHayf19]
 \cfcmt{Should we explain how we dealt with a cluter where the sample was too small?}
 
 \cfcmt{Regarding FGC benefits modules, there were 9 questions.  Kenya had all the 9, Mali and SL 7 missing promiscuity and STD, NG 8 missing STD).  Is it a problem?]
