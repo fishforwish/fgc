@@ -1,4 +1,5 @@
-library(ordinal)
+library(shellpipes); manageConflicts()
+
 library(splines)
 library(dplyr)
 
@@ -7,7 +8,7 @@ library(dplyr)
 #   %>% select(-c(Age,baseAge,interviewYear, oldMC, MCcat,))
 # )
 # Answers <- Answers[complete.cases(Answers),]
-Ans <- (combined_dat
+Ans <- (rdsRead()
 	%>% select(Persist, fgcstatus, CC 
   , age , Residence , Religion , MaritalStatus , Job , Education
   , mediaNpmg , mediaRadio , mediaTv
@@ -25,9 +26,11 @@ Ans <- (combined_dat
 		, ifelse(between(age,40,44),"40-44"
 		, ifelse(between(age,45,49),"45-49",NA)
 		))))))
-		, Persist = factor(Persist,labels=c("No","Depends", "Yes"))
+		, Persist = factor(Persist)
 		)
 )
+
+summary(Ans)
 
 CCtable <- function(x){
   return(table(Ans[,x],Ans[,"CC"]))

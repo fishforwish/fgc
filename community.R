@@ -8,11 +8,14 @@
 
 library(shellpipes); manageConflicts()
 
+loadEnvironments()
+Answers <- rdsRead()
+
 library(dplyr)
 
 Answers <- (Answers 
   %>% mutate(id=1:nrow(.))
-  )
+)
 
 # number of Yes/ total and then divided by the mean. 
 # mean score will be 1
@@ -59,6 +62,6 @@ Answers <- (Answers
 print(head(Answers,60),n=60)
 
 print(summary(Answers))
-saveRDS(Answers, rdsname)
 
-# rdnosave
+rdsSave(Answers)
+

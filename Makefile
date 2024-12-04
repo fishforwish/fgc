@@ -147,19 +147,20 @@ recodes.summary.output: $(sets:%=%.recode.summary.Routput)
 %.community.Rout: community.R %.recode.rds recodeFuns.rda
 	$(pipeR)
 
-prevalence.Rout: ke5.community.Rds ng5.community.Rds sl5.community.Rds ml5.community.Rds prevalence.R
-	$(run-R)
+## Combine data sets, make a bunch of plots
+prevalence.Rout: prevalence.R ke5.community.rds ng5.community.rds sl5.community.rds ml5.community.rds
+	$(pipeR)
 
-wealth.Rout: prevalence.Rout wealth.R
+## Histogram of wealth. Why?
+wealth.Rout: wealth.R prevalence.rds
 	$(run-R)
 
 ## Table
-
-tables.Rout: prevalence.Rout tables.R
-	$(run-R)
+tables.Rout: tables.R prevalence.rds
+	$(pipeR)
 
 tabletex.Rout: tables.Rout table_funs.R tabletex.R
-	$(run-R)
+	$(pipeR)
 
 Ignore += table_output.tex
 table_output.tex: tabletex.Rout ; touch $@
@@ -178,41 +179,41 @@ hybrid_clmm.Rout: prevalence.Rout hybrid_clmm.R
 
 
 daughterPlan_varlvlsum.Rout: daughterPlan_clmm.Rout varlvlsum.R
-	$(run-R)
+	$(pipeR)
 fgcPersist_varlvlsum.Rout: fgcPersist_clmm.Rout varlvlsum.R
-	$(run-R)
+	$(pipeR)
 hybrid_varlvlsum.Rout: hybrid_clmm.Rout varlvlsum.R
-	$(run-R)
+	$(pipeR)
 
 
 daughterPlan_isoplots.Rout: daughterPlan_clmm.Rout daughterPlan_varlvlsum.Rout ordfuns.Rout plotFuns.Rout rename_dat.Rout iso.R
-	$(run-R)
+	$(pipeR)
 
 fgcPersist_isoplots.Rout: fgcPersist_clmm.Rout fgcPersist_varlvlsum.Rout ordfuns.Rout plotFuns.Rout rename_dat.Rout iso.R
-	$(run-R)
+	$(pipeR)
 
 hybrid_isoplots.Rout: hybrid_clmm.Rout hybrid_varlvlsum.Rout ordfuns.Rout plotFuns.Rout rename_dat.Rout iso.R
-	$(run-R)
+	$(pipeR)
 
 all_full_models: futurefgc_full_clmm.Rout futurefgcDau_full_clmm.Rout daughterfgc_full_clmm.Rout
 
 fgcPersist_effects.Rout: fgcPersist_clmm.Rout rename_dat.Rout single_var_effect.R
-	$(run-R)
+	$(pipeR)
 
 daughterPlan_effects.Rout: daughterPlan_clmm.Rout rename_dat.Rout single_var_effect.R
-	$(run-R)
+	$(pipeR)
 
 hybrid_effects.Rout: hybrid_clmm.Rout rename_dat.Rout single_var_effect.R
-	$(run-R)
+	$(pipeR)
 
 fgcPersist_effects_plot.Rout: fgcPersist_effects.Rout effects_plot.R
-	$(run-R)
+	$(pipeR)
 
 daughterPlan_effects_plot.Rout: daughterPlan_effects.Rout effects_plot.R
-	$(run-R)
+	$(pipeR)
 
 hybrid_effects_plot.Rout: hybrid_effects.Rout effects_plot.R
-	$(run-R)
+	$(pipeR)
 ######################################################################
 
 ## Mike, why do we have so many .mk files? Can we pull these into a Makefile, would that be easier to read and navigate/
