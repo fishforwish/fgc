@@ -8,9 +8,9 @@ Try to combine heardGC and heardFGC; look at descriptions first.
 
 Why was fgc scaled?
 
-Edu in mls5 recode seems wrong.
+NEED TO CHECK Edu. The recode.rout seems wrong except maybe Kenya.
 
-Wealth code was weried in both recode and select.csv 
+Wealth code was weird in both recode and select.csv 
 
 heardFGC and heardGC in ml5 recode and select.csv dont' seem to match the original data.
 
