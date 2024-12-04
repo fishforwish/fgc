@@ -1,2 +1,3 @@
+library(shellpipes); manageConflicts()
 
-print(hist(combined_dat$wealth))
+print(hist(rdsRead()$wealth))

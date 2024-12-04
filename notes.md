@@ -1,3 +1,13 @@
+
+2024 Dec 04 (Wed)
+=================
+
+stuck on tables.R; some sort of format errors
+
+Look into values for the Persist variable
+
+git rm *brms*.R
+
 2024 Aug 21 
 ===========
 G116: Intends to have daughter(s) circumcised in future.  This is our main predictor.  This question was answered by women who has daughter not yet cut. They were from G115 (Any daughter who is not circumcise) who answered yes and from G108 (Number of  daughters circumcised) who answered 95 (No daughter circumcised).   

@@ -1,25 +1,18 @@
+
+library(shellpipes); manageConflicts()
+
 library(dplyr)
 library(ggplot2)
 library(tidyr)
 library(ggforce)
 
-combined_dat <- data.frame()
-for(r in input_files){
-  combined_dat <- bind_rows(combined_dat, readRDS(r))
-}
-
-print(head(combined_dat))
-
-combined_dat <- (combined_dat
-	%>% mutate_if(sapply(.,is.character),as.factor)
-)
-
+combined_dat <- rdsReadList() |> bind_rows()
 
 groupdat <- (combined_dat
 	%>% select(clusterId, CC,contains("group"))
 	%>% distinct()
 	%>% gather(key = type, value = prevalence, -c(CC, clusterId))
-	%>% mutate_if(sapply(.,is.character),as.factor)
+	%>% mutate_if(is.character, as.factor)
 )
 
 print(ggplot(groupdat, aes(prevalence))
@@ -35,4 +28,5 @@ print(ggplot(groupdat, aes(prevalence,group=CC))
 	+ theme_bw()
 )
 }
-# rdsave(combined_dat)
+
+rdsSave(combined_dat)
