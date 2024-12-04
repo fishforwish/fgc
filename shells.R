@@ -1,10 +1,3 @@
-## norm
-## we want to calculate the community avg but not including the individual
-## the logic to do it is:
-## create the denominator (d1) by taking the number of people in the community
-## create the new_numerator (n1) by taking the sum of all responses minus the individual of interest
-## new_denominator (d2) = d1-1
-## new group mean = new_numerator/new_denominator
 
 library(shellpipes); manageConflicts()
 

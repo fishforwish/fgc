@@ -147,8 +147,8 @@ recodes.summary.output: $(sets:%=%.recode.summary.Routput)
 %.community.Rout: community.R %.recode.rds recodeFuns.rda
 	$(pipeR)
 
-prevalence.Rout: ke5.community.Rds ng5.community.Rds sl5.community.Rds ml5.community.Rds prevalence.R
-	$(run-R)
+prevalence.Rout: prevalence.R ke5.community.rds ng5.community.rds sl5.community.rds ml5.community.rds
+	$(pipeR)
 
 wealth.Rout: prevalence.Rout wealth.R
 	$(run-R)
