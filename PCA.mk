@@ -2,8 +2,9 @@
 all_PCA.Rout: ke5.benePCA.Rds ml5.benePCA.Rds sl5.benePCA.Rds ng5.benePCA.Rds all_PCA.R
 	$(run-R)
 
+## sl5.benePCA.Rout: catPCA.R
 %.benePCA.Rout: %.beneQuant.Rout catPCA.R
-	$(run-R)
+	$(pipeR)
 
 benePCAs.output: $(sets:%=%.benePCA.Routput)
 	cat $^ > $@
