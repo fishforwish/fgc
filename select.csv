@@ -33,13 +33,17 @@ attRefuseSex, V744D
 attBurnFood, V744E
 # FGC Basic Info
 requirReligion, G118, FG122
+requirCulture, SGC17A
+##keir8
+requireSociety, SGC17B
+##keir8
 heardFGC, G100, FG100, S631D
 heardGC, G101, S631E
 # Predictors 1:
 fgc, G102, FG103, S821, S1002, S631F
 # predictor 2: FGC benefit
 beneHygiene, G117A, FG119A
-beneAcceptance, G117B, FG119B
+beneAcceptance, G117B, FG119B, SGC8CK
 beneMarriage, G117C, FG119C
 benePreventPreSex, G117D, FG119D, FG121
 benePleasureM, G117E, FG119E

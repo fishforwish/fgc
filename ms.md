@@ -29,7 +29,7 @@ Beliefs of justifying FGC practice was as much rooted in traditional values as t
 Although FGC norms associated with FGC behavior have been studied as aforementioned, and analyses of FGC practices using DHS data were also found (such as [AyenWol23, AzezWill20, TordBish22, YounCheo20]), there was limited clarification of quantitative types of individual normative attitudes (e.g., attitudinal position of FGC values) and behavioural intention in response to the community persistence. In this study, we quantitatively analyzed types of social norms women attached to FGC beliefs categorized in DHS along with women's gender-based awareness [GrosHayf19] both individually and collectively. Integrating gender awareness when analyzing FGC intention was relevant [BoylSvec19, HayfGarv20, Youn04, YounCheo20].   We believe this is the first FGC study integrating quantitative DHS modules of FGC normative attitudes and gender awareness to model the FGC intention within the community influence.  Hopefully, the finding will add a robust understanding of advanced quantitative comparisons of FGC norms across nations.
 
 
-Some women might decide to have FGC on their daughtrs even they do not believe the value themselves [ShelResh16]
+Some women might decide to have FGC on their daughters even they do not believe the value themselves [ShelResh16]
 Research Questions
 =================
 \hypertarget{Research-Questions}{%
