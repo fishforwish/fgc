@@ -130,12 +130,6 @@ Ignore += *.output
 recodes.output: $(sets:%=%.recode.Routput)
 	cat $^ > $@
 
-recodes.objects.output: $(sets:%=%.recode.objects.Routput)
-	cat $^ > $@
-
-recodes.summary.output: $(sets:%=%.recode.summary.Routput)
-	cat $^ > $@
-
 ######################################################################
 
 ## Code for this is in PCA.mk

@@ -1,3 +1,10 @@
+
+## Structure
+
+This project still has many different make files to go through different steps; in the process of updating things to the pipeR paradigm 2024 Dec 11 (Wed)
+
+## Notes
+
 DHS login:  Mac email. Study
 
 2024 Jul 30 (Tue): Old-data paper is ms.md; comparison paper is ms.kenya.md. Should just build a new repo??
@@ -136,7 +143,6 @@ daughterToFgc, G116, FG118
 -------------------------------
 
 * We are also interested in __GPS__ data.  We can map fgc concentration and location by showing where fgc are mostly practiced.  Here are some articles we can learn from: http://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1001626: "WSS data were sourced from national household cluster-sample surveys undertaken as part of multiple indicator cluster surveys (MICS) (http://www.childinfo.org/mics4_surveys.html; implementation supported by UNICEF), Demographic and Health Surveys (DHS) and national malaria and AIDS indicator surveys (MIS/AIS) (http://www.measuredhs.com/data/available-datasets.cfm; USAID) and living standard measurement studies (LSMS) (http://iresearch.worldbank.org/lsms/lsmssurveyFinder.htm; World Bank). "
-
 
 # Journals to consider:
 

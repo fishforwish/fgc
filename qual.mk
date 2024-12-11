@@ -1,20 +1,14 @@
 #### Qual
 
+bene.Rout: bene.R
+	$(wrapR)
 
-%.beneQual.Rout:	%.recode.Rout bene.R qual.R
-			$(run-R)
+## sl5.beneQual.Rout: qual.R
+%.beneQual.Rout: qual.R	%.recode.rds bene.rda
+	$(pipeR)
  
 beneQuals.output:	$(sets:%=%.beneQual.Routput)
 			cat $^ > $@
- 
-beneQuals.objects.output:	$(sets:%=%.beneQual.objects.Routput)
-				cat $^ > $@
- 
-beneQuals.summary.output:	$(sets:%=%.beneQual.summary.Routput)
-				cat $^ > $@
-
-
-######################################################################
 
 %.attQual.Rout:	%.recode.Rout att.R qual.R
 		$(run-R)
