@@ -1,3 +1,13 @@
+
+2024 Dec 20 (Fri)
+=================
+
+daughterPlan_clmm.Rout is running now. It was ready to be repiped, because it doesn't use anything in the PCA pathway, apparently.
+
+We need to decide if we prefer PCA- or average-based models. If we prefer average-based, we probably need to rescue the PCA stuff anyway and see what we learned from it.
+
+We didn't look at the daughterPlan_clmm results yet because of fishing concerns.
+
 2024 Dec 18 (Wed)
 =================
 For next meeting:

@@ -165,7 +165,7 @@ fgc_table.pdf: table_output.tex
 
 ## fitting using clmm
 
-daughterPlan_clmm.Rout: prevalence.Rout daughterPlan_clmm.R
+daughterPlan_clmm.Rout: daughterPlan_clmm.R prevalence.rds
 fgcPersist_clmm.Rout: prevalence.Rout fgcPersist_clmm.R
 hybrid_clmm.Rout: prevalence.Rout hybrid_clmm.R
 
