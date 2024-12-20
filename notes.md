@@ -1,3 +1,13 @@
+2024 Dec 18 (Wed)
+=================
+For next meeting:
+To look at all_PCA.Rout.pdf to decide if to exclude certain fgc benefit variables.
+
+We decided the following based on comments from the data lunch and a meeting afterwards with Mike:
+
+The number of don't know on daughterFuture is not really small (kind of on the boarder), so we decided not to drop it.
+
+We will use clmm/ordinal, no brms.  It not working, we will use Ben's suggestions.We shall fit a small dataset of clmm and do experiment; or find a program to fit our small data to find out how it works.
 
 2024 Dec 04 (Wed)
 =================

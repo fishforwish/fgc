@@ -21,6 +21,8 @@ job, V714
 # daughterDead, V207
 # LNdaughterFgced, G109
 # ageDaughterFgced, G113
+daughterCut, G121
+#WhoCutDaughtr, G114,
 # Confounders 1
 mediaNpmg, V157
 mediaRadio, V158
@@ -34,16 +36,17 @@ attBurnFood, V744E
 # FGC Basic Info
 requirReligion, G118, FG122
 requirCulture, SGC17A
-##keir8
-requireSociety, SGC17B
-##keir8
+##KE8, SL7
+requireSociety, SGC17B, SGC8CK
+##KE8, SL7
 heardFGC, G100, FG100, S631D
 heardGC, G101, S631E
 # Predictors 1:
 fgc, G102, FG103, S821, S1002, S631F
 # predictor 2: FGC benefit
 beneHygiene, G117A, FG119A
-beneAcceptance, G117B, FG119B, SGC8CK
+beneAcceptance, G117B, FG119B, SGC8CK, SGC17B
+# also in KE8, SL7
 beneMarriage, G117C, FG119C
 benePreventPreSex, G117D, FG119D, FG121
 benePleasureM, G117E, FG119E
