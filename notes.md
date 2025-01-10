@@ -1,3 +1,8 @@
+2024 Dec 21 (Sat)
+=================
+Chyun played with hybrid_clmm.Rout but huy rid_clmm.R found no combimed_dat to make the Rout.
+
+Chyun also tried to make effects_plot.Rout but no betadf was found
 
 2024 Dec 20 (Fri)
 =================
