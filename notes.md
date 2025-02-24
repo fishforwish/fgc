@@ -2,7 +2,9 @@
 =================
 Chyun played with hybrid_clmm.Rout but huy rid_clmm.R found no combimed_dat to make the Rout.
 
-Chyun also tried to make effects_plot.Rout but no betadf was found
+Chyun also tried to make effects_plot.Rout but no betadf was found.
+
+Based on the to all_PCA.Rout.pdf, I don't know how to decide if we prefer PCA- or average-based models.  Need help. 
 
 2024 Dec 20 (Fri)
 =================
