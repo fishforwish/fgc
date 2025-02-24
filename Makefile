@@ -100,10 +100,10 @@ sets = ke5 ml5 ng5 sl5
 ### Selecting
 select=$(sets:%=%.select.Rout)
 
-## wselect.R needs to be moved to a general place
-$(select): %.select.Rout: fgc_DHS/%.rda select.csv wselect.R
+## select.R needs to be moved to a general place
+$(select): %.select.Rout: fgc_DHS/%.rda select.csv select.R
 	$(pipeR)
-## ke5.select.Routput: wselect.R
+## ke5.select.Routput: select.R
 
 Ignore += select.output
 select.output: $(sets:%=%.select.Routput)
