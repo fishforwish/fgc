@@ -14,6 +14,7 @@ Ignore += .gitignore
 Sources += $(wildcard *.lmk)
 
 testsetup:
+	$(LNF) ../fgc_DHS .
 	ln -s jd.lmk local.mk
 
 Ignore += fgc_DHS
@@ -129,9 +130,6 @@ recodeFuns.Rout: recodeFuns.R
 Ignore += *.output
 recodes.output: $(sets:%=%.recode.Routput)
 	cat $^ > $@
-
-testsetup:
-	$(LNF) ../fgc_DHS .
 
 ## ke5.recode.dd.mg.pdf:
 
