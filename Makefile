@@ -130,7 +130,7 @@ Ignore += *.output
 recodes.output: $(sets:%=%.recode.Routput)
 	cat $^ > $@
 
-## recodes.output.dd.mg.pdf:
+## ke5.recode.dd.mg.pdf:
 
 ######################################################################
 
