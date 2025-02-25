@@ -130,6 +130,9 @@ Ignore += *.output
 recodes.output: $(sets:%=%.recode.Routput)
 	cat $^ > $@
 
+testsetup:
+	$(LNF) ../fgc_DHS .
+
 ## ke5.recode.dd.mg.pdf:
 
 ######################################################################
