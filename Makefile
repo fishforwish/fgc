@@ -250,6 +250,7 @@ makestuff/Makefile:
 ## -include makestuff/autorefs.mk
 -include makestuff/pipeR.mk
 -include makestuff/texi.mk
+-include makestuff/makegraph.mk
 
 -include makestuff/git.mk
 -include makestuff/visual.mk
