@@ -13,7 +13,8 @@ Ignore += .gitignore
 
 Sources += $(wildcard *.lmk)
 
-## ln -s jd.lmk local.mk ##
+testsetup:
+	ln -s jd.lmk local.mk
 
 Ignore += fgc_DHS
 -include local.mk
@@ -22,7 +23,8 @@ drop ?= ~/Dropbox
 fgc_DHS: dir=$(drop)
 fgc_DHS:
 	$(linkdir)
-fgc_DHS/%: | fgc_DHS
+fgc_DHS/%:
+	$(MAKE) fgc_DHS
 
 ######################################################################
 
@@ -33,7 +35,7 @@ Sources += $(wildcard *.md)
 
 ######################################################################
 
-alwayspipeR = defined
+autopipeR = defined
 
 hist.Rout: hist.R
 
@@ -98,9 +100,10 @@ sets = ke5 ml5 ng5 sl5
 ### Selecting
 select=$(sets:%=%.select.Rout)
 
-## wselect.R needs to be moved to a general place
-$(select): %.select.Rout: fgc_DHS/%.rda select.csv wselect.R
-## ke5.select.Routput: wselect.R
+## select.R needs to be moved to a general place
+$(select): %.select.Rout: fgc_DHS/%.rda select.csv select.R
+	$(pipeR)
+## ke5.select.Routput: select.R
 
 Ignore += select.output
 select.output: $(sets:%=%.select.Routput)
@@ -114,10 +117,10 @@ select.summary.output: $(sets:%=%.select.summary.Routput)
 ######################################################################
 
 ### Recoding
-Sources += $(wildcard *.ccsv *.tsv)
+Sources += $(wildcard *.ccsv *.tsv *.csv)
 
-## ke5.recode.Rout: recode.R
 .PRECIOUS: %.recode.Rout
+## ke5.recode.Routput: recode.R
 %.recode.Rout: recode.R %.select.rda recodeFuns.rda religion_basic.ccsv partnership_basic.ccsv
 	$(pipeR)
 
@@ -125,12 +128,6 @@ recodeFuns.Rout: recodeFuns.R
 
 Ignore += *.output
 recodes.output: $(sets:%=%.recode.Routput)
-	cat $^ > $@
-
-recodes.objects.output: $(sets:%=%.recode.objects.Routput)
-	cat $^ > $@
-
-recodes.summary.output: $(sets:%=%.recode.summary.Routput)
 	cat $^ > $@
 
 ######################################################################
@@ -144,19 +141,20 @@ recodes.summary.output: $(sets:%=%.recode.summary.Routput)
 %.community.Rout: community.R %.recode.rds recodeFuns.rda
 	$(pipeR)
 
-prevalence.Rout: ke5.community.Rds ng5.community.Rds sl5.community.Rds ml5.community.Rds prevalence.R
-	$(run-R)
+## Combine data sets, make a bunch of plots
+prevalence.Rout: prevalence.R ke5.community.rds ng5.community.rds sl5.community.rds ml5.community.rds
+	$(pipeR)
 
-wealth.Rout: prevalence.Rout wealth.R
+## Histogram of wealth. Why?
+wealth.Rout: wealth.R prevalence.rds
 	$(run-R)
 
 ## Table
-
-tables.Rout: prevalence.Rout tables.R
-	$(run-R)
+tables.Rout: tables.R prevalence.rds
+	$(pipeR)
 
 tabletex.Rout: tables.Rout table_funs.R tabletex.R
-	$(run-R)
+	$(pipeR)
 
 Ignore += table_output.tex
 table_output.tex: tabletex.Rout ; touch $@
@@ -167,7 +165,7 @@ fgc_table.pdf: table_output.tex
 
 ## fitting using clmm
 
-daughterPlan_clmm.Rout: prevalence.Rout daughterPlan_clmm.R
+daughterPlan_clmm.Rout: daughterPlan_clmm.R prevalence.rds
 fgcPersist_clmm.Rout: prevalence.Rout fgcPersist_clmm.R
 hybrid_clmm.Rout: prevalence.Rout hybrid_clmm.R
 
@@ -175,41 +173,41 @@ hybrid_clmm.Rout: prevalence.Rout hybrid_clmm.R
 
 
 daughterPlan_varlvlsum.Rout: daughterPlan_clmm.Rout varlvlsum.R
-	$(run-R)
+	$(pipeR)
 fgcPersist_varlvlsum.Rout: fgcPersist_clmm.Rout varlvlsum.R
-	$(run-R)
+	$(pipeR)
 hybrid_varlvlsum.Rout: hybrid_clmm.Rout varlvlsum.R
-	$(run-R)
+	$(pipeR)
 
 
 daughterPlan_isoplots.Rout: daughterPlan_clmm.Rout daughterPlan_varlvlsum.Rout ordfuns.Rout plotFuns.Rout rename_dat.Rout iso.R
-	$(run-R)
+	$(pipeR)
 
 fgcPersist_isoplots.Rout: fgcPersist_clmm.Rout fgcPersist_varlvlsum.Rout ordfuns.Rout plotFuns.Rout rename_dat.Rout iso.R
-	$(run-R)
+	$(pipeR)
 
 hybrid_isoplots.Rout: hybrid_clmm.Rout hybrid_varlvlsum.Rout ordfuns.Rout plotFuns.Rout rename_dat.Rout iso.R
-	$(run-R)
+	$(pipeR)
 
 all_full_models: futurefgc_full_clmm.Rout futurefgcDau_full_clmm.Rout daughterfgc_full_clmm.Rout
 
 fgcPersist_effects.Rout: fgcPersist_clmm.Rout rename_dat.Rout single_var_effect.R
-	$(run-R)
+	$(pipeR)
 
 daughterPlan_effects.Rout: daughterPlan_clmm.Rout rename_dat.Rout single_var_effect.R
-	$(run-R)
+	$(pipeR)
 
 hybrid_effects.Rout: hybrid_clmm.Rout rename_dat.Rout single_var_effect.R
-	$(run-R)
+	$(pipeR)
 
 fgcPersist_effects_plot.Rout: fgcPersist_effects.Rout effects_plot.R
-	$(run-R)
+	$(pipeR)
 
 daughterPlan_effects_plot.Rout: daughterPlan_effects.Rout effects_plot.R
-	$(run-R)
+	$(pipeR)
 
 hybrid_effects_plot.Rout: hybrid_effects.Rout effects_plot.R
-	$(run-R)
+	$(pipeR)
 ######################################################################
 
 ## Mike, why do we have so many .mk files? Can we pull these into a Makefile, would that be easier to read and navigate/
@@ -240,10 +238,11 @@ Sources += qual.mk quant.mk plots.mk comPlots.mk bioPlots.mk PCA.mk
 
 msrepo = https://github.com/dushoff
 
-Makefile: makestuff/Makefile
-makestuff/Makefile:
-	git clone $(msrepo)/makestuff
-	ls makestuff/Makefile
+Makefile: makestuff/00.stamp
+makestuff/%.stamp:
+	- $(RM) makestuff/*.stamp
+	(cd makestuff && $(MAKE) pull) || git clone --depth 1 $(msrepo)/makestuff
+	touch $@
 
 -include makestuff/os.mk
 

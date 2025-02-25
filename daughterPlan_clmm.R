@@ -1,6 +1,10 @@
+library(shellpipes)
 library(ordinal)
 library(splines)
 
+combined_dat <- rdsRead()
+
+summary(combined_dat)
 
 modAns <- model.frame(
   daughterPlan ~ group_daughterPlan

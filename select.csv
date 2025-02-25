@@ -21,6 +21,8 @@ job, V714
 # daughterDead, V207
 # LNdaughterFgced, G109
 # ageDaughterFgced, G113
+daughterCut, G121
+#WhoCutDaughtr, G114,
 # Confounders 1
 mediaNpmg, V157
 mediaRadio, V158
@@ -33,13 +35,18 @@ attRefuseSex, V744D
 attBurnFood, V744E
 # FGC Basic Info
 requirReligion, G118, FG122
+requirCulture, SGC17A
+##KE8, SL7
+requireSociety, SGC17B, SGC8CK
+##KE8, SL7
 heardFGC, G100, FG100, S631D
 heardGC, G101, S631E
 # Predictors 1:
 fgc, G102, FG103, S821, S1002, S631F
 # predictor 2: FGC benefit
 beneHygiene, G117A, FG119A
-beneAcceptance, G117B, FG119B
+beneAcceptance, G117B, FG119B, SGC8CK, SGC17B
+# also in KE8, SL7
 beneMarriage, G117C, FG119C
 benePreventPreSex, G117D, FG119D, FG121
 benePleasureM, G117E, FG119E
@@ -47,10 +54,14 @@ beneReligion, G117F, FG119F
 beneRedPromis, G117G,
 beneRedSTD, G117H
 beneOther, G117X, FG119X
-# Response 1: daughter FGC status
+# Response 1: daughterToFgc (daughter FGC status)
+daughterToFgc, G116, FG108
+## For fgc module, see https://dhsprogram.com/pubs/pdf/DHSQMP/DHS5_Module_Female_Genital_Cutting.pdf (or https://dhsprogram.com/pubs/pdf/DHSQM/DHS8-Module-FGCut-Qnnaire-EN-23Jan2020-DHSQM.pdf)
 numDaughterFgced, G108, FG110, S631I
 daughterNotFgced, G115
-daughterToFgc, G116, FG118
-# Response 2: FGC future
+## G108: Number of daughters circumcised (95: No daughter circumcised)
+## G115: Any daughter who is not circumcised (for those from G108)
+## G116: Intends to have daughter(s) circumcised in future.  This question was for women who has daughter not yet cut. They were from G115 (Any daughter who is not circumcise) and from G108 who answered 95 (No daughter circumcised).  A side test can be about womem who had daughters cut and whether going to cut the other daughers.
+# Response 2: continueFgc (FGC future):
 continueFgc, G119, S1012, S631G, FG123
 # potential interest: ageFgc, G106, S1003; whoDidFgc, G107; gender control (contrJealous/D101A, contrAccusesUnfaith/ D101B, contrProhibitFriend/D101C, contrLimitFamily/D101D, contrWhere, D101E, contrMoney/D101F, conTotal/D102), daughterAgeFgc, G113, fgcT2, G103, fgcT1, G104, fgcT3, G105, fgcRemoved, G103, FG104, fgcNicked, G104, FG105, fgcSewn, G105, FG106, daughterFgcRemoved, G110, FG112, daughterFgcNicked, G111, FG113, daughterFgcSewn, G112, FG114

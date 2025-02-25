@@ -46,4 +46,5 @@ Questions <- NewQuestions
  
 print(data.frame(Question=Questions))
  
+summary(Answers)
 saveVars(Answers, Questions)
