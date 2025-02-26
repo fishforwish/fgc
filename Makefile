@@ -76,6 +76,9 @@ fgc_DHS/%.Rout: convert_dataset.R
 
 fgc_DHS/ke8.Rout: fgc_DHS/KEIR8CFL.SAV convert_dataset.R
 	$(pipeR)
+	
+fgc_DHS/ke8.Rout: fgc_DHS/SLIR7AFL.SAV convert_dataset.R
+	$(pipeR)	
 
 ifdef convert_files
 
