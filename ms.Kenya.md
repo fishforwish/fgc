@@ -18,8 +18,7 @@ The normative values guide most people in a group in the direction of what they 
 
 
 
-
- Keyna has shown clear decrease of FGC prevalence over the decades.  To study if the norm has shifted and how it associated with the decline of FGC practice in a community setting can broaden our understanding of social norm impacting FGC, and effectiveness of intervention in social context.
+Keyna has shown clear decrease of FGC prevalence over the decades.  To study if the norm has shifted and how it associated with the decline of FGC practice in a community setting can broaden our understanding of social norm impacting FGC, and effectiveness of intervention in social context.
 
 
 =====
