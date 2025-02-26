@@ -74,6 +74,9 @@ fgc_DHS/%.Rout: convert_dataset.R
 
 ######################################################################
 
+fgc_DHS/ke8.Rout: fgc_DHS/KEIR8CFL.SAV convert_dataset.R
+	$(pipeR)
+
 ifdef convert_files
 
 fgc_DHS/ke5.Rout: fgc_DHS/KEIR52FL.SAV convert_dataset.R
@@ -94,7 +97,7 @@ endif
 Sources += $(wildcard *.R)
 
 ### Data sets
-sets = ke5 ml5 ng5 sl5
+sets = ke5 ml5 ng5 sl5 ke8
 
 ######################################################################
 
