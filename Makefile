@@ -107,7 +107,7 @@ select=$(sets:%=%.select.Rout)
 ## select.R needs to be moved to a general place
 $(select): %.select.Rout: fgc_DHS/%.rda select.csv select.R
 	$(pipeR)
-## ke5.select.Routput: select.R
+## ke8.select.Routput: select.R
 
 Ignore += select.output
 select.output: $(sets:%=%.select.Routput)
