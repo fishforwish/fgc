@@ -99,7 +99,7 @@ endif
 Sources += $(wildcard *.R)
 
 ### Data sets
-sets = ke5 ml5 ng5 sl5 ke8
+sets = ke5 ml5 ng5 sl5 ke8 sl7
 
 ######################################################################
 
