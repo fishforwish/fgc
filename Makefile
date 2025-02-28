@@ -13,9 +13,7 @@ Ignore += .gitignore
 
 Sources += $(wildcard *.lmk)
 
-testsetup:
-	$(LNF) ../fgc_DHS .
-	ln -s jd.lmk local.mk
+mirrors += fgc_DHS
 
 Ignore += fgc_DHS
 -include local.mk
@@ -26,6 +24,10 @@ fgc_DHS:
 	$(linkdir)
 fgc_DHS/%:
 	$(MAKE) fgc_DHS
+
+testsetup:
+	$(LNF) ../fgc_DHS .
+	ln -s jd.lmk local.mk
 
 ######################################################################
 
@@ -258,6 +260,7 @@ makestuff/%.stamp:
 -include makestuff/pipeR.mk
 -include makestuff/texi.mk
 -include makestuff/makegraph.mk
+-include makestuff/mirror.mk
 
 -include makestuff/git.mk
 -include makestuff/visual.mk
