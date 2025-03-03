@@ -4,6 +4,8 @@ Research questions:
 
 2025 Mar 3 (Mon)
 =================
+* Git errors to be fixed: couldn't sync
+* object 'combined_dat' not found in prevalence.Rout to make fgcPersist_clmm.Rout
 
 
 2024 Dec 21 (Sat)
