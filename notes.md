@@ -8,6 +8,15 @@ Research questions:
 	* This was a Dropbox legacy problem, fixed for Chyun now
 * object 'combined_dat' not found in prevalence.Rout to make fgcPersist_clmm.Rout
 
+Make sure scripts and rules are updated before trying to run. 
+* There should be no .Rout dependencies
+* Scripts should have a shellpipes call
+
+Working on Mike's table stuff:
+* several deprecated calls in tables.R
+* updated tabletex, getting a mysterious error, and it's all pretty ugly
+
+Anything with rdsave needs to be updated to saveVars or saveEnvironment.
 
 2024 Dec 21 (Sat)
 =================

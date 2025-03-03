@@ -163,31 +163,36 @@ wealth.Rout: wealth.R prevalence.rds
 tables.Rout: tables.R prevalence.rds
 	$(pipeR)
 
-tabletex.Rout: tables.Rout table_funs.R tabletex.R
+table_funs.Rout: table_funs.R
+	$(wrapR)
+
+tabletex.Rout: tabletex.R table_funs.rda tables.rds
 	$(pipeR)
 
 Ignore += table_output.tex
+## table_output.tex: tabletex.R
 table_output.tex: tabletex.Rout ; touch $@
 
 Sources += fgc_table.tex
+## fgc_table.pdf: fgc_table.tex
 fgc_table.pdf: table_output.tex
 
 ## fitting using clmm
 
 daughterPlan_clmm.Rout: daughterPlan_clmm.R prevalence.rds
 fgcPersist_clmm.Rout: fgcPersist_clmm.R prevalence.rds
-hybrid_clmm.Rout: prevalence.Rout hybrid_clmm.R
+
+## Not updated 2025 Mar 03 (Mon)
+## hybrid_clmm.Rout: prevalence.Rout hybrid_clmm.R
 
 ## calculating variable level p-values
 
-
-daughterPlan_varlvlsum.Rout: daughterPlan_clmm.Rout varlvlsum.R
+daughterPlan_varlvlsum.Rout: varlvlsum.R daughterPlan_clmm.rda
 	$(pipeR)
 fgcPersist_varlvlsum.Rout: fgcPersist_clmm.Rout varlvlsum.R
 	$(pipeR)
 hybrid_varlvlsum.Rout: hybrid_clmm.Rout varlvlsum.R
 	$(pipeR)
-
 
 daughterPlan_isoplots.Rout: daughterPlan_clmm.Rout daughterPlan_varlvlsum.Rout ordfuns.Rout plotFuns.Rout rename_dat.Rout iso.R
 	$(pipeR)
@@ -257,7 +262,7 @@ makestuff/%.stamp:
 
 ## -include makestuff/autorefs.mk
 -include makestuff/pipeR.mk
--include makestuff/texi.mk
+-include makestuff/texj.mk
 -include makestuff/makegraph.mk
 -include makestuff/mirror.mk
 
