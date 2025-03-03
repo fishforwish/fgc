@@ -172,11 +172,10 @@ table_output.tex: tabletex.Rout ; touch $@
 Sources += fgc_table.tex
 fgc_table.pdf: table_output.tex
 
-
 ## fitting using clmm
 
 daughterPlan_clmm.Rout: daughterPlan_clmm.R prevalence.rds
-fgcPersist_clmm.Rout: prevalence.Rout fgcPersist_clmm.R
+fgcPersist_clmm.Rout: fgcPersist_clmm.R prevalence.rds
 hybrid_clmm.Rout: prevalence.Rout hybrid_clmm.R
 
 ## calculating variable level p-values

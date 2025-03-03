@@ -5,6 +5,7 @@ Research questions:
 2025 Mar 3 (Mon)
 =================
 * Git errors to be fixed: couldn't sync
+	* This was a Dropbox legacy problem, fixed for Chyun now
 * object 'combined_dat' not found in prevalence.Rout to make fgcPersist_clmm.Rout
 
 
