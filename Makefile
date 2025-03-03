@@ -13,7 +13,7 @@ Ignore += .gitignore
 
 Sources += $(wildcard *.lmk)
 
-mirrors += fgc_DHS
+## mirrors += fgc_DHS
 
 Ignore += fgc_DHS
 -include local.mk
