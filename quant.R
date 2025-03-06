@@ -1,4 +1,10 @@
-cat ("\n\n##########  RTARGET  ##########\n\n")
+library(shellpipes)
+
+print(paste("######## TARGET", targetname()))
+
+loadEnvironments()
+
+catList <- grepl(catname, names(Answers))
 levelCodeTable <- (read.table(input_files, header=FALSE, stringsAsFactors=FALSE, sep="\t", row.names=1))
 
 levelCodes <- levelCodeTable[[1]]

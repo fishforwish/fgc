@@ -99,7 +99,8 @@ endif
 Sources += $(wildcard *.R)
 
 ### Data sets
-sets = ke5 ml5 ng5 sl5 ke8 sl7
+sets = ke5 ml5 ng5 sl5
+newsets = ke8 sl7
 
 ######################################################################
 
@@ -226,9 +227,12 @@ Sources += qual.mk quant.mk plots.mk comPlots.mk bioPlots.mk PCA.mk
 
 -include qual.mk
 
+quals: beneQuals.output mediaQuals.output attQuals.output
+
 #### Quant
 
 -include quant.mk
+quants: beneQuants.output mediaQuants.output attQuants.output
 
 #### PCA
 

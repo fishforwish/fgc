@@ -1,5 +1,6 @@
 
-%.beneQuant.Rout: %.beneQual.Rout levelcodes_bene.tsv quant.R
+## ke5.beneQuant.Rout: quant.R levelcodes_bene.tsv
+%.beneQuant.Rout: %.beneQual.rda levelcodes_bene.tsv quant.R
 	$(run-R)
 
 beneQuants.output: $(sets:%=%.beneQuant.Routput)
