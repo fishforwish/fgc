@@ -39,7 +39,6 @@ fit_time <- system.time(mod<- clmm(
   , data=modAns)
 )
 
-
 print(summary(mod))
 
-# rdsave(mod, modAns, fit_time)
+saveVars(mod, modAns, fit_time)

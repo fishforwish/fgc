@@ -1,6 +1,9 @@
 library(ordinal)
 library(splines)
 
+library(shellpipes)
+
+combined_dat <- rdsRead()
 
 modAns <- model.frame(
   Persist ~ group_Persist

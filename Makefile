@@ -13,9 +13,7 @@ Ignore += .gitignore
 
 Sources += $(wildcard *.lmk)
 
-testsetup:
-	$(LNF) ../fgc_DHS .
-	ln -s jd.lmk local.mk
+## mirrors += fgc_DHS
 
 Ignore += fgc_DHS
 -include local.mk
@@ -26,6 +24,10 @@ fgc_DHS:
 	$(linkdir)
 fgc_DHS/%:
 	$(MAKE) fgc_DHS
+
+testsetup:
+	$(LNF) ../fgc_DHS .
+	ln -s jd.lmk local.mk
 
 ######################################################################
 
@@ -74,10 +76,6 @@ fgc_DHS/%.Rout: convert_dataset.R
 
 ######################################################################
 
-
-fgc_DHS/sl7.Rout: fgc_DHS/SLIR7AFL.SAV convert_dataset.R
-	$(pipeR)	
-
 ifdef convert_files
 fgc_DHS/ke8.Rout: fgc_DHS/KEIR8CFL.SAV convert_dataset.R
 	$(pipeR)
@@ -89,7 +87,8 @@ fgc_DHS/ng5.Rout: fgc_DHS/NGIR53FL.SAV convert_dataset.R
 	$(run-R)
 fgc_DHS/sl5.Rout: fgc_DHS/SLIR51FL.SAV convert_dataset.R
 	$(run-R)
-
+fgc_DHS/sl7.Rout: fgc_DHS/SLIR7AFL.SAV convert_dataset.R
+	$(pipeR)	
 endif
 
 ##################################################################
@@ -162,32 +161,36 @@ wealth.Rout: wealth.R prevalence.rds
 tables.Rout: tables.R prevalence.rds
 	$(pipeR)
 
-tabletex.Rout: tables.Rout table_funs.R tabletex.R
+table_funs.Rout: table_funs.R
+	$(wrapR)
+
+tabletex.Rout: tabletex.R table_funs.rda tables.rds
 	$(pipeR)
 
 Ignore += table_output.tex
+## table_output.tex: tabletex.R
 table_output.tex: tabletex.Rout ; touch $@
 
 Sources += fgc_table.tex
+## fgc_table.pdf: fgc_table.tex
 fgc_table.pdf: table_output.tex
-
 
 ## fitting using clmm
 
 daughterPlan_clmm.Rout: daughterPlan_clmm.R prevalence.rds
-fgcPersist_clmm.Rout: prevalence.Rout fgcPersist_clmm.R
-hybrid_clmm.Rout: prevalence.Rout hybrid_clmm.R
+fgcPersist_clmm.Rout: fgcPersist_clmm.R prevalence.rds
+
+## Not updated 2025 Mar 03 (Mon)
+## hybrid_clmm.Rout: prevalence.Rout hybrid_clmm.R
 
 ## calculating variable level p-values
 
-
-daughterPlan_varlvlsum.Rout: daughterPlan_clmm.Rout varlvlsum.R
+daughterPlan_varlvlsum.Rout: varlvlsum.R daughterPlan_clmm.rda
 	$(pipeR)
 fgcPersist_varlvlsum.Rout: fgcPersist_clmm.Rout varlvlsum.R
 	$(pipeR)
 hybrid_varlvlsum.Rout: hybrid_clmm.Rout varlvlsum.R
 	$(pipeR)
-
 
 daughterPlan_isoplots.Rout: daughterPlan_clmm.Rout daughterPlan_varlvlsum.Rout ordfuns.Rout plotFuns.Rout rename_dat.Rout iso.R
 	$(pipeR)
@@ -260,8 +263,9 @@ makestuff/%.stamp:
 
 ## -include makestuff/autorefs.mk
 -include makestuff/pipeR.mk
--include makestuff/texi.mk
+-include makestuff/texj.mk
 -include makestuff/makegraph.mk
+-include makestuff/mirror.mk
 
 -include makestuff/git.mk
 -include makestuff/visual.mk

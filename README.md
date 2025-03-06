@@ -15,15 +15,14 @@ The reference sites are at auto.bib and manual.bib (and in a way from https://ww
 
 Basically, this paper is about 'norm and behaviors'. We made two papers: 
 First, 'KMNS': Kenya 2008/9, Mali 2006 (C: the report was in French), Nigeria 2008 and Sierra Leone 2008. (To add Guinea 2005?)
-Second: Kenya 2008 vs 2022.The Kenya 2022 (questions under "SGC") FGC data is different from the 2008 but comparable to its 2008/9 data. (see https://github.com/fishforwish/fgc_Kenya)
+Second: Kenya 2008 vs 2022.The Kenya 2022 (questions under "SGC") FGC data is different from the 2008 but maybe comparable to its 2008/9 data. (see https://github.com/fishforwish/fgc_Kenya)
 
-DHS archives was updated by Aug 6, 2024, and the newer sets (Kenya 2014, Mali 2012-3/18, Nigeria 2013/18 and Sierra Leon 2019) did not have comparable questionnaire for this study, so we sticked to the older datasets.  Meanwhile, we found Gambia 2019-20 with relatively similar FGC data and with IPV modules.
+DHS archives was updated by Aug 6, 2024, and the newer sets (Kenya 2014, Mali 2012-3/18, Nigeria 2013/18 and Sierra Leon 2019) did not have comparable questionnaire for this study, so we stick to the older datasets.  Meanwhile, we found Gambia 2019-20 with relatively similar FGC data and  IPV modules.
 
-We also checked the other African countries with high FGC prevalence (i.e., countries with more than 20\% of FGC prevalence) and found no data met our criteria:  Burkina Faso** (2010, 2021), Central African Republic(nd, no data), Chad**(2014-5), Cote Dlvoire**(2011-2), Djibouti(nd), Egypt(nd), Eritrea(nd), Ethiopia**(2016),  Guinea Bissau (nd), Guinea** (2018), Liberia (2019-20), Senegal**(2023, 2019, 2018, 2017, 2016, 2015, 2014, 2010-1, 2005), Somalia(na), and Sudan(na).   (** data with questions of religion and whether to continue the practice). Data before 2000 were not considered due to limited access and/or no related questionnaires found.  Sierra Leone 2013 DHS and Kenya 2022 do have similar data and that will allow us to do a quasi longitudinal comparison.
+We also checked the other African countries with high FGC prevalence (i.e., countries with more than 20\% of FGC prevalence) and found no data met our criteria:  Burkina Faso** (2010, 2021), Central African Republic(nd, no data), Chad**(2014-5), Cote Dlvoire**(2011-2), Djibouti(nd), Egypt(nd), Eritrea(nd), Ethiopia**(2016),  Guinea Bissau (nd), Guinea** (2018), Liberia (2019-20), Senegal**(2023, 2019, 2018, 2017, 2016, 2015, 2014, 2010-1, 2005), Somalia(na), and Sudan(na).   (** data with questions of religion and whether to continue the practice). Data before 2000 were not considered due to limited access and/or no related questionnaires found.  Sierra Leone 2013 DHS and Kenya 2022 do have similar data and that may allow us to do a quasi longitudinal comparison.
 
 There are other perspectives we can explore beside the KMNS data within a reasonable year range: 
-- Sierra Leone 2008 vs. 2013 (with norm questions)
-- Sierra Leone 2008 vs. 2013 vs. 2019 (with questions of religious requirement and of whether to continue the practice)
+- Sierra Leone 2008 vs. 2013 (with norm questions).  The 2019 has no info on daughters' fgc status and therefore is not useful.
     - We can incorporate turning point, threshold concept or Bicchieri's norm theory
 - *** To add Guinea 2005 to the KMNS? ***
 - *** Chyun thinks we should include men in our continuance model?  Kenya 2022 include men's attitude on fgc under MG100-- and SGCM03--. E.g.,

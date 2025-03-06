@@ -1,6 +1,7 @@
 Catholic: Catholic/Orthodox
 Orthodox: Catholic/Orthodox
 Adventist: Other Christian
+African instituted churches: Other Christian
 Anglican: Other Christian
 Anglican Church: Other Christian
 Apostolic Sect: Other Christian
@@ -52,6 +53,7 @@ Sans religion: None/Other
 Traditional: None/Other
 Traditionnal: None/Other
 Traditionalist: None/Other
+Traditionalists: None/Other
 Traditionnal/animist: None/Other
 United faith: None/Other
 Not responded: NA

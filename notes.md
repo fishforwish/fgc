@@ -1,10 +1,28 @@
+Research questions:  
+* First, what is the association between mothers' beliefs about the benefits of FGC and their plans for their daughters' FGC future (For this model, we will use daughterPlan_clmm.Rout); 
+* second, what is the association between woman's beliefs and their opinion about whether FGC should be continued.(For this model, we will use fgcPersist_clmm.Rout)
+
+2025 Mar 3 (Mon)
+=================
+* Git errors to be fixed: couldn't sync
+	* This was a Dropbox legacy problem, fixed for Chyun now
+* object 'combined_dat' not found in prevalence.Rout to make fgcPersist_clmm.Rout
+
+Make sure scripts and rules are updated before trying to run. 
+* There should be no .Rout dependencies
+* Scripts should have a shellpipes call
+
+Working on Mike's table stuff:
+* several deprecated calls in tables.R
+* updated tabletex, getting a mysterious error, and it's all pretty ugly
+
+Anything with rdsave needs to be updated to saveVars or saveEnvironment.
+
 2024 Dec 21 (Sat)
 =================
-Chyun played with hybrid_clmm.Rout but huy rid_clmm.R found no combimed_dat to make the Rout.
 
-Chyun also tried to make effects_plot.Rout but no betadf was found.
-
-Based on the to all_PCA.Rout.pdf, I don't know how to decide if we prefer PCA- or average-based models.  Need help. 
+Tried to make fgcPersist_clmm.Rout but failed because object 'combined_dat' not found.
+Based on the to all_PCA.Rout.pdf, Chyun wonders how to decide if we prefer PCA- or average-based models.  Need help. 
 
 2024 Dec 20 (Fri)
 =================
