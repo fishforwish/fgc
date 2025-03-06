@@ -1,10 +1,11 @@
+## Made some Frankenstein mistakes here; go back and figure out what you're doing.
+
 library(shellpipes)
 
 print(paste("######## TARGET", targetname()))
 
 loadEnvironments()
 
-catList <- grepl(catname, names(Answers))
 levelCodeTable <- (read.table(input_files, header=FALSE, stringsAsFactors=FALSE, sep="\t", row.names=1))
 
 levelCodes <- levelCodeTable[[1]]
