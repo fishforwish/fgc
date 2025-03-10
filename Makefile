@@ -76,10 +76,6 @@ fgc_DHS/%.Rout: convert_dataset.R
 
 ######################################################################
 
-
-fgc_DHS/sl7.Rout: fgc_DHS/SLIR7AFL.SAV convert_dataset.R
-	$(pipeR)	
-
 ifdef convert_files
 fgc_DHS/ke8.Rout: fgc_DHS/KEIR8CFL.SAV convert_dataset.R
 	$(pipeR)
@@ -91,7 +87,8 @@ fgc_DHS/ng5.Rout: fgc_DHS/NGIR53FL.SAV convert_dataset.R
 	$(run-R)
 fgc_DHS/sl5.Rout: fgc_DHS/SLIR51FL.SAV convert_dataset.R
 	$(run-R)
-
+fgc_DHS/sl7.Rout: fgc_DHS/SLIR7AFL.SAV convert_dataset.R
+	$(pipeR)	
 endif
 
 ##################################################################
@@ -101,7 +98,8 @@ endif
 Sources += $(wildcard *.R)
 
 ### Data sets
-sets = ke5 ml5 ng5 sl5 ke8 sl7
+sets = ke5 ml5 ng5 sl5
+newsets = ke8 sl7
 
 ######################################################################
 
@@ -232,9 +230,12 @@ Sources += qual.mk quant.mk plots.mk comPlots.mk bioPlots.mk PCA.mk
 
 -include qual.mk
 
+quals: beneQuals.output mediaQuals.output attQuals.output
+
 #### Quant
 
 -include quant.mk
+quants: beneQuants.output mediaQuants.output attQuants.output
 
 #### PCA
 
@@ -252,7 +253,7 @@ Sources += qual.mk quant.mk plots.mk comPlots.mk bioPlots.mk PCA.mk
 
 msrepo = https://github.com/dushoff
 
-Makefile: makestuff/00.stamp
+Makefile: makestuff/01.stamp
 makestuff/%.stamp:
 	- $(RM) makestuff/*.stamp
 	(cd makestuff && $(MAKE) pull) || git clone --depth 1 $(msrepo)/makestuff
