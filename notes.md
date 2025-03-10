@@ -18,6 +18,11 @@ Chyun had some git errors:
 * tried to make fgcPersist_effects_plot.Rout but found no package called ‘mod’
 * tried to make fgcPersist_isoplots.Rout but found no package called ‘RVAideMemoire’
 
+JD is working on PCA pipeline
+* quals are working 
+* quants are working
+* PCAs are working
+
 2025 Mar 3 (Mon)
 =================
 * Git errors to be fixed: couldn't sync

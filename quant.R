@@ -28,4 +28,4 @@ row.names(quant) <- row.names(qual)
 
 summary(quant)
 
-# rdsave(quant, catname)
+saveVars(quant, catname)

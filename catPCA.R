@@ -1,10 +1,14 @@
-cat("#######################  RTARGET ####################")
 
-library(gdata)
+library(shellpipes)
+
+tname <- targetname()
+print(paste("######## TARGET", tname))
+
+loadEnvironments()
+
+# library(gdata)
 library(ggplot2)
 library(ggfortify)
-
-
 
 quant <- na.omit(quant)
 
@@ -26,7 +30,7 @@ print(PCAplot <- autoplot(pc
 	, loadings.label.colour = "blue"
 	)
 	+ theme_bw()
-	+ ggtitle(rtargetname)
+	+ ggtitle(tname)
 )
 
 scores <- as.data.frame(predict(pc))
@@ -50,5 +54,9 @@ quantpca <- quantpca[-1]
 # row.names(quantpca)
 # row.names(scores)
 
-saveRDS(PCAplot, rdsname)
-# rdsave(quantpca, scores, catname, pc, PCAplot)
+rdsSave(PCAplot)
+saveVars(quantpca, scores, catname, pc, PCAplot)
+
+## Not clear what Mike is doing here with two targets
+## saveRDS(PCAplot, rdsname)
+# wrapRTarget had (quantpca, scores, catname, pc, PCAplot)

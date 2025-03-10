@@ -175,6 +175,8 @@ Sources += fgc_table.tex
 ## fgc_table.pdf: fgc_table.tex
 fgc_table.pdf: table_output.tex
 
+######################################################################
+
 ## fitting using clmm
 
 daughterPlan_clmm.Rout: daughterPlan_clmm.R prevalence.rds
@@ -240,6 +242,7 @@ quants: beneQuants.output mediaQuants.output attQuants.output
 #### PCA
 
 -include PCA.mk
+PCAs: benePCAs.output mediaPCAs.output attPCAs.out
 
 #### Plots
 
