@@ -13,7 +13,7 @@ We like to use the following figures in the ms or at least look at them for insp
 =================
 Chyun had some git errors:
 * tried to make daughterPlan_effects_plot.Rout but object 'mod' not found
-* tried to make daughterPlan_isoplots.Rout with an error: no package called ‘RVAideMemoire’
+* tried to make daughterPlan_isoplots.Rout with an error: object 'rtargetname' not found
 * tried to make effects_plot.Rout but "betadf" not found.
 * tried to make fgcPersist_effects_plot.Rout but found no package called ‘mod’
 * tried to make fgcPersist_isoplots.Rout but found no package called ‘RVAideMemoire’
