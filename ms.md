@@ -36,9 +36,8 @@ Research Questions
 \section{Research Questions}\label{Research-Questions}}
 
 There are two research questions:  first, what is the association between mothers' beliefs about the benefits of FGC and their plans for their daughters' FGC future; second, what is the association between woman's beliefs and their opinion about whether FGC should be continued.  
-The two questions were tested as the daughter model, and the continuance model respectively.  In addition, we also tested a “persistence” model, to examine the association of mothers' intention on cutting their daughters and their view of FGC continuance predicted by mother's FGC status and their FGC beliefs.  
-JD: Can you clarify following sentence?  CF:  there are two predictors in the persistence model:  mother's position on fgc continuance and their fgc status.
-The persistence model, the third model, was developed to further understand how the position of the main model could be changed (or mediated/moderated?) under mother's position on whether to continue FGC practice in general. \cfcmt{Do we test countries separately and all together in one big dataset?}
+The two questions were tested as the daughter model, and the continuance model respectively.
+\cfcmt{Do we test countries separately and all together in one big dataset?}
 
 \hypertarget{methods}{%
 \section{Methods}\label{methods}}
@@ -217,6 +216,8 @@ Put countries' economic index (e.g., GPA, on the UN's Human Development Index, G
 - Involve elders and traditional leaders to address the issue of those who wish not to participate in the cutting practice [ChegAske04, more]
 
 Changes of social norms in public health behaviours may require a few steps:  motivation, deliberation and action [CislHeis18a].  An alternative to fgc (e.g., a complete stop or a symbolic pricking) will have to provide motivation and facilitate the change of behaviour; the behavioural change will have to be a social action (i.e., gaining recognition and public participation within community) since fgc is a social norm;  and a public commitment to change in hope for reaching a critical mass needed to dismantle the normative behaviour. (using Tostan as an example) (also see [Youn15].  Promising change are observed in changing norms [EvanSnid19] (and Tostan).  How to foresee a community conducive to certainty for girls without fgc?
+
+- Based on the results, group benefit did not show clear influences on women's position on cutting daughters nor on support of FGC practice.  One possible reason might be the validity of the module of the FGC beneifts which could be overdated.  The newest version of Keyna DHS replaced the benefits questionnaire with questions of cultural and social accpetance.  It will be helpful to study the newer dataset on FGC norms and behavior.
 
 Unlike foot binding which was displayed in public, the outcome of FGC can only be identified through private channels (e.g., a tight group community or personnel communications).  The intervention of FGC via public rejection or condemnation is more questionable (or challenging, especially when if marriage is no longer a main reason for FGC).  While the comparison of foot binding had a public norm effect, the difference between FGC and no FGC is more personal.  A bottom-up campaign empowering local community and engaging women in change of the practice is essential [BergDeni13b] and messages tailoring differences of normative beliefs in different groups should also be considered.  The practice of FGC is likely to be revised due to types of FGC, but how to eradicate it if it evolves to just a “nick” [KoskHeym17] compared to the norm of male circumcision as a state of identity [Earp15, HanbEsse21, PalmElme23]?
 
