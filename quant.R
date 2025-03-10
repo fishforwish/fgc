@@ -1,4 +1,3 @@
-## Made some Frankenstein mistakes here; go back and figure out what you're doing.
 
 library(shellpipes)
 
@@ -6,10 +5,12 @@ print(paste("######## TARGET", targetname()))
 
 loadEnvironments()
 
-levelCodeTable <- (read.table(input_files, header=FALSE, stringsAsFactors=FALSE, sep="\t", row.names=1))
+levelCodeTable <- tsvRead(col_names=FALSE, comment="#")
 
-levelCodes <- levelCodeTable[[1]]
-names(levelCodes) <- rownames(levelCodeTable)
+print(levelCodeTable)
+
+levelCodes <- levelCodeTable[[2]]
+names(levelCodes) <- levelCodeTable[[1]]
 
 quantall <- as.data.frame(sapply(qual, function(qual){
     sapply(as.character(qual), function(q){

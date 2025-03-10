@@ -1,5 +1,5 @@
 %.benePlot.Rout: %.benePCA.Rout benePlots.R
-	$(run-R)
+	$(pipeR)
 
 benePlots.output: $(sets:%=%.benePlot.Routput)
 	cat $^ > $@
