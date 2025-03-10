@@ -243,6 +243,7 @@ quants: beneQuants.output mediaQuants.output attQuants.output
 
 -include PCA.mk
 PCAs: benePCAs.output mediaPCAs.output attPCAs.out
+## all_PCA.Rout: all_PCA.R
 
 #### Plots
 

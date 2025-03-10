@@ -19,9 +19,10 @@ Chyun had some git errors:
 * tried to make fgcPersist_isoplots.Rout but found no package called ‘RVAideMemoire’
 
 JD is working on PCA pipeline
-* quals are working 
-* quants are working
-* PCAs are working
+* quals are working …
+* quants are working …
+* PCAs are working …
+* all_PCA.Rout is working …
 
 2025 Mar 3 (Mon)
 =================
