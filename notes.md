@@ -2,6 +2,22 @@ Research questions:
 * First, what is the association between mothers' beliefs about the benefits of FGC and their plans for their daughters' FGC future (For this model, we will use daughterPlan_clmm.Rout); 
 * second, what is the association between woman's beliefs and their opinion about whether FGC should be continued.(For this model, we will use fgcPersist_clmm.Rout)
 
+Figures and tables:
+We like to use the following figures in the ms or at least look at them for inspiration:
+* daughterPlan_effects.Plot.Rout.pdf (and fgcPersist_)
+* daughterPlan_isoplots.Rout.pdf (and fgcPersist_)
+* all_PCA.Rout.pdf
+* prevalence_Rout.pdf
+
+2025 Mar 10 (Mon)
+=================
+Chyun had some git errors:
+* tried to make daughterPlan_effects_plot.Rout but object 'mod' not found
+* tried to make daughterPlan_isoplots.Rout with an error: no package called ‘RVAideMemoire’
+* tried to make effects_plot.Rout but "betadf" not found.
+* tried to make fgcPersist_effects_plot.Rout but found no package called ‘mod’
+* tried to make fgcPersist_isoplots.Rout but found no package called ‘RVAideMemoire’
+
 2025 Mar 3 (Mon)
 =================
 * Git errors to be fixed: couldn't sync
