@@ -1,5 +1,9 @@
-all_PCA.Rout: all_PCA.R ke5.benePCA.rds ml5.benePCA.rds sl5.benePCA.rds ng5.benePCA.rds
+
+%.pcaPlots.Rout: all_PCA.R ke5.%PCA.rds ml5.%PCA.rds sl5.%PCA.rds ng5.%PCA.rds
 	$(pipeR)
+
+pcaPlots.pdf: bene.pcaPlots.Rout.pdf att.pcaPlots.Rout.pdf media.pcaPlots.Rout.pdf
+	$(pdfdog)
 
 ## sl5.benePCA.Rout: catPCA.R
 %.benePCA.Rout: catPCA.R %.beneQuant.rda
