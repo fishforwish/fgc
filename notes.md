@@ -9,6 +9,9 @@ We like to use the following figures in the ms or at least look at them for insp
 * all_PCA.Rout.pdf
 * prevalence_Rout.pdf
 
+2025 Mar 18 (Mon)
+=================
+How do we interpret pca, especially benePCA?
 2025 Mar 10 (Mon)
 =================
 Chyun had some git errors:
