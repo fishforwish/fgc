@@ -12,6 +12,11 @@ We like to use the following figures in the ms or at least look at them for insp
 2025 Mar 18 (Mon)
 =================
 How do we interpret pca, especially benePCA?
+
+The PCA is a little interesting, but not very. The most salient feature is that “other benefits” is almost perpendicular to the main component in three of the four countries. It will be hard to interpret this, because we have no information about what other benefits respondents had in mind in the different countries.
+
+The loadings are all consistent in sign, and we don't see any particular reason to use weightings, so we have decided not to. In particular, we wouldn't want to (effectively) drop “other benefits”.
+
 2025 Mar 10 (Mon)
 =================
 Chyun had some git errors:
