@@ -125,6 +125,7 @@ select.summary.output: $(sets:%=%.select.summary.Routput)
 ### Recoding
 Sources += $(wildcard *.ccsv *.tsv *.csv)
 
+impmakeR += recode
 .PRECIOUS: %.recode.Rout
 ## ke5.recode.Routput: recode.R
 %.recode.Rout: recode.R %.select.rda recodeFuns.rda religion_basic.ccsv partnership_basic.ccsv
@@ -146,6 +147,7 @@ recodes.output: $(sets:%=%.recode.Routput)
 
 ## Make community-level variables
 ## ke5.community.Rout: community.R
+impmakeR += community
 %.community.Rout: community.R %.recode.rds recodeFuns.rda
 	$(pipeR)
 
