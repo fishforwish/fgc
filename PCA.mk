@@ -1,4 +1,5 @@
 
+impmakeR += pcaPlots
 %.pcaPlots.Rout: all_PCA.R ke5.%PCA.rds ml5.%PCA.rds sl5.%PCA.rds ng5.%PCA.rds
 	$(pipeR)
 
@@ -7,6 +8,7 @@ pcaPlots.pdf: bene.pcaPlots.Rout.pdf att.pcaPlots.Rout.pdf media.pcaPlots.Rout.p
 	$(pdfdog)
 
 ## sl5.benePCA.Rout: catPCA.R
+impmakeR += benePCA
 %.benePCA.Rout: catPCA.R %.beneQuant.rda
 	$(pipeR)
 
@@ -19,6 +21,7 @@ benePCAs.objects.output: $(sets:%=%.benePCA.objects.Routput)
 benePCAs.summary.output: $(sets:%=%.benePCA.summary.Routput)
 	cat $^ > $@
 
+impmakeR += attQuant
 %.attPCA.Rout: %.attQuant.rda catPCA.R
 	$(pipeR)
 
@@ -31,6 +34,7 @@ attPCAs.objects.output: $(sets:%=%.attPCA.objects.Routput)
 attPCAs.summary.output: $(sets:%=%.attPCA.summary.Routput)
 	cat $^ > $@
 
+impmakeR += mediaPCA
 %.mediaPCA.Rout: %.mediaQuant.rda catPCA.R
 	$(pipeR)
 

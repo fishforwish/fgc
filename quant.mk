@@ -1,4 +1,5 @@
 
+impmakeR += %.beneQuant.Rout
 %.beneQuant.Rout: %.beneQual.rda levelcodes_bene.tsv quant.R
 	$(pipeR)
 
@@ -11,6 +12,7 @@ beneQuants.objects.output: $(sets:%=%.beneQuant.objects.Routput)
 beneQuants.summary.output: $(sets:%=%.beneQuant.summary.Routput)
 	cat $^ > $@
 
+impmakeR += %.attQuant.Rout
 %.attQuant.Rout: %.attQual.rda levelcodes_att.tsv quant.R
 	$(pipeR)
 
@@ -24,6 +26,7 @@ attQuants.summary.output: $(sets:%=%.attQuant.summary.Routput)
 	cat $^ > $@
 
 ## ke5.mediaQuant.Rout: quant.R levelcodes_media.tsv
+impmakeR += %.mediaQuant.Rout
 %.mediaQuant.Rout: %.mediaQual.rda levelcodes_media.tsv quant.R
 	$(pipeR)
 

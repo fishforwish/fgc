@@ -1,4 +1,6 @@
-# what is this for? 
+library(shellpipes)
+
+loadEnvironments()
 
 vtypef <- function(v){
 	if (grepl("beneHygiene", v)) {return("beneHygiene")}

@@ -11,19 +11,14 @@ Ignore += .gitignore
 
 ######################################################################
 
-Sources += $(wildcard *.lmk)
-
+## Don't know why this is currently suppressed
+## Maybe very slow; we should separate data and target dirs
 ## mirrors += fgc_DHS
-
 Ignore += fgc_DHS
--include local.mk
-drop ?= ~/Dropbox
 
-fgc_DHS: dir=$(drop)
-fgc_DHS:
-	$(linkdir)
-fgc_DHS/%:
-	$(MAKE) fgc_DHS
+Sources += $(wildcard *.lmk)
+## Generic and specific Dropbox rules now in jd.lmk
+-include local.mk
 
 testsetup:
 	$(LNF) ../fgc_DHS .
