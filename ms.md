@@ -13,7 +13,7 @@ Background
 \hypertarget{Background}{%
 \section{Background}\label{Background}}
 
-Female genital cutting (FGC), circumcision or mutilation is a form of mutilating or injuring female's genitalia for non-medical purposes [Momo17].  Following Tostan [Tost15], we use the term “cutting”, instead of circumcision or mutilation without excusing the negative impact of the practice while recognizing a sensitivity of identity in making decision about FGC [JohnEsse10, KawoAllw22, Meye00, Shel01, Tost15].
+Female genital multilation/cutting (FGMC), circumcision or mutilation is a form of mutilating or injuring female's genitalia for non-medical purposes [Momo17].  Following Tostan and UNFPA [Tost15, UNFP25], we use both “cutting” and multilation, to connote a human rights viewpoint while recognizing a sensitivity of identity in making decision about FGC [JohnEsse10, KawoAllw22, Meye00, Shel01, Tost15].
  
 It was estimated that at least 230 million women and girls are survivors of FGC in 2024, mostly in Africa and the Middle East and with most girls cut before age 15 [UNIC24], although the exact prevalence might be under reported due to its deeply embedded social-cultural practice mostly deemed illegal [StevKell22].  The practice was of public health issues and human rights violations in one end, and of cultural and religious identity on the other [AhmeKare18, BergDeni13a, JohaAhme21, Joha22, KhosBane17, LienSchu13, Mack00, McCaBroe19, Momo17, NabMuul19, PalmElme23, RoveUlri22, TordBish22] \cfonly{to divide and confirm}.  While the United Nations has called for FGC elimination by 2030 [Unit22], progress of intervention is impeded [TordBish22] for its complicated history [BergDeni12, Cami16].  It was noted that the practice was also observed in cross-border and transnational environment after migrating to countries where FGC was banned [Unit22].
 
@@ -156,7 +156,8 @@ A systematic review showed that "A lower level of maternal education, family his
 
 Norms can be rooted in what one thinks, passively or actively, others think which can be based on one's action or the communication. Change should be coordinated among interrelated members of social networks [Mack96, Mack00, MackLeJe09, ShelWand11]
 
-Data showed that Kenya, Nigeria and Sierra Leon had shown strong progress in eliminating FGC over the last 30 years, which Mali’s progress stagered [https://data.unicef.org/topic/child-protection/female-genital-mutilation/].
+Data showed that Kenya, Nigeria and Sierra Leon had shown strong progress in eliminating FGC over the last 30 years, which Mali’s progress stagered [UNIC25].
+
 Modifying DHS module of FGC
 
 To use [WandShel20] for reference in discussion regarding[EffeVogt15] and others.
