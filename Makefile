@@ -208,7 +208,7 @@ all_full_models: futurefgc_full_clmm.Rout futurefgcDau_full_clmm.Rout daughterfg
 fgcPersist_effects.Rout: single_var_effect.R fgcPersist_clmm.rda rename_dat.rda
 	$(pipeR)
 
-daughterPlan_effects.Rout: daughterPlan_clmm.Rout rename_dat.Rout single_var_effect.R
+daughterPlan_effects.Rout: single_var_effect.R daughterPlan_clmm.rda rename_dat.rda
 	$(pipeR)
 
 hybrid_effects.Rout: hybrid_clmm.Rout rename_dat.Rout single_var_effect.R
@@ -217,7 +217,7 @@ hybrid_effects.Rout: hybrid_clmm.Rout rename_dat.Rout single_var_effect.R
 fgcPersist_effects_plot.Rout: effects_plot.R fgcPersist_effects.rds
 	$(pipeR)
 
-daughterPlan_effects_plot.Rout: daughterPlan_effects.Rout effects_plot.R
+daughterPlan_effects_plot.Rout: effects_plot.R daughterPlan_effects.rds
 	$(pipeR)
 
 hybrid_effects_plot.Rout: hybrid_effects.Rout effects_plot.R
