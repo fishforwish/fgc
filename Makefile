@@ -184,6 +184,9 @@ fgcPersist_clmm.Rout: fgcPersist_clmm.R prevalence.rds
 
 ## calculating variable level p-values
 
+rename_dat.Rout: rename_dat.R
+	$(wrapR)
+
 daughterPlan_varlvlsum.Rout: varlvlsum.R daughterPlan_clmm.rda
 	$(pipeR)
 fgcPersist_varlvlsum.Rout: fgcPersist_clmm.Rout varlvlsum.R
@@ -202,7 +205,7 @@ hybrid_isoplots.Rout: hybrid_clmm.Rout hybrid_varlvlsum.Rout ordfuns.Rout plotFu
 
 all_full_models: futurefgc_full_clmm.Rout futurefgcDau_full_clmm.Rout daughterfgc_full_clmm.Rout
 
-fgcPersist_effects.Rout: fgcPersist_clmm.Rout rename_dat.Rout single_var_effect.R
+fgcPersist_effects.Rout: single_var_effect.R fgcPersist_clmm.rda rename_dat.rda
 	$(pipeR)
 
 daughterPlan_effects.Rout: daughterPlan_clmm.Rout rename_dat.Rout single_var_effect.R
@@ -211,7 +214,7 @@ daughterPlan_effects.Rout: daughterPlan_clmm.Rout rename_dat.Rout single_var_eff
 hybrid_effects.Rout: hybrid_clmm.Rout rename_dat.Rout single_var_effect.R
 	$(pipeR)
 
-fgcPersist_effects_plot.Rout: fgcPersist_effects.Rout effects_plot.R
+fgcPersist_effects_plot.Rout: effects_plot.R fgcPersist_effects.rds
 	$(pipeR)
 
 daughterPlan_effects_plot.Rout: daughterPlan_effects.Rout effects_plot.R
@@ -219,6 +222,7 @@ daughterPlan_effects_plot.Rout: daughterPlan_effects.Rout effects_plot.R
 
 hybrid_effects_plot.Rout: hybrid_effects.Rout effects_plot.R
 	$(pipeR)
+
 ######################################################################
 
 ## Mike, why do we have so many .mk files? Can we pull these into a Makefile, would that be easier to read and navigate/

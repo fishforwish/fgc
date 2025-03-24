@@ -2,6 +2,10 @@ library(ordinal)
 library(dplyr)
 library(tidyr)
 
+library(shellpipes)
+
+loadEnvironments()
+
 beta_est <- coef(mod)
 beta_ci <- confint(mod)
 
@@ -17,7 +21,6 @@ mm2 <- (mm
   %>% dplyr:::summarise_all(funs(as.numeric(.)))
 )
 x_keep <- (mm
-  # %>% 
   %>% dplyr:::summarise_all(funs(as.numeric(!is.numeric(.))*length(unique(.))))
   %>% gather(variable,levels)
   %>% filter(levels<=2)
@@ -43,3 +46,5 @@ betadf <- (mm2
 )
 
 print(betadf)
+
+rdsSave(betadf)

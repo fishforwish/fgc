@@ -40,4 +40,4 @@ system.time(mod <- clmm(
 
 print(summary(mod))
 
-# rdsave(mod, modAns)
+saveVars(mod, modAns)
