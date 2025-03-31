@@ -32,13 +32,11 @@ Normative factors have underlain women’s decisions of having their daughters u
 
 Although norms associated with FGMC behavior have been studied as above, and analyses of FGMC practices using DHS data were also found (such as [AyenWol23, AzezWill20, TordBish22, YounCheo20]), there was limited clarification of quantitative types of individual normative attitudes (e.g., attitudinal position of FGMC values) and behavioural intention in response to the community persistence. In this study, we quantitatively analyzed types of social norms women attached to FGMC beliefs categorized in DHS along with women's gender-based awareness [GrosHayf19] both individually and collectively. Integrating gender awareness when analyzing FGMC intention was relevant to untangle correlation of FGMC norm and gender values [BoylSvec19, HayfGarv20, Youn04, YounCheo20].   We believe this is the first FGMC study integrating quantitative DHS modules of FGMC normative attitudes and gender awareness to model the FGMC intention within the community influence.  Hopefully, the finding will add a robust understanding of advanced quantitative comparisons of FGMC norms across nations.
 
- It was noted that the normative coordination was challenged for no clear tipping point occurred in the coordinated communities [AgolRich20 EffeVogt15].  
 =================
 \hypertarget{Research-Questions}{%
 \section{Research Questions}\label{Research-Questions}}
 
-There are two research questions:  first, what is the association between mothers' beliefs about the benefits of FGMC and their plans for their daughters' FGMC future; second, what is the association between woman's beliefs and their opinion about whether FGMC should be continued.  
-The two questions were tested as the daughter model, and the continuance model respectively.
+There are two research questions:  first, what is the association between mothers' beliefs in the FGMC benefits and their plans for their daughters' FGMC future; second, what is the association between woman's beliefs in the FGMC benefits and their opinion about whether FGMC should be continued.  The two questions were tested as the daughter model, and the continuance model respectively.
 \cfcmt{Do we test countries separately and all together in one big dataset?}
 
 \hypertarget{methods}{%

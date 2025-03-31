@@ -9,6 +9,11 @@ We like to use the following figures in the ms or at least look at them for insp
 * all_PCA.Rout.pdf
 * prevalence_Rout.pdf
 
+2025 Mar 31 (Mon)
+=================
+J will read a draft of the manuscript.
+To discuss norm and behavior using a newer DHS Kenya data
+
 2025 Mar 24 (Mon)
 =================
 J tried to fix some weird problems of .Rout thought were fixed
