@@ -266,7 +266,7 @@ makestuff/%.stamp:
 
 -include makestuff/os.mk
 
-## -include makestuff/autorefs.mk
+-include makestuff/autorefs.mk
 -include makestuff/pipeR.mk
 -include makestuff/texj.mk
 -include makestuff/makegraph.mk
