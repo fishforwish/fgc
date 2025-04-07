@@ -9,6 +9,17 @@ We like to use the following figures in the ms or at least look at them for insp
 * all_PCA.Rout.pdf
 * prevalence_Rout.pdf
 
+2025 Apr 07 (Mon)
+=================
+
+Working towards isoplots
+
+We don't want hybrid model anymore. What was it?
+
+How should we share files so that Chyun can make things?
+
+Figure out what to do with the .rmu files
+
 2025 Mar 31 (Mon)
 =================
 J will read a draft of the manuscript.
