@@ -179,7 +179,7 @@ fgc_table.pdf: table_output.tex
 daughterPlan_clmm.Rout: daughterPlan_clmm.R prevalence.rds
 fgcPersist_clmm.Rout: fgcPersist_clmm.R prevalence.rds
 
-## Not updated 2025 Mar 03 (Mon)
+## Not updated 2025 Mar 03 (Mon); I have deleted the downstream stuff, which I guess was parallel to daughterPlan and fgcPersist
 ## hybrid_clmm.Rout: prevalence.Rout hybrid_clmm.R
 
 ## calculating variable level p-values
@@ -189,18 +189,13 @@ rename_dat.Rout: rename_dat.R
 
 daughterPlan_varlvlsum.Rout: varlvlsum.R daughterPlan_clmm.rda
 	$(pipeR)
-fgcPersist_varlvlsum.Rout: fgcPersist_clmm.Rout varlvlsum.R
-	$(pipeR)
-hybrid_varlvlsum.Rout: hybrid_clmm.Rout varlvlsum.R
+fgcPersist_varlvlsum.Rout: varlvlsum.R fgcPersist_clmm.rda varlvlsum.R
 	$(pipeR)
 
 daughterPlan_isoplots.Rout: daughterPlan_clmm.Rout daughterPlan_varlvlsum.Rout ordfuns.Rout plotFuns.Rout rename_dat.Rout iso.R
 	$(pipeR)
 
 fgcPersist_isoplots.Rout: fgcPersist_clmm.Rout fgcPersist_varlvlsum.Rout ordfuns.Rout plotFuns.Rout rename_dat.Rout iso.R
-	$(pipeR)
-
-hybrid_isoplots.Rout: hybrid_clmm.Rout hybrid_varlvlsum.Rout ordfuns.Rout plotFuns.Rout rename_dat.Rout iso.R
 	$(pipeR)
 
 all_full_models: futurefgc_full_clmm.Rout futurefgcDau_full_clmm.Rout daughterfgc_full_clmm.Rout
@@ -211,16 +206,10 @@ fgcPersist_effects.Rout: single_var_effect.R fgcPersist_clmm.rda rename_dat.rda
 daughterPlan_effects.Rout: single_var_effect.R daughterPlan_clmm.rda rename_dat.rda
 	$(pipeR)
 
-hybrid_effects.Rout: hybrid_clmm.Rout rename_dat.Rout single_var_effect.R
-	$(pipeR)
-
 fgcPersist_effects_plot.Rout: effects_plot.R fgcPersist_effects.rds
 	$(pipeR)
 
 daughterPlan_effects_plot.Rout: effects_plot.R daughterPlan_effects.rds
-	$(pipeR)
-
-hybrid_effects_plot.Rout: hybrid_effects.Rout effects_plot.R
 	$(pipeR)
 
 ######################################################################
