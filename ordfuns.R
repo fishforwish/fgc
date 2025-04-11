@@ -1,3 +1,4 @@
+library(shellpipes)
 ordTrans <- function(v, a, s){
   sapply(v, function(n){
     return(sum(plogis(n-a))*(1/s))
@@ -126,3 +127,6 @@ varpred <- function(mod, varname, frame, isolate=FALSE, isoValue=NULL, level=0.0
   names(df)[[1]] <- varname
   return(df)
 }
+
+saveEnvironment()
+

@@ -192,13 +192,13 @@ daughterPlan_varlvlsum.Rout: varlvlsum.R daughterPlan_clmm.rda
 fgcPersist_varlvlsum.Rout: varlvlsum.R fgcPersist_clmm.rda varlvlsum.R
 	$(pipeR)
 
-daughterPlan_isoplots.Rout: daughterPlan_clmm.Rout daughterPlan_varlvlsum.Rout ordfuns.Rout plotFuns.Rout rename_dat.Rout iso.R
+%_isoplots.Rout: iso.R %_clmm.rda daughterPlan_varlvlsum.rda ordfuns.rda plotFuns.rda rename_dat.rda
 	$(pipeR)
+## daughterPlan_isoplots.Rout: iso.R 
+## fgcPersist_isoplots.Rout: iso.R
 
-fgcPersist_isoplots.Rout: fgcPersist_clmm.Rout fgcPersist_varlvlsum.Rout ordfuns.Rout plotFuns.Rout rename_dat.Rout iso.R
-	$(pipeR)
-
-all_full_models: futurefgc_full_clmm.Rout futurefgcDau_full_clmm.Rout daughterfgc_full_clmm.Rout
+## Have we lost anything that we want?
+## all_full_models: futurefgc_full_clmm.Rout futurefgcDau_full_clmm.Rout daughterfgc_full_clmm.Rout
 
 fgcPersist_effects.Rout: single_var_effect.R fgcPersist_clmm.rda rename_dat.rda
 	$(pipeR)

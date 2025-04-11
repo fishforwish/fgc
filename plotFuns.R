@@ -1,10 +1,13 @@
+
+library(shellpipes)
+
+## This code does not apparently do anything?
+rtargetname <- targetname()
 resp_mod <- unlist(strsplit(unlist(strsplit(rtargetname,"[.]"))[1],"_"))
 resp <- NULL
 if(resp_mod[1] == "daughterfgc"){resp = "Daughter FGC"}
 if(resp_mod[1] == "futurefgc"){resp = "Future FGC"}
 if(resp_mod[1] == "futurefgcDau"){resp = "Future Daughter FGC"}
-
-
 
 sigName <- function(n, P){
   if(!is.null(P)){
@@ -74,3 +77,5 @@ listPlot <- function(predList, ylab=resp){
   lapply(predList, varPlot, ylab=ylab)
 }
 
+
+saveEnvironment()

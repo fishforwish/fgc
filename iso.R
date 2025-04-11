@@ -4,8 +4,13 @@ library(gridExtra)
 library(ggplot2)
 library(reshape)
 theme_set(theme_bw())
-attr(modAns,"terms") <- NULL 
 
+library(shellpipes)
+loadEnvironments()
+rtargetname <- targetname()
+startGraphics()
+
+attr(modAns,"terms") <- NULL 
 
 catNames <- c("religion","urRural","job","maritalStat")
 predNames <- colnames(modAns)[2:(ncol(modAns)-2)]

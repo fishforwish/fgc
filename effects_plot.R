@@ -1,4 +1,5 @@
 library(shellpipes)
+startGraphics()
 
 library(ggplot2)
 

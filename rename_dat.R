@@ -1,3 +1,4 @@
+library(shellpipes)
 varnames <- c("fgcstatusYes"
 , "group_fgc"
 , "bene" 
@@ -48,3 +49,5 @@ plotnames <- c("FGCed"
 )  
 
 rename_dat <- data.frame(variable=varnames, plotnames)
+
+saveEnvironment()
