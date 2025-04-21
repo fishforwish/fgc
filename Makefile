@@ -20,9 +20,7 @@ Sources += $(wildcard *.lmk)
 ## Generic and specific Dropbox rules now in jd.lmk
 -include local.mk
 
-testsetup:
-	$(LNF) ../fgc_DHS .
-	ln -s jd.lmk local.mk
+## testsetup: ; $(LNF) ../fgc_DHS . ln -s jd.lmk local.mk
 
 ######################################################################
 
@@ -76,6 +74,13 @@ Makefile: | data
 data:
 	git clone https://github.com/dushoff/fgc_data.git $@
 
+Ignore += data
+
+######################################################################
+
+cheat:
+	cd fgc_DHS && $(CP) *.Rout *.rd* $(CURDIR)/data/
+
 ifdef convert_files
 data/ke8.Rout: fgc_DHS/KEIR8CFL.SAV convert_dataset.R
 	$(pipeR)
@@ -100,9 +105,6 @@ Sources += $(wildcard *.R)
 ### Data sets
 sets = ke5 ml5 ng5 sl5
 newsets = ke8 sl7
-
-cheat:
-	cd fgc_DHS && $(CP) *.Rout *.rd* $(CURDIR)/data/
 
 ######################################################################
 

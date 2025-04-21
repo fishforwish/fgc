@@ -1,11 +1,4 @@
-convert_files = defined
+## convert_files = defined
 
-## Dushoff Dropbox
+## Dropboxes all deprecated, there's a mirror of some kind now
 drop=~/Dropbox/academic/dhs_arc
-
-## Generic Dropbox (not used now)
-drop ?= ~/Dropbox
-fgc_DHS: dir=$(drop)
-fgc_DHS:
-	$(linkdir)
-fgc_DHS/%: | fgc_DHS
