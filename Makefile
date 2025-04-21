@@ -71,18 +71,23 @@ fgc_DHS/%.Rout: convert_dataset.R
 
 ######################################################################
 
+alldirs += data
+Makefile: | data
+data:
+	git clone https://github.com/dushoff/fgc_data.git $@
+
 ifdef convert_files
-fgc_DHS/ke8.Rout: fgc_DHS/KEIR8CFL.SAV convert_dataset.R
+data/ke8.Rout: fgc_DHS/KEIR8CFL.SAV convert_dataset.R
 	$(pipeR)
-fgc_DHS/ke5.Rout: fgc_DHS/KEIR52FL.SAV convert_dataset.R
+data/ke5.Rout: fgc_DHS/KEIR52FL.SAV convert_dataset.R
 	$(pipeR)
-fgc_DHS/ml5.Rout: fgc_DHS/MLIR53FL.SAV convert_dataset.R
+data/ml5.Rout: fgc_DHS/MLIR53FL.SAV convert_dataset.R
 	$(run-R)
-fgc_DHS/ng5.Rout: fgc_DHS/NGIR53FL.SAV convert_dataset.R
+data/ng5.Rout: fgc_DHS/NGIR53FL.SAV convert_dataset.R
 	$(run-R)
-fgc_DHS/sl5.Rout: fgc_DHS/SLIR51FL.SAV convert_dataset.R
+data/sl5.Rout: fgc_DHS/SLIR51FL.SAV convert_dataset.R
 	$(run-R)
-fgc_DHS/sl7.Rout: fgc_DHS/SLIR7AFL.SAV convert_dataset.R
+data/sl7.Rout: fgc_DHS/SLIR7AFL.SAV convert_dataset.R
 	$(pipeR)	
 endif
 
@@ -96,13 +101,16 @@ Sources += $(wildcard *.R)
 sets = ke5 ml5 ng5 sl5
 newsets = ke8 sl7
 
+cheat:
+	cd fgc_DHS && $(CP) *.Rout *.rd* $(CURDIR)/data/
+
 ######################################################################
 
 ### Selecting
 select=$(sets:%=%.select.Rout)
 
 ## select.R needs to be moved to a general place
-$(select): %.select.Rout: fgc_DHS/%.rda select.csv select.R
+$(select): %.select.Rout: data/%.rda select.csv select.R
 	$(pipeR)
 ## ke8.select.Routput: select.R
 
