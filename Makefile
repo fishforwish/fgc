@@ -197,6 +197,9 @@ fgcPersist_clmm.Rout: fgcPersist_clmm.R prevalence.rds
 rename_dat.Rout: rename_dat.R
 	$(wrapR)
 
+varlvlsums: daughterPlan_varlvlsum.Rout fgcPersist_varlvlsum.Rout
+	bash -cl banner
+
 daughterPlan_varlvlsum.Rout: varlvlsum.R daughterPlan_clmm.rda
 	$(pipeR)
 fgcPersist_varlvlsum.Rout: varlvlsum.R fgcPersist_clmm.rda varlvlsum.R
