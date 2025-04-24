@@ -205,7 +205,7 @@ daughterPlan_varlvlsum.Rout: varlvlsum.R daughterPlan_clmm.rda
 fgcPersist_varlvlsum.Rout: varlvlsum.R fgcPersist_clmm.rda varlvlsum.R
 	$(pipeR)
 
-%_isoplots.Rout: iso.R %_clmm.rda daughterPlan_varlvlsum.rda ordfuns.rda plotFuns.rda rename_dat.rda
+%_isoplots.Rout: iso.R %_clmm.rda %_varlvlsum.rda ordfuns.rda plotFuns.rda rename_dat.rda
 	$(pipeR)
 ## daughterPlan_isoplots.Rout: iso.R 
 ## fgcPersist_isoplots.Rout: iso.R

@@ -38,6 +38,8 @@ isoList <- lapply(predNames, function(n){
   ordpred(mod, n, modAns)
 })
 
+## print(predNames)
+## print(varlvlnames)
 
 varlvlsum1 <- varlvlsum[predsummary,]
 print(
