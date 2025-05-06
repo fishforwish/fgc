@@ -73,17 +73,55 @@ Decisions:
 * to make ethnicity a random because we don't need the power for the result.  We have enough levels for our reason; and we are not particularly interested in ethnicity for our study.  __BUT__ we latter decided to put it back as a fixed variable.
 * We decided to run versions of our two main models, but without group level covariates. (Apr 20, 15)
 
-* list of FGC benefits in DHS:
-G117A: Circumcision benefits: cleanliness/hygiene
-G117B: Circumcision benefits: social acceptance
-G117C: Circumcision benefits: better marriage prospects
-G117D: Circumcision benefits: virginity/prevent premarital sex
-G117E: Circumcision benefits: more sexual pleasure for men
-G117F: Circumcision benefits: religious approval
-G117G: Circumcision benefits: reduce promiscuity/ reduce sex drive
-G117H: Circumcision benefits: reduce STD and AIDS infections
-G117X: Circumcision benefits: other
-G117Y: Circumcision benefits: no benefit (Did we use this one? to check.)
+* list of 10+1 FGC benefits in DHS see https://dhsprogram.com/pubs/pdf/DHSQMP/DHS5_Module_Female_Genital_Cutting.pdf:
+G117A: Circumcision benefits: cleanliness/hygiene (KMNS)
+G117B: Circumcision benefits: social acceptance (KMNS)
+G117C: Circumcision benefits: better marriage prospects (KMNS)
+G117D: Circumcision benefits: virginity/prevent premarital sex (KMNS)
+G117E: Circumcision benefits: more sexual pleasure for men (KMNS)
+G117F: Circumcision benefits: religious approval (KMNS)
+G117G: Circumcision benefits: reduce promiscuity/ reduce sex drive (K)
+** Nigeria G117G: Circumcision benefits: don't know benefits
+G117H: Circumcision benefits: reduce STD and AIDS infections (KM)
+G117X: Circumcision benefits: other (KMNS)
+G117Y: Circumcision benefits: no benefit (KMNS) (Did we use this one? to check.) (0-No: no no benefit; 1-yes: yes no benefit)
+G118 Circumcision is required by religion. (KMNS)
+
+* DHS fgmc benefit module V:
+G117A Cleanliness/hygiene.
+G117B Social acceptance.
+G117C Better marriage prospects.
+G117D Virginity/prevent premarital sex.
+G117E More sexual pleasure for men.
+G117F Religious approval.
+G117G Country Specific.
+G117H Country Specific.
+G117I Country Specific.
+G117J Country Specific.
+G117X Other.
+G117Y No benefit.
+G118 Circumcision is required by religion.
+
+* FGMC module ?, such as keir8
+G118: Female circumcision required by religion
+SGC17A: Do you believe that female circumcision is required by culture (no physicla, NP)
+SGC17B: Do you believe that female circumcision is required by society (NP)
+SGC8CA: Effects of circumcision - Heavy bleeding (physical, P)
+SGC8CB: Effects of circumcision - Severe pain (P)
+SGC8CC: Effects of circumcision - Infection (P)
+SGC8CD: Effects of circumcision - Urine retention (P)
+SGC8CE: Effects of circumcision - Anemia (P)
+SGC8CF: Effects of circumcision - Fever (P)
+SGC8CG: Effects of circumcision - Complications with with menstrual periods (P)
+SGC8CH: Effects of circumcision - Complications during sexual intercourse (P)
+SGC8CI: Effects of circumcision - Complications during childbirth (P)
+SGC8CJ: Effects of circumcision - Fistula (P)
+SGC8CK: Effects of circumcision - Social acceptability (NP)
+SGC8CL: Effects of circumcision - Stigma (NP)
+SGC8CM: Effects of circumcision - Depression/stress/mental health (NP)
+SGC8CX: Effects of circumcision - Other (compare to G117X: Circumcision benefits: other?)
+SGC8CY: Effects of circumcision - None -  (compare to G117Y: Circumcision benefits: no benefit?)
+SGC8CZ: Effects of circumcision - Don't know
 
 * list of variables included or to be considered:
 # Blocks
