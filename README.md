@@ -5,11 +5,9 @@ This project still has many different make files to go through different steps; 
 
 ## Notes
 
-DHS login:  Mac email. Study
+DHS login:  Mac email. Work
 
 2024 Jul 30 (Tue): Old-data paper is ms.md; comparison paper is ms.kenya.md. Should just build a new repo??
-
-Project proposal:  The Associations of Woman's belief in Female Genital Cutting and the Likelihood of  having Daughters to be cut.
 
 The reference sites are at auto.bib and manual.bib (and in a way from https://www.bioinformatics.org/texmed/)
 
@@ -17,31 +15,21 @@ Basically, this paper is about 'norm and behaviors'. We made two papers:
 First, 'KMNS': Kenya 2008/9, Mali 2006 (C: the report was in French), Nigeria 2008 and Sierra Leone 2008. (To add Guinea 2005?)
 Second: Kenya 2008 vs 2022.The Kenya 2022 (questions under "SGC") FGC data is different from the 2008 but maybe comparable to its 2008/9 data. (see https://github.com/fishforwish/fgc_Kenya)
 
-DHS archives was updated by Aug 6, 2024, and the newer sets (Kenya 2014, Mali 2012-3/18, Nigeria 2013/18 and Sierra Leon 2019) did not have comparable questionnaire for this study, so we stick to the older datasets.  Meanwhile, we found Gambia 2019-20 with relatively similar FGC data and  IPV modules.
+DHS archives was updated by Aug 6, 2024, and the newer sets (Kenya 2014/22, Mali 2012-3/18, Nigeria 2013/18 and Sierra Leon 2019) did not have comparable questionnaire for this study, so we stick to the older datasets, but we may be able to use some of the questions.  Meanwhile, we found Gambia 2019-20 with relatively similar FGC data and  IPV modules.
 
-We also checked the other African countries with high FGC prevalence (i.e., countries with more than 20\% of FGC prevalence) and found no data met our criteria:  Burkina Faso** (2010, 2021), Central African Republic(nd, no data), Chad**(2014-5), Cote Dlvoire**(2011-2), Djibouti(nd), Egypt(nd), Eritrea(nd), Ethiopia**(2016),  Guinea Bissau (nd), Guinea** (2018), Liberia (2019-20), Senegal**(2023, 2019, 2018, 2017, 2016, 2015, 2014, 2010-1, 2005), Somalia(na), and Sudan(na).   (** data with questions of religion and whether to continue the practice). Data before 2000 were not considered due to limited access and/or no related questionnaires found.  Sierra Leone 2013 DHS and Kenya 2022 do have similar data and that may allow us to do a quasi longitudinal comparison.
-
-There are other perspectives we can explore beside the KMNS data within a reasonable year range: 
-- Sierra Leone 2008 vs. 2013 (with norm questions).  The 2019 has no info on daughters' fgc status and therefore is not useful.
-    - We can incorporate turning point, threshold concept or Bicchieri's norm theory
-- *** To add Guinea 2005 to the KMNS? ***
-- *** Chyun thinks we should include men in our continuance model?  Kenya 2022 include men's attitude on fgc under MG100-- and SGCM03--. E.g.,
-  -- MG100: Ever heard of female circumcision
-  -- MG118: Female circumcision required by religion
-  -- MG119: Female circumcision: continue or be stopped
-  -- SGCM03A: Do you believe that female circumcision is required by culture
-  -- SGCM03B: Do you believe that female circumcision is required by society
-  
+We also checked the other African countries with high FGC prevalence (i.e., countries with more than 20\% of FGC prevalence) and found no data met our criteria:  Burkina Faso** (2010, 2021), Central African Republic(nd, no data), Chad**(2014-5), Cote Dlvoire**(2011-2), Djibouti(nd), Egypt(nd), Eritrea(nd), Ethiopia**(2016),  Guinea Bissau (nd), Guinea** (2018), Liberia (2019-20), Senegal**(2023, 2019, 2018, 2017, 2016, 2015, 2014, 2010-1, 2005),Somalia(na), and Sudan(na).   (** data with questions of religion and whether to continue the practice). Data before 2000 were not considered due to limited access and/or no related questionnaires found.  Sierra Leone 2013 DHS does have similar data and that may allow us to do a quasi longitudinal comparison. and Kenya 2016, 2022 is also good for comparison in terms if FGMC is required by religion and continuity.
 
 Research Questions:
 * The first question: the association of daughter's FGC future and FGC beliefs.  
 * The second question:  the association of FGC continuance and FGC beliefs.
 
 Models:
-Three models were made in response to the three questions above accordingly:
+Two models were made in response to the three questions above accordingly:
 * A daughter model (all multivariate, only women with daughter to be cut are included): beliefs in FGC benefits (see the list of FGC benefits at table--) --> FGC continuance + to cut daughters.
 * A continuance model (all future FGC, all the women are included), a structural model:  beliefs in FGC benefits --> to FGC continuance.  This model included all the women in the DHS data, whether they had or had no daughter for FGC consideration.
-* A persistence model (only women with daughter included) for this:  FGC benefits and FGC continuance --> FGC intention on daughters (We might need it.  This is a model which we hope can provide more details to explain the first question).  This was a mixed and a structural model to understand how FGC continuance affect 
+
+A confusing model:  Does it make sense to have two main predictors -- FGC benefits and FGC continuance?
+FGC benefits and FGC continuance --> FGC intention on daughters (We might need it.  Can a model like this help us to gather more details to explain the first question). 
 
 * We are going to run versions of our two main models, but without group level covariates.
 
@@ -62,6 +50,18 @@ Other issues and questions:
 * to investigate the associations of women’s gender awareness, and their beliefs of FGC benefits.  It is presumed that gender awareness interrelate to FGC beliefs.  By testing the relations of the two factors allows us to gather information for a better interpretation of the main model. (which group of women?  with or without daughters to be cut?)
 * to study contrast of countries.
 
+
+There are other perspectives we can explore beside the KMNS data within a reasonable year range: 
+- Sierra Leone 2008 vs. 2013 (with norm questions).  The 2019 has no info on daughters' fgc status and therefore is not useful.
+    - We can incorporate turning point, threshold concept or Bicchieri's norm theory
+- *** To add Guinea 2005 to the KMNS? ***
+- *** Chyun thinks we should include men in our continuance model?  Kenya 2022 include men's attitude on fgc under MG100-- and SGCM03--. E.g.,
+  -- MG100: Ever heard of female circumcision
+  -- MG118: Female circumcision required by religion
+  -- MG119: Female circumcision: continue or be stopped
+  -- SGCM03A: Do you believe that female circumcision is required by culture
+  -- SGCM03B: Do you believe that female circumcision is required by society
+
 Discussion:
 * We will try to put country's FGC policy (i.e., whether there is an official ban on the practice) in context when interpreting the results.
 
@@ -74,18 +74,24 @@ Decisions:
 * We decided to run versions of our two main models, but without group level covariates. (Apr 20, 15)
 
 * list of 10+1 FGC benefits in DHS see https://dhsprogram.com/pubs/pdf/DHSQMP/DHS5_Module_Female_Genital_Cutting.pdf:
-G117A: Circumcision benefits: cleanliness/hygiene (KMNS)
-G117B: Circumcision benefits: social acceptance (KMNS)
-G117C: Circumcision benefits: better marriage prospects (KMNS)
-G117D: Circumcision benefits: virginity/prevent premarital sex (KMNS)
-G117E: Circumcision benefits: more sexual pleasure for men (KMNS)
-G117F: Circumcision benefits: religious approval (KMNS)
-G117G: Circumcision benefits: reduce promiscuity/ reduce sex drive (K)
-** Nigeria G117G: Circumcision benefits: don't know benefits
+G117A: Circumcision benefits: cleanliness/hygiene (KMNS5) (S6) *(Gambia8/G8)
+G117B: Circumcision benefits: social acceptance (KMNS) (S6) (G8)
+G117C: Circumcision benefits: better marriage prospects (KMNS) (S6)
+G117D: Circumcision benefits: virginity/prevent premarital sex (KMNS) (S6)
+G117E: Circumcision benefits: more sexual pleasure for men (KMNS) (S6)
+G117F: Circumcision benefits: religious approval (KMNS) (S6) (S8)
+G117G: Circumcision benefits: reduce promiscuity/ reduce sex drive (K) (S8 in G117I)
+** G117G: Circumcision benefits: don't know benefits (N)
+** G117G: Prevents pregnancy: Female circumcision benefit (S8)
 G117H: Circumcision benefits: reduce STD and AIDS infections (KM)
-G117X: Circumcision benefits: other (KMNS)
-G117Y: Circumcision benefits: no benefit (KMNS) (Did we use this one? to check.) (0-No: no no benefit; 1-yes: yes no benefit)
-G118 Circumcision is required by religion. (KMNS)
+** G117H: Easier delivery: Female circumcision benefit (S8)
+G117I: Reduced promiscuity: Female circumcision benefit (S8)
+G117J: No opinion/Don't know: Female circumcision benefit (S6) 
+** G117J: Part of womanhood: Female circumcision benefit (S8)
+G117X: Circumcision benefits: other (KMNS) (S6) (S8)
+G117Y: Circumcision benefits: no benefit (KMNS) (S6) (Did we use this one? to check.) (0-No: no no benefit; 1-yes: yes no benefit)
+G118 Circumcision is required by religion. (KMNS) (S6) (S8)
+S1315A: Do you believe that female circumcision is required by community (K7)
 
 * DHS fgmc benefit module V:
 G117A Cleanliness/hygiene.
@@ -102,9 +108,9 @@ G117X Other.
 G117Y No benefit.
 G118 Circumcision is required by religion.
 
-* FGMC module ?, such as keir8
+* FGMC module VIII, such as keir8
 G118: Female circumcision required by religion
-SGC17A: Do you believe that female circumcision is required by culture (no physicla, NP)
+SGC17A: Do you believe that female circumcision is required by culture (non physical, NP)
 SGC17B: Do you believe that female circumcision is required by society (NP)
 SGC8CA: Effects of circumcision - Heavy bleeding (physical, P)
 SGC8CB: Effects of circumcision - Severe pain (P)
@@ -123,6 +129,15 @@ SGC8CX: Effects of circumcision - Other (compare to G117X: Circumcision benefits
 SGC8CY: Effects of circumcision - None -  (compare to G117Y: Circumcision benefits: no benefit?)
 SGC8CZ: Effects of circumcision - Don't know
 
+GMIR8:
+S1319A: Reason to stop female circumcision: negative health effects
+S1319B: Reason to stop female circumcision: harmful practice
+S1319C: Reason to stop female circumcision: not religious obligation
+S1319D: Reason to stop female circumcision: illegal
+S1319E: Reason to stop female circumcision: complicates delivery
+S1319F: Reason to stop female circumcision: painful/unsatisfying sex
+S1319X: Reason to stop female circumcision: other
+S1320: Aware of the law that prohibits the practice of circumcision (This is interesting in terms of who know it is illegal but still want to fgmc their kids)
 * list of variables included or to be considered:
 # Blocks
 clusterId, V001

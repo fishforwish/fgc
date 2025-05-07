@@ -3,9 +3,9 @@ Research questions:
 * second, what is the association between woman's beliefs and their opinion about whether FGC should be continued.(For this model, we will use fgcPersist_clmm.Rout)
 
 Figures and tables:
-We like to use the following figures in the ms or at least look at them for inspiration:
-* daughterPlan_effects.Plot.Rout.pdf (and fgcPersist_)
-* daughterPlan_isoplots.Rout.pdf (and fgcPersist_)
+Our main findings will be based on the results ofdaughterPlan_effects.Plot.Rout.pdf (and fgcPersist_), and daughterPlan_isoplots.Rout.pdf (and fgcPersist_)
+We also like to use the following figures in the ms or at least look at them for insights:
+* daughterPlan_varlvlsum.Routput and fgcPersist_varlvlsum.Routput
 * all_PCA.Rout.pdf
 * prevalence_Rout.pdf
 
