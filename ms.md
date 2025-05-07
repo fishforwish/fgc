@@ -1,3 +1,9 @@
+- Individual woman’s attitude towards FGMC continuity was positively aligned with their community, same as their plan of cutting their daughters.
+- The positive correlations were also found in women’s perception of FGMC benefits and their FGMC status, individually and collectively
+- The group perception of FGMC benefits was tricky:  it had a clear opposition association both with the continuity and the daughters’ future.
+- Gender awareness had opposite effect both on the continuity and daughter’s FGMC future; yet group gender awareness did not see clear association.
+- While group FGMC showed a positive association with women’s intention of cutting their daughters, it was negatively associated with woman’s intention of continuing FGMC practice.
+
 
 Female Genital Cutting Is a Social Coordination Norm in Kenya, Mali, Nigeria and Sierra Leon (The title will change to reflect the findings.)
 
