@@ -9,6 +9,26 @@ We also like to use the following figures in the ms or at least look at them for
 * all_PCA.Rout.pdf
 * prevalence_Rout.pdf
 
+2025 May ?
+=================
+* Should we keep only benefit questions which was asked in all the 4 countries?
+* We should skip G117G, because Kenya was the only country with this question and G117G also meant differently in Nigeria:  (Circumcision benefits: don't know benefits)
+* Should we also skip G117H which onliy showed up in Kenya and Mali.
+* We should add G117Y (no benefits)
+
+G117A: Circumcision benefits: cleanliness/hygiene (all)
+G117B: Circumcision benefits: social acceptance (all)
+G117C: Circumcision benefits: better marriage prospects (all)
+G117D: Circumcision benefits: virginity/prevent premarital sex (all) 
+G117E: Circumcision benefits: more sexual pleasure for men (all) 
+G117F: Circumcision benefits: religious approval (all)
+G117G: Circumcision benefits: reduce promiscuity/ reduce sex drive (K) 
+** G117G: Circumcision benefits: don't know benefits (N)
+G117H: Circumcision benefits: reduce STD and AIDS infections (KM)
+G117X: Circumcision benefits: other (all)
+G117Y: Circumcision benefits: no benefit (all) (Did we use this one? to check.) (0-No: no no benefit; 1-yes: yes no benefit)
+G118 Circumcision is required by religion. (all)
+
 2025 Apr 07 (Mon)
 =================
 

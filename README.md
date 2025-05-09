@@ -74,12 +74,12 @@ Decisions:
 * We decided to run versions of our two main models, but without group level covariates. (Apr 20, 15)
 
 * list of 10+1 FGC benefits in DHS see https://dhsprogram.com/pubs/pdf/DHSQMP/DHS5_Module_Female_Genital_Cutting.pdf:
-G117A: Circumcision benefits: cleanliness/hygiene (KMNS5) (S6) *(Gambia8/G8)
+G117A: Circumcision benefits: cleanliness/hygiene (KMNS5 2006-9) (S6 2013) *(Gambia8/G8 2019-20)
 G117B: Circumcision benefits: social acceptance (KMNS) (S6) (G8)
 G117C: Circumcision benefits: better marriage prospects (KMNS) (S6)
 G117D: Circumcision benefits: virginity/prevent premarital sex (KMNS) (S6)
 G117E: Circumcision benefits: more sexual pleasure for men (KMNS) (S6)
-G117F: Circumcision benefits: religious approval (KMNS) (S6) (S8)
+G117F: Circumcision benefits: religious approval (KMNS) (S6) (S8 2019)
 G117G: Circumcision benefits: reduce promiscuity/ reduce sex drive (K) (S8 in G117I)
 ** G117G: Circumcision benefits: don't know benefits (N)
 ** G117G: Prevents pregnancy: Female circumcision benefit (S8)
@@ -129,7 +129,7 @@ SGC8CX: Effects of circumcision - Other (compare to G117X: Circumcision benefits
 SGC8CY: Effects of circumcision - None -  (compare to G117Y: Circumcision benefits: no benefit?)
 SGC8CZ: Effects of circumcision - Don't know
 
-GMIR8:
+GMIR8 (Gambia 2019-20) (w/o intention of cutting daughters):
 S1319A: Reason to stop female circumcision: negative health effects
 S1319B: Reason to stop female circumcision: harmful practice
 S1319C: Reason to stop female circumcision: not religious obligation
