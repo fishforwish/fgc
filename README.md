@@ -89,7 +89,7 @@ G117I: Reduced promiscuity: Female circumcision benefit (S8)
 G117J: No opinion/Don't know: Female circumcision benefit (S6) 
 ** G117J: Part of womanhood: Female circumcision benefit (S8)
 G117X: Circumcision benefits: other (KMNS) (S6) (S8)
-G117Y: Circumcision benefits: no benefit (KMNS) (S6) (Did we use this one? to check.) (0-No: no, "there is no" no benefit; 1-yes: yes, "there is" no benefit) (ref to ngir53)
+G117Y, FG119Y: Circumcision benefits: no benefit (KMNS) (S6) beneNone is a derived variable, not using.
 G118 Circumcision is required by religion. (KMNS) (S6) (S8)
 S1315A: Do you believe that female circumcision is required by community (K7)
 
