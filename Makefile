@@ -122,6 +122,7 @@ select.output: $(sets:%=%.select.Routput)
 select.objects.output: $(sets:%=%.select.objects.Routput)
 	cat $^ > $@
 
+## ??? summary code missing?
 select.summary.output: $(sets:%=%.select.summary.Routput)
 	cat $^ > $@
 
