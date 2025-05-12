@@ -11,10 +11,12 @@ We also like to use the following figures in the ms or at least look at them for
 
 2025 May ?
 =================
-* Should we keep only benefit questions which was asked in all the 4 countries?
-* We should skip G117G, because Kenya was the only country with this question and G117G also meant differently in Nigeria:  (Circumcision benefits: don't know benefits)
+* Redo the benefits csv
+** Should we keep only benefit questions used in all the 4 countries?
+** We should skip G117G, because Kenya was the only country with this question and G117G also meant differently in Nigeria:  (Circumcision benefits: don't know benefits)
 * Should we also skip G117H which onliy showed up in Kenya and Mali.
 * We should add G117Y (no benefits)
+* Can't find bene.pcaPlots.Rout.pdf
 
 G117A: Circumcision benefits: cleanliness/hygiene (all)
 G117B: Circumcision benefits: social acceptance (all)
