@@ -55,7 +55,6 @@ beneRedPromis, G117G,
 ## G117G in Nigeria is Circumcision benefits: don't know benefits.  We need to recode this.
 beneRedSTD, G117H
 beneOther, G117X, FG119X
-beneNo, G117Y
 # Response 1: daughterToFgc (daughter FGC status)
 daughterToFgc, G116, FG108
 ## For fgc module, see https://dhsprogram.com/pubs/pdf/DHSQMP/DHS5_Module_Female_Genital_Cutting.pdf (or https://dhsprogram.com/pubs/pdf/DHSQM/DHS8-Module-FGCut-Qnnaire-EN-23Jan2020-DHSQM.pdf)
