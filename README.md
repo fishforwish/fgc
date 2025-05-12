@@ -89,7 +89,7 @@ G117I: Reduced promiscuity: Female circumcision benefit (S8)
 G117J: No opinion/Don't know: Female circumcision benefit (S6) 
 ** G117J: Part of womanhood: Female circumcision benefit (S8)
 G117X: Circumcision benefits: other (KMNS) (S6) (S8)
-G117Y: Circumcision benefits: no benefit (KMNS) (S6) (Did we use this one? to check.) (0-No: no no benefit; 1-yes: yes no benefit)
+G117Y: Circumcision benefits: no benefit (KMNS) (S6) (Did we use this one? to check.) (0-No: no, "there is no" no benefit; 1-yes: yes, "there is" no benefit) (ref to ngir53)
 G118 Circumcision is required by religion. (KMNS) (S6) (S8)
 S1315A: Do you believe that female circumcision is required by community (K7)
 
@@ -119,13 +119,13 @@ SGC8CD: Effects of circumcision - Urine retention (P)
 SGC8CE: Effects of circumcision - Anemia (P)
 SGC8CF: Effects of circumcision - Fever (P)
 SGC8CG: Effects of circumcision - Complications with with menstrual periods (P)
-SGC8CH: Effects of circumcision - Complications during sexual intercourse (P)
-SGC8CI: Effects of circumcision - Complications during childbirth (P)
+SGC8CH: Effects of circumcision - Complications during sexual intercourse (P) (vs. gmir8 S1319F)
+SGC8CI: Effects of circumcision - Complications during childbirth (P) (vs. gmir8 S1319E)
 SGC8CJ: Effects of circumcision - Fistula (P)
 SGC8CK: Effects of circumcision - Social acceptability (NP)
 SGC8CL: Effects of circumcision - Stigma (NP)
 SGC8CM: Effects of circumcision - Depression/stress/mental health (NP)
-SGC8CX: Effects of circumcision - Other (compare to G117X: Circumcision benefits: other?)
+SGC8CX: Effects of circumcision - Other (compare to G117X: Circumcision benefits: other?) (vs. gmir8 S1319X)
 SGC8CY: Effects of circumcision - None -  (compare to G117Y: Circumcision benefits: no benefit?)
 SGC8CZ: Effects of circumcision - Don't know
 
@@ -134,9 +134,9 @@ S1319A: Reason to stop female circumcision: negative health effects
 S1319B: Reason to stop female circumcision: harmful practice
 S1319C: Reason to stop female circumcision: not religious obligation
 S1319D: Reason to stop female circumcision: illegal
-S1319E: Reason to stop female circumcision: complicates delivery
-S1319F: Reason to stop female circumcision: painful/unsatisfying sex
-S1319X: Reason to stop female circumcision: other
+S1319E: Reason to stop female circumcision: complicates delivery (vs. keir8 SGC8CI)
+S1319F: Reason to stop female circumcision: painful/unsatisfying sex (vs. keir8 SGC8CF)
+S1319X: Reason to stop female circumcision: other (vs. keir8 SGC8CX)
 S1320: Aware of the law that prohibits the practice of circumcision (This is interesting in terms of who know it is illegal but still want to fgmc their kids)
 * list of variables included or to be considered:
 # Blocks
