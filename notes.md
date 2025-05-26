@@ -3,8 +3,8 @@ Research questions:
 * second, what is the association between woman's beliefs and their opinion about whether FGC should be continued.(For this model, we will use fgcPersist_clmm.Rout)
 
 Figures and tables:
-Our main findings will be based on the results ofdaughterPlan_effects.Plot.Rout.pdf (and fgcPersist_), and daughterPlan_isoplots.Rout.pdf (and fgcPersist_)
-We also like to use the following figures in the ms or at least look at them for insights:
+Our main findings will be based on the results of daughterPlan_effects.Plot.Rout.pdf (and fgcPersist_), and daughterPlan_isoplots.Rout.pdf (and fgcPersist_)
+We also like to use the following figures to look for insights:
 * daughterPlan_varlvlsum.Routput and fgcPersist_varlvlsum.Routput
 * bene.Rout.pdf
 * prevalence_Rout.pdf
@@ -14,6 +14,7 @@ We also like to use the following figures in the ms or at least look at them for
 * Redo the benefits csv
 ** We keep only benefit questions used in all the 4 countries.
 ** beneNone (G117Y, FG119Y) is a derived variable, not using.
+** We use G118 (equired by religion) independently along with G117F (religious approval) which is part of the bene variables.
 
 G117A: Circumcision benefits: cleanliness/hygiene (all)
 G117B: Circumcision benefits: social acceptance (all)

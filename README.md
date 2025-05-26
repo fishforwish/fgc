@@ -9,7 +9,7 @@ DHS login:  Mac email. Work
 
 2024 Jul 30 (Tue): Old-data paper is ms.md; comparison paper is ms.kenya.md. Should just build a new repo??
 
-The reference sites are at auto.bib and manual.bib (and in a way from https://www.bioinformatics.org/texmed/)
+The reference sites were at auto.bib and manual.bib (and in a way from https://www.bioinformatics.org/texmed/), but auto.bib is now not traceable.
 
 Basically, this paper is about 'norm and behaviors'. We made two papers: 
 First, 'KMNS': Kenya 2008/9, Mali 2006 (C: the report was in French), Nigeria 2008 and Sierra Leone 2008. (To add Guinea 2005?)

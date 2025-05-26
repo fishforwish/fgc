@@ -4,7 +4,10 @@
 - Gender awareness had opposite effect both on the continuity and daughter’s FGMC future; yet group gender awareness did not see clear association.
 - While group FGMC showed a positive association with women’s intention of cutting their daughters, it was negatively associated with woman’s intention of continuing FGMC practice.
 
+8 pitfalls of soical norms [CislHeis18]:
+1: Conflating social norms and personal attitudes
 
+=======
 Female Genital Cutting Is a Social Coordination Norm in Kenya, Mali, Nigeria and Sierra Leon (The title will change to reflect the findings.)
 
 Chyun-Fung Shi (1), Mike Li (2,3), Jonathan Dushoff (1,2,4)
@@ -19,16 +22,11 @@ Background
 \hypertarget{Background}{%
 \section{Background}\label{Background}}
 
-Female genital mutilation/cutting (FGMC) (also known as female genital circumcision or female genital mutilation) is a form of injuring female's genitalia for non-medical purposes [Momo17].
-We use FGMC to recognize both the human-rights viewpoint [UNFP25] and also the importance of being sensitive to the role of identity in making decision about FGMC [Tost15].
-EXTRA CITES: [JohnEsse10, KawoAllw22, Meye00, Shel01].  
-Globally, an estimated 230 million women and girls are FGMC survivors, mostly in Africa and the Middle East, and with most cut before age 15 [WHO25].  
-The prevalence of this deeply embedded social-cultural practice might be under-reported, since it is mostly illegal [StevKell22].  The practice has been investigated from the point of view of public health issues and human rights violations in one end, and cultural and religious identity on the other [AhmeKare18, BergDeni13a, JohaAhme21, Joha22, KhosBane17, LienSchu13, Mack00, McCaBroe19, Momo17, NabMuul19, PalmElme23, RoveUlri22, TordBish22] \cfonly{to divide and confirm}.
-While the United Nations has called for FGMC elimination by 2030 [Unit22], progress has been impeded [TordBish22] by its complicated history [BergDeni12, Cami16].  The practice has also been observed to spread via migration, including spreading to countries where it was banned [Unit22].
+Female genital mutilation/cutting (FGMC) (also known as female genital circumcision or female genital mutilation) is a form of injuring female's genitalia for non-medical purposes [Momo17].   Globally, an estimated 230 million women and girls are FGMC survivors, mostly in Africa and the Middle East, and with most cut before age 15 [WHO25].  The prevalence of this deeply embedded social-cultural practice might be under-reported, since it is mostly illegal [StevKell22].  We use FGMC to recognize both the human-rights viewpoint [UNFP25] and also the importance of being sensitive to the role of identity in making decision about FGMC [Meye00, Onso17, Tost15]. FGMC has been investigated as a continuum of perpetuating and hindering the practice [BergDeni12, BergDeni13a, JohaAhme21, PalmElme23], from the point of view of public health issues and human rights violations on one end [KhosBane17,LeyeVanE19,NabMuul19, TordBish22, UNFP25], and cultural and religious identity on the other [Onso17, Joha22].  While the United Nations has called for FGMC elimination by 2030 [Unit22], progress has been impeded [TordBish22] by its complicated history [BergDeni12, BergDeni13a].  The practice has also been observed to spread via migration, including spreading to countries where it was banned [Unit22].
 
-Despite various degrees of legal actions against FGMC in African countries, the laws have not been easily translated to abandonment  [ChegAske04, Bicc10, Cami15, CislHeis18, McCaBroe19, NabMuul19]\cfonly{less cites}, because FGMC is often deeply rooted in tradition, and often functions as a social norm [Hayf05, Mack00, Momo17, SchuLien13].  
-Social norm is a form of values driving behavioural patterns which are self-enforcing within a group [Youn15] \cfonly{update cites}, and it is at the core of why FGMC persisted for thousand years of the ancient history [KoubMuas85].  
-Understanding its dynamics as a norm is crucial in changing FGMC conventions [Bicc10, Cami15, CislHeis18, KawoAllw22, Mack96, MataEeke23, Momo17, Youn15] \cfonly{update}.
+Despite various degrees of legal actions against FGMC in African countries, the laws have not been easily translated to abandonment [ChegAske04, Cami15, McCaBroe19, NabMuul19]\cfonly{less cites}, because of its deeply rooted normative expectations [Mack00, Momo17, ShelWand11, SchuLien13].  
+Understanding its dynamics as a norm is crucial in changing FGMC conventions [BiccMari15, Cami16, CislHeis18, KawoAllw22, Mack96, MataEeke23, Momo17, ShelWand11, Youn15] \cfonly{update}.  Social norm is a form of values driving behavioural patterns which are self-enforcing within a group [Youn15] \cfonly{update cites}, and it is at the core of why FGMC persisted for thousand years of the ancient history [KoubMuas85].  
+
 
 Social convention theory, the leading theory probing FGMC tradition (e.g., see [BoylMcMo02, BoylCorl10, FreyJohn07, FrieMahm13, Hayf05, KandMwek09, Mack06, MackLeJe09, ReigGonz14, YirgKass12] \cfonly{update}), initially proposed that FGMC was a marriageability convention operating through coordination [Mack96], and later expanded to include interactions with other values, such as social prestige, adolescent rite of passage, and female honour and modesty [Mack00, MackLeJe09] {update}.  
 Although the normative coordination was challenged due to lack of evidence for a clear tipping point in communities [AgolRich20 EffeVogt15] {update?}, the theory lays a foundation of understanding the complexity of FGMC practice embedded within its community [GutiSola22, Haye05, KandShel19].  
@@ -36,7 +34,7 @@ The theory regards FGMC as a social expectation of interdependent behavior among
 FGMC is strongly correlated with social expectation (i.e., what other people do or what other people believe one should do)[BiccMari15,MataEeke23] \cfonly{more cites}.  Basically, when FGMC norms within the communities are strong, individuals tend to self-enforce and coordinate such norms [Ajze02, Hayf05, KandNwak09, KandShel19, Mack96, Mack06, MackLeJe09, ThomMadd92] \cfonly{add [Bicc15]]\cfonly{cut cites}.  
 Normative factors have underlain women’s decisions of having their daughters undergoing FGMC [AlcaGonz13, GutiSola22, Hayf05, Mack09, PashPonn16, Rima08, ShelWand11], whether the decision was a personal choice or an anticipated collective preference of their community [ForsIsak21].
 
-Although norms associated with FGMC behavior have been studied as above, and analyses of FGMC practices using DHS data were also found (such as [AyenWol23, AzezWill20, TordBish22, YounCheo20]), there was limited clarification of quantitative types of individual normative attitudes (e.g., attitudinal position of FGMC values) and behavioural intention in response to the community persistence. In this study, we quantitatively analyzed types of social norms women attached to FGMC beliefs categorized in DHS along with women's gender-based awareness [GrosHayf19] both individually and collectively. Integrating gender awareness when analyzing FGMC intention was relevant to untangle correlation of FGMC norm and gender values [BoylSvec19, HayfGarv20, Youn04, YounCheo20].   We believe this is the first FGMC study integrating quantitative DHS modules of FGMC normative attitudes and gender awareness to model the FGMC intention within the community influence.  Hopefully, the finding will add a robust understanding of advanced quantitative comparisons of FGMC norms across nations.
+Although norms associated with FGMC behavior have been studied as above, and analyses of FGMC practices using DHS data were also found (such as [AyenWol23, AzezWill20, TordBish22, YounCheo20]), there was limited clarification of quantitative types of individual normative attitudes (e.g., attitudinal position of FGMC values) and behavioural intention in response to the community persistence.  In this study, we quantitatively analyzed types of social norms women attached to FGMC beliefs categorized in DHS along with women's gender-based awareness [GrosHayf19] both individually and collectively. Integrating gender awareness when analyzing FGMC intention was relevant to untangle correlation of FGMC norm and gender values [BoylSvec19, HayfGarv20, Youn04, YounCheo20].   We believe this is the first FGMC study integrating quantitative DHS modules of FGMC normative attitudes and gender awareness to model the FGMC intention within the community influence.  Hopefully, the finding will add a robust understanding of advanced quantitative comparisons of FGMC norms across nations.
 
 =================
 \hypertarget{Research-Questions}{%
@@ -61,7 +59,7 @@ Only women with daughters for FGMC options were included in the the daughter fut
 \hypertarget{Measurements}{%
 \subsection{Measurements}\label{Measurements}}
 
-The main responses and predictors in the models are: FGMC daughters predicted by FGMC benefits in the daughter future model, FGMC future predicted by FGMC benefits in the continuance model, and FGMC daughters predicted by both FGMC benefits and FGMC continuance in the persistence model.  Women's FGMC status was also treated as a main predictor in all the three models.  The FGMC benefits were quantified using average score \cfcmt{pls confirm] to identify the strength of FGMC beliefs associating with FGMC practice.
+We aggregated quantitative attitude data at a cluster level, as a proxy for collective social norms [MackMone15, RimaLapi15]. The main responses and predictors in the models are: FGMC daughters predicted by FGMC benefits in the daughter future model, FGMC future predicted by FGMC benefits in the continuance model, and FGMC daughters predicted by both FGMC benefits and FGMC continuance in the persistence model.  Women's FGMC status was also treated as a main predictor in all the three models.  The FGMC benefits were quantified using average score \cfcmt{pls confirm] to identify the strength of FGMC beliefs associating with FGMC practice.
 
 The co-variables were basic social demographic factors:  country, education, job, residence (rural vs. urban), religion, marital status, age, media use, and wealth in addition to gender awareness.  Gender awareness (see — for questions of gender awareness proxy) was considered a sensible factor in FGMC decision [BoylSvec19?] and therefore was included to test its association with FGMC decision overall [BoylSvec19].  Media use and gender awareness were also scored.  Cluster ID (i.e., villages where the samples were from) and ethnicity (see the list of ethnicity recode at table xx in appendix) \cfonly{with a footnote on how we recoded it] were treated as random variables.
 
@@ -71,8 +69,6 @@ The following response factors were also tested at a community level to assess t
 
 \fcmt{How do we define community?  Is it based on cluster?} [See GrosHayf19]
 \cfcmt{Should we explain how we dealt with a cluter where the sample was too small?}
-
-\cfcmt{Regarding FGMC benefits modules, there were 9 questions.  Kenya had all the 9, Mali and SL 7 missing promiscuity and STD, NG 8 missing STD).  Is it a problem?]
 
 \cfcmt{Bayesian model [KandNwak09] “Conversely, one cannot assume that the clusters selected in each district are fully representative of the states in which they are located because surveys only attempted to generate a fully representative sample at the regional level. Consequently, the spatial analysis will be affected by some random fluctuations.  Some of this random variation can be reduced through structured spatial effects because it includes neighboring observations in the analysis. However, it should be pointed out that such a spatial analysis should preferably be applied to census data, where the precision of the spatial analysis would be much higher." (p. 788)]
 
@@ -186,6 +182,7 @@ Put countries' economic index (e.g., GPA, on the UN's Human Development Index, G
 \cfonly {in response to the degrees of modernization, conventional values and gender awareness within- and among-community (see [Achi14, BoylMcMo02, Hayf05, KandNwak09, ModrLiu13, Moor13, OdukAfol17, Youn02])}
 "We used random split-half samples for each country to conduct first an exploratory factor analysis (EFA) and then a confirmatory factor analysis (CFA) to identify the factor structure." [HayfGarv20]
 
+
 \cfonly{reference: Methods and the first paragraph of Discussion[Achi14]}
 
 Some women might decide to have FGMC on their daughters even they do not believe the value themselves [ShelResh16]
@@ -194,6 +191,12 @@ Research Questions
 The social advantages of the practice ranged from showing respect to the authority of the cut elders [ShelWand11], appreciation of the tradition, feminine virtue [WandShel20] and religious requirement [GreiBarn20], to avoiding the ongoing socially psychological discrimination from being denied their group identities [OmigBell22].  FGMC was also viewed as a form of social and symbolic capital [Bour84] to differentiate cut women from the uncuts for seeking inclusion by their social groups [OmigBell22, ShelWand11, WandShel20]. 
  It was noted that the normative coordination was challenged for no clear tipping point occurred in the coordinated communities [AgolRich20 EffeVogt15].
 \hypertarget{conclusion}{%
+
+\section{suggestions:}\label{suggestions}}
+- listening [LienSchu13, PalmElme23]
+- DHS module to capature normative attitude of FGMC based on new module (in Kenya 8, cultural vs. social vs. relgious)
+
+
 \section{Conclusion:}\label{conclusion}}
 
 ———— stop reading —————
