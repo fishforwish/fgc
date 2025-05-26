@@ -49,6 +49,17 @@ refs.bib: auto.bib manual.bib
 
 ######################################################################
 
+## Chyun request 2025 May 26 (Mon)
+
+creq += daughterPlan_effects_plot.Rout.pdf daughterPlan_isoplots.Rout.pdf
+creq += fgcPersist_effects_plot.Rout.pdf fgcPersist_isoplots.Rout.pdf
+creq += daughterPlan_varlvlsum.Routput and fgcPersist_varlvlsum.Routput
+creq += bene.Rout.pdf prevalence_Rout.pdf
+
+crp: $(creq:%=%.op)
+
+######################################################################
+
 # New set import. Carefully
 
 # newwomen = $(newsets:%=fgc_DHS/%.women.RData)
