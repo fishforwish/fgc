@@ -100,7 +100,7 @@ The results (see figure _isoplots) also showed that age had a negative nonlinear
 
 In Kenya, "A daughter’s adjusted hazard of FGMC was lower if she: had an uncut mother who disfavored FGMC, lived in a community that was more opposed to FGMC, and lived in a more ethnically diverse community. Unexpectedly, a daughter’s adjusted FGMC hazard was higher if she lived in a community with more extra-familial opportunities for women. " [GrosHayf19]
 
-\cf{Need some discuss of the mixed model:  how it help to clarify our main models or what?]
+
 \cf{in daughter model, gender awareness (P<0.05) should be below group gender awareness (P>0.05) on effect plots based on the valvisum.Rout.  So is there a mistake? ]
 \cfcmt{Why isn’t mixed model our main model?]
 \cfcmt{M: individual persistence is missing in the mixed model]
