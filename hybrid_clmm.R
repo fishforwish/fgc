@@ -2,10 +2,9 @@ library(dplyr)
 library(ordinal)
 library(splines)
 
-combined_dat <- (combined_dat
-	%>% group_by(clusterId)
-	%>% mutate(group_Persist = mean(Persist01, na.rm=TRUE))
-)
+combined_dat <- rdsRead()
+
+summary(combined_dat)
 
 modAns <- model.frame(
   daughterPlan ~ group_daughterPlan
@@ -23,7 +22,7 @@ modAns <- model.frame(
   , data=combined_dat, na.action=na.exclude, drop.unused.levels=TRUE
 )
 
-system.time(mod<- clmm(
+fit_time <- system.time(mod<- clmm(
   daughterPlan ~ group_daughterPlan
   + Persist + group_Persist
   + fgcstatus + group_fgc
@@ -44,4 +43,4 @@ system.time(mod<- clmm(
 
 print(summary(mod))
 
-# rdsave(mod, modAns)
+saveVars(mod, modAns, fit_time)
