@@ -7,6 +7,7 @@ combined_dat <- rdsRead()
 
 modAns <- model.frame(
   Persist ~ group_Persist
+  + daughterPlan + group_daughterPlan
   + fgcstatus + group_fgc
   + CC
   + bene 

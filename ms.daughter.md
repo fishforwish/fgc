@@ -71,7 +71,8 @@ The following response factors were also tested at a community level to assess t
 \subsection{Statistical Model}\label{Statistical-Model}}
 
 We used cumulative link mixed models (CLMMs) in the statistics package R [Rstats,Rpackage_ordinal] to analyze the models.  The CLMM framework allows us to model a binary or ordinal response variable (i.e., intention of applying FGMC to daughters), while treating clusters and ethnicity as random effects.  
-We subtracted respondent (-1) from the cluster when testing the community effect \cfcmt{Please rewrite this. Also, do we need to mention how we treat some clusters which had only one sample (if that happens).}
+We subtracted respondent (-1) from the cluster when testing the community effect \cfc
+mt{Please rewrite this. Also, do we need to mention how we treat some clusters which had only one sample (if that happens).}
 \cfcmt{Please explain why we didn’t do sampling weight.} "Multivariate models do not include weights because the DHS does not release the cluster-level sampling weights necessary for estimating weighted multilevel models" [HayfGarv20]
 \cfcmt{Do we explain conveyance of uncertainty}
 

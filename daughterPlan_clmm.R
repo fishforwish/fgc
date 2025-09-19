@@ -8,6 +8,7 @@ summary(combined_dat)
 
 modAns <- model.frame(
   daughterPlan ~ group_daughterPlan
+  + Persist + group_Persist
   + fgcstatus + group_fgc
   + CC
   + bene 
