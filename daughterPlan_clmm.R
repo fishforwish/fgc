@@ -24,6 +24,7 @@ modAns <- model.frame(
 
 fit_time <- system.time(mod<- clmm(
   daughterPlan ~ group_daughterPlan
+  + Persist + group_Persist
   + fgcstatus + group_fgc
   + CC
   + bene 
