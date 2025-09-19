@@ -1,13 +1,16 @@
 Research questions:  
-* First, what is the association between mothers' beliefs about the benefits of FGC and their plans for their daughters' FGC future (For this model, we will use daughterPlan_clmm.Rout); 
-* second, what is the association between woman's beliefs and their opinion about whether FGC should be continued.(For this model, we will use fgcPersist_clmm.Rout)
+* First paper (daughter future status), what is the association between mothers' beliefs about the benefits of FGC and their plans for their daughters' FGC future (For this model, we will use daughterPlan_clmm.Rout); 
+* second paper (opinion on fgmc future), what is the association between woman's beliefs and their opinion about whether FGC should be continued.(For this model, we will use fgcPersist_clmm.Rout)
 
 Figures and tables:
-Our main findings will be based on the results of daughterPlan_effects.Plot.Rout.pdf (and fgcPersist_), and daughterPlan_isoplots.Rout.pdf (and fgcPersist_)
+Our main findings will be based on the results of daughterPlan_effects_plot.Rout.pdf (and fgcPersist_), and daughterPlan_isoplots.Rout.pdf (and fgcPersist_)
 We also like to use the following figures to look for insights:
 * daughterPlan_varlvlsum.Routput and fgcPersist_varlvlsum.Routput
-* bene.Rout.pdf
+* bene.pcaPlots.Rout.pdf
 * prevalence_Rout.pdf
+2025 Jun 30
+============
+Chyun wanted to divide the paper into two. One asked mother's intention of cutting their daughters, the other about fgmc future in general.
 
 2025 May 12
 =================
