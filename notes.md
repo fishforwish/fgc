@@ -8,6 +8,22 @@ We also like to use the following figures to look for insights:
 * daughterPlan_varlvlsum.Routput and fgcPersist_varlvlsum.Routput
 * bene.pcaPlots.Rout.pdf
 * prevalence_Rout.pdf
+
+Coding:
+* bene:  V1 no (no benefit), V2 yes
+* att (gender awareness): V1 no (should be beaten) V2 yes, V3 dont' know
+
+ ** vs. beneframe <- scoring(Answers, "bene", rightfactor, Answers$id)
+attframe <- scoring(Answers, "att", yesnodk, Answers$id)
+mediaframe <- scoring(Answers, "media", rightfactor, Answers$id)
+* 
+
+2025 Sep 19
+============
+How did we calculate group_persistence? The individual persis had 3 answers: no, depends and yes; but not for group_persistence.
+
+Chyun added persistence to daughter model and daughter plan to persistence model.
+
 2025 Jun 30
 ============
 Chyun wanted to divide the paper into two. One asked mother's intention of cutting their daughters, the other about fgmc future in general.

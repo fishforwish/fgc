@@ -23,6 +23,7 @@ modAns <- model.frame(
 
 system.time(mod <- clmm(
   Persist ~ group_Persist
+  + daughterPlan + group_daughterPlan
   + fgcstatus + group_fgc
   + CC
   + bene
