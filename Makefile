@@ -5,6 +5,8 @@ current: target
 
 ##################################################################
 
+## https://github.com/fishforwish/fgc.git
+
 Ignore += .gitignore
 
 # -include makestuff/perl.def
