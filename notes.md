@@ -12,11 +12,15 @@ We also like to use the following figures to look for insights:
 Coding:
 * bene:  V1 no (no benefit), V2 yes
 * att (gender awareness): V1 no (should be beaten) V2 yes, V3 dont' know
+* edu:  no, primary, secondary, higher
 
  ** vs. beneframe <- scoring(Answers, "bene", rightfactor, Answers$id)
 attframe <- scoring(Answers, "att", yesnodk, Answers$id)
 mediaframe <- scoring(Answers, "media", rightfactor, Answers$id)
-* 
+
+What are missing from isoplot vs effect vs. clmm
+* in daughterPlan, missing individual persisten (depend and continue)
+* How were persistent (no, dk, yes) and daughter to fgc (nom dk, yes) coded in clmm.rout?
 
 2025 Sep 19
 ============
