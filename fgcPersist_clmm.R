@@ -12,7 +12,7 @@ modAns <- model.frame(
   + CC
   + bene 
   + group_bene
-  + media + group_media
+  + media + group_media 
   + genderAware + group_genderAware
   + edu + group_edu
   + wealth + group_wealth
@@ -28,7 +28,7 @@ system.time(mod <- clmm(
   + CC
   + bene
   + group_bene
-  + media + group_media
+  + media + group_media 
   + genderAware + group_genderAware
   + edu + group_edu
   + ns(wealth,3) + ns(group_wealth, 3)
