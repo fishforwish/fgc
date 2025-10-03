@@ -146,7 +146,8 @@ Sources += $(wildcard *.ccsv *.tsv *.csv)
 
 impmakeR += recode
 .PRECIOUS: %.recode.Rout
-## ke5.recode.Routput: recode.R
+## ke5.select.Routput: 
+## ke5.recode.Rout: recode.R
 %.recode.Rout: recode.R %.select.rda recodeFuns.rda religion_basic.ccsv partnership_basic.ccsv
 	$(pipeR)
 
