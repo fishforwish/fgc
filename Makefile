@@ -13,6 +13,16 @@ Ignore += .gitignore
 
 ######################################################################
 
+## Debugging 2025 Nov 04 (Tue)
+
+## partnership_basic.ccsv.e30d09ae.oldfile:
+## partnership_basic.ccsv.olddiff:
+
+## religion_basic.ccsv.e30d09ae.oldfile:
+## religion_basic.ccsv.olddiff:
+
+######################################################################
+
 ## Don't know why this is currently suppressed
 ## Maybe very slow; we should separate data and target dirs
 ## mirrors += fgc_DHS
