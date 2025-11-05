@@ -17,6 +17,7 @@ Ignore += .gitignore
 
 ## partnership_basic.ccsv.e30d09ae.oldfile:
 ## partnership_basic.ccsv.olddiff:
+## partnership_basic.ccsv.oldpick:
 
 ## religion_basic.ccsv.e30d09ae.oldfile:
 ## religion_basic.ccsv.olddiff:
