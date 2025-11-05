@@ -165,7 +165,7 @@ impmakeR += recode
 recodeFuns.Rout: recodeFuns.R
 
 Ignore += *.output
-recodes.output: $(sets:%=%.recode.Routput)
+recodes.output: $(Sets:%=%.recode.Routput)
 	cat $^ > $@
 
 ## ke5.recode.dd.mg.pdf:
