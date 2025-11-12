@@ -46,7 +46,7 @@ fgc, G102, FG103, S821, S1002, S631F
 # predictor 2: FGC benefit
 beneHygiene, G117A, FG119A
 beneAcceptance, G117B, FG119B, SGC8CK, SGC17B
-# also in KE8, SL7
+# also in KE8 (SGC8CK:Effects of circumcision - Social acceptability), SL7
 beneMarriage, G117C, FG119C
 benePreventPreSex, G117D, FG119D, FG121
 benePleasureM, G117E, FG119E

@@ -13,6 +13,17 @@ Ignore += .gitignore
 
 ######################################################################
 
+## Debugging 2025 Nov 04 (Tue)
+
+## partnership_basic.ccsv.e30d09ae.oldfile:
+## partnership_basic.ccsv.olddiff:
+## partnership_basic.ccsv.oldpick:
+
+## religion_basic.ccsv.e30d09ae.oldfile:
+## religion_basic.ccsv.olddiff:
+
+######################################################################
+
 ## Don't know why this is currently suppressed
 ## Maybe very slow; we should separate data and target dirs
 ## mirrors += fgc_DHS
@@ -146,14 +157,15 @@ Sources += $(wildcard *.ccsv *.tsv *.csv)
 
 impmakeR += recode
 .PRECIOUS: %.recode.Rout
-## ke5.recode.Routput: recode.R
+## ke5.select.Routput: 
+## ke5.recode.Rout: recode.R
 %.recode.Rout: recode.R %.select.rda recodeFuns.rda religion_basic.ccsv partnership_basic.ccsv
 	$(pipeR)
 
 recodeFuns.Rout: recodeFuns.R
 
 Ignore += *.output
-recodes.output: $(sets:%=%.recode.Routput)
+recodes.output: $(Sets:%=%.recode.Routput)
 	cat $^ > $@
 
 ## ke5.recode.dd.mg.pdf:
@@ -274,7 +286,7 @@ PCAs: benePCAs.output mediaPCAs.output attPCAs.out
 
 msrepo = https://github.com/dushoff
 
-Makefile: makestuff/01.stamp
+Makefile: makestuff/02.stamp
 makestuff/%.stamp:
 	- $(RM) makestuff/*.stamp
 	(cd makestuff && $(MAKE) pull) || git clone --depth 1 $(msrepo)/makestuff
