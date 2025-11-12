@@ -1,3 +1,9 @@
+
+daughterPlan_isoplots.Routput and fgcPersist_varlvlsum.Routput both not working.
+
+
+----------------------------------------------------------------------
+
 Research questions:  
 * First paper (daughter future status), what is the association between mothers' beliefs about the benefits of FGC and their plans for their daughters' FGC future (For this model, we will use daughterPlan_clmm.Rout); 
 * second paper (opinion on fgmc future), what is the association between woman's beliefs and their opinion about whether FGC should be continued.(For this model, we will use fgcPersist_clmm.Rout)
