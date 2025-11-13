@@ -224,7 +224,7 @@ rename_dat.Rout: rename_dat.R
 	$(wrapR)
 
 varlvlsums: daughterPlan_varlvlsum.Rout fgcPersist_varlvlsum.Rout
-	bash -cl banner
+	bash -cl banner ##
 
 daughterPlan_varlvlsum.Rout: varlvlsum.R daughterPlan_clmm.rda
 	$(pipeR)
