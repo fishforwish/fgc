@@ -59,12 +59,12 @@ cat("\\bf{Survey Year} & 2008/09 & 2006 & 2008 & 2008 &\\\\"
   , latex(dfill(tab,"benePreventPreSex"),space=TRUE)
   , space , "\\bf{Religion}", spaces
   , latex(dfill(tab,"beneReligion"),space=TRUE)
-  , space , "\\bf{Reduce STD}", spaces
-  , latex(dfill(tab,"beneRedSTD"),space=TRUE)
+  ## , space , "\\bf{Reduce STD}", spaces
+  ## , latex(dfill(tab,"beneRedSTD"),space=TRUE)
   , space , "\\bf{Sexual Pleasure for Men}", spaces
   , latex(dfill(tab,"benePleasureM"),space=TRUE)
-  , space , "\\bf{Reduce Promiscuity}", spaces
-  , latex(dfill(tab,"beneRedPromis"),space=TRUE)
+  ## , space , "\\bf{Reduce Promiscuity}", spaces
+  ## , latex(dfill(tab,"beneRedPromis"),space=TRUE)
   , space , "\\bf{Other}", spaces
   , latex(dfill(tab,"beneOther"),space=TRUE)
   , "\\bf{Gender Awareness: Wife beaten justified}" , spaces
