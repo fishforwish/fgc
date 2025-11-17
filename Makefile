@@ -197,12 +197,16 @@ tables.Rout: tables.R prevalence.rds
 table_funs.Rout: table_funs.R
 	$(wrapR)
 
+## Seems fairly terrible, use newer stuff to convert or write a table
 tabletex.Rout: tabletex.R table_funs.rda tables.rds
 	$(pipeR)
 
 Ignore += table_output.tex
 ## table_output.tex: tabletex.R
 table_output.tex: tabletex.Rout ; touch $@
+
+table_output.pdf: table_output.tex
+	pandoc -f latex -t pdf $< > $@ 
 
 Sources += fgc_table.tex
 ## fgc_table.pdf: fgc_table.tex
@@ -224,7 +228,7 @@ rename_dat.Rout: rename_dat.R
 	$(wrapR)
 
 varlvlsums: daughterPlan_varlvlsum.Rout fgcPersist_varlvlsum.Rout
-	bash -cl banner
+	bash -cl banner ##
 
 daughterPlan_varlvlsum.Rout: varlvlsum.R daughterPlan_clmm.rda
 	$(pipeR)

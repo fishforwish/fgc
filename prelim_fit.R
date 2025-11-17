@@ -24,7 +24,7 @@ contfgc <- function(x){
 df <- Answers %>% select(c(continueFgc,daughterToFgc,fgc,clusterId,
                            beneHygiene,beneAcceptance,beneMarriage,
                            benePreventPreSex,benePleasureM,beneReligion,
-                           beneRedPromis,beneRedSTD,beneOther)) %>% 
+                           beneOther)) %>% 
   filter(complete.cases(.))
 
 beneNames <- grepl("bene", names(df))
