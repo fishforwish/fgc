@@ -1,12 +1,13 @@
 
-daughterPlan_isoplots.Routput and fgcPersist_varlvlsum.Routput both not working.
-
+- What's the difference between daughterPlan_clmm.Routput and daughterPlan_varlvlsum.Routput?
+- Can we regroup FMGC benefit to include only normative modules, beneAcceptance beneMarriage beneReligion and exclude beneHygiene  benePreventPreSex benePleasureM  beneOther and beneNone?  Can the selection be justified based on beneQuants.output?
+- KE8 has requirCulture  requireSociety requirCulture requireSociety and beneAcceptance.  The only same factors are requireSociety and beneAcceptance.  How do we compare KE8 with KE5?
 
 ----------------------------------------------------------------------
 
 Research questions:  
 * First paper (daughter future status), what is the association between mothers' beliefs about the benefits of FGC and their plans for their daughters' FGC future (For this model, we will use daughterPlan_clmm.Rout); 
-* second paper (opinion on fgmc future), what is the association between woman's beliefs and their opinion about whether FGC should be continued.(For this model, we will use fgcPersist_clmm.Rout)
+* second paper, what is the difference between ke5 and ke8 in the association of mothers' beliefs about the benefits of FGC and their plans for their daughters' FGC future 
 
 Figures and tables:
 Our main findings will be based on the results of daughterPlan_effects_plot.Rout.pdf and daughterPlan_isoplots.Rout.pdf; and fgcPersist_effects_plot.Rout.pdf and fgcPersist_isoplots.Rout.pdf)
